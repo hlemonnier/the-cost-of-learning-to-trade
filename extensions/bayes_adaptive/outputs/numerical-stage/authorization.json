@@ -1,0 +1,7 @@
+{
+  "started_utc": "2026-09-25T00:48:17.053089+00:00",
+  "source_checkpoint": "6057963982cf1e6640561021a2d7da0a88fb0897",
+  "scope": "Numerical validation and cold reproduction only; economics/report/ZIP paused",
+  "original_config_sha256": "8681e5a8c48f25967f95a4b7d42b76531cbc4e8e00d013114c3e6efe93aee462",
+  "unchanged_solver_sha256": "d22fcc3a460eb75c6bac239e1d383f333811dcfe0db3d768109f56f913e853fc"
+}

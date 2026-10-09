@@ -1,0 +1,41 @@
+{
+  "passed": true,
+  "checked_utc": "2026-09-24T17:18:44.126585+00:00",
+  "main_pages": 8,
+  "mathematical_appendix_pages": 11,
+  "main_pdf_sha256": "55c29c4f6c0757eaa931731bf10129f361a0962605096d5f27cdf8581cc63e41",
+  "appendix_pdf_sha256": "7f2b440647699659525bd42989d7138848fdc03c95ceef626d8e3763c34fbf1e",
+  "production_source_sha256": "cabebb53081506b722f4f9232e49a5171585217b7712e4c7a2940149aa6a34eb",
+  "raw_csv_sha256": "1f2f28f70bc92c90b98a4d0ed1fcf8689e7e018fdd17230fc0798a919ad48057",
+  "report_claims_sha256": "16bbb9ed8ebea8284cd27c4e9f90f16e34a063dc1626350a87805b6e27410c22",
+  "main_tex_sha256": "046e5c7f4b9b97deaae27ce4d727a61461f45ebcd47d5cb4b2b840bce5d39656",
+  "appendix_tex_sha256": "9e05508a3d76867b0a31826f6e1ec676e5e5f0df8f152dc6338565833e877f6b",
+  "expected_claim_text_present": true,
+  "delivery_receipts": {
+    "passed": true,
+    "identity": {
+      "production_source_sha256": "cabebb53081506b722f4f9232e49a5171585217b7712e4c7a2940149aa6a34eb",
+      "raw_csv_sha256": "1f2f28f70bc92c90b98a4d0ed1fcf8689e7e018fdd17230fc0798a919ad48057",
+      "manifest_sha256": "8dfec1a33e07c96ef625b9b7150046f878d2875510493b9ec37ab143d0b45e58",
+      "claims_sha256": "16bbb9ed8ebea8284cd27c4e9f90f16e34a063dc1626350a87805b6e27410c22"
+    },
+    "checked_input_files": 177,
+    "pdfs": {
+      "output/pdf/Market_Making_Study.pdf": {
+        "sha256": "55c29c4f6c0757eaa931731bf10129f361a0962605096d5f27cdf8581cc63e41",
+        "pages": 8
+      },
+      "output/pdf/Market_Making_Appendix.pdf": {
+        "sha256": "7f2b440647699659525bd42989d7138848fdc03c95ceef626d8e3763c34fbf1e",
+        "pages": 11
+      }
+    },
+    "build_receipt_sha256": "1a1a5793d3c5ead08300754d0d71a082b8817a5776509ba9a488ea1339963195",
+    "scope": "Current source/data/claim/input/PDF receipts agree; no visual or external sign-off inferred."
+  },
+  "visual_review": {
+    "record": "outputs/verification/pdf_visual_review.json",
+    "sha256": "ee70a3a6870b4ddfd9634424f5d98016bfbd623407041f00d172e8e8a2458b45",
+    "scope": "Recorded manual primary-agent inspection; not an external reviewer sign-off"
+  }
+}

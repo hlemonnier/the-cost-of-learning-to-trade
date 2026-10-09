@@ -1,0 +1,402 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=19mm]{geometry}
+\usepackage{amsmath,amssymb,booktabs,array,graphicx,xcolor,hyperref,fancyhdr}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\hypersetup{colorlinks=true,urlcolor=blue,linkcolor=blue}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt}
+\emergencystretch=1em
+\setlength{\tabcolsep}{4.5pt}
+\pagestyle{fancy}\fancyhf{}
+\fancyhead[L]{\small The Cost of Learning to Trade}
+\fancyhead[R]{\small Hidden execution regimes}
+\fancyfoot[L]{\small Hugo Lemonnier}
+\fancyfoot[R]{\small\thepage/8}
+\newcommand{\E}{\mathbb E}
+\newcommand{\KL}{\operatorname{KL}}
+\input{generated/key_numbers.tex}
+\begin{document}
+\thispagestyle{empty}
+{\Huge\bfseries The Cost of Learning to Trade}\par
+\vspace{4pt}
+{\Large Market making under hidden execution regimes}\par
+\vspace{8pt}
+Hugo Lemonnier \hfill 24 September 2026\par
+\textit{A reproducible study of selected feedback and sequential market making}
+
+\section*{1. Question, result and scope}
+Does planning for future regime information improve trading beyond filtering
+available feedback? This study compares those decisions in the specified synthetic
+market, using public returns and selected fills. Pilots almost identify the
+parameter pair: the practical evidence concerns hidden-regime learning with
+nearly known parameters, not persistent model identification or Bayes-adaptive
+optimality.
+
+Three conclusions follow. First, at fixed dependence magnitude, the selected fill
+vector has the same distribution in either sign regime. The informative object is the joint return/fill
+observation, including non-fills. Second, in a precisely defined stationary
+reduction, learning to identify the environment with at most 5\% error requires
+at least 15.82 submitted sides in expectation and at least 0.4846 units of
+expected regret in the bad environment (integral constants evaluated numerically).
+Third, active information has a positive, directly isolated value in the checked
+control problem, but its practical economic advantage must be judged against a
+baseline that also filters and learns from feedback.
+
+\input{generated/executive_results.tex}
+
+\textbf{What is established.} The finite-sample lower bound handles adaptive
+identification in the reset experiment; it is not a switching-controller regret bound.
+The restricted control is numerically
+validated, with separate integration and belief refinements and independent
+rollouts. The practical policy is a declared approximation evaluated on independent
+pilots and test episodes. Neither synthetic PnL nor numerical convergence is a
+claim of executable real-market alpha or certified optimality.
+
+\subsection*{The specified experiment}
+An episode has 300 decisions, inventory $q\in\{-5,\ldots,5\}$, public signal
+$x\in\{-1,0,1\}$ and eleven pre-mask actions: nine passive quote pairs, a market
+buy and a market sell. Each passive side is absent, shallow or deep. Actions must
+be safe for every fill subset. With independent standard normals,
+\begin{align*}
+R&=.03x+.30Z,& \rho&=H\theta,\\
+p_{s,k}(x)&=(1+e^{.3+.7k+.2sx})^{-1},&
+F_{s,k}&=\mathbf1\{\rho sZ+\sqrt{1-\rho^2}U_s\le\Phi^{-1}(p_{s,k}(x))\}.
+\end{align*}
+$H\in\{-1,+1\}$ switches with probability $\kappa$; the same side noise is used
+across potential depths. Only selected outcomes enter the learner. The grid is
+$\theta\in\{.15,.35,.65\}$ and $\kappa\in\{.002,.02,.10\}$. Half-spread and
+depth step are .025; passive and market fees are .001 and .002 per unit.
+
+\newpage
+\section*{2. Observation law and the economic cost of evidence}
+After acting, $z=(R-.03x)/.30$ is observable. For a submitted side, let
+$a_{s,k}=\Phi^{-1}(p_{s,k}(x))$ and
+$c_{h,s}=\Phi((a_{s,k}-h\theta sz)/\sqrt{1-\theta^2})$. At prior
+$b=\Pr(H=+1\mid\mathcal I)$ the conditional fill likelihood is
+\[
+\ell_h=\prod_{s\in S(A)}c_{h,s}^{f_s}(1-c_{h,s})^{1-f_s},\quad
+B=\frac{b\ell_+}{(1-b)\ell_-+b\ell_+},\quad
+b'=\kappa+(1-2\kappa)B.
+\]
+The regime mixture is outside the product. Missing sides contribute nothing;
+submitted non-fills contribute evidence. Empty products give $B=b$, followed by
+prediction toward one half. Stable log-CDFs and log-sum-exp avoid tail underflow.
+Substituting $z\mapsto-z$ in the fill-vector density proves its invariance to
+$H\mapsto-H$. At fixed $\theta$, returns or fills alone do not identify $H$.
+Two-side fills can nevertheless reveal unknown dependence magnitude.
+
+\subsection*{A reduction with an explicit learning cost}
+Fix $x=0$, $\theta=.35$, an unknown permanent $H=+1$ (bad) or $H=-1$ (good),
+fresh innovations each opportunity and a reset to zero cash/inventory. Keep all
+eleven actions and liquidate after each one-period opportunity. Cash/position
+histories and current returns remain observable; no regime labels or external
+training evidence are supplied. The signal chain, switching and inventory
+carry are explicitly removed. The pre-decision risk penalty is therefore zero.
+
+For a quote depth $k$, write $v_k=.025+.025k-.001$ and $p_k=g(-.3-.7k)$.
+Its expected spread less adverse selection in the bad environment is
+$v_kp_k-.105\phi(\Phi^{-1}p_k)$. Every submitted side costs at least
+\[
+c_0=\min_k\{.105\phi(\Phi^{-1}p_k)-v_kp_k\}=.02147136
+\]
+before nonnegative liquidation cost. When both sides fill, their contemporary
+selection and liquidation contributions cancel; the two-sided action still has
+negative expected selection across all its outcomes. Abstention is
+optimal in the bad environment; profitable quoting is available in the good one.
+The attainable comparator repeats the environment-specific best one-period action.
+
+Let $I_k$ be the KL divergence of the \emph{observed return and selected Bernoulli
+fill} between the two worlds. Conditional on the observed $z$, side divergences
+add; $I_0=.1674822$, $I_1=.1483586$. Let $N_k$ count submitted sides at depth $k$,
+including non-fills, $N=N_0+N_1\le2n$, and $D_a=\sum_{s\in S(a)}I_{k_s}$.
+For any adaptive policy, the action kernels
+cancel at the same public history, giving
+\[
+\KL(P_0^\pi\Vert P_1^\pi)=\E_0\sum_tD_{A_t}
+=I_0\E_0N_0+I_1\E_0N_1.
+\]
+An identification error at most $\delta$ in each world implies KL at least
+$\beta_\delta=(1-2\delta)\log((1-\delta)/\delta)$ by binary data processing [1].
+Thus $\E_0N\ge\beta_\delta/\max_k I_k$. Defining
+$\eta=\min_{a:D_a>0}[-r_0(a)]/D_a$, every informative action also satisfies
+$-r_0(a)\ge\eta D_a$, and uninformative market actions cost money. Expected
+regret against optimal abstention is $\mathcal R_0^\pi(n)=-\E_0\sum_t r_0(A_t)$; hence
+\[
+\boxed{\mathcal R_0^\pi(n)\ge\eta\beta_\delta.}
+\]
+At $\delta=.05$, $\eta=.182881$ and the bound is .484634. A completely explicit
+Gaussian data-processing bound gives the weaker .203791. These are expected
+costs in the named reduction, not losses on every trade, a switching-model regret
+rate, or a claim that eight opportunities (the necessary integer lower bound)
+suffice. The appendix gives the proof, all-action table and an identification experiment.
+
+\newpage
+\section*{3. Control, accounting and a verified numerical reference}
+With $W=C+qP$, signed executions $\Delta q$ and immediate cash gain relative to
+midpoint $G$, the exact marked-wealth identity is
+\[
+W_{t+1}-W_t=G_t+q_{t+1}R_t,\qquad
+\Pi_T=\sum_{t<T}(G_t+q_{t+1}R_t)-.027|q_T|.
+\]
+The objective subtracts $.002\sum q_t^2$ using \emph{pre-decision} inventory.
+This utility penalty never debits cash. Both-side fees and terminal liquidation
+are charged once; abstention preserves existing exposure.
+
+Translation invariance and the absence of cash constraints make $(m,q,x,b)$ a
+sufficient known-parameter control state. For $m$ remaining decisions,
+\[
+V_0=-.027|q|,\qquad
+V_m=\max_{a\in\mathcal A(q)}\E\{G+q'R-.002q^2+
+\textstyle\sum_{x'}K_{xx'}V_{m-1}(q',x',b')\}.
+\]
+Expected immediate rewards use exact Gaussian moments; only continuation uses
+Gauss--Hermite quadrature and linear belief interpolation. Sparse transition
+operators keep the finite-horizon calculation tractable.
+
+\textbf{Matched no-information-value planning.} Replace the feedback posterior
+$B$ by $b$ inside continuation, retaining the same economics and inventory
+transitions. Both runtime policies still filter actual feedback before their next
+decision. The baseline's internal non-learning planning value is therefore not
+its realised filtered-policy value. At fixed magnitude, fill-vector sign invariance
+implies $\E[B\mid F]=b$; convex continuation makes the same-continuation value of
+feedback nonnegative in the exact known-parameter problem.
+
+\textbf{Reduced reference.} For $T=30$, $|q|\le2$, $(\theta,\kappa)=(.35,.02)$,
+belief and quadrature refinements were tested separately under fixed tolerances.
+At 321 beliefs and 161 nodes, initial active value is .9895588. The final belief
+refinement changes it by $9.60\times10^{-5}$ and the final integration refinement
+by $5.12\times10^{-6}$; neither changes a robust action choice. These are
+stability diagnostics, not certified continuous-state error bounds.
+
+\input{generated/reference_table.tex}
+\textit{Rollout values use 20,000 paired independent episodes; parentheses denote
+Monte Carlo standard errors. The full-information reference sees current $H$ only.}
+
+At $(m,q,x,b)=(30,0,0,.75)$, the active policy selects two deep quotes with expected
+immediate reward $-.0082932$. Suppressing only the current feedback's valuation
+while holding the same active continuation selects abstention. The active action's
+total Q advantage is .0034968. This controlled state illustrates a real information
+sacrifice; it was selected after solving and is not a separate statistical test.
+
+\newpage
+\section*{4. Finite-pilot learning and independent evaluation}
+Each of the nine nominal environments supplies ten independent pilot datasets,
+each containing exactly 100 episodes of 300 decisions. The behaviour policy is
+uniform over \emph{currently admissible} actions, with probabilities logged. The
+learner receives public states, actions and selected outcomes; simulator labels,
+counterfactual fills, seeds and environment identifiers remain in the evaluator.
+
+\textbf{Inference.} The declared prior is uniform on the public nine-point parameter
+grid. For each candidate $j$, exact HMM filtering accumulates the likelihood of
+the permitted pilot observations. Let $w_j$ be its posterior weight and $b_j$ its
+conditional regime belief. At each new observation, update $w_j$ by its marginal
+likelihood, update $b_j$ by Bayes' rule, then predict with candidate $\kappa_j$.
+All computations retain log model weights. Every final episode starts from a fresh
+copy of the same pilot posterior and $b_j=1/2$. Learning is allowed within that
+episode and never accumulates across evaluation episodes.
+
+\textbf{Practical controller.} Precompute known-model tables for every publicly
+declared candidate and choose
+\[
+\widehat a=\arg\max_{a\in\mathcal A(q)}\sum_{j=1}^9w_jQ^{\rm active}_{j,m}(q,x,b_j,a).
+\]
+This posterior-weighted approximation values future regime feedback inside each
+model. Each model's continuation optimizes its own future decisions, implicitly
+allowing future model-specific knowledge. This optimistic relaxation neither solves
+joint Bayes-adaptive control nor values future parameter identification correctly.
+Replanning and parameter updates remain available. The matched ablation replaces
+only $Q^{\rm active}$ by $Q^{\rm noinfo}$, keeping estimator, data, risk, actions and
+numerical resolution identical. Grid-specific tables are public-prior computation,
+not additional samples from the hidden target environment.
+
+The other controls are abstention; an inventory-planning taker with market orders
+only; a planner assuming independent return/fills ($\theta=0$); a filtered myopic
+controller using a one-decision objective including liquidation; and the privileged
+known-parameter, current-regime reference. The identification map below distinguishes
+matched treatments from compound controller differences.
+
+\textbf{Frozen numerical settings.} Practical tables use 641 beliefs and 161
+quadrature nodes; public candidate $(.65,.002)$ uses 1,281 beliefs for both matched
+modes. All eighteen families pass refinement at every remaining horizon; earlier
+failures remain saved. Float64 decisions use the lowest admissible action ID within
+$10^{-12}$ absolute score units of the maximum, in Bellman values and execution.
+
+\textbf{Replication and inference.} Each pilot is followed by 100 fresh episodes
+per policy in each of three variants. This yields 1,000 episodes per parameter pair,
+policy and variant, or 189,000 policy episodes on 27,000 exogenous trajectories.
+Paired exogenous streams are
+shared across policies, never as policy input. Pilot, debug and final streams are
+separate. The corrective replay retains the original seeds with the numerical
+contract fixed before rerunning; it adds no independent statistical sample.
+
+Uncertainty uses paired episode differences aggregated within independently fitted
+pilots. Student intervals across pilot means retain training-sample variation;
+within-pilot Monte Carlo variance is reported separately. The uniform nine-environment
+mixture uses stratified variance and Welch--Satterthwaite degrees of freedom. These
+are empirical approximations with only ten pilots per environment. One primary
+comparison was fixed; supplementary contrasts also have family-adjusted intervals.
+
+\newpage
+\section*{5. Nominal performance and attribution}
+\input{generated/nominal_narrative.tex}
+\input{generated/nominal_table.tex}
+\textit{Penalised objective per 300-decision episode. The last column is the paired
+active-minus-noinfo mean and Bonferroni-adjusted interval for the 162-comparison
+family at nominal 95\% coverage under the Student approximation. No configuration is selected as the winner.}
+
+\input{generated/mechanism_table.tex}
+
+The exact ledger separates passive spread capture, execution fees, market spread,
+terminal liquidation, directional exposure and contemporaneous passive selection.
+Directional exposure includes inherited-inventory returns and predictable
+returns on new executions. Passive selection is
+$\sum\Delta q_t^{P}(R_t-.03X_t)$; predictable market orders have a separately
+reported innovation term. The inventory penalty is additional utility cost.
+\input{generated/attribution_narrative.tex}
+
+\newpage
+\section*{6. Misspecification, observable diagnostics and failure}
+Both stress experiments keep the nominally fitted starting state and all declared
+online updates. Stress observations do not refit the initial posterior or tune or
+select policies; they enter the permitted within-episode updates.
+State dependence uses $H\theta(1+.25X)$; fixed durations use 50-period spells
+with a hidden uniform initial phase. Nominal mean spell length is $1/\kappa$:
+at $\kappa=.002$, 500 becomes 50. That case changes duration shape, mean switching
+rate and opportunities together. Reported $\kappa$ labels training. The retained
+return and fill marginals are checked in all nine configurations and three variants.
+
+\input{generated/stress_narrative.tex}
+\begin{center}
+\includegraphics[width=\linewidth]{../outputs/figures/robustness.png}
+\end{center}
+\textit{Left: uniform environment-mixture objective under the two separate stresses.
+Right: the active learner's public execution/return residual by signal (descriptive,
+pooled over the fixed grid); zero is its model prediction.}
+
+An online residual uses only selected outcomes and observed returns:
+\[
+e_t=\sum_{s\in S(A_t)}sf_s z_t+
+\E[\rho_t\mid\mathcal I_t]\sum_{s\in S(A_t)}\phi(a_{s,k_s}(X_t)).
+\]
+Correct prediction makes the residual conditionally mean-zero. Log scores depend
+on action mix and entropy; label-based scores are retrospective. These diagnostics
+have no calibrated alarm rate or detection power. No quotes means no new execution
+evidence.
+
+\input{generated/monitoring_narrative.tex}
+\input{generated/failure_narrative.tex}
+The decline is descriptive, not an isolated cost of duration shape or filtering
+inefficiency. The privileged reference retains nominal dynamics; its stress curves
+are not stress-environment oracle optima.
+
+\newpage
+\section*{7. Deployment decision and limits}
+Before final evaluation, the candidate was fixed as active, the baseline as matched
+noinfo, and the population as a uniform mixture of the nine nominal environments
+with fresh independent 100-episode pilots. The economic threshold is .05 additional
+penalised-objective units per episode, approximately one market round-trip spread
+and fee cost (.054). Acceptance requires the one-sided 95\% lower
+bound for that paired advantage to exceed .05 and the corresponding lower bound
+for active net PnL to be positive. This is a synthetic policy-selection assessment.
+
+\input{generated/deployment_narrative.tex}
+
+For other independent evaluations of this same frozen design, an advantage
+upper bound below .05 supports retaining the baseline. Bounds spanning the
+economic threshold leave the benefit unresolved; failure to establish positive
+net PnL also prevents acceptance. The operational fallback is the baseline in
+either non-acceptance case. Only fresh, prespecified evidence can resolve that
+uncertainty; repeated inspection of the same outcomes cannot.
+
+The primary candidate was not selected from whichever policy or environment won
+after inspection. Per-environment and additional policy differences are labelled
+supplementary; their saved intervals additionally adjust for the full family of
+162 contrasts. Repeated comparisons do not become independent experiments merely
+because many ticks are available. Episode outcomes remain correlated through a
+common fitted pilot, which is why uncertainty is computed at that level.
+
+\subsection*{Material limits}
+\begin{enumerate}
+\item The finite-grid prior gives the correct nominal support by construction.
+The method can be strongly confident in a misspecified family; exact filtering
+within that family does not make it correct under stress. All 90 pilots put at
+least \PilotTruthMin{} posterior mass on the true pair (evaluator-only diagnostic).
+This study therefore gives limited evidence about persistent parameter uncertainty.
+\item Posterior-weighted known-model planning is not joint Bayes-adaptive control.
+Its matched ablation isolates the specified regime-information planning component,
+not every possible exploration mechanism or parameter-learning advantage.
+\item Numerical refinement is empirical. The worst practical family required a
+much finer belief grid; stability of action choices and value drift are reported
+separately. No rigorous continuous-belief approximation bound is claimed.
+\item Ten independent pilots per environment support an empirical uncertainty
+assessment, with limited precision for rare training failures and tails. Gaussian
+innovations make rewards unbounded. No bounded-reward concentration theorem or
+protection against arbitrary future regime change is invoked.
+\item The environment deliberately excludes queues, latency, impact, partial fills
+and intra-period cancellation. There is no exchange calibration, real-market data,
+live order placement or evidence of executable commercial profitability.
+\end{enumerate}
+
+The reset experiment proves an identification cost. The switching study evaluates
+future regime-information planning against a filtering baseline after near-identification
+of the parameter pair. It establishes neither joint Bayes-adaptive optimality nor
+an isolated causal explanation of stress losses.
+
+\newpage
+\section*{8. Reproduction, verification and attribution}
+The repository contains the model, inference/control code, evaluator, verification
+programs and saved data. The manifest binds source, specification, seeds and
+numerical builds. Install the pinned dependencies using \texttt{REPRODUCING.md};
+then run the small check:
+
+\begin{verbatim}
+PYTHONPATH=src .venv/bin/python verification/verify_pipeline.py
+\end{verbatim}
+
+This checks identical episode tables and table fingerprints from two processes
+with separate cold caches. Full cold-run commands and resource limits are in the
+guide. Recorded source identities are retained; cache integrity and
+incomplete-data/configuration rejection are checked.
+Optional multi-asset, Hawkes, deep-RL and exchange-connectivity extensions
+remain unimplemented.
+
+\input{generated/runtime_narrative.tex}
+
+\begin{itemize}
+\item Environment: exhaustive safe actions and signed executions, fees/liquidation,
+public feedback, depth consistency, uniform behaviour and 3.24 million validation periods.
+\item Inference: hidden-path enumeration, extreme likelihoods, independent resets
+and evaluator calibration.
+\item Theory: complete derivation, independent quadrature and raw-noise ledgers;
+integral evaluations are not certificates.
+\item Control: scalar integration, symmetry, convexity, mass, information dominance,
+separate refinements, serialization and independent rollouts.
+\item Integration: frozen source, separate streams, pilot/posterior fingerprints,
+complete counts, ledger agreement and data-generated report tables.
+\end{itemize}
+
+\textbf{Methods and tools.} Gaussian conditioning, Bayesian HMM filtering, Bellman
+dynamic programming, KL chain rules, binary testing and likelihood-ratio methods
+are established tools. The reduction, cost argument and benchmark calculations
+are task-specific derivations; no general methodological novelty is claimed.
+Python, NumPy, SciPy, pandas, Matplotlib, Pandoc and LaTeX were used. Codex and
+delegated AI research/coding agents assisted with derivation, implementation,
+review and writing. Author verification and the ability to defend every claim
+remain essential to the interpretation of these results.
+
+\subsection*{Selected references}
+{\small
+[1] Kaufmann, E., Capp\'e, O. and Garivier, A. (2016). On the Complexity of
+Best-Arm Identification in Multi-Armed Bandit Models. \emph{JMLR} 17(1), 1--42,
+Lemma 1. \url{https://jmlr.org/papers/v17/kaufman16a.html}
+
+[2] Zabaljauregui, D. and Campi, L. (2020). Optimal market making under partial information
+with general intensities. \url{https://arxiv.org/abs/1902.01157}.
+Context for partial-information market making; its model is not imported here.
+
+[3] NumPy documentation, parallel random number generation.
+\url{https://numpy.org/doc/stable/reference/random/parallel.html}.
+Independent namespaced SeedSequence streams are recorded in the manifest.
+}
+\end{document}

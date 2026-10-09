@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "explanatory_candidates": {
+    "checked": true,
+    "artifact_sha256": "4c84eb53f8e9e9717c03f875161f64eba2b904a7391d7f0714af8a371dcbd71e",
+    "public_decisions_replayed": 60000,
+    "candidate_states_checked": 137430,
+    "max_public_posterior_error": 2.248201624865942e-15,
+    "scope": "Every reached pre-decision belief and inventory independently replayed from saved selected public feedback"
+  }
+}

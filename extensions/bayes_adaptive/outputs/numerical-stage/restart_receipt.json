@@ -1,0 +1,18 @@
+{
+  "command": [
+    "/recorded-environment Learning/.venv/bin/python",
+    "/recorded-environment Learning/extensions/bayes_adaptive/refine_numerical.py",
+    "--output",
+    "/recorded-environment Learning/extensions/bayes_adaptive/outputs/numerical-stage",
+    "--cache",
+    "/recorded-environment Learning/extensions/bayes_adaptive/cache/v2"
+  ],
+  "completed_utc": "2026-09-25T01:03:18.130177+00:00",
+  "exit_code": -2,
+  "launch_mode": "Supervisor detached with start_new_session=True, stdin /dev/null and file stdout/stderr",
+  "process_running": false,
+  "solver_sha256": "d22fcc3a460eb75c6bac239e1d383f333811dcfe0db3d768109f56f913e853fc",
+  "started_utc": "2026-09-25T00:48:17.282281+00:00",
+  "wall_seconds": 900.8484260409896,
+  "worker_pid": 92741
+}

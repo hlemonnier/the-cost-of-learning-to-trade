@@ -1,0 +1,1029 @@
+{
+  "rows": 720,
+  "paired_market_trajectories": 48,
+  "independent_pilot_replicates": 4,
+  "primary": {
+    "budget": 0,
+    "policy": "bayes",
+    "baseline": "weighted_q",
+    "metric": "objective",
+    "mean": -0.11503888186248715,
+    "se": 0.08124081348842349,
+    "df": 1.1514377816717398,
+    "low": -0.8758047969110454,
+    "high": 0.6457270331860712,
+    "simultaneous_low": -12.189389236004207,
+    "simultaneous_high": 11.959311472279232,
+    "stratum_means": [
+      -0.11265055690463335,
+      -0.11742720682034095
+    ],
+    "independent_replicates_per_model": 2,
+    "zero_empirical_variance": false
+  },
+  "economic_threshold": 0.002,
+  "primary_empirical_lower_exceeds_threshold": false,
+  "contrasts": [
+    {
+      "budget": 0,
+      "policy": "bayes",
+      "baseline": "weighted_q",
+      "metric": "objective",
+      "mean": -0.11503888186248715,
+      "se": 0.08124081348842349,
+      "df": 1.1514377816717398,
+      "low": -0.8758047969110454,
+      "high": 0.6457270331860712,
+      "simultaneous_low": -12.189389236004207,
+      "simultaneous_high": 11.959311472279232,
+      "stratum_means": [
+        -0.11265055690463335,
+        -0.11742720682034095
+      ],
+      "independent_replicates_per_model": 2,
+      "zero_empirical_variance": false
+    },
+    {
+      "budget": 0,
+      "policy": "bayes",
+      "baseline": "no_feedback",
+      "metric": "objective",
+      "mean": 0.008096589209528049,
+      "se": 0.23915802417167167,
+      "df": 1.0792325399531986,
+      "low": -2.551035641937294,
+      "high": 2.56722882035635,
+      "simultaneous_low": -48.78377274696926,
+      "simultaneous_high": 48.79996592538832,
+      "stratum_means": [
+        -0.009238388806782072,
+        0.02543156722583817
+      ],
+      "independent_replicates_per_model": 2,
+      "zero_empirical_variance": false
+    },
+    {
+      "budget": 0,
+      "policy": "bayes",
+      "baseline": "frozen_model",
+      "metric": "objective",
+      "mean": 0.03141689931853925,
+      "se": 0.027731275607496518,
+      "df": 1.9905755714256954,
+      "low": -0.08844414014393827,
+      "high": 0.15127793878101675,
+      "simultaneous_low": -0.5822560537006676,
+      "simultaneous_high": 0.6450898523377462,
+      "stratum_means": [
+        0.11964667976551063,
+        -0.056812881128432136
+      ],
+      "independent_replicates_per_model": 2,
+      "zero_empirical_variance": false
+    },
+    {
+      "budget": 0,
+      "policy": "known_parameter",
+      "baseline": "bayes",
+      "metric": "objective",
+      "mean": 0.01485791509506268,
+      "se": 0.31960693025766307,
+      "df": 1.9401115168058716,
+      "low": -1.4017902175786345,
+      "high": 1.43150604776876,
+      "simultaneous_low": -7.5261099502276885,
+      "simultaneous_high": 7.555825780417814,
+      "stratum_means": [
+        -0.007510340864105874,
+        0.03722617105423123
+      ],
+      "independent_replicates_per_model": 2,
+      "zero_empirical_variance": false
+    },
+    {
+      "budget": 0,
+      "policy": "bayes",
+      "baseline": "weighted_q",
+      "metric": "pnl",
+      "mean": -0.10853888186248713,
+      "se": 0.08090586362295718,
+      "df": 1.1656125404675282,
+      "low": -0.8482138462095546,
+      "high": 0.6311360824845803,
+      "simultaneous_low": -11.463856075963978,
+      "simultaneous_high": 11.246778312239005,
+      "stratum_means": [
+        -0.10481722357129998,
+        -0.11226054015367427
+      ],
+      "independent_replicates_per_model": 2,
+      "zero_empirical_variance": false
+    },
+    {
+      "budget": 0,
+      "policy": "bayes",
+      "baseline": "no_feedback",
+      "metric": "pnl",
+      "mean": -0.00032007745713862057,
+      "se": 0.24033539655813774,
+      "df": 1.0819511718103179,
+      "low": -2.5582256931862055,
+      "high": 2.557585538271928,
+      "simultaneous_low": -48.41138222894568,
+      "simultaneous_high": 48.410742074031404,
+      "stratum_means": [
+        -0.014071722140115414,
+        0.013431567225838159
+      ],
+      "independent_replicates_per_model": 2,
+      "zero_empirical_variance": false
+    },
+    {
+      "budget": 0,
+      "policy": "bayes",
+      "baseline": "frozen_model",
+      "metric": "pnl",
+      "mean": 0.032666899318539236,
+      "se": 0.027320497738156094,
+      "df": 1.9561685362177648,
+      "low": -0.08744421985715134,
+      "high": 0.1527780184942298,
+      "simultaneous_low": -0.5986764314533524,
+      "simultaneous_high": 0.6640102300904309,
+      "stratum_means": [
+        0.12206334643217728,
+        -0.05672954779509882
+      ],
+      "independent_replicates_per_model": 2,
+      "zero_empirical_variance": false
+    },
+    {
+      "budget": 0,
+      "policy": "known_parameter",
+      "baseline": "bayes",
+      "metric": "pnl",
+      "mean": 0.008191248428395956,
+      "se": 0.32094148354226765,
+      "df": 1.9413055600793143,
+      "low": -1.413499835879483,
+      "high": 1.4298823327362749,
+      "simultaneous_low": -7.552460261153404,
+      "simultaneous_high": 7.568842758010196,
+      "stratum_means": [
+        -0.012677007530772583,
+        0.029059504387564494
+      ],
+      "independent_replicates_per_model": 2,
+      "zero_empirical_variance": false
+    },
+    {
+      "budget": 1,
+      "policy": "bayes",
+      "baseline": "weighted_q",
+      "metric": "objective",
+      "mean": -0.10263017830262822,
+      "se": 0.16013714372094429,
+      "df": 1.1785175767596334,
+      "low": -1.535869332999418,
+      "high": 1.3306089763941615,
+      "simultaneous_low": -21.46386074455745,
+      "simultaneous_high": 21.258600387952193,
+      "stratum_means": [
+        -0.032119166932741354,
+        -0.17314118967251507
+      ],
+      "independent_replicates_per_model": 2,
+      "zero_empirical_variance": false
+    },
+    {
+      "budget": 1,
+      "policy": "bayes",
+      "baseline": "no_feedback",
+      "metric": "objective",
+      "mean": -0.05827920908370253,
+      "se": 0.19708609171438882,
+      "df": 1.2510138828550093,
+      "low": -1.6381999228986996,
+      "high": 1.5216415047312946,
+      "simultaneous_low": -20.2323515335044,
+      "simultaneous_high": 20.11579311533699,
+      "stratum_means": [
+        0.038193352113166136,
+        -0.1547517702805712
+      ],
+      "independent_replicates_per_model": 2,
+      "zero_empirical_variance": false
+    },
+    {
+      "budget": 1,
+      "policy": "bayes",
+      "baseline": "frozen_model",
+      "metric": "objective",
+      "mean": -0.03342303462480452,
+      "se": 0.01679392503829231,
+      "df": 1.192490705249674,
+      "low": -0.18039598521625572,
+      "high": 0.11354991596664667,
+      "simultaneous_low": -2.1564295558950595,
+      "simultaneous_high": 2.089583486645451,
+      "stratum_means": [
+        0.0017251176559903618,
+        -0.06857118690559941
+      ],
+      "independent_replicates_per_model": 2,
+      "zero_empirical_variance": false
+    },
+    {
+      "budget": 1,
+      "policy": "known_parameter",
+      "baseline": "bayes",
+      "metric": "objective",
+      "mean": 0.05036648486181204,
+      "se": 0.2819372294269938,
+      "df": 1.8314231499983018,
+      "low": -1.2762559619877325,
+      "high": 1.3769889317113564,
+      "simultaneous_low": -7.690407017994412,
+      "simultaneous_high": 7.7911399877180365,
+      "stratum_means": [
+        -0.06689500725244218,
+        0.16762797697606627
+      ],
+      "independent_replicates_per_model": 2,
+      "zero_empirical_variance": false
+    },
+    {
+      "budget": 1,
+      "policy": "bayes",
+      "baseline": "weighted_q",
+      "metric": "pnl",
+      "mean": -0.09879684496929488,
+      "se": 0.1596508113469928,
+      "df": 1.169052562182517,
+      "low": -1.5500652050718708,
+      "high": 1.3524715151332811,
+      "simultaneous_low": -22.201845451940166,
+      "simultaneous_high": 22.004251762001573,
+      "stratum_means": [
+        -0.028702500266074692,
+        -0.16889118967251504
+      ],
+      "independent_replicates_per_model": 2,
+      "zero_empirical_variance": false
+    },
+    {
+      "budget": 1,
+      "policy": "bayes",
+      "baseline": "no_feedback",
+      "metric": "pnl",
+      "mean": -0.06519587575036924,
+      "se": 0.20004561082552288,
+      "df": 1.2433178518793144,
+      "low": -1.6865764606694704,
+      "high": 1.556184709168732,
+      "simultaneous_low": -21.092837440630277,
+      "simultaneous_high": 20.962445689129538,
+      "stratum_means": [
+        0.03161001877983274,
+        -0.16200177028057122
+      ],
+      "independent_replicates_per_model": 2,
+      "zero_empirical_variance": false
+    },
+    {
+      "budget": 1,
+      "policy": "bayes",
+      "baseline": "frozen_model",
+      "metric": "pnl",
+      "mean": -0.03333970129147118,
+      "se": 0.017317872276196657,
+      "df": 1.2250029936557383,
+      "low": -0.17751642757506642,
+      "high": 0.11083702499212406,
+      "simultaneous_low": -1.9751567049791336,
+      "simultaneous_high": 1.9084773023961914,
+      "stratum_means": [
+        0.004475117655990355,
+        -0.07115452023893272
+      ],
+      "independent_replicates_per_model": 2,
+      "zero_empirical_variance": false
+    },
+    {
+      "budget": 1,
+      "policy": "known_parameter",
+      "baseline": "bayes",
+      "metric": "pnl",
+      "mean": 0.04578315152847873,
+      "se": 0.281229248325018,
+      "df": 1.8363976958861832,
+      "low": -1.2736570771366662,
+      "high": 1.3652233801936238,
+      "simultaneous_low": -7.6188244021104214,
+      "simultaneous_high": 7.710390705167379,
+      "stratum_means": [
+        -0.06972834058577548,
+        0.16129464364273294
+      ],
+      "independent_replicates_per_model": 2,
+      "zero_empirical_variance": false
+    },
+    {
+      "budget": 5,
+      "policy": "bayes",
+      "baseline": "weighted_q",
+      "metric": "objective",
+      "mean": -0.13250480904255085,
+      "se": 0.15825107961780746,
+      "df": 1.0014518983320417,
+      "low": -2.136399564947055,
+      "high": 1.8713899468619533,
+      "simultaneous_low": -48.104245067678015,
+      "simultaneous_high": 47.83923544959291,
+      "stratum_means": [
+        0.05137772136194922,
+        -0.31638733944705094
+      ],
+      "independent_replicates_per_model": 2,
+      "zero_empirical_variance": false
+    },
+    {
+      "budget": 5,
+      "policy": "bayes",
+      "baseline": "no_feedback",
+      "metric": "objective",
+      "mean": -0.14494186633267042,
+      "se": 0.14938852279823084,
+      "df": 1.9946924324903115,
+      "low": -0.7893505558059513,
+      "high": 0.49946682314061036,
+      "simultaneous_low": -3.43408183366425,
+      "simultaneous_high": 3.1441981009989095,
+      "stratum_means": [
+        -0.04588093316262348,
+        -0.24400279950271733
+      ],
+      "independent_replicates_per_model": 2,
+      "zero_empirical_variance": false
+    },
+    {
+      "budget": 5,
+      "policy": "bayes",
+      "baseline": "frozen_model",
+      "metric": "objective",
+      "mean": -0.048051540679757906,
+      "se": 0.035045177765677726,
+      "df": 1.1942590923040182,
+      "low": -0.3538950109705984,
+      "high": 0.25779192961108255,
+      "simultaneous_low": -4.448692796693706,
+      "simultaneous_high": 4.35258971533419,
+      "stratum_means": [
+        -0.029215650134057705,
+        -0.06688743122545811
+      ],
+      "independent_replicates_per_model": 2,
+      "zero_empirical_variance": false
+    },
+    {
+      "budget": 5,
+      "policy": "known_parameter",
+      "baseline": "bayes",
+      "metric": "objective",
+      "mean": 0.2227107479292506,
+      "se": 0.31204774674686037,
+      "df": 1.53251374085365,
+      "low": -1.599992287945443,
+      "high": 2.0454137838039443,
+      "simultaneous_low": -14.50324303900337,
+      "simultaneous_high": 14.948664534861871,
+      "stratum_means": [
+        0.15014752877624107,
+        0.2952739670822601
+      ],
+      "independent_replicates_per_model": 2,
+      "zero_empirical_variance": false
+    },
+    {
+      "budget": 5,
+      "policy": "bayes",
+      "baseline": "weighted_q",
+      "metric": "pnl",
+      "mean": -0.1302131423758842,
+      "se": 0.15817065426058857,
+      "df": 1.0004717563387033,
+      "low": -2.1377238106064103,
+      "high": 1.8772975258546418,
+      "simultaneous_low": -48.33758765867501,
+      "simultaneous_high": 48.07716137392324,
+      "stratum_means": [
+        0.0558777213619492,
+        -0.31630400611371756
+      ],
+      "independent_replicates_per_model": 2,
+      "zero_empirical_variance": false
+    },
+    {
+      "budget": 5,
+      "policy": "bayes",
+      "baseline": "no_feedback",
+      "metric": "pnl",
+      "mean": -0.15302519966600378,
+      "se": 0.1518811809014704,
+      "df": 1.999095867308946,
+      "low": -0.8068004871572838,
+      "high": 0.5007500878252762,
+      "simultaneous_low": -3.4790465572551503,
+      "simultaneous_high": 3.172996157923143,
+      "stratum_means": [
+        -0.05279759982929022,
+        -0.25325279950271734
+      ],
+      "independent_replicates_per_model": 2,
+      "zero_empirical_variance": false
+    },
+    {
+      "budget": 5,
+      "policy": "bayes",
+      "baseline": "frozen_model",
+      "metric": "pnl",
+      "mean": -0.04805154067975792,
+      "se": 0.03487055935565166,
+      "df": 1.2646086878581602,
+      "low": -0.3223120698920612,
+      "high": 0.22620898853254534,
+      "simultaneous_low": -3.456910175781376,
+      "simultaneous_high": 3.36080709442186,
+      "stratum_means": [
+        -0.03063231680072439,
+        -0.06547076455879146
+      ],
+      "independent_replicates_per_model": 2,
+      "zero_empirical_variance": false
+    },
+    {
+      "budget": 5,
+      "policy": "known_parameter",
+      "baseline": "bayes",
+      "metric": "pnl",
+      "mean": 0.22091908126258392,
+      "se": 0.3124993405902188,
+      "df": 1.518799273497217,
+      "low": -1.6270343005351802,
+      "high": 2.068872463060348,
+      "simultaneous_low": -14.983361914486887,
+      "simultaneous_high": 15.425200077012056,
+      "stratum_means": [
+        0.14964752877624107,
+        0.2921906337489268
+      ],
+      "independent_replicates_per_model": 2,
+      "zero_empirical_variance": false
+    }
+  ],
+  "policy_means": [
+    {
+      "budget": 0,
+      "policy": "bayes",
+      "metric": "objective",
+      "mean": 1.164497009176899,
+      "se": 0.46004534949614706,
+      "df": 1.48843834953151,
+      "low": -1.6337536723774655,
+      "high": 3.9627476907312635,
+      "simultaneous_low": -1.6337536723774655,
+      "simultaneous_high": 3.9627476907312635,
+      "stratum_means": [
+        1.346670593543615,
+        0.9823234248101828
+      ],
+      "independent_replicates_per_model": 2,
+      "zero_empirical_variance": false
+    },
+    {
+      "budget": 0,
+      "policy": "weighted_q",
+      "metric": "objective",
+      "mean": 1.279535891039386,
+      "se": 0.3808235402388889,
+      "df": 1.581403861902717,
+      "low": -0.8536465419981627,
+      "high": 3.4127183240769345,
+      "simultaneous_low": -0.8536465419981627,
+      "simultaneous_high": 3.4127183240769345,
+      "stratum_means": [
+        1.4593211504482482,
+        1.0997506316305237
+      ],
+      "independent_replicates_per_model": 2,
+      "zero_empirical_variance": false
+    },
+    {
+      "budget": 0,
+      "policy": "no_feedback",
+      "metric": "objective",
+      "mean": 1.1564004199673708,
+      "se": 0.3101577730590091,
+      "df": 1.768096088295466,
+      "low": -0.36070201216435827,
+      "high": 2.6735028520990998,
+      "simultaneous_low": -0.36070201216435827,
+      "simultaneous_high": 2.6735028520990998,
+      "stratum_means": [
+        1.355908982350397,
+        0.9568918575843446
+      ],
+      "independent_replicates_per_model": 2,
+      "zero_empirical_variance": false
+    },
+    {
+      "budget": 0,
+      "policy": "frozen_model",
+      "metric": "objective",
+      "mean": 1.1330801098583596,
+      "se": 0.43407582805776174,
+      "df": 1.4434377215556955,
+      "low": -1.6268658670264953,
+      "high": 3.8930260867432143,
+      "simultaneous_low": -1.6268658670264953,
+      "simultaneous_high": 3.8930260867432143,
+      "stratum_means": [
+        1.2270239137781043,
+        1.039136305938615
+      ],
+      "independent_replicates_per_model": 2,
+      "zero_empirical_variance": false
+    },
+    {
+      "budget": 0,
+      "policy": "known_parameter",
+      "metric": "objective",
+      "mean": 1.1793549242719614,
+      "se": 0.4459419846772997,
+      "df": 1.308041561955544,
+      "low": -2.130928708760168,
+      "high": 4.48963855730409,
+      "simultaneous_low": -2.130928708760168,
+      "simultaneous_high": 4.48963855730409,
+      "stratum_means": [
+        1.339160252679509,
+        1.019549595864414
+      ],
+      "independent_replicates_per_model": 2,
+      "zero_empirical_variance": false
+    },
+    {
+      "budget": 0,
+      "policy": "bayes",
+      "metric": "pnl",
+      "mean": 1.2433303425102322,
+      "se": 0.46183846082201874,
+      "df": 1.4772913342792395,
+      "low": -1.5960130858991735,
+      "high": 4.082673770919638,
+      "simultaneous_low": -1.5960130858991735,
+      "simultaneous_high": 4.082673770919638,
+      "stratum_means": [
+        1.4322539268769483,
+        1.0544067581435161
+      ],
+      "independent_replicates_per_model": 2,
+      "zero_empirical_variance": false
+    },
+    {
+      "budget": 0,
+      "policy": "weighted_q",
+      "metric": "pnl",
+      "mean": 1.3518692243727193,
+      "se": 0.3826163003123233,
+      "df": 1.561036250286331,
+      "low": -0.8282765341787375,
+      "high": 3.532014982924176,
+      "simultaneous_low": -0.8282765341787375,
+      "simultaneous_high": 3.532014982924176,
+      "stratum_means": [
+        1.5370711504482484,
+        1.1666672982971904
+      ],
+      "independent_replicates_per_model": 2,
+      "zero_empirical_variance": false
+    },
+    {
+      "budget": 0,
+      "policy": "no_feedback",
+      "metric": "pnl",
+      "mean": 1.2436504199673708,
+      "se": 0.31081727158828737,
+      "df": 1.779048987281745,
+      "low": -0.2661712323670842,
+      "high": 2.753472072301826,
+      "simultaneous_low": -0.2661712323670842,
+      "simultaneous_high": 2.753472072301826,
+      "stratum_means": [
+        1.4463256490170637,
+        1.0409751909176779
+      ],
+      "independent_replicates_per_model": 2,
+      "zero_empirical_variance": false
+    },
+    {
+      "budget": 0,
+      "policy": "frozen_model",
+      "metric": "pnl",
+      "mean": 1.210663443191693,
+      "se": 0.43537307400865793,
+      "df": 1.4461254147112794,
+      "low": -1.549964835635829,
+      "high": 3.971291722019215,
+      "simultaneous_low": -1.549964835635829,
+      "simultaneous_high": 3.971291722019215,
+      "stratum_means": [
+        1.310190580444771,
+        1.111136305938615
+      ],
+      "independent_replicates_per_model": 2,
+      "zero_empirical_variance": false
+    },
+    {
+      "budget": 0,
+      "policy": "known_parameter",
+      "metric": "pnl",
+      "mean": 1.2515215909386281,
+      "se": 0.4463670850209122,
+      "df": 1.3151632948780112,
+      "low": -2.032017082653622,
+      "high": 4.535060264530879,
+      "simultaneous_low": -2.032017082653622,
+      "simultaneous_high": 4.535060264530879,
+      "stratum_means": [
+        1.4195769193461758,
+        1.0834662625310805
+      ],
+      "independent_replicates_per_model": 2,
+      "zero_empirical_variance": false
+    },
+    {
+      "budget": 1,
+      "policy": "bayes",
+      "metric": "objective",
+      "mean": 1.1289884394101497,
+      "se": 0.4641021984534265,
+      "df": 1.6894560229669109,
+      "low": -1.264365993602985,
+      "high": 3.5223428724232844,
+      "simultaneous_low": -1.264365993602985,
+      "simultaneous_high": 3.5223428724232844,
+      "stratum_means": [
+        1.4060552599319514,
+        0.8519216188883478
+      ],
+      "independent_replicates_per_model": 2,
+      "zero_empirical_variance": false
+    },
+    {
+      "budget": 1,
+      "policy": "weighted_q",
+      "metric": "objective",
+      "mean": 1.2316186177127777,
+      "se": 0.3788482050337663,
+      "df": 1.9194438706917147,
+      "low": -0.4657786066040144,
+      "high": 2.9290158420295698,
+      "simultaneous_low": -0.4657786066040144,
+      "simultaneous_high": 2.9290158420295698,
+      "stratum_means": [
+        1.4381744268646925,
+        1.0250628085608628
+      ],
+      "independent_replicates_per_model": 2,
+      "zero_empirical_variance": false
+    },
+    {
+      "budget": 1,
+      "policy": "no_feedback",
+      "metric": "objective",
+      "mean": 1.187267648493852,
+      "se": 0.3761735000000653,
+      "df": 1.7284096337417236,
+      "low": -0.7011803451366392,
+      "high": 3.0757156421243432,
+      "simultaneous_low": -0.7011803451366392,
+      "simultaneous_high": 3.0757156421243432,
+      "stratum_means": [
+        1.3678619078187852,
+        1.006673389168919
+      ],
+      "independent_replicates_per_model": 2,
+      "zero_empirical_variance": false
+    },
+    {
+      "budget": 1,
+      "policy": "frozen_model",
+      "metric": "objective",
+      "mean": 1.162411474034954,
+      "se": 0.44790116132316943,
+      "df": 1.7108276033634318,
+      "low": -1.113173012088152,
+      "high": 3.43799596015806,
+      "simultaneous_low": -1.113173012088152,
+      "simultaneous_high": 3.43799596015806,
+      "stratum_means": [
+        1.4043301422759609,
+        0.9204928057939471
+      ],
+      "independent_replicates_per_model": 2,
+      "zero_empirical_variance": false
+    },
+    {
+      "budget": 1,
+      "policy": "known_parameter",
+      "metric": "objective",
+      "mean": 1.1793549242719614,
+      "se": 0.4459419846772997,
+      "df": 1.308041561955544,
+      "low": -2.130928708760168,
+      "high": 4.48963855730409,
+      "simultaneous_low": -2.130928708760168,
+      "simultaneous_high": 4.48963855730409,
+      "stratum_means": [
+        1.339160252679509,
+        1.019549595864414
+      ],
+      "independent_replicates_per_model": 2,
+      "zero_empirical_variance": false
+    },
+    {
+      "budget": 1,
+      "policy": "bayes",
+      "metric": "pnl",
+      "mean": 1.2057384394101494,
+      "se": 0.4645975827454358,
+      "df": 1.6853844712150627,
+      "low": -1.1971134702575945,
+      "high": 3.6085903490778932,
+      "simultaneous_low": -1.1971134702575945,
+      "simultaneous_high": 3.6085903490778932,
+      "stratum_means": [
+        1.4893052599319512,
+        0.9221716188883476
+      ],
+      "independent_replicates_per_model": 2,
+      "zero_empirical_variance": false
+    },
+    {
+      "budget": 1,
+      "policy": "weighted_q",
+      "metric": "pnl",
+      "mean": 1.3045352843794444,
+      "se": 0.3781251197709272,
+      "df": 1.9266480445073413,
+      "low": -0.38322940922663573,
+      "high": 2.9922999779855246,
+      "simultaneous_low": -0.38322940922663573,
+      "simultaneous_high": 2.9922999779855246,
+      "stratum_means": [
+        1.518007760198026,
+        1.0910628085608627
+      ],
+      "independent_replicates_per_model": 2,
+      "zero_empirical_variance": false
+    },
+    {
+      "budget": 1,
+      "policy": "no_feedback",
+      "metric": "pnl",
+      "mean": 1.2709343151605186,
+      "se": 0.3745929120453109,
+      "df": 1.718799783459987,
+      "low": -0.6218449784068236,
+      "high": 3.1637136087278606,
+      "simultaneous_low": -0.6218449784068236,
+      "simultaneous_high": 3.1637136087278606,
+      "stratum_means": [
+        1.4576952411521185,
+        1.0841733891689187
+      ],
+      "independent_replicates_per_model": 2,
+      "zero_empirical_variance": false
+    },
+    {
+      "budget": 1,
+      "policy": "frozen_model",
+      "metric": "pnl",
+      "mean": 1.2390781407016207,
+      "se": 0.4477799090044291,
+      "df": 1.7053765448679348,
+      "low": -1.0444740512241633,
+      "high": 3.5226303326274047,
+      "simultaneous_low": -1.0444740512241633,
+      "simultaneous_high": 3.5226303326274047,
+      "stratum_means": [
+        1.4848301422759609,
+        0.9933261391272804
+      ],
+      "independent_replicates_per_model": 2,
+      "zero_empirical_variance": false
+    },
+    {
+      "budget": 1,
+      "policy": "known_parameter",
+      "metric": "pnl",
+      "mean": 1.2515215909386281,
+      "se": 0.4463670850209122,
+      "df": 1.3151632948780112,
+      "low": -2.032017082653622,
+      "high": 4.535060264530879,
+      "simultaneous_low": -2.032017082653622,
+      "simultaneous_high": 4.535060264530879,
+      "stratum_means": [
+        1.4195769193461758,
+        1.0834662625310805
+      ],
+      "independent_replicates_per_model": 2,
+      "zero_empirical_variance": false
+    },
+    {
+      "budget": 5,
+      "policy": "bayes",
+      "metric": "objective",
+      "mean": 0.956644176342711,
+      "se": 0.34204316758699904,
+      "df": 1.3838708753857967,
+      "low": -1.3614667215173135,
+      "high": 3.2747550742027354,
+      "simultaneous_low": -1.3614667215173135,
+      "simultaneous_high": 3.2747550742027354,
+      "stratum_means": [
+        1.1890127239032682,
+        0.7242756287821539
+      ],
+      "independent_replicates_per_model": 2,
+      "zero_empirical_variance": false
+    },
+    {
+      "budget": 5,
+      "policy": "weighted_q",
+      "metric": "objective",
+      "mean": 1.0891489853852618,
+      "se": 0.21076006098394856,
+      "df": 1.9904603509171577,
+      "low": 0.17814400767271166,
+      "high": 2.0001539630978122,
+      "simultaneous_low": 0.17814400767271166,
+      "simultaneous_high": 2.0001539630978122,
+      "stratum_means": [
+        1.1376350025413189,
+        1.0406629682292048
+      ],
+      "independent_replicates_per_model": 2,
+      "zero_empirical_variance": false
+    },
+    {
+      "budget": 5,
+      "policy": "no_feedback",
+      "metric": "objective",
+      "mean": 1.1015860426753814,
+      "se": 0.32447296013355575,
+      "df": 1.9458270606951402,
+      "low": -0.3324249062060278,
+      "high": 2.5355969915567904,
+      "simultaneous_low": -0.3324249062060278,
+      "simultaneous_high": 2.5355969915567904,
+      "stratum_means": [
+        1.2348936570658915,
+        0.9682784282848713
+      ],
+      "independent_replicates_per_model": 2,
+      "zero_empirical_variance": false
+    },
+    {
+      "budget": 5,
+      "policy": "frozen_model",
+      "metric": "objective",
+      "mean": 1.0046957170224688,
+      "se": 0.31663120634950864,
+      "df": 1.5339400927921432,
+      "low": -0.8424400750677115,
+      "high": 2.851831509112649,
+      "simultaneous_low": -0.8424400750677115,
+      "simultaneous_high": 2.851831509112649,
+      "stratum_means": [
+        1.2182283740373256,
+        0.791163060007612
+      ],
+      "independent_replicates_per_model": 2,
+      "zero_empirical_variance": false
+    },
+    {
+      "budget": 5,
+      "policy": "known_parameter",
+      "metric": "objective",
+      "mean": 1.1793549242719614,
+      "se": 0.4459419846772997,
+      "df": 1.308041561955544,
+      "low": -2.130928708760168,
+      "high": 4.48963855730409,
+      "simultaneous_low": -2.130928708760168,
+      "simultaneous_high": 4.48963855730409,
+      "stratum_means": [
+        1.339160252679509,
+        1.019549595864414
+      ],
+      "independent_replicates_per_model": 2,
+      "zero_empirical_variance": false
+    },
+    {
+      "budget": 5,
+      "policy": "bayes",
+      "metric": "pnl",
+      "mean": 1.0306025096760443,
+      "se": 0.34168852621788465,
+      "df": 1.3748974024402112,
+      "low": -1.3087751126957834,
+      "high": 3.369980132047872,
+      "simultaneous_low": -1.3087751126957834,
+      "simultaneous_high": 3.369980132047872,
+      "stratum_means": [
+        1.2699293905699347,
+        0.7912756287821539
+      ],
+      "independent_replicates_per_model": 2,
+      "zero_empirical_variance": false
+    },
+    {
+      "budget": 5,
+      "policy": "weighted_q",
+      "metric": "pnl",
+      "mean": 1.1608156520519284,
+      "se": 0.2086935815209027,
+      "df": 1.9818030346607105,
+      "low": 0.25493219234809705,
+      "high": 2.0666991117557596,
+      "simultaneous_low": 0.25493219234809705,
+      "simultaneous_high": 2.0666991117557596,
+      "stratum_means": [
+        1.2140516692079855,
+        1.1075796348958713
+      ],
+      "independent_replicates_per_model": 2,
+      "zero_empirical_variance": false
+    },
+    {
+      "budget": 5,
+      "policy": "no_feedback",
+      "metric": "pnl",
+      "mean": 1.1836277093420482,
+      "se": 0.3214307981890046,
+      "df": 1.9402452213135595,
+      "low": -0.24100673577646048,
+      "high": 2.608262154460557,
+      "simultaneous_low": -0.24100673577646048,
+      "simultaneous_high": 2.608262154460557,
+      "stratum_means": [
+        1.322726990399225,
+        1.0445284282848712
+      ],
+      "independent_replicates_per_model": 2,
+      "zero_empirical_variance": false
+    },
+    {
+      "budget": 5,
+      "policy": "frozen_model",
+      "metric": "pnl",
+      "mean": 1.0786540503558022,
+      "se": 0.3175096164219985,
+      "df": 1.530080148245443,
+      "low": -0.7799739179732674,
+      "high": 2.937282018684872,
+      "simultaneous_low": -0.7799739179732674,
+      "simultaneous_high": 2.937282018684872,
+      "stratum_means": [
+        1.300561707370659,
+        0.8567463933409453
+      ],
+      "independent_replicates_per_model": 2,
+      "zero_empirical_variance": false
+    },
+    {
+      "budget": 5,
+      "policy": "known_parameter",
+      "metric": "pnl",
+      "mean": 1.2515215909386281,
+      "se": 0.4463670850209122,
+      "df": 1.3151632948780112,
+      "low": -2.032017082653622,
+      "high": 4.535060264530879,
+      "simultaneous_low": -2.032017082653622,
+      "simultaneous_high": 4.535060264530879,
+      "stratum_means": [
+        1.4195769193461758,
+        1.0834662625310805
+      ],
+      "independent_replicates_per_model": 2,
+      "zero_empirical_variance": false
+    }
+  ],
+  "supplementary_family_size": 24,
+  "uncertainty": "Paired episode differences averaged within independent pilots; equal two-model mixture; empirical Welch intervals; 24 simultaneous supplementary contrasts",
+  "scope": "Same market trajectories are reused across budgets and policies. Numerical approximation uncertainty is separate from these sampling intervals."
+}

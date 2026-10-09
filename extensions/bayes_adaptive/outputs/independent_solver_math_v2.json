@@ -1,0 +1,50 @@
+{
+  "passed": true,
+  "math": {
+    "mass_error": 2.220446049250313e-16,
+    "cold_first_step_model_weight_drift": 1.1102230246251565e-16,
+    "no_feedback_belief_error": 0.0,
+    "one_step_sign_symmetry_error": 4.163336342344337e-17,
+    "scope": "Independent four-state selected likelihood and timing identities"
+  },
+  "solver_short_horizon": {
+    "posterior_max_error": 2.220446049250313e-16,
+    "one_step_max_finite_q_error": 5.134781488891349e-16,
+    "two_step_max_finite_q_error_by_grid": [
+      0.0006104551790592737,
+      0.00016880223391272514
+    ],
+    "singleton_known_model_q_error": 9.454617391599363e-05,
+    "structural_reductions": {
+      "duplicate_kappa": [
+        0.02,
+        0.02
+      ],
+      "duplicate_model_horizon": 5,
+      "bayes_to_marginal_known_max_q_error_by_grid": [
+        0.005645288618026115,
+        0.001221451747773536
+      ],
+      "equal_conditional_weighted_q_max_error": 2.7755575615628914e-17,
+      "theta_zero_horizon": 5,
+      "theta_zero_full_value_table_max_error": 8.326672684688674e-17,
+      "theta_zero_full_legal_q_table_max_error": 8.326672684688674e-17,
+      "scope": "Fresh whole-family structural reductions; agreement is numerical, with no exact bound claim"
+    },
+    "solver_source_sha256": "d22fcc3a460eb75c6bac239e1d383f333811dcfe0db3d768109f56f913e853fc",
+    "core_model_sha256": "7a120a7faabd8aec2c1345a486128129105e9d564ec60908f1c07ea0cf5a897f",
+    "grids": [
+      [
+        5,
+        9,
+        15
+      ],
+      [
+        9,
+        17,
+        25
+      ]
+    ],
+    "scope": "Fresh separate small-grid solver builds versus direct Gaussian enumeration; empirical approximation checks, not certified bounds"
+  }
+}

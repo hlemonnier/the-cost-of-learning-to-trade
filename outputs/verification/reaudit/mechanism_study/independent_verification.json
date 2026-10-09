@@ -1,0 +1,203 @@
+{
+  "passed": true,
+  "scope": "Independent raw reader, regenerated paired tapes, action-level cash ledger and paired episode inference; no production simulation/statistics imports",
+  "verifier_sha256": "4270730ca3a3a3bb6ba766483b8690548c6921578fc74f7e11e5469382b2db9f",
+  "protocol_sha256": "d2c6f2edd919e7ff0f08b7a09ea05ec109234f6f4ef17c2eaef392aae04d942a",
+  "manifest_sha256": "e62e458491176736a7923ee1a10904e268c4a43119201c76d7d3dbfcb89190d4",
+  "source_inputs_checked": 16,
+  "file_sha256": {
+    "episodes.csv.gz": "f56a267a851130fc553eb72a79bdb3c4ad0a17a19ee78a313a653da3d50bde4d",
+    "actions.npz": "ba8e0fbe460c6b9cf963652728c2babd33b9bbcb03abf6a46c726e84272bc515",
+    "traces.csv.gz": "19dba502c9557e5b4077e710c708aee77dee13eb6f00195cba97004574d1ebba",
+    "numerical_checks.json": "616a30d72534fccf74eb4cfbdc4be85867434a75ab054eadef1a464745f3d428",
+    "summary.json": "00c07e53567b654962fc977facb3080d837f4d063919d58fbd165e05fc3f996f"
+  },
+  "numerical_build_sha256": "734eddc7d5a49af317fdedcd669ef30ac9d3a34847a389f01335a545e700261d",
+  "validation_git_scope": {
+    "history_available": true,
+    "commits_verified": true,
+    "scope": "Own repository Git objects validated; exact current source bytes also checked"
+  },
+  "numerical_checks_reported_passed": true,
+  "numerical_table_array_scope": "Fingerprint metadata checked; arrays are not embedded here for independent rehashing",
+  "tape_sha256": {
+    "x": "537b0653632d3995171d017bb7b8d709befcf8823ecf29c4029789a3886fa367",
+    "h": "bd61b2269dd86f13df8a6648cd874a9522fd599e979649f6240ca6ffc61ce525",
+    "z": "f97bedddb2f637a22e8a04460639ed53e87659525cd8a08f50befdb0cf0a42d0",
+    "u_bid": "b1a5a721353f46e40e7e8dca45c7955d98d24e109cf6c21d26ed2764a83ba907",
+    "u_ask": "44e73aaa6718ee9ccc1079d5ba3d5d52817d2d6b59ac199885ede0b3f984e6c5"
+  },
+  "policies": 7,
+  "episodes_per_policy": 20000,
+  "outcome_rows": 140000,
+  "trace_rows": 2520,
+  "maximum_independent_ledger_error": 2.7284841053187847e-12,
+  "recomputed": {
+    "policies": {
+      "active": {
+        "mean": 0.9904387250148567,
+        "se": 0.016146005543142442,
+        "pnl_mean": 1.0713866250148567
+      },
+      "noinfo": {
+        "mean": 0.9642422128990169,
+        "se": 0.01647956156549644,
+        "pnl_mean": 1.052757612899017
+      },
+      "no_forecast": {
+        "mean": 0.7735355369301031,
+        "se": 0.013282947965407334,
+        "pnl_mean": 0.8138775369301031
+      },
+      "blind_regime": {
+        "mean": 0.7226416282187478,
+        "se": 0.016060293853746414,
+        "pnl_mean": 0.7889208282187479
+      },
+      "inventory_off": {
+        "mean": 0.8787950009916476,
+        "se": 0.018261260445940935,
+        "pnl_mean": 0.9938019009916478
+      },
+      "myopic": {
+        "mean": 0.8390488298969685,
+        "se": 0.013644999621322224,
+        "pnl_mean": 0.8868180298969685
+      },
+      "full_information": {
+        "mean": 1.4598779293951114,
+        "se": 0.015778440135673085,
+        "pnl_mean": 1.5448890293951114
+      }
+    },
+    "contrasts": [
+      {
+        "mechanism": "forecast",
+        "policy": "noinfo",
+        "baseline": "no_forecast",
+        "mean": 0.19070667596891397,
+        "se": 0.013856733857231964,
+        "low": 0.1635463328888541,
+        "high": 0.21786701904897385,
+        "simultaneous_low": 0.1560935039577378,
+        "simultaneous_high": 0.22531984798009014,
+        "df": 19999,
+        "n": 20000
+      },
+      {
+        "mechanism": "current_inference",
+        "policy": "noinfo",
+        "baseline": "blind_regime",
+        "mean": 0.24160058468026924,
+        "se": 0.010978207803377106,
+        "low": 0.22008239046393926,
+        "high": 0.26311877889659924,
+        "simultaneous_low": 0.2141777735771746,
+        "simultaneous_high": 0.2690233957833639,
+        "df": 19999,
+        "n": 20000
+      },
+      {
+        "mechanism": "inventory_continuation",
+        "policy": "noinfo",
+        "baseline": "inventory_off",
+        "mean": 0.08544721190736937,
+        "se": 0.011435772131100547,
+        "low": 0.06303215380881366,
+        "high": 0.10786227000592508,
+        "simultaneous_low": 0.056881436456048914,
+        "simultaneous_high": 0.11401298735868982,
+        "df": 19999,
+        "n": 20000
+      },
+      {
+        "mechanism": "future_information",
+        "policy": "active",
+        "baseline": "noinfo",
+        "mean": 0.026196512115839492,
+        "se": 0.006791254301635748,
+        "low": 0.012885092651714357,
+        "high": 0.03950793157996463,
+        "simultaneous_low": 0.009232424060451574,
+        "simultaneous_high": 0.043160600171227415,
+        "df": 19999,
+        "n": 20000
+      }
+    ]
+  },
+  "repeat": {
+    "passed": true,
+    "first_manifest_sha256": "e62e458491176736a7923ee1a10904e268c4a43119201c76d7d3dbfcb89190d4",
+    "repeat_manifest_sha256": "51bb00971bbb96d84e3962bdbf7b7cf74ec764d2b4e53ec6835d3b66ac7c85bb",
+    "exact_five_file_content": true,
+    "matching_input_build_table_tape_and_numerical_contract": true,
+    "first_file_sha256": {
+      "episodes.csv.gz": "f56a267a851130fc553eb72a79bdb3c4ad0a17a19ee78a313a653da3d50bde4d",
+      "actions.npz": "ba8e0fbe460c6b9cf963652728c2babd33b9bbcb03abf6a46c726e84272bc515",
+      "traces.csv.gz": "19dba502c9557e5b4077e710c708aee77dee13eb6f00195cba97004574d1ebba",
+      "numerical_checks.json": "616a30d72534fccf74eb4cfbdc4be85867434a75ab054eadef1a464745f3d428",
+      "summary.json": "00c07e53567b654962fc977facb3080d837f4d063919d58fbd165e05fc3f996f"
+    },
+    "repeat_file_sha256": {
+      "episodes.csv.gz": "f56a267a851130fc553eb72a79bdb3c4ad0a17a19ee78a313a653da3d50bde4d",
+      "actions.npz": "ba8e0fbe460c6b9cf963652728c2babd33b9bbcb03abf6a46c726e84272bc515",
+      "traces.csv.gz": "19dba502c9557e5b4077e710c708aee77dee13eb6f00195cba97004574d1ebba",
+      "numerical_checks.json": "616a30d72534fccf74eb4cfbdc4be85867434a75ab054eadef1a464745f3d428",
+      "summary.json": "00c07e53567b654962fc977facb3080d837f4d063919d58fbd165e05fc3f996f"
+    },
+    "scope": "Two separate study directories each passed independent raw/action/statistical verification on this numerical build"
+  },
+  "fault_probes": [
+    {
+      "case": "wrong_protocol",
+      "rejected": true,
+      "reason": "Manifest protocol differs from frozen configuration"
+    },
+    {
+      "case": "stale_source_hash",
+      "rejected": true,
+      "reason": "Stale source input: verification/mechanism_study.py"
+    },
+    {
+      "case": "stale_artifact_hash",
+      "rejected": true,
+      "reason": "Missing or stale artifact: actions.npz"
+    },
+    {
+      "case": "missing_id",
+      "rejected": true,
+      "reason": "Incomplete outcome budget: 139999"
+    },
+    {
+      "case": "duplicate_id",
+      "rejected": true,
+      "reason": "Duplicate outcome ID: active/0"
+    },
+    {
+      "case": "nonfinite_outcome",
+      "rejected": true,
+      "reason": "Nonfinite active/0/objective"
+    },
+    {
+      "case": "changed_scalar_ledger",
+      "rejected": true,
+      "reason": "Objective identity active/0: np.float64(0.7278237002754558) versus np.float64(1.2278237002754557)"
+    },
+    {
+      "case": "corrupt_action_data",
+      "rejected": true,
+      "reason": "Invalid action ID: active"
+    },
+    {
+      "case": "changed_trace_state",
+      "rejected": true,
+      "reason": "Trace next_cash disagrees with independent replay: active/0/0: -999.451 versus -999.951"
+    },
+    {
+      "case": "wrong_contrast",
+      "rejected": true,
+      "reason": "Summary contrast forecast/mean: 1.190706675968914 versus 0.19070667596891397"
+    }
+  ],
+  "fault_probes_rejected": 10
+}

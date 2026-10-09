@@ -1,0 +1,314 @@
+{
+  "primary": {
+    "mean": 1.39256132230691,
+    "se": 0.047934543412208576,
+    "df": 35.922734202110014,
+    "low": 1.2953383013860345,
+    "high": 1.4897843432277855,
+    "one_sided_lower": 1.3116289454047196,
+    "environments": 9,
+    "pilots": 90,
+    "episodes": 9000,
+    "policy": "active",
+    "baseline": "noinfo",
+    "threshold": 0.05,
+    "population": "uniform mixture of nine nominal environments, fresh 100-episode pilot",
+    "active_net_pnl": {
+      "mean": 15.001406298409178,
+      "se": 0.13459617163568297,
+      "df": 59.489568778431575,
+      "low": 14.732126348193242,
+      "high": 15.270686248625113,
+      "one_sided_lower": 14.776513096903923,
+      "environments": 9,
+      "pilots": 90,
+      "episodes": 9000
+    },
+    "decision": "prefer_active_in_prespecified_synthetic_nominal_population",
+    "guarantee": false
+  },
+  "active_nominal": {
+    "variant": "nominal",
+    "policy": "active",
+    "objective": {
+      "mean": 13.246730076186957,
+      "se": 0.13450105211786878,
+      "df": 59.47390696582081,
+      "low": 12.977638956683185,
+      "high": 13.515821195690728,
+      "one_sided_lower": 13.021994871213984,
+      "environments": 9,
+      "pilots": 90,
+      "episodes": 9000
+    },
+    "pnl": {
+      "mean": 15.001406298409178,
+      "se": 0.13459617163568297,
+      "df": 59.489568778431575,
+      "low": 14.732126348193242,
+      "high": 15.270686248625113,
+      "one_sided_lower": 14.776513096903923,
+      "environments": 9,
+      "pilots": 90,
+      "episodes": 9000
+    }
+  },
+  "failure_illustration": {
+    "illustration_selection": "Largest active objective deterioration across prescribed stresses, retrospective only",
+    "variant": "fixed_duration",
+    "environment": "theta0.65_kappa0.002",
+    "objective_change": -9.404406720534347,
+    "nominal": {
+      "variant": "nominal",
+      "environment": "theta0.65_kappa0.002",
+      "policy": "active",
+      "objective": {
+        "mean": 23.946102751700757,
+        "se": 0.5560074160235723,
+        "low": 22.68832659297411,
+        "high": 25.203878910427402,
+        "pilots": 10,
+        "episodes": 1000,
+        "df": 9,
+        "observed_pilot_mean_variance": 3.0914424667320985,
+        "within_pilot_mean_variance": 4.35164438890478,
+        "estimated_between_pilot_variance": 0.0
+      },
+      "pnl": {
+        "mean": 26.01462475170075,
+        "se": 0.5621475443022834,
+        "low": 24.742958657807918,
+        "high": 27.286290845593584,
+        "pilots": 10,
+        "episodes": 1000,
+        "df": 9,
+        "observed_pilot_mean_variance": 3.1600986156508766,
+        "within_pilot_mean_variance": 4.379578558829726,
+        "estimated_between_pilot_variance": 0.0
+      },
+      "metrics": {
+        "pnl": 26.014624751700758,
+        "inventory_penalty": 2.0685219999999997,
+        "liquidation_cost": 0.042552000000000006,
+        "passive_fees": 0.11075300000000007,
+        "market_fees": 0.12323800000000008,
+        "turnover": 173.948,
+        "spread_capture": 3.6352000000000015,
+        "directional_exposure": 4.95451816886932,
+        "execution_selection": 19.264936064871748,
+        "mean_abs_inventory": 1.5031966666666667,
+        "max_quote_gap": 22.436,
+        "regime_brier": 0.02887129670540547,
+        "wrong_confident_fraction": 0.023136666666666666,
+        "post_switch_error_10": 0.6966002747252747,
+        "conditional_logscore": -0.8695535825216436,
+        "score_residual_per_side": 0.00030182695558528304
+      },
+      "downside": {
+        "pnl_5pct_quantile": -6.957617673745942,
+        "pnl_lower_5pct_mean": -11.793833666803591,
+        "loss_probability": 0.115
+      },
+      "action_frequencies": [
+        0.26105666666666666,
+        0.01574333333333333,
+        0.008586666666666666,
+        0.015710000000000002,
+        0.10612666666666667,
+        0.18866333333333332,
+        0.006246666666666667,
+        0.18463666666666667,
+        0.007833333333333333,
+        0.10299333333333333,
+        0.10240333333333333
+      ]
+    },
+    "stress": {
+      "variant": "fixed_duration",
+      "environment": "theta0.65_kappa0.002",
+      "policy": "active",
+      "objective": {
+        "mean": 14.54169603116641,
+        "se": 0.23466103016407563,
+        "low": 14.01085590095114,
+        "high": 15.072536161381679,
+        "pilots": 10,
+        "episodes": 1000,
+        "df": 9,
+        "observed_pilot_mean_variance": 0.5506579907766521,
+        "within_pilot_mean_variance": 1.012807711807561,
+        "estimated_between_pilot_variance": 0.0
+      },
+      "pnl": {
+        "mean": 16.56704803116641,
+        "se": 0.23826541435660914,
+        "low": 16.028054217432526,
+        "high": 17.106041844900297,
+        "pilots": 10,
+        "episodes": 1000,
+        "df": 9,
+        "observed_pilot_mean_variance": 0.5677040767852665,
+        "within_pilot_mean_variance": 1.0333458003947542,
+        "estimated_between_pilot_variance": 0.0
+      },
+      "metrics": {
+        "pnl": 16.56704803116641,
+        "inventory_penalty": 2.025352,
+        "liquidation_cost": 0.035343000000000006,
+        "passive_fees": 0.08229400000000003,
+        "market_fees": 0.15141000000000007,
+        "turnover": 159.308,
+        "spread_capture": 2.7088999999999963,
+        "directional_exposure": 6.293527698961309,
+        "execution_selection": 9.711644894405667,
+        "mean_abs_inventory": 1.4930933333333332,
+        "max_quote_gap": 30.931,
+        "regime_brier": 0.23039055380967477,
+        "wrong_confident_fraction": 0.22058666666666665,
+        "post_switch_error_10": 0.6782214371847348,
+        "conditional_logscore": -1.052332868002045,
+        "score_residual_per_side": -0.023877454665570237
+      },
+      "downside": {
+        "pnl_5pct_quantile": 0.5438949036542188,
+        "pnl_lower_5pct_mean": -3.8759387705822888,
+        "loss_probability": 0.045
+      },
+      "action_frequencies": [
+        0.32817999999999997,
+        0.02621,
+        0.014623333333333332,
+        0.02617,
+        0.07198,
+        0.12820333333333334,
+        0.010280000000000001,
+        0.13033999999999998,
+        0.011663333333333333,
+        0.12674,
+        0.12561
+      ]
+    },
+    "matched_contrast": {
+      "variant": "fixed_duration",
+      "environment": "theta0.65_kappa0.002",
+      "baseline": "noinfo",
+      "paired": {
+        "mean": 9.265419020593876,
+        "se": 0.17491231867143822,
+        "low": 8.86973986604964,
+        "high": 9.661098175138113,
+        "pilots": 10,
+        "episodes": 1000,
+        "df": 9,
+        "observed_pilot_mean_variance": 0.30594319223018757,
+        "within_pilot_mean_variance": 0.6298004050951984,
+        "estimated_between_pilot_variance": 0.0
+      },
+      "family_adjusted": {
+        "mean": 9.265419020593876,
+        "se": 0.17491231867143822,
+        "low": 8.274973271771936,
+        "high": 10.255864769415817,
+        "pilots": 10,
+        "episodes": 1000,
+        "df": 9,
+        "observed_pilot_mean_variance": 0.30594319223018757,
+        "within_pilot_mean_variance": 0.6298004050951984,
+        "estimated_between_pilot_variance": 0.0
+      },
+      "family_size": 162
+    }
+  },
+  "pilot_true_weight_min": 0.9685953911650175,
+  "pilot_true_weight_median": 1.0,
+  "audit": {
+    "passed": true,
+    "episodes": 189000,
+    "pilot_datasets": 90,
+    "pilot_episodes": 9000,
+    "final_periods": 56700000,
+    "total_stream_ids": 450,
+    "final_stream_ids": 270,
+    "pilot_and_behavior_stream_ids": 180,
+    "policy_variant_environment_cells": 189,
+    "max_ledger_error": 1.6626700016786344e-11,
+    "max_attribution_error": 1.6623147303107544e-11,
+    "production_code_hash": "cabebb53081506b722f4f9232e49a5171585217b7712e4c7a2940149aa6a34eb",
+    "final_csv_sha256": "1f2f28f70bc92c90b98a4d0ed1fcf8689e7e018fdd17230fc0798a919ad48057",
+    "primary_comparison_recomputed": {
+      "mean": 1.39256132230691,
+      "se": 0.04793454341220856,
+      "df": 35.92273420211001,
+      "low": 1.2953383013860345,
+      "high": 1.4897843432277855,
+      "one_sided_lower": 1.3116289454047196,
+      "environments": 9,
+      "pilots": 90,
+      "episodes": 9000
+    },
+    "scope": "Complete frozen campaign and existing verification reconciled; PDF visual review is separate."
+  },
+  "mechanism_study": {
+    "identity": {
+      "manifest_sha256": "e62e458491176736a7923ee1a10904e268c4a43119201c76d7d3dbfcb89190d4",
+      "independent_verification_sha256": "663231403024dbdcae2bdcb488e238246e6173faae70064bbaafdbce02ba3f76",
+      "summary_sha256": "00c07e53567b654962fc977facb3080d837f4d063919d58fbd165e05fc3f996f"
+    },
+    "contrasts": [
+      {
+        "mechanism": "forecast",
+        "policy": "noinfo",
+        "baseline": "no_forecast",
+        "mean": 0.19070667596891397,
+        "se": 0.013856733857231964,
+        "low": 0.1635463328888541,
+        "high": 0.21786701904897385,
+        "simultaneous_low": 0.1560935039577378,
+        "simultaneous_high": 0.22531984798009014,
+        "df": 19999,
+        "n": 20000
+      },
+      {
+        "mechanism": "current_inference",
+        "policy": "noinfo",
+        "baseline": "blind_regime",
+        "mean": 0.24160058468026924,
+        "se": 0.010978207803377106,
+        "low": 0.22008239046393926,
+        "high": 0.26311877889659924,
+        "simultaneous_low": 0.2141777735771746,
+        "simultaneous_high": 0.2690233957833639,
+        "df": 19999,
+        "n": 20000
+      },
+      {
+        "mechanism": "inventory_continuation",
+        "policy": "noinfo",
+        "baseline": "inventory_off",
+        "mean": 0.08544721190736937,
+        "se": 0.011435772131100547,
+        "low": 0.06303215380881366,
+        "high": 0.10786227000592508,
+        "simultaneous_low": 0.056881436456048914,
+        "simultaneous_high": 0.11401298735868982,
+        "df": 19999,
+        "n": 20000
+      },
+      {
+        "mechanism": "future_information",
+        "policy": "active",
+        "baseline": "noinfo",
+        "mean": 0.026196512115839492,
+        "se": 0.006791254301635748,
+        "low": 0.012885092651714357,
+        "high": 0.03950793157996463,
+        "simultaneous_low": 0.009232424060451574,
+        "simultaneous_high": 0.043160600171227415,
+        "df": 19999,
+        "n": 20000
+      }
+    ],
+    "episodes": 20000,
+    "rows": 140000
+  }
+}

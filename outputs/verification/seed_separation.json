@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "final_root": 260924138,
+  "retired_root": 260924137,
+  "smoke_root": 260924136,
+  "final_stream_count": 450,
+  "duplicate_final_ids": 0,
+  "overlap_with_consumed_debug_ids": 0,
+  "scope": "Full evaluation has not yet run; roots and namespace assignments frozen before final data generation."
+}

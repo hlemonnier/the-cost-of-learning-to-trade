@@ -1,0 +1,986 @@
+{
+  "passed": true,
+  "scope": "AUD-03/AUD-04 failure probes and original raw-summary reconciliation; no full simulation",
+  "rejected_cases": [
+    {
+      "case": "single_pilot_nonconstant",
+      "exception": "ValueError",
+      "message": "at least two independent pilots are required to estimate pilot uncertainty"
+    },
+    {
+      "case": "empty",
+      "exception": "ValueError",
+      "message": "statistical evidence must be a nonempty DataFrame"
+    },
+    {
+      "case": "one_episode_per_pilot",
+      "exception": "ValueError",
+      "message": "balanced evidence with at least two episodes per pilot is required"
+    },
+    {
+      "case": "unbalanced_pilots",
+      "exception": "ValueError",
+      "message": "balanced evidence with at least two episodes per pilot is required"
+    },
+    {
+      "case": "duplicate_pilot_episode",
+      "exception": "ValueError",
+      "message": "duplicate paired pilot/episode keys"
+    },
+    {
+      "case": "missing_episode_identifier",
+      "exception": "ValueError",
+      "message": "missing statistical evidence columns: ['episode']"
+    },
+    {
+      "case": "nan",
+      "exception": "ValueError",
+      "message": "v contains missing or nonfinite outcomes"
+    },
+    {
+      "case": "positive_infinity",
+      "exception": "ValueError",
+      "message": "v contains missing or nonfinite outcomes"
+    },
+    {
+      "case": "negative_infinity",
+      "exception": "ValueError",
+      "message": "v contains missing or nonfinite outcomes"
+    },
+    {
+      "case": "overflow",
+      "exception": "ValueError",
+      "message": "nonfinite statistical result: arithmetic overflow or invalid evidence"
+    },
+    {
+      "case": "text_outcome",
+      "exception": "ValueError",
+      "message": "v must contain real numeric outcomes"
+    },
+    {
+      "case": "complex_outcome",
+      "exception": "ValueError",
+      "message": "v must contain real numeric outcomes"
+    },
+    {
+      "case": "boolean_outcome",
+      "exception": "ValueError",
+      "message": "v must contain real numeric outcomes"
+    },
+    {
+      "case": "invalid_alpha_0",
+      "exception": "ValueError",
+      "message": "alpha must be a finite real probability strictly between zero and one"
+    },
+    {
+      "case": "invalid_alpha_1",
+      "exception": "ValueError",
+      "message": "alpha must be a finite real probability strictly between zero and one"
+    },
+    {
+      "case": "invalid_alpha_-0.1",
+      "exception": "ValueError",
+      "message": "alpha must be a finite real probability strictly between zero and one"
+    },
+    {
+      "case": "invalid_alpha_nan",
+      "exception": "ValueError",
+      "message": "alpha must be a finite real probability strictly between zero and one"
+    },
+    {
+      "case": "invalid_alpha_inf",
+      "exception": "ValueError",
+      "message": "alpha must be a finite real probability strictly between zero and one"
+    },
+    {
+      "case": "invalid_pilot_0.5",
+      "exception": "ValueError",
+      "message": "pilot IDs must be nonnegative integers"
+    },
+    {
+      "case": "invalid_episode_-1",
+      "exception": "ValueError",
+      "message": "episode IDs must be nonnegative integers"
+    },
+    {
+      "case": "invalid_pilot_nan",
+      "exception": "ValueError",
+      "message": "pilot contains missing or nonfinite outcomes"
+    },
+    {
+      "case": "mixed_cluster_strata",
+      "exception": "ValueError",
+      "message": "a clustered estimate requires exactly one environment stratum"
+    },
+    {
+      "case": "undeclared_stratified_population",
+      "exception": "TypeError",
+      "message": "stratified_estimate() missing 1 required keyword-only argument: 'protocol'"
+    },
+    {
+      "case": "actual_inference_support_mismatch",
+      "exception": "ValueError",
+      "message": "actual inference support differs from the resolved public grid"
+    },
+    {
+      "case": "actual_policy_implementation_mismatch",
+      "exception": "ValueError",
+      "message": "actual policy implementation differs from the resolved policy set"
+    },
+    {
+      "case": "config_full_theta_grid",
+      "exception": "ValueError",
+      "message": "unsupported theta_grid: this fixed benchmark requires [0.15, 0.35, 0.65], got [0.27]"
+    },
+    {
+      "case": "config_smoke_theta_grid",
+      "exception": "ValueError",
+      "message": "unsupported theta_grid: this fixed benchmark requires [0.15, 0.35, 0.65], got [0.27]"
+    },
+    {
+      "case": "config_full_kappa_grid",
+      "exception": "ValueError",
+      "message": "unsupported kappa_grid: this fixed benchmark requires [0.002, 0.02, 0.1], got [0.04]"
+    },
+    {
+      "case": "config_smoke_kappa_grid",
+      "exception": "ValueError",
+      "message": "unsupported kappa_grid: this fixed benchmark requires [0.002, 0.02, 0.1], got [0.04]"
+    },
+    {
+      "case": "config_full_policies",
+      "exception": "ValueError",
+      "message": "unsupported policies: this fixed benchmark requires ['abstain', 'taker', 'independent', 'myopic', 'noinfo', 'active', 'full_information'], got ['abstain']"
+    },
+    {
+      "case": "config_smoke_policies",
+      "exception": "ValueError",
+      "message": "unsupported policies: this fixed benchmark requires ['abstain', 'taker', 'independent', 'myopic', 'noinfo', 'active', 'full_information'], got ['abstain']"
+    },
+    {
+      "case": "config_full_primary_policy",
+      "exception": "ValueError",
+      "message": "unsupported primary_policy: this fixed benchmark requires 'active', got 'independent'"
+    },
+    {
+      "case": "config_smoke_primary_policy",
+      "exception": "ValueError",
+      "message": "unsupported primary_policy: this fixed benchmark requires 'active', got 'independent'"
+    },
+    {
+      "case": "config_full_primary_baseline",
+      "exception": "ValueError",
+      "message": "unsupported primary_baseline: this fixed benchmark requires 'noinfo', got 'taker'"
+    },
+    {
+      "case": "config_smoke_primary_baseline",
+      "exception": "ValueError",
+      "message": "unsupported primary_baseline: this fixed benchmark requires 'noinfo', got 'taker'"
+    },
+    {
+      "case": "config_full_deployment_threshold",
+      "exception": "ValueError",
+      "message": "unsupported deployment_threshold: this fixed benchmark requires 0.05, got 0.01"
+    },
+    {
+      "case": "config_smoke_deployment_threshold",
+      "exception": "ValueError",
+      "message": "unsupported deployment_threshold: this fixed benchmark requires 0.05, got 0.01"
+    },
+    {
+      "case": "config_full_deployment_population",
+      "exception": "ValueError",
+      "message": "unsupported deployment_population: this fixed benchmark requires 'uniform mixture of nine nominal environments, fresh 100-episode pilot', got 'an invented market'"
+    },
+    {
+      "case": "config_smoke_deployment_population",
+      "exception": "ValueError",
+      "message": "unsupported deployment_population: this fixed benchmark requires 'uniform mixture of nine nominal environments, fresh 100-episode pilot', got 'an invented market'"
+    },
+    {
+      "case": "config_full_variants",
+      "exception": "ValueError",
+      "message": "unsupported variants: this fixed benchmark requires ['nominal', 'state_dependence', 'fixed_duration'], got ['nominal']"
+    },
+    {
+      "case": "config_smoke_variants",
+      "exception": "ValueError",
+      "message": "unsupported variants: this fixed benchmark requires ['nominal', 'state_dependence', 'fixed_duration'], got ['nominal']"
+    },
+    {
+      "case": "config_full_horizon",
+      "exception": "ValueError",
+      "message": "unsupported horizon: this fixed benchmark requires 300, got 301"
+    },
+    {
+      "case": "config_smoke_horizon",
+      "exception": "ValueError",
+      "message": "unsupported horizon: this fixed benchmark requires 300, got 301"
+    },
+    {
+      "case": "config_full_qmax",
+      "exception": "ValueError",
+      "message": "unsupported qmax: this fixed benchmark requires 5, got 4"
+    },
+    {
+      "case": "config_smoke_qmax",
+      "exception": "ValueError",
+      "message": "unsupported qmax: this fixed benchmark requires 5, got 4"
+    },
+    {
+      "case": "config_full_pilots",
+      "exception": "ValueError",
+      "message": "unsupported pilots: this fixed benchmark requires 10, got 1"
+    },
+    {
+      "case": "config_smoke_pilots",
+      "exception": "ValueError",
+      "message": "unsupported pilots: this fixed benchmark requires 10, got 1"
+    },
+    {
+      "case": "config_full_pilot_episodes",
+      "exception": "ValueError",
+      "message": "unsupported pilot_episodes: this fixed benchmark requires 100, got 99"
+    },
+    {
+      "case": "config_smoke_pilot_episodes",
+      "exception": "ValueError",
+      "message": "unsupported pilot_episodes: this fixed benchmark requires 100, got 99"
+    },
+    {
+      "case": "config_full_test_episodes",
+      "exception": "ValueError",
+      "message": "unsupported test_episodes: this fixed benchmark requires 100, got 99"
+    },
+    {
+      "case": "config_smoke_test_episodes",
+      "exception": "ValueError",
+      "message": "unsupported test_episodes: this fixed benchmark requires 100, got 99"
+    },
+    {
+      "case": "config_full_version",
+      "exception": "ValueError",
+      "message": "unsupported version: this fixed benchmark requires 1, got 999"
+    },
+    {
+      "case": "config_smoke_version",
+      "exception": "ValueError",
+      "message": "unsupported version: this fixed benchmark requires 1, got 999"
+    },
+    {
+      "case": "config_full_parameter_prior",
+      "exception": "ValueError",
+      "message": "unsupported parameter_prior: this fixed benchmark requires 'uniform over declared public 3x3 grid', got 'oracle'"
+    },
+    {
+      "case": "config_smoke_parameter_prior",
+      "exception": "ValueError",
+      "message": "unsupported parameter_prior: this fixed benchmark requires 'uniform over declared public 3x3 grid', got 'oracle'"
+    },
+    {
+      "case": "config_full_online_updates",
+      "exception": "ValueError",
+      "message": "unsupported online_updates: this fixed benchmark requires 'joint parameter/regime posterior within each episode only', got 'across episodes'"
+    },
+    {
+      "case": "config_smoke_online_updates",
+      "exception": "ValueError",
+      "message": "unsupported online_updates: this fixed benchmark requires 'joint parameter/regime posterior within each episode only', got 'across episodes'"
+    },
+    {
+      "case": "config_full_algorithm_selection",
+      "exception": "ValueError",
+      "message": "unsupported algorithm_selection: this fixed benchmark requires 'fixed in advance; no final-data tuning', got 'select after outcomes'"
+    },
+    {
+      "case": "config_smoke_algorithm_selection",
+      "exception": "ValueError",
+      "message": "unsupported algorithm_selection: this fixed benchmark requires 'fixed in advance; no final-data tuning', got 'select after outcomes'"
+    },
+    {
+      "case": "config_full_mispelled_field",
+      "exception": "ValueError",
+      "message": "configuration fields differ: missing=[], unknown=['mispelled_field']"
+    },
+    {
+      "case": "config_smoke_mispelled_field",
+      "exception": "ValueError",
+      "message": "configuration fields differ: missing=[], unknown=['mispelled_field']"
+    },
+    {
+      "case": "config_full_master_seed",
+      "exception": "ValueError",
+      "message": "master_seed must be a Python/JSON integer >= 0, not a boolean"
+    },
+    {
+      "case": "config_smoke_master_seed",
+      "exception": "ValueError",
+      "message": "master_seed must be a Python/JSON integer >= 0, not a boolean"
+    },
+    {
+      "case": "config_full_belief_points",
+      "exception": "ValueError",
+      "message": "belief_points must be a Python/JSON integer >= 2, not a boolean"
+    },
+    {
+      "case": "config_smoke_belief_points",
+      "exception": "ValueError",
+      "message": "belief_points must be a Python/JSON integer >= 2, not a boolean"
+    },
+    {
+      "case": "config_full_quadrature_points",
+      "exception": "ValueError",
+      "message": "quadrature_points must be a Python/JSON integer >= 1, not a boolean"
+    },
+    {
+      "case": "config_smoke_quadrature_points",
+      "exception": "ValueError",
+      "message": "quadrature_points must be a Python/JSON integer >= 1, not a boolean"
+    },
+    {
+      "case": "missing_config_policies",
+      "exception": "ValueError",
+      "message": "configuration fields differ: missing=['policies'], unknown=[]"
+    },
+    {
+      "case": "missing_config_theta_grid",
+      "exception": "ValueError",
+      "message": "configuration fields differ: missing=['theta_grid'], unknown=[]"
+    },
+    {
+      "case": "missing_config_primary_baseline",
+      "exception": "ValueError",
+      "message": "configuration fields differ: missing=['primary_baseline'], unknown=[]"
+    },
+    {
+      "case": "reordered_theta_grid",
+      "exception": "ValueError",
+      "message": "unsupported theta_grid: this fixed benchmark requires [0.15, 0.35, 0.65], got [0.65, 0.35, 0.15]"
+    },
+    {
+      "case": "reordered_policies",
+      "exception": "ValueError",
+      "message": "unsupported policies: this fixed benchmark requires ['abstain', 'taker', 'independent', 'myopic', 'noinfo', 'active', 'full_information'], got ['full_information', 'active', 'noinfo', 'myopic', 'independent', 'taker', 'abstain']"
+    },
+    {
+      "case": "reordered_variants",
+      "exception": "ValueError",
+      "message": "unsupported variants: this fixed benchmark requires ['nominal', 'state_dependence', 'fixed_duration'], got ['fixed_duration', 'state_dependence', 'nominal']"
+    },
+    {
+      "case": "duplicate_grid",
+      "exception": "ValueError",
+      "message": "unsupported theta_grid: this fixed benchmark requires [0.15, 0.35, 0.65], got [0.15, 0.35, 0.35]"
+    },
+    {
+      "case": "duplicate_json_key",
+      "exception": "ValueError",
+      "message": "duplicate JSON configuration key: policies"
+    },
+    {
+      "case": "nonfinite_json_literal",
+      "exception": "ValueError",
+      "message": "nonfinite JSON configuration literal: NaN"
+    },
+    {
+      "case": "unknown_profile",
+      "exception": "ValueError",
+      "message": "profile must be 'full' or 'smoke'"
+    },
+    {
+      "case": "bad_resolution_0_None",
+      "exception": "ValueError",
+      "message": "belief_points must be a Python/JSON integer >= 2, not a boolean"
+    },
+    {
+      "case": "bad_resolution_True_None",
+      "exception": "ValueError",
+      "message": "belief_points must be a Python/JSON integer >= 2, not a boolean"
+    },
+    {
+      "case": "bad_resolution_1.5_None",
+      "exception": "ValueError",
+      "message": "belief_points must be a Python/JSON integer >= 2, not a boolean"
+    },
+    {
+      "case": "bad_resolution_None_0",
+      "exception": "ValueError",
+      "message": "quadrature_points must be a Python/JSON integer >= 1, not a boolean"
+    },
+    {
+      "case": "bad_resolution_None_-2",
+      "exception": "ValueError",
+      "message": "quadrature_points must be a Python/JSON integer >= 1, not a boolean"
+    },
+    {
+      "case": "resolved_environments",
+      "exception": "ValueError",
+      "message": "unsupported environments: this fixed benchmark requires [[0.15, 0.002], [0.15, 0.02], [0.15, 0.1], [0.35, 0.002], [0.35, 0.02], [0.35, 0.1], [0.65, 0.002], [0.65, 0.02], [0.65, 0.1]], got [[0.15, 0.002]]"
+    },
+    {
+      "case": "execute_preflight_environments",
+      "exception": "ValueError",
+      "message": "unsupported environments: this fixed benchmark requires [[0.15, 0.002], [0.15, 0.02], [0.15, 0.1], [0.35, 0.002], [0.35, 0.02], [0.35, 0.1], [0.65, 0.002], [0.65, 0.02], [0.65, 0.1]], got [[0.15, 0.002]]"
+    },
+    {
+      "case": "resolved_policies",
+      "exception": "ValueError",
+      "message": "unsupported policies: this fixed benchmark requires ['abstain', 'taker', 'independent', 'myopic', 'noinfo', 'active', 'full_information'], got ['abstain']"
+    },
+    {
+      "case": "execute_preflight_policies",
+      "exception": "ValueError",
+      "message": "unsupported policies: this fixed benchmark requires ['abstain', 'taker', 'independent', 'myopic', 'noinfo', 'active', 'full_information'], got ['abstain']"
+    },
+    {
+      "case": "resolved_primary_baseline",
+      "exception": "ValueError",
+      "message": "unsupported primary_baseline: this fixed benchmark requires 'noinfo', got 'taker'"
+    },
+    {
+      "case": "execute_preflight_primary_baseline",
+      "exception": "ValueError",
+      "message": "unsupported primary_baseline: this fixed benchmark requires 'noinfo', got 'taker'"
+    },
+    {
+      "case": "resolved_deployment_population",
+      "exception": "ValueError",
+      "message": "unsupported deployment_population: this fixed benchmark requires 'uniform mixture of nine nominal environments, fresh 100-episode pilot', got 'wrong'"
+    },
+    {
+      "case": "execute_preflight_deployment_population",
+      "exception": "ValueError",
+      "message": "unsupported deployment_population: this fixed benchmark requires 'uniform mixture of nine nominal environments, fresh 100-episode pilot', got 'wrong'"
+    },
+    {
+      "case": "resolved_pilots",
+      "exception": "ValueError",
+      "message": "unsupported pilots: this fixed benchmark requires 10, got 1"
+    },
+    {
+      "case": "execute_preflight_pilots",
+      "exception": "ValueError",
+      "message": "unsupported pilots: this fixed benchmark requires 10, got 1"
+    },
+    {
+      "case": "resolved_profile",
+      "exception": "ValueError",
+      "message": "resolved profile must be 'full' or 'smoke'"
+    },
+    {
+      "case": "execute_preflight_profile",
+      "exception": "ValueError",
+      "message": "resolved profile must be 'full' or 'smoke'"
+    },
+    {
+      "case": "missing_declared_environment",
+      "exception": "ValueError",
+      "message": "campaign environment strata differ from the declared protocol"
+    },
+    {
+      "case": "missing_stratified_environment",
+      "exception": "ValueError",
+      "message": "stratified evidence differs from the explicitly declared population"
+    },
+    {
+      "case": "missing_comparator",
+      "exception": "ValueError",
+      "message": "campaign policy strata differ from the declared protocol"
+    },
+    {
+      "case": "missing_variant",
+      "exception": "ValueError",
+      "message": "campaign variant strata differ from the declared protocol"
+    },
+    {
+      "case": "missing_pilot",
+      "exception": "ValueError",
+      "message": "incomplete declared campaign pilot/episode budgets"
+    },
+    {
+      "case": "missing_episode",
+      "exception": "ValueError",
+      "message": "incomplete declared campaign pilot/episode budgets"
+    },
+    {
+      "case": "duplicate_paired_key",
+      "exception": "ValueError",
+      "message": "duplicate campaign paired episode key"
+    },
+    {
+      "case": "duplicate_replacing_missing",
+      "exception": "ValueError",
+      "message": "duplicate campaign paired episode key"
+    },
+    {
+      "case": "campaign_objective_nan",
+      "exception": "ValueError",
+      "message": "objective contains missing or nonfinite outcomes"
+    },
+    {
+      "case": "campaign_pnl_inf",
+      "exception": "ValueError",
+      "message": "pnl contains missing or nonfinite outcomes"
+    },
+    {
+      "case": "campaign_inventory_penalty_-inf",
+      "exception": "ValueError",
+      "message": "inventory_penalty contains missing or nonfinite outcomes"
+    },
+    {
+      "case": "campaign_theta_0.15",
+      "exception": "ValueError",
+      "message": "environment label disagrees with numeric parameter metadata"
+    },
+    {
+      "case": "campaign_kappa_0.1",
+      "exception": "ValueError",
+      "message": "environment label disagrees with numeric parameter metadata"
+    },
+    {
+      "case": "campaign_environment_wrong",
+      "exception": "ValueError",
+      "message": "campaign environment strata differ from the declared protocol"
+    },
+    {
+      "case": "campaign_policy_unknown",
+      "exception": "ValueError",
+      "message": "campaign policy strata differ from the declared protocol"
+    },
+    {
+      "case": "campaign_pilot_2",
+      "exception": "ValueError",
+      "message": "pilot IDs exceed the declared budget"
+    },
+    {
+      "case": "campaign_episode_16",
+      "exception": "ValueError",
+      "message": "episode IDs exceed the declared budget"
+    },
+    {
+      "case": "campaign_pilot_data_hash_None",
+      "exception": "ValueError",
+      "message": "missing or invalid pilot dataset fingerprint"
+    },
+    {
+      "case": "campaign_starting_posterior_hash_None",
+      "exception": "ValueError",
+      "message": "missing starting policy-state fingerprint"
+    },
+    {
+      "case": "campaign_nonfinite_market_spread_cost",
+      "exception": "ValueError",
+      "message": "market_spread_cost contains missing or nonfinite outcomes"
+    },
+    {
+      "case": "campaign_missing_market_spread_cost",
+      "exception": "ValueError",
+      "message": "missing statistical evidence columns: ['market_spread_cost']"
+    },
+    {
+      "case": "campaign_nonfinite_liquidation_spread",
+      "exception": "ValueError",
+      "message": "liquidation_spread contains missing or nonfinite outcomes"
+    },
+    {
+      "case": "campaign_missing_liquidation_spread",
+      "exception": "ValueError",
+      "message": "missing statistical evidence columns: ['liquidation_spread']"
+    },
+    {
+      "case": "campaign_nonfinite_liquidation_fees",
+      "exception": "ValueError",
+      "message": "liquidation_fees contains missing or nonfinite outcomes"
+    },
+    {
+      "case": "campaign_missing_liquidation_fees",
+      "exception": "ValueError",
+      "message": "missing statistical evidence columns: ['liquidation_fees']"
+    },
+    {
+      "case": "campaign_nonfinite_directional_pnl",
+      "exception": "ValueError",
+      "message": "directional_pnl contains missing or nonfinite outcomes"
+    },
+    {
+      "case": "campaign_missing_directional_pnl",
+      "exception": "ValueError",
+      "message": "missing statistical evidence columns: ['directional_pnl']"
+    },
+    {
+      "case": "campaign_nonfinite_execution_exposure_pnl",
+      "exception": "ValueError",
+      "message": "execution_exposure_pnl contains missing or nonfinite outcomes"
+    },
+    {
+      "case": "campaign_missing_execution_exposure_pnl",
+      "exception": "ValueError",
+      "message": "missing statistical evidence columns: ['execution_exposure_pnl']"
+    },
+    {
+      "case": "campaign_nonfinite_inventory_sq_sum",
+      "exception": "ValueError",
+      "message": "inventory_sq_sum contains missing or nonfinite outcomes"
+    },
+    {
+      "case": "campaign_missing_inventory_sq_sum",
+      "exception": "ValueError",
+      "message": "missing statistical evidence columns: ['inventory_sq_sum']"
+    },
+    {
+      "case": "campaign_nonfinite_inventory_post_sq_sum",
+      "exception": "ValueError",
+      "message": "inventory_post_sq_sum contains missing or nonfinite outcomes"
+    },
+    {
+      "case": "campaign_missing_inventory_post_sq_sum",
+      "exception": "ValueError",
+      "message": "missing statistical evidence columns: ['inventory_post_sq_sum']"
+    },
+    {
+      "case": "campaign_nonfinite_inventory_abs_sum",
+      "exception": "ValueError",
+      "message": "inventory_abs_sum contains missing or nonfinite outcomes"
+    },
+    {
+      "case": "campaign_missing_inventory_abs_sum",
+      "exception": "ValueError",
+      "message": "missing statistical evidence columns: ['inventory_abs_sum']"
+    },
+    {
+      "case": "campaign_nonfinite_max_abs_inventory",
+      "exception": "ValueError",
+      "message": "max_abs_inventory contains missing or nonfinite outcomes"
+    },
+    {
+      "case": "campaign_missing_max_abs_inventory",
+      "exception": "ValueError",
+      "message": "missing statistical evidence columns: ['max_abs_inventory']"
+    },
+    {
+      "case": "campaign_nonfinite_passive_fills",
+      "exception": "ValueError",
+      "message": "passive_fills contains missing or nonfinite outcomes"
+    },
+    {
+      "case": "campaign_missing_passive_fills",
+      "exception": "ValueError",
+      "message": "missing statistical evidence columns: ['passive_fills']"
+    },
+    {
+      "case": "campaign_nonfinite_market_fills",
+      "exception": "ValueError",
+      "message": "market_fills contains missing or nonfinite outcomes"
+    },
+    {
+      "case": "campaign_missing_market_fills",
+      "exception": "ValueError",
+      "message": "missing statistical evidence columns: ['market_fills']"
+    },
+    {
+      "case": "campaign_nonfinite_terminal_inventory",
+      "exception": "ValueError",
+      "message": "terminal_inventory contains missing or nonfinite outcomes"
+    },
+    {
+      "case": "campaign_missing_terminal_inventory",
+      "exception": "ValueError",
+      "message": "missing statistical evidence columns: ['terminal_inventory']"
+    },
+    {
+      "case": "campaign_nonfinite_terminal_units",
+      "exception": "ValueError",
+      "message": "terminal_units contains missing or nonfinite outcomes"
+    },
+    {
+      "case": "campaign_missing_terminal_units",
+      "exception": "ValueError",
+      "message": "missing statistical evidence columns: ['terminal_units']"
+    },
+    {
+      "case": "campaign_nonfinite_risk_penalty",
+      "exception": "ValueError",
+      "message": "risk_penalty contains missing or nonfinite outcomes"
+    },
+    {
+      "case": "campaign_missing_risk_penalty",
+      "exception": "ValueError",
+      "message": "missing statistical evidence columns: ['risk_penalty']"
+    },
+    {
+      "case": "campaign_nonfinite_reconciled_pnl",
+      "exception": "ValueError",
+      "message": "reconciled_pnl contains missing or nonfinite outcomes"
+    },
+    {
+      "case": "campaign_missing_reconciled_pnl",
+      "exception": "ValueError",
+      "message": "missing statistical evidence columns: ['reconciled_pnl']"
+    },
+    {
+      "case": "campaign_nonfinite_terminal_inventory_after_liquidation",
+      "exception": "ValueError",
+      "message": "terminal_inventory_after_liquidation contains missing or nonfinite outcomes"
+    },
+    {
+      "case": "campaign_missing_terminal_inventory_after_liquidation",
+      "exception": "ValueError",
+      "message": "missing statistical evidence columns: ['terminal_inventory_after_liquidation']"
+    },
+    {
+      "case": "campaign_nonfinite_mean_abs_inventory",
+      "exception": "ValueError",
+      "message": "mean_abs_inventory contains missing or nonfinite outcomes"
+    },
+    {
+      "case": "campaign_missing_mean_abs_inventory",
+      "exception": "ValueError",
+      "message": "missing statistical evidence columns: ['mean_abs_inventory']"
+    },
+    {
+      "case": "campaign_nonfinite_bid_fill_count",
+      "exception": "ValueError",
+      "message": "bid_fill_count contains missing or nonfinite outcomes"
+    },
+    {
+      "case": "campaign_missing_bid_fill_count",
+      "exception": "ValueError",
+      "message": "missing statistical evidence columns: ['bid_fill_count']"
+    },
+    {
+      "case": "campaign_nonfinite_ask_fill_count",
+      "exception": "ValueError",
+      "message": "ask_fill_count contains missing or nonfinite outcomes"
+    },
+    {
+      "case": "campaign_missing_ask_fill_count",
+      "exception": "ValueError",
+      "message": "missing statistical evidence columns: ['ask_fill_count']"
+    },
+    {
+      "case": "campaign_nonfinite_max_quote_gap",
+      "exception": "ValueError",
+      "message": "max_quote_gap contains missing or nonfinite outcomes"
+    },
+    {
+      "case": "campaign_missing_max_quote_gap",
+      "exception": "ValueError",
+      "message": "missing statistical evidence columns: ['max_quote_gap']"
+    },
+    {
+      "case": "campaign_nonfinite_submitted_periods",
+      "exception": "ValueError",
+      "message": "submitted_periods contains missing or nonfinite outcomes"
+    },
+    {
+      "case": "campaign_missing_submitted_periods",
+      "exception": "ValueError",
+      "message": "missing statistical evidence columns: ['submitted_periods']"
+    },
+    {
+      "case": "campaign_nonfinite_submitted_sides_x-1",
+      "exception": "ValueError",
+      "message": "submitted_sides_x-1 contains missing or nonfinite outcomes"
+    },
+    {
+      "case": "campaign_missing_submitted_sides_x-1",
+      "exception": "ValueError",
+      "message": "missing statistical evidence columns: ['submitted_sides_x-1']"
+    },
+    {
+      "case": "campaign_nonfinite_submitted_sides_x0",
+      "exception": "ValueError",
+      "message": "submitted_sides_x0 contains missing or nonfinite outcomes"
+    },
+    {
+      "case": "campaign_missing_submitted_sides_x0",
+      "exception": "ValueError",
+      "message": "missing statistical evidence columns: ['submitted_sides_x0']"
+    },
+    {
+      "case": "campaign_nonfinite_submitted_sides_x1",
+      "exception": "ValueError",
+      "message": "submitted_sides_x1 contains missing or nonfinite outcomes"
+    },
+    {
+      "case": "campaign_missing_submitted_sides_x1",
+      "exception": "ValueError",
+      "message": "missing statistical evidence columns: ['submitted_sides_x1']"
+    },
+    {
+      "case": "campaign_missing_column_objective",
+      "exception": "ValueError",
+      "message": "missing statistical evidence columns: ['objective']"
+    },
+    {
+      "case": "campaign_missing_column_episode",
+      "exception": "ValueError",
+      "message": "missing statistical evidence columns: ['episode']"
+    },
+    {
+      "case": "campaign_missing_column_policy",
+      "exception": "ValueError",
+      "message": "missing statistical evidence columns: ['policy']"
+    },
+    {
+      "case": "campaign_missing_column_pilot_data_hash",
+      "exception": "ValueError",
+      "message": "missing statistical evidence columns: ['pilot_data_hash']"
+    },
+    {
+      "case": "unmatched_pilot_identity",
+      "exception": "ValueError",
+      "message": "paired policies or variants received different pilot datasets"
+    },
+    {
+      "case": "reused_pilot_disguised_as_independent",
+      "exception": "ValueError",
+      "message": "one pilot dataset was reused as independent pilot replicates"
+    },
+    {
+      "case": "unmatched_initial_learning_state",
+      "exception": "ValueError",
+      "message": "learning policies did not reset to the same pilot-fitted state"
+    }
+  ],
+  "rejected_count": 168,
+  "canonical_rows": 189000,
+  "canonical_max_numeric_difference": 3.552713678800501e-14,
+  "original_csv_sha256": "098ac2ced552c16f090d5ea9a2dc9199116c4f12e4686df5e1a991fcec253ef3",
+  "original_source_sha256": "96ccb4b6e1086d78416c62cd40851b24b2d07990bd971d3581cc0864263c91f7",
+  "resolved_smoke": {
+    "version": 1,
+    "horizon": 12,
+    "qmax": 2,
+    "theta_grid": [
+      0.15,
+      0.35,
+      0.65
+    ],
+    "kappa_grid": [
+      0.002,
+      0.02,
+      0.1
+    ],
+    "pilots": 2,
+    "pilot_episodes": 12,
+    "test_episodes": 16,
+    "variants": [
+      "nominal",
+      "state_dependence",
+      "fixed_duration"
+    ],
+    "policies": [
+      "abstain",
+      "taker",
+      "independent",
+      "myopic",
+      "noinfo",
+      "active",
+      "full_information"
+    ],
+    "master_seed": 260924136,
+    "primary_policy": "active",
+    "primary_baseline": "noinfo",
+    "deployment_threshold": 0.05,
+    "deployment_population": "smoke integration only: theta=0.35,kappa=0.02, fresh 12-episode pilot; no deployment inference",
+    "parameter_prior": "uniform over declared public 3x3 grid",
+    "online_updates": "joint parameter/regime posterior within each episode only",
+    "algorithm_selection": "fixed in advance; no final-data tuning",
+    "belief_points": 21,
+    "quadrature_points": 15,
+    "belief_overrides": {},
+    "profile": "smoke",
+    "environments": [
+      [
+        0.35,
+        0.02
+      ]
+    ]
+  },
+  "resolved_full": {
+    "version": 1,
+    "horizon": 300,
+    "qmax": 5,
+    "theta_grid": [
+      0.15,
+      0.35,
+      0.65
+    ],
+    "kappa_grid": [
+      0.002,
+      0.02,
+      0.1
+    ],
+    "pilots": 10,
+    "pilot_episodes": 100,
+    "test_episodes": 100,
+    "variants": [
+      "nominal",
+      "state_dependence",
+      "fixed_duration"
+    ],
+    "policies": [
+      "abstain",
+      "taker",
+      "independent",
+      "myopic",
+      "noinfo",
+      "active",
+      "full_information"
+    ],
+    "master_seed": 260924138,
+    "primary_policy": "active",
+    "primary_baseline": "noinfo",
+    "deployment_threshold": 0.05,
+    "deployment_population": "uniform mixture of nine nominal environments, fresh 100-episode pilot",
+    "parameter_prior": "uniform over declared public 3x3 grid",
+    "online_updates": "joint parameter/regime posterior within each episode only",
+    "algorithm_selection": "fixed in advance; no final-data tuning",
+    "belief_points": 641,
+    "quadrature_points": 161,
+    "belief_overrides": {
+      "0.65,0.002": 1281
+    },
+    "profile": "full",
+    "environments": [
+      [
+        0.15,
+        0.002
+      ],
+      [
+        0.15,
+        0.02
+      ],
+      [
+        0.15,
+        0.1
+      ],
+      [
+        0.35,
+        0.002
+      ],
+      [
+        0.35,
+        0.02
+      ],
+      [
+        0.35,
+        0.1
+      ],
+      [
+        0.65,
+        0.002
+      ],
+      [
+        0.65,
+        0.02
+      ],
+      [
+        0.65,
+        0.1
+      ]
+    ]
+  },
+  "source_hash": "cabebb53081506b722f4f9232e49a5171585217b7712e4c7a2940149aa6a34eb"
+}

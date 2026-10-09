@@ -1,0 +1,46 @@
+{
+  "scope": "Completed endpoint ladder on the recorded macOS ARM build; operator bytes describe temporary storage, not peak process RSS",
+  "completed_families": [
+    {
+      "family": "w17-b33-gh15",
+      "array_bytes": 2712138088,
+      "seconds": 49.24817691699718
+    },
+    {
+      "family": "w17-b33-gh25",
+      "array_bytes": 2712138088,
+      "seconds": 62.501262124977075
+    },
+    {
+      "family": "w25-b49-gh15",
+      "array_bytes": 8734699048,
+      "seconds": 171.50741591700353
+    },
+    {
+      "family": "w25-b49-gh25",
+      "array_bytes": 8734699048,
+      "seconds": 287.73505254200427
+    },
+    {
+      "family": "w33-b65-gh15",
+      "array_bytes": 20254051048,
+      "seconds": 969.4589595409925
+    },
+    {
+      "family": "w33-b65-gh25",
+      "array_bytes": 20254051048,
+      "seconds": 1645.3349268330203
+    },
+    {
+      "family": "w9-b17-gh25",
+      "array_bytes": 403625128,
+      "seconds": 10.914709125005174
+    }
+  ],
+  "retained_array_bytes": 63805401496,
+  "selected_family_array_bytes": 20254051048,
+  "largest_selected_operator_bytes": 13347074220,
+  "first_selected_build_seconds": 1645.3349268330203,
+  "host_physical_ram_bytes": 17179869184,
+  "recommendation": "Run one solver at a time. The recorded 16 GiB machine completes via memory-mapped disk access; more RAM may reduce disk traffic but no alternative-hardware speedup was measured."
+}

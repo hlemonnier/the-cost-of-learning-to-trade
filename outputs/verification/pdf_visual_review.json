@@ -1,0 +1,46 @@
+{
+  "passed": true,
+  "checked_utc": "2026-09-24T17:16:19.632772+00:00",
+  "reviewer": "Primary Codex agent; separate from Hugo and ChatGPT 6 Pro final review",
+  "scope": "Fresh Poppler renders of exact current PDFs; every page inspected for tables, equations, pagination, margins, plots, new matched mechanisms and three-way deployment interpretation. The appendix table continues with a repeated header.",
+  "renderer": "pdftoppm; 115 dpi main, 110 dpi appendix",
+  "documents": [
+    {
+      "path": "output/pdf/Market_Making_Study.pdf",
+      "sha256": "55c29c4f6c0757eaa931731bf10129f361a0962605096d5f27cdf8581cc63e41",
+      "pages": 8,
+      "inspected_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "render_command": "pdftoppm -png -r 115 output/pdf/Market_Making_Study.pdf tmp/final-pdf-review/main",
+      "unresolved_findings": []
+    },
+    {
+      "path": "output/pdf/Market_Making_Appendix.pdf",
+      "sha256": "7f2b440647699659525bd42989d7138848fdc03c95ceef626d8e3763c34fbf1e",
+      "pages": 11,
+      "inspected_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "render_command": "pdftoppm -png -r 110 output/pdf/Market_Making_Appendix.pdf tmp/final-pdf-review/appendix",
+      "unresolved_findings": []
+    }
+  ]
+}

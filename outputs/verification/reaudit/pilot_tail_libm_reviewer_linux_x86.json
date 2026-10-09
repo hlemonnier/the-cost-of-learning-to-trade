@@ -1,0 +1,46 @@
+{
+  "runtime": {
+    "python": "3.13.5",
+    "numpy": "2.3.5",
+    "system": "Linux",
+    "machine": "x86_64"
+  },
+  "manifest_sha256": "8dfec1a33e07c96ef625b9b7150046f878d2875510493b9ec37ab143d0b45e58",
+  "numpy_source": "https://github.com/numpy/numpy/blob/v2.3.5/numpy/random/src/distributions/distributions.c",
+  "constant_source": "https://github.com/numpy/numpy/blob/v2.3.5/numpy/random/src/distributions/ziggurat_constants.h",
+  "passed": true,
+  "cases": [
+    {
+      "pilot": "03_01",
+      "episode": 49,
+      "period": 163,
+      "raw_index_in_z_component": 15162,
+      "raw_uint64": 12261688070341713172,
+      "uniform_hex": "0x1.545488ab66b9bp-1",
+      "log1p_minus_uniform_hex": "-0x1.17be9557b254ep+0",
+      "tail_magnitude_hex": "0x1.fa0259788755cp+1",
+      "regenerated_z_hex": "-0x1.fa0259788755cp+1",
+      "signal": 0,
+      "original_return_hex": "-0x1.2f9b027b8466bp+0",
+      "regenerated_return_hex": "-0x1.2f9b027b8466ap+0",
+      "original_archive_sha256": "3fa637e1f93bc473ea5125813cf88e974ffb572f4884f9f89d58b9a4cbbe287b",
+      "return_ulp_steps": 1
+    },
+    {
+      "pilot": "08_02",
+      "episode": 35,
+      "period": 252,
+      "raw_index_in_z_component": 10964,
+      "raw_uint64": 12068009366028942479,
+      "uniform_hex": "0x1.4ef45d28a07bfp-1",
+      "log1p_minus_uniform_hex": "-0x1.0fd9ddc5ec286p+0",
+      "tail_magnitude_hex": "0x1.f8edda80dd030p+1",
+      "regenerated_z_hex": "-0x1.f8edda80dd030p+1",
+      "signal": 0,
+      "original_return_hex": "-0x1.2ef51cb3b7ceap+0",
+      "regenerated_return_hex": "-0x1.2ef51cb3b7ce9p+0",
+      "original_archive_sha256": "e3b753f6344414488c4d0c7b62bcfaaabccc05987cbbe9aa1d2dd8c4f4d6835b",
+      "return_ulp_steps": 1
+    }
+  ]
+}

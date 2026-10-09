@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="330" viewBox="0 0 1280 330" role="img" aria-labelledby="title desc">
+<title id="title">The Cost of Learning to Trade</title>
+<desc id="desc">The loop between beliefs, actions and execution feedback.</desc>
+<defs>
+<linearGradient id="bg" x2="1" y2="1"><stop stop-color="#101b2b"/><stop offset="1" stop-color="#19374a"/></linearGradient>
+<pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#fff" stroke-opacity=".035"/></pattern>
+<marker id="arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0 0L6 3L0 6" fill="#7ad8c4"/></marker>
+</defs>
+<rect width="1280" height="330" rx="16" fill="url(#bg)"/><rect width="1280" height="330" rx="16" fill="url(#grid)"/>
+<rect x="54" y="58" width="40" height="3" rx="1.5" fill="#7ad8c4"/>
+<text x="54" y="93" font-family="Arial,Helvetica,sans-serif" font-size="13" letter-spacing="3.5" fill="#a5c8d0">QUANTITATIVE RESEARCH</text>
+<text x="54" y="152" font-family="Arial,Helvetica,sans-serif" font-size="43" font-weight="700" fill="#f2f6fa">The Cost of Learning</text>
+<text x="54" y="207" font-family="Arial,Helvetica,sans-serif" font-size="43" font-weight="700" fill="#f2f6fa">to Trade</text>
+<text x="56" y="258" font-family="Arial,Helvetica,sans-serif" font-size="17" fill="#bbd1db">Hidden regimes. Selected feedback. Sequential decisions.</text>
+<g font-family="Arial,Helvetica,sans-serif" text-anchor="middle">
+<path d="M912 107L1079 166M1064 203L883 246M840 220L857 130" fill="none" stroke="#7ad8c4" stroke-width="2" marker-end="url(#arrow)" opacity=".8"/>
+<rect x="796" y="67" width="174" height="60" rx="12" fill="#223f50" stroke="#567f91"/><text x="883" y="104" font-size="17" fill="#e4eff4">Belief</text>
+<rect x="1030" y="149" width="174" height="60" rx="12" fill="#234d55" stroke="#6fb3ad"/><text x="1117" y="186" font-size="17" fill="#e4eff4">Action</text>
+<rect x="744" y="223" width="214" height="60" rx="12" fill="#223f50" stroke="#567f91"/><text x="851" y="260" font-size="17" fill="#e4eff4">Execution feedback</text>
+<text x="989" y="76" font-size="12" fill="#8eacb9" letter-spacing="1.5">VALUE OF INFORMATION</text>
+</g>
+</svg>

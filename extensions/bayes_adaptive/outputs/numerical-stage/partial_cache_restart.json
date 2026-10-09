@@ -1,0 +1,883 @@
+{
+  "utc": "2026-09-25T00:48:17.006033+00:00",
+  "reason": "User explicitly resumed numerical validation; interrupted unauthenticated regenerable cache is rebuilt from empty directory",
+  "path": "/recorded-environment Learning/extensions/bayes_adaptive/cache/v2/w33-b65-gh25",
+  "had_complete_marker": false,
+  "bytes": 32982826108,
+  "files": [
+    {
+      "file": "known-q-0.npy",
+      "bytes": 13135448
+    },
+    {
+      "file": "known-q-1.npy",
+      "bytes": 13135448
+    },
+    {
+      "file": "operators-bayes/x0-a0-dq0/data.npy",
+      "bytes": 3984680
+    },
+    {
+      "file": "operators-bayes/x0-a0-dq0/indices.npy",
+      "bytes": 1992404
+    },
+    {
+      "file": "operators-bayes/x0-a0-dq0/indptr.npy",
+      "bytes": 557832
+    },
+    {
+      "file": "operators-bayes/x0-a1-dq-1/data.npy",
+      "bytes": 150127064
+    },
+    {
+      "file": "operators-bayes/x0-a1-dq-1/indices.npy",
+      "bytes": 75063596
+    },
+    {
+      "file": "operators-bayes/x0-a1-dq-1/indptr.npy",
+      "bytes": 557832
+    },
+    {
+      "file": "operators-bayes/x0-a1-dq0/data.npy",
+      "bytes": 180435232
+    },
+    {
+      "file": "operators-bayes/x0-a1-dq0/indices.npy",
+      "bytes": 90217680
+    },
+    {
+      "file": "operators-bayes/x0-a1-dq0/indptr.npy",
+      "bytes": 557832
+    },
+    {
+      "file": "operators-bayes/x0-a10-dq-1/data.npy",
+      "bytes": 3984680
+    },
+    {
+      "file": "operators-bayes/x0-a10-dq-1/indices.npy",
+      "bytes": 1992404
+    },
+    {
+      "file": "operators-bayes/x0-a10-dq-1/indptr.npy",
+      "bytes": 557832
+    },
+    {
+      "file": "operators-bayes/x0-a2-dq-1/data.npy",
+      "bytes": 127816104
+    },
+    {
+      "file": "operators-bayes/x0-a2-dq-1/indices.npy",
+      "bytes": 63908116
+    },
+    {
+      "file": "operators-bayes/x0-a2-dq-1/indptr.npy",
+      "bytes": 557832
+    },
+    {
+      "file": "operators-bayes/x0-a2-dq0/data.npy",
+      "bytes": 193997728
+    },
+    {
+      "file": "operators-bayes/x0-a2-dq0/indices.npy",
+      "bytes": 96998928
+    },
+    {
+      "file": "operators-bayes/x0-a2-dq0/indptr.npy",
+      "bytes": 557832
+    },
+    {
+      "file": "operators-bayes/x0-a3-dq0/data.npy",
+      "bytes": 168933840
+    },
+    {
+      "file": "operators-bayes/x0-a3-dq0/indices.npy",
+      "bytes": 84466984
+    },
+    {
+      "file": "operators-bayes/x0-a3-dq0/indptr.npy",
+      "bytes": 557832
+    },
+    {
+      "file": "operators-bayes/x0-a3-dq1/data.npy",
+      "bytes": 163096296
+    },
+    {
+      "file": "operators-bayes/x0-a3-dq1/indices.npy",
+      "bytes": 81548212
+    },
+    {
+      "file": "operators-bayes/x0-a3-dq1/indptr.npy",
+      "bytes": 557832
+    },
+    {
+      "file": "operators-bayes/x0-a4-dq-1/data.npy",
+      "bytes": 102888400
+    },
+    {
+      "file": "operators-bayes/x0-a4-dq-1/indices.npy",
+      "bytes": 51444264
+    },
+    {
+      "file": "operators-bayes/x0-a4-dq-1/indptr.npy",
+      "bytes": 557832
+    },
+    {
+      "file": "operators-bayes/x0-a4-dq0/data.npy",
+      "bytes": 148691472
+    },
+    {
+      "file": "operators-bayes/x0-a4-dq0/indices.npy",
+      "bytes": 74345800
+    },
+    {
+      "file": "operators-bayes/x0-a4-dq0/indptr.npy",
+      "bytes": 557832
+    },
+    {
+      "file": "operators-bayes/x0-a4-dq1/data.npy",
+      "bytes": 116741864
+    },
+    {
+      "file": "operators-bayes/x0-a4-dq1/indices.npy",
+      "bytes": 58370996
+    },
+    {
+      "file": "operators-bayes/x0-a4-dq1/indptr.npy",
+      "bytes": 557832
+    },
+    {
+      "file": "operators-bayes/x0-a5-dq-1/data.npy",
+      "bytes": 92554016
+    },
+    {
+      "file": "operators-bayes/x0-a5-dq-1/indices.npy",
+      "bytes": 46277072
+    },
+    {
+      "file": "operators-bayes/x0-a5-dq-1/indptr.npy",
+      "bytes": 557832
+    },
+    {
+      "file": "operators-bayes/x0-a5-dq0/data.npy",
+      "bytes": 267146392
+    },
+    {
+      "file": "operators-bayes/x0-a5-dq0/indices.npy",
+      "bytes": 133573260
+    },
+    {
+      "file": "operators-bayes/x0-a5-dq0/indptr.npy",
+      "bytes": 557832
+    },
+    {
+      "file": "operators-bayes/x0-a5-dq1/data.npy",
+      "bytes": 127922752
+    },
+    {
+      "file": "operators-bayes/x0-a5-dq1/indices.npy",
+      "bytes": 63961440
+    },
+    {
+      "file": "operators-bayes/x0-a5-dq1/indptr.npy",
+      "bytes": 557832
+    },
+    {
+      "file": "operators-bayes/x0-a6-dq0/data.npy",
+      "bytes": 188146240
+    },
+    {
+      "file": "operators-bayes/x0-a6-dq0/indices.npy",
+      "bytes": 94073184
+    },
+    {
+      "file": "operators-bayes/x0-a6-dq0/indptr.npy",
+      "bytes": 557832
+    },
+    {
+      "file": "operators-bayes/x0-a6-dq1/data.npy",
+      "bytes": 139365368
+    },
+    {
+      "file": "operators-bayes/x0-a6-dq1/indices.npy",
+      "bytes": 69682748
+    },
+    {
+      "file": "operators-bayes/x0-a6-dq1/indptr.npy",
+      "bytes": 557832
+    },
+    {
+      "file": "operators-bayes/x0-a7-dq-1/data.npy",
+      "bytes": 112947160
+    },
+    {
+      "file": "operators-bayes/x0-a7-dq-1/indices.npy",
+      "bytes": 56473644
+    },
+    {
+      "file": "operators-bayes/x0-a7-dq-1/indptr.npy",
+      "bytes": 557832
+    },
+    {
+      "file": "operators-bayes/x0-a7-dq0/data.npy",
+      "bytes": 126076784
+    },
+    {
+      "file": "operators-bayes/x0-a7-dq0/indices.npy",
+      "bytes": 63038456
+    },
+    {
+      "file": "operators-bayes/x0-a7-dq0/indptr.npy",
+      "bytes": 557832
+    },
+    {
+      "file": "operators-bayes/x0-a7-dq1/data.npy",
+      "bytes": 103081640
+    },
+    {
+      "file": "operators-bayes/x0-a7-dq1/indices.npy",
+      "bytes": 51540884
+    },
+    {
+      "file": "operators-bayes/x0-a7-dq1/indptr.npy",
+      "bytes": 557832
+    },
+    {
+      "file": "operators-bayes/x0-a8-dq-1/data.npy",
+      "bytes": 100607056
+    },
+    {
+      "file": "operators-bayes/x0-a8-dq-1/indices.npy",
+      "bytes": 50303592
+    },
+    {
+      "file": "operators-bayes/x0-a8-dq-1/indptr.npy",
+      "bytes": 557832
+    },
+    {
+      "file": "operators-bayes/x0-a8-dq0/data.npy",
+      "bytes": 160487976
+    },
+    {
+      "file": "operators-bayes/x0-a8-dq0/indices.npy",
+      "bytes": 80244052
+    },
+    {
+      "file": "operators-bayes/x0-a8-dq0/indptr.npy",
+      "bytes": 557832
+    },
+    {
+      "file": "operators-bayes/x0-a8-dq1/data.npy",
+      "bytes": 113232944
+    },
+    {
+      "file": "operators-bayes/x0-a8-dq1/indices.npy",
+      "bytes": 56616536
+    },
+    {
+      "file": "operators-bayes/x0-a8-dq1/indptr.npy",
+      "bytes": 557832
+    },
+    {
+      "file": "operators-bayes/x0-a9-dq1/data.npy",
+      "bytes": 3984680
+    },
+    {
+      "file": "operators-bayes/x0-a9-dq1/indices.npy",
+      "bytes": 1992404
+    },
+    {
+      "file": "operators-bayes/x0-a9-dq1/indptr.npy",
+      "bytes": 557832
+    },
+    {
+      "file": "operators-bayes/x1-a0-dq0/data.npy",
+      "bytes": 3984680
+    },
+    {
+      "file": "operators-bayes/x1-a0-dq0/indices.npy",
+      "bytes": 1992404
+    },
+    {
+      "file": "operators-bayes/x1-a0-dq0/indptr.npy",
+      "bytes": 557832
+    },
+    {
+      "file": "operators-bayes/x1-a1-dq-1/data.npy",
+      "bytes": 156579520
+    },
+    {
+      "file": "operators-bayes/x1-a1-dq-1/indices.npy",
+      "bytes": 78289824
+    },
+    {
+      "file": "operators-bayes/x1-a1-dq-1/indptr.npy",
+      "bytes": 557832
+    },
+    {
+      "file": "operators-bayes/x1-a1-dq0/data.npy",
+      "bytes": 174994984
+    },
+    {
+      "file": "operators-bayes/x1-a1-dq0/indices.npy",
+      "bytes": 87497556
+    },
+    {
+      "file": "operators-bayes/x1-a1-dq0/indptr.npy",
+      "bytes": 557832
+    },
+    {
+      "file": "operators-bayes/x1-a10-dq-1/data.npy",
+      "bytes": 3984680
+    },
+    {
+      "file": "operators-bayes/x1-a10-dq-1/indices.npy",
+      "bytes": 1992404
+    },
+    {
+      "file": "operators-bayes/x1-a10-dq-1/indptr.npy",
+      "bytes": 557832
+    },
+    {
+      "file": "operators-bayes/x1-a2-dq-1/data.npy",
+      "bytes": 132992952
+    },
+    {
+      "file": "operators-bayes/x1-a2-dq-1/indices.npy",
+      "bytes": 66496540
+    },
+    {
+      "file": "operators-bayes/x1-a2-dq-1/indptr.npy",
+      "bytes": 557832
+    },
+    {
+      "file": "operators-bayes/x1-a2-dq0/data.npy",
+      "bytes": 191645456
+    },
+    {
+      "file": "operators-bayes/x1-a2-dq0/indices.npy",
+      "bytes": 95822792
+    },
+    {
+      "file": "operators-bayes/x1-a2-dq0/indptr.npy",
+      "bytes": 557832
+    },
+    {
+      "file": "operators-bayes/x1-a3-dq0/data.npy",
+      "bytes": 174994984
+    },
+    {
+      "file": "operators-bayes/x1-a3-dq0/indices.npy",
+      "bytes": 87497556
+    },
+    {
+      "file": "operators-bayes/x1-a3-dq0/indptr.npy",
+      "bytes": 557832
+    },
+    {
+      "file": "operators-bayes/x1-a3-dq1/data.npy",
+      "bytes": 156579520
+    },
+    {
+      "file": "operators-bayes/x1-a3-dq1/indices.npy",
+      "bytes": 78289824
+    },
+    {
+      "file": "operators-bayes/x1-a3-dq1/indptr.npy",
+      "bytes": 557832
+    },
+    {
+      "file": "operators-bayes/x1-a4-dq-1/data.npy",
+      "bytes": 110004208
+    },
+    {
+      "file": "operators-bayes/x1-a4-dq-1/indices.npy",
+      "bytes": 55002168
+    },
+    {
+      "file": "operators-bayes/x1-a4-dq-1/indptr.npy",
+      "bytes": 557832
+    },
+    {
+      "file": "operators-bayes/x1-a4-dq0/data.npy",
+      "bytes": 10237016
+    },
+    {
+      "file": "operators-bayes/x1-a4-dq0/indices.npy",
+      "bytes": 5118572
+    },
+    {
+      "file": "operators-bayes/x1-a4-dq0/indptr.npy",
+      "bytes": 557832
+    },
+    {
+      "file": "operators-bayes/x1-a4-dq1/data.npy",
+      "bytes": 110004208
+    },
+    {
+      "file": "operators-bayes/x1-a4-dq1/indices.npy",
+      "bytes": 55002168
+    },
+    {
+      "file": "operators-bayes/x1-a4-dq1/indptr.npy",
+      "bytes": 557832
+    },
+    {
+      "file": "operators-bayes/x1-a5-dq-1/data.npy",
+      "bytes": 98025728
+    },
+    {
+      "file": "operators-bayes/x1-a5-dq-1/indices.npy",
+      "bytes": 49012928
+    },
+    {
+      "file": "operators-bayes/x1-a5-dq-1/indptr.npy",
+      "bytes": 557832
+    },
+    {
+      "file": "operators-bayes/x1-a5-dq0/data.npy",
+      "bytes": 226265400
+    },
+    {
+      "file": "operators-bayes/x1-a5-dq0/indices.npy",
+      "bytes": 113132764
+    },
+    {
+      "file": "operators-bayes/x1-a5-dq0/indptr.npy",
+      "bytes": 557832
+    },
+    {
+      "file": "operators-bayes/x1-a5-dq1/data.npy",
+      "bytes": 120453408
+    },
+    {
+      "file": "operators-bayes/x1-a5-dq1/indices.npy",
+      "bytes": 60226768
+    },
+    {
+      "file": "operators-bayes/x1-a5-dq1/indptr.npy",
+      "bytes": 557832
+    },
+    {
+      "file": "operators-bayes/x1-a6-dq0/data.npy",
+      "bytes": 191645456
+    },
+    {
+      "file": "operators-bayes/x1-a6-dq0/indices.npy",
+      "bytes": 95822792
+    },
+    {
+      "file": "operators-bayes/x1-a6-dq0/indptr.npy",
+      "bytes": 557832
+    },
+    {
+      "file": "operators-bayes/x1-a6-dq1/data.npy",
+      "bytes": 132992952
+    },
+    {
+      "file": "operators-bayes/x1-a6-dq1/indices.npy",
+      "bytes": 66496540
+    },
+    {
+      "file": "operators-bayes/x1-a6-dq1/indptr.npy",
+      "bytes": 557832
+    },
+    {
+      "file": "operators-bayes/x1-a7-dq-1/data.npy",
+      "bytes": 120453408
+    },
+    {
+      "file": "operators-bayes/x1-a7-dq-1/indices.npy",
+      "bytes": 60226768
+    },
+    {
+      "file": "operators-bayes/x1-a7-dq-1/indptr.npy",
+      "bytes": 557832
+    },
+    {
+      "file": "operators-bayes/x1-a7-dq0/data.npy",
+      "bytes": 226265400
+    },
+    {
+      "file": "operators-bayes/x1-a7-dq0/indices.npy",
+      "bytes": 113132764
+    },
+    {
+      "file": "operators-bayes/x1-a7-dq0/indptr.npy",
+      "bytes": 557832
+    },
+    {
+      "file": "operators-bayes/x1-a7-dq1/data.npy",
+      "bytes": 98025728
+    },
+    {
+      "file": "operators-bayes/x1-a7-dq1/indices.npy",
+      "bytes": 49012928
+    },
+    {
+      "file": "operators-bayes/x1-a7-dq1/indptr.npy",
+      "bytes": 557832
+    },
+    {
+      "file": "operators-bayes/x1-a8-dq-1/data.npy",
+      "bytes": 106697104
+    },
+    {
+      "file": "operators-bayes/x1-a8-dq-1/indices.npy",
+      "bytes": 53348616
+    },
+    {
+      "file": "operators-bayes/x1-a8-dq-1/indptr.npy",
+      "bytes": 557832
+    },
+    {
+      "file": "operators-bayes/x1-a8-dq0/data.npy",
+      "bytes": 10177512
+    },
+    {
+      "file": "operators-bayes/x1-a8-dq0/indices.npy",
+      "bytes": 5088820
+    },
+    {
+      "file": "operators-bayes/x1-a8-dq0/indptr.npy",
+      "bytes": 557832
+    },
+    {
+      "file": "operators-bayes/x1-a8-dq1/data.npy",
+      "bytes": 106697104
+    },
+    {
+      "file": "operators-bayes/x1-a8-dq1/indices.npy",
+      "bytes": 53348616
+    },
+    {
+      "file": "operators-bayes/x1-a8-dq1/indptr.npy",
+      "bytes": 557832
+    },
+    {
+      "file": "operators-bayes/x1-a9-dq1/data.npy",
+      "bytes": 3984680
+    },
+    {
+      "file": "operators-bayes/x1-a9-dq1/indices.npy",
+      "bytes": 1992404
+    },
+    {
+      "file": "operators-bayes/x1-a9-dq1/indptr.npy",
+      "bytes": 557832
+    },
+    {
+      "file": "operators-bayes/x2-a0-dq0/data.npy",
+      "bytes": 3984680
+    },
+    {
+      "file": "operators-bayes/x2-a0-dq0/indices.npy",
+      "bytes": 1992404
+    },
+    {
+      "file": "operators-bayes/x2-a0-dq0/indptr.npy",
+      "bytes": 557832
+    },
+    {
+      "file": "operators-bayes/x2-a1-dq-1/data.npy",
+      "bytes": 163096296
+    },
+    {
+      "file": "operators-bayes/x2-a1-dq-1/indices.npy",
+      "bytes": 81548212
+    },
+    {
+      "file": "operators-bayes/x2-a1-dq-1/indptr.npy",
+      "bytes": 557832
+    },
+    {
+      "file": "operators-bayes/x2-a1-dq0/data.npy",
+      "bytes": 168933840
+    },
+    {
+      "file": "operators-bayes/x2-a1-dq0/indices.npy",
+      "bytes": 84466984
+    },
+    {
+      "file": "operators-bayes/x2-a1-dq0/indptr.npy",
+      "bytes": 557832
+    },
+    {
+      "file": "operators-bayes/x2-a10-dq-1/data.npy",
+      "bytes": 3984680
+    },
+    {
+      "file": "operators-bayes/x2-a10-dq-1/indices.npy",
+      "bytes": 1992404
+    },
+    {
+      "file": "operators-bayes/x2-a10-dq-1/indptr.npy",
+      "bytes": 557832
+    },
+    {
+      "file": "operators-bayes/x2-a2-dq-1/data.npy",
+      "bytes": 139365368
+    },
+    {
+      "file": "operators-bayes/x2-a2-dq-1/indices.npy",
+      "bytes": 69682748
+    },
+    {
+      "file": "operators-bayes/x2-a2-dq-1/indptr.npy",
+      "bytes": 557832
+    },
+    {
+      "file": "operators-bayes/x2-a2-dq0/data.npy",
+      "bytes": 188146240
+    },
+    {
+      "file": "operators-bayes/x2-a2-dq0/indices.npy",
+      "bytes": 94073184
+    },
+    {
+      "file": "operators-bayes/x2-a2-dq0/indptr.npy",
+      "bytes": 557832
+    },
+    {
+      "file": "operators-bayes/x2-a3-dq0/data.npy",
+      "bytes": 180435232
+    },
+    {
+      "file": "operators-bayes/x2-a3-dq0/indices.npy",
+      "bytes": 90217680
+    },
+    {
+      "file": "operators-bayes/x2-a3-dq0/indptr.npy",
+      "bytes": 557832
+    },
+    {
+      "file": "operators-bayes/x2-a3-dq1/data.npy",
+      "bytes": 150127064
+    },
+    {
+      "file": "operators-bayes/x2-a3-dq1/indices.npy",
+      "bytes": 75063596
+    },
+    {
+      "file": "operators-bayes/x2-a3-dq1/indptr.npy",
+      "bytes": 557832
+    },
+    {
+      "file": "operators-bayes/x2-a4-dq-1/data.npy",
+      "bytes": 116741864
+    },
+    {
+      "file": "operators-bayes/x2-a4-dq-1/indices.npy",
+      "bytes": 58370996
+    },
+    {
+      "file": "operators-bayes/x2-a4-dq-1/indptr.npy",
+      "bytes": 557832
+    },
+    {
+      "file": "operators-bayes/x2-a4-dq0/data.npy",
+      "bytes": 148691472
+    },
+    {
+      "file": "operators-bayes/x2-a4-dq0/indices.npy",
+      "bytes": 74345800
+    },
+    {
+      "file": "operators-bayes/x2-a4-dq0/indptr.npy",
+      "bytes": 557832
+    },
+    {
+      "file": "operators-bayes/x2-a4-dq1/data.npy",
+      "bytes": 102888400
+    },
+    {
+      "file": "operators-bayes/x2-a4-dq1/indices.npy",
+      "bytes": 51444264
+    },
+    {
+      "file": "operators-bayes/x2-a4-dq1/indptr.npy",
+      "bytes": 557832
+    },
+    {
+      "file": "operators-bayes/x2-a5-dq-1/data.npy",
+      "bytes": 103081640
+    },
+    {
+      "file": "operators-bayes/x2-a5-dq-1/indices.npy",
+      "bytes": 51540884
+    },
+    {
+      "file": "operators-bayes/x2-a5-dq-1/indptr.npy",
+      "bytes": 557832
+    },
+    {
+      "file": "operators-bayes/x2-a5-dq0/data.npy",
+      "bytes": 126076784
+    },
+    {
+      "file": "operators-bayes/x2-a5-dq0/indices.npy",
+      "bytes": 63038456
+    },
+    {
+      "file": "operators-bayes/x2-a5-dq0/indptr.npy",
+      "bytes": 557832
+    },
+    {
+      "file": "operators-bayes/x2-a5-dq1/data.npy",
+      "bytes": 112947160
+    },
+    {
+      "file": "operators-bayes/x2-a5-dq1/indices.npy",
+      "bytes": 56473644
+    },
+    {
+      "file": "operators-bayes/x2-a5-dq1/indptr.npy",
+      "bytes": 557832
+    },
+    {
+      "file": "operators-bayes/x2-a6-dq0/data.npy",
+      "bytes": 193997728
+    },
+    {
+      "file": "operators-bayes/x2-a6-dq0/indices.npy",
+      "bytes": 96998928
+    },
+    {
+      "file": "operators-bayes/x2-a6-dq0/indptr.npy",
+      "bytes": 557832
+    },
+    {
+      "file": "operators-bayes/x2-a6-dq1/data.npy",
+      "bytes": 127816104
+    },
+    {
+      "file": "operators-bayes/x2-a6-dq1/indices.npy",
+      "bytes": 63908116
+    },
+    {
+      "file": "operators-bayes/x2-a6-dq1/indptr.npy",
+      "bytes": 557832
+    },
+    {
+      "file": "operators-bayes/x2-a7-dq-1/data.npy",
+      "bytes": 127922752
+    },
+    {
+      "file": "operators-bayes/x2-a7-dq-1/indices.npy",
+      "bytes": 63961440
+    },
+    {
+      "file": "operators-bayes/x2-a7-dq-1/indptr.npy",
+      "bytes": 557832
+    },
+    {
+      "file": "operators-bayes/x2-a7-dq0/data.npy",
+      "bytes": 267146392
+    },
+    {
+      "file": "operators-bayes/x2-a7-dq0/indices.npy",
+      "bytes": 133573260
+    },
+    {
+      "file": "operators-bayes/x2-a7-dq0/indptr.npy",
+      "bytes": 557832
+    },
+    {
+      "file": "operators-bayes/x2-a7-dq1/data.npy",
+      "bytes": 92554016
+    },
+    {
+      "file": "operators-bayes/x2-a7-dq1/indices.npy",
+      "bytes": 46277072
+    },
+    {
+      "file": "operators-bayes/x2-a7-dq1/indptr.npy",
+      "bytes": 557832
+    },
+    {
+      "file": "operators-bayes/x2-a8-dq-1/data.npy",
+      "bytes": 113232944
+    },
+    {
+      "file": "operators-bayes/x2-a8-dq-1/indices.npy",
+      "bytes": 56616536
+    },
+    {
+      "file": "operators-bayes/x2-a8-dq-1/indptr.npy",
+      "bytes": 557832
+    },
+    {
+      "file": "operators-bayes/x2-a8-dq0/data.npy",
+      "bytes": 160487976
+    },
+    {
+      "file": "operators-bayes/x2-a8-dq0/indices.npy",
+      "bytes": 80244052
+    },
+    {
+      "file": "operators-bayes/x2-a8-dq0/indptr.npy",
+      "bytes": 557832
+    },
+    {
+      "file": "operators-bayes/x2-a8-dq1/data.npy",
+      "bytes": 100607056
+    },
+    {
+      "file": "operators-bayes/x2-a8-dq1/indices.npy",
+      "bytes": 50303592
+    },
+    {
+      "file": "operators-bayes/x2-a8-dq1/indptr.npy",
+      "bytes": 557832
+    },
+    {
+      "file": "operators-bayes/x2-a9-dq1/data.npy",
+      "bytes": 3984680
+    },
+    {
+      "file": "operators-bayes/x2-a9-dq1/indices.npy",
+      "bytes": 1992404
+    },
+    {
+      "file": "operators-bayes/x2-a9-dq1/indptr.npy",
+      "bytes": 557832
+    },
+    {
+      "file": "q-bayes.npy",
+      "bytes": 5705271128
+    },
+    {
+      "file": "q-frozen_model.npy",
+      "bytes": 5705271128
+    },
+    {
+      "file": "q-no_feedback.npy",
+      "bytes": 5705271128
+    },
+    {
+      "file": "value-bayes.npy",
+      "bytes": 518661128
+    },
+    {
+      "file": "value-frozen_model.npy",
+      "bytes": 518661128
+    },
+    {
+      "file": "value-no_feedback.npy",
+      "bytes": 518661128
+    },
+    {
+      "file": "value-reveal1.npy",
+      "bytes": 518661128
+    },
+    {
+      "file": "value-reveal2.npy",
+      "bytes": 518661128
+    },
+    {
+      "file": "value-reveal3.npy",
+      "bytes": 518661128
+    }
+  ],
+  "interruption_receipt_sha256": "42641d8499d516b0cc5ca302050e08c4476a7303394d288ce43fe3cc7be5662f",
+  "deletion_complete": true
+}

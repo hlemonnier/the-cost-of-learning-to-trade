@@ -1,0 +1,527 @@
+{
+  "status": "complete",
+  "profile": "smoke",
+  "protocol": {
+    "version": 1,
+    "research_core_snapshot": "0c13a03ec83212ca1c752959ce5cfdd7588b63c3",
+    "theta": 0.35,
+    "kappas": [
+      0.002,
+      0.1
+    ],
+    "model_prior": [
+      0.5,
+      0.5
+    ],
+    "horizon": 30,
+    "qmax": 2,
+    "root_seed": 260925508,
+    "seed_namespaces": {
+      "pilot_market": 110,
+      "pilot_actions": 111,
+      "evaluation": 210,
+      "numerical_probes": 310,
+      "explanatory_probes": 410,
+      "cold_repeat": 510
+    },
+    "pilot_budgets": [
+      0,
+      1,
+      5
+    ],
+    "replicates_per_model": 30,
+    "episodes_per_replicate": 1000,
+    "policies": [
+      "bayes",
+      "weighted_q",
+      "no_feedback",
+      "frozen_model",
+      "known_parameter"
+    ],
+    "primary": {
+      "budget": 0,
+      "policy": "bayes",
+      "baseline": "weighted_q",
+      "metric": "objective",
+      "economic_threshold": 0.002,
+      "alpha": 0.05
+    },
+    "contrasts": [
+      [
+        "bayes",
+        "weighted_q"
+      ],
+      [
+        "bayes",
+        "no_feedback"
+      ],
+      [
+        "bayes",
+        "frozen_model"
+      ],
+      [
+        "known_parameter",
+        "bayes"
+      ]
+    ],
+    "metrics": [
+      "objective",
+      "pnl"
+    ],
+    "supplementary_family_size": 24,
+    "trace_episodes_per_replicate": 4,
+    "joint_grid_levels": [
+      [
+        9,
+        17,
+        17
+      ],
+      [
+        17,
+        33,
+        33
+      ],
+      [
+        25,
+        49,
+        49
+      ],
+      [
+        33,
+        65,
+        65
+      ]
+    ],
+    "quadrature_levels": [
+      15,
+      25,
+      41,
+      61,
+      121,
+      241
+    ],
+    "known_reference": {
+      "belief_points": 321,
+      "quadrature_points": 161,
+      "refined_belief_points": 641,
+      "refined_quadrature_points": 321
+    },
+    "refinement": {
+      "initial": 0.001,
+      "probe_sup": 0.005,
+      "robust_gap": 0.001,
+      "robust_disagreement": 0.005,
+      "random_probes": 2048
+    },
+    "revelation_delays": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "original_zip_sha256": "0fbfb9c73989747dc220b7cff5f7b0a65f25a2679a1001cd78bfeec760a0fcf3"
+  },
+  "protocol_sha256": "8681e5a8c48f25967f95a4b7d42b76531cbc4e8e00d013114c3e6efe93aee462",
+  "protocol_freeze_commit": "8db62080ef4e5170413d01b7f5fdac33bfd2b1e5",
+  "inputs": {
+    "core": {
+      "src/trade_learning/__init__.py": "dbcea2a78df304d3856b15682c08a578552c571b823f8d44b6dab9cd044648f1",
+      "src/trade_learning/control.py": "2ad1a96921e2b6d595608e279e3d40fef74d29642188e7b297e32473278b78c4",
+      "src/trade_learning/environment.py": "dc50eb8f5d8cb884da02404445d299b3bffefb3cc6ac7a3a6f28a737ca8e8eef",
+      "src/trade_learning/filtering.py": "711997ebc28c7981ffb848ddded400650aee28488b5982d07cdc1fe563cf6ec1",
+      "src/trade_learning/model.py": "7a120a7faabd8aec2c1345a486128129105e9d564ec60908f1c07ea0cf5a897f",
+      "src/trade_learning/numerics.py": "bd30936513b1da7237ead270382a281943e558f95628ea930a1c1c149fbe8347",
+      "src/trade_learning/policies.py": "496759e539fabf4774a7ba77c7b9e0c9c951f1bc34d270b1052b4fa8597f22d5",
+      "src/trade_learning/protocol.py": "ad7ea5d9f105d5951637c1815f55211365a237ee49921cc1e4dd433487cfa7ac",
+      "src/trade_learning/run.py": "4f92e18e7d2311c36a238ca8480fbd010b30ab3432b3c1aa4b38a170903cb9da",
+      "src/trade_learning/statistics.py": "dcbd89fe362fad79c26cfebcbcb6b6b0e7defe0dfb5a5cc994114b6c57fe665a",
+      "src/trade_learning/theory.py": "6d66ad7c6805fef49c927f7d0628a475d4e215a71327fef882b490e682daa3a4"
+    },
+    "extension": {
+      "run.py": "293ea96002a68ec809fd5fbdfb2510a1efe40ab1b959dfd70a50dee6323539bd",
+      "solver.py": "8fdf88cae1b6b74ebd738e8b07942c15fd99042e2fd4f80f112660fc77f9e1ff",
+      "config.json": "8681e5a8c48f25967f95a4b7d42b76531cbc4e8e00d013114c3e6efe93aee462",
+      "PROTOCOL.md": "da2c1d8ce367fe1f647a7ffbbf7f4629602d5ed6f9c9b7f00dad2f852ea66c3e",
+      "NUMERICAL_AMENDMENT.md": "61a0187514ea3af0dfaee271d2c306c32057e600c084d5732d7647b81e781511",
+      "numerical_config.json": "10e311f1d7b7bdf44bafa5b948811831a6d09d6bcc8d7cbbe64953e1d89caff6",
+      "refine_numerical.py": "63754394ca07788225b7d7facc801cd7752538ecf617052e8ef881eaeea16fda"
+    }
+  },
+  "core_source_hash": "cabebb53081506b722f4f9232e49a5171585217b7712e4c7a2940149aa6a34eb",
+  "replicates_per_model": 2,
+  "episodes_per_replicate": 12,
+  "policy_records": 720,
+  "paired_market_trajectories": 48,
+  "files": {
+    "actions/m0_r0.npz": "58705ca51c966993adf424ae2de62a327d753beba8f9a5afc899800755381ecb",
+    "actions/m0_r1.npz": "95749774251aa868ff5783667d385d625ddecea673f632c0602d6835164639db",
+    "actions/m1_r0.npz": "df17258c596bc0adff96a55f22240a526d6a6eefed72cbc2ea2b3ee73785b635",
+    "actions/m1_r1.npz": "b4dcc29dd491a5f3bf3680112a5d821c26184115de5b32f06288126747a02f48",
+    "diagnostics.csv": "ff44f3b49af91626eab7a95386c743ee57c5b9c195be0d79d3fcae941a73ca8c",
+    "episodes.csv.gz": "be68d1116c3a6751fc6f257a1c8ae1d461ece914fbf6e4f46887d0f33b70e2b4",
+    "pilot_records.json": "c0e70b7bf41357003507fc14faecc0d74c3ad25b9d40da90152819941f46947c",
+    "pilots/m0_r0.npz": "45515848e4f061df292de6020ae3d9148bfeea77a42dc7bb91bb418d857beb31",
+    "pilots/m0_r1.npz": "ebe48f6cf3006db2ee06d444badb99ab69d2e34c585119410d90bc7fef6eef0b",
+    "pilots/m1_r0.npz": "f626f966ed389f5f6e0d83428dafee6daaf0a89ee1b1d52208752370416885e3",
+    "pilots/m1_r1.npz": "4f4ca49977213bdb94dc129634fb562fd134fc56514dd8aa0f8bb5ba4453d078",
+    "planning_values.csv": "7e80b20757465d0242fc84100fef376c8d8817dc1c0ddd596e5dfaaa2b9794b0",
+    "summary.json": "3812357482250754285f5c230d9bf8f9fa9d4fd3df69329d54fd37f2d2dd3294",
+    "tapes/m0_r0.npz": "0b116d2c5073d4e7591dcc34d2c597e736ad9da4db43fddb4d6c9f845f49abab",
+    "tapes/m0_r1.npz": "75fa230b9dfbe9ae7de3364ceb9dcb07cf413d24483fc023c0ec544a91cfa749",
+    "tapes/m1_r0.npz": "64944e63ad62b0b511d8d5591fc9fd56c0ae22e42a8c277d7165f74b907376c0",
+    "tapes/m1_r1.npz": "9e98ee686b4c65e0dbbd7a0c202ae15f03a73565c19e62ede42b3a21220a5a78",
+    "timings.csv": "6da73786d80acb4234a0dc329cc6a6adaeda0fc551e2b0e184887f70cd429059",
+    "traces.csv.gz": "ee7cb1e4782464c7228e719083b66b8b5194d7451333cdf67e6eab5ba4ad0722"
+  },
+  "table_specification": {
+    "theta": 0.35,
+    "kappas": [
+      0.002,
+      0.1
+    ],
+    "horizon": 30,
+    "qmax": 2,
+    "weight_points": 5,
+    "belief_points": 9,
+    "quadrature_points": 15,
+    "known_belief_points": 321,
+    "known_quadrature_points": 161,
+    "belief_geometry": "endpoint_sine"
+  },
+  "table_artifact_sha256": "51ccd684d0e289bb5e717269625169504ae295e71aa8d35db6b1cad481c97f64",
+  "table_arrays": [
+    {
+      "bytes": 13135448,
+      "dtype": "float64",
+      "file": "known-q-0.npy",
+      "sha256": "9e0e0a5cb0497b1b4346ca13ba4ba2d8c910736253392204344c759731e29501",
+      "shape": [
+        31,
+        5,
+        3,
+        321,
+        11
+      ]
+    },
+    {
+      "bytes": 13135448,
+      "dtype": "float64",
+      "file": "known-q-1.npy",
+      "sha256": "e9df3b9cf747bcb440ae97700b48227e0b4b5afa16942dff435a6541bdb5a8c8",
+      "shape": [
+        31,
+        5,
+        3,
+        321,
+        11
+      ]
+    },
+    {
+      "bytes": 16572728,
+      "dtype": "float64",
+      "file": "q-bayes.npy",
+      "sha256": "dab5b90c9984cd56efafda4948e457bd2a7351263da93daec4fd010f9f5b5313",
+      "shape": [
+        31,
+        5,
+        3,
+        405,
+        11
+      ]
+    },
+    {
+      "bytes": 16572728,
+      "dtype": "float64",
+      "file": "q-frozen_model.npy",
+      "sha256": "2a895e8f019fd093540cca851bd34b85e717fb5e4c2af287991bab2d171869a9",
+      "shape": [
+        31,
+        5,
+        3,
+        405,
+        11
+      ]
+    },
+    {
+      "bytes": 16572728,
+      "dtype": "float64",
+      "file": "q-no_feedback.npy",
+      "sha256": "4ccf339edbd4642b54436a0346a7178d0432c4e9ff4406bbdc1a7a4e295efed2",
+      "shape": [
+        31,
+        5,
+        3,
+        405,
+        11
+      ]
+    },
+    {
+      "bytes": 1506728,
+      "dtype": "float64",
+      "file": "value-bayes.npy",
+      "sha256": "e0864998f5704b95a90af5037b92a533e5e8a8cec74680578351b27a6a62708c",
+      "shape": [
+        31,
+        5,
+        3,
+        405
+      ]
+    },
+    {
+      "bytes": 1506728,
+      "dtype": "float64",
+      "file": "value-frozen_model.npy",
+      "sha256": "441229960de399164534b54fae005112fe62368f99f7160f97b1e86846f2c18a",
+      "shape": [
+        31,
+        5,
+        3,
+        405
+      ]
+    },
+    {
+      "bytes": 1506728,
+      "dtype": "float64",
+      "file": "value-no_feedback.npy",
+      "sha256": "2c27be368ba83ecbd9dd321d5af4be12f29010df9c75ee4eb180a086ed5324c5",
+      "shape": [
+        31,
+        5,
+        3,
+        405
+      ]
+    },
+    {
+      "bytes": 1506728,
+      "dtype": "float64",
+      "file": "value-reveal1.npy",
+      "sha256": "d6a15a784be8725c9b0d591280195d76047e69f098c1e636ef9554f22ad4abd1",
+      "shape": [
+        31,
+        5,
+        3,
+        405
+      ]
+    },
+    {
+      "bytes": 1506728,
+      "dtype": "float64",
+      "file": "value-reveal2.npy",
+      "sha256": "58bd80e85fc660c70e357cd1bad51d763b05128ae24cf69f0b300c4846dca78b",
+      "shape": [
+        31,
+        5,
+        3,
+        405
+      ]
+    },
+    {
+      "bytes": 1506728,
+      "dtype": "float64",
+      "file": "value-reveal3.npy",
+      "sha256": "c875f1243714e18a6a298365875eab6a8793a4e464d8d5b645d5c0da606f9334",
+      "shape": [
+        31,
+        5,
+        3,
+        405
+      ]
+    }
+  ],
+  "numerical_acceptance_sha256": null,
+  "build": {
+    "python": "3.12.14",
+    "implementation": "CPython",
+    "system": "Darwin",
+    "machine": "arm64",
+    "byteorder": "little",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "numpy_config": {
+      "Compilers": {
+        "c": {
+          "name": "clang",
+          "linker": "ld64",
+          "version": "15.0.0",
+          "commands": "cc"
+        },
+        "cython": {
+          "name": "cython",
+          "linker": "cython",
+          "version": "3.3.0",
+          "commands": "cython"
+        },
+        "c++": {
+          "name": "clang",
+          "linker": "ld64",
+          "version": "15.0.0",
+          "commands": "c++"
+        }
+      },
+      "Machine Information": {
+        "host": {
+          "cpu": "aarch64",
+          "family": "aarch64",
+          "endian": "little",
+          "system": "darwin"
+        },
+        "build": {
+          "cpu": "aarch64",
+          "family": "aarch64",
+          "endian": "little",
+          "system": "darwin"
+        }
+      },
+      "Build Dependencies": {
+        "blas": {
+          "name": "accelerate",
+          "found": true,
+          "version": "unknown",
+          "detection method": "system",
+          "include directory": "unknown",
+          "lib directory": "unknown",
+          "openblas configuration": "unknown",
+          "pc file directory": "unknown"
+        },
+        "lapack": {
+          "name": "accelerate",
+          "found": true,
+          "version": "unknown",
+          "detection method": "system",
+          "include directory": "unknown",
+          "lib directory": "unknown",
+          "openblas configuration": "unknown",
+          "pc file directory": "unknown"
+        }
+      },
+      "Python Information": {
+        "path": "/private/var/folders/s6/5hzmn6lx4dz5nxs7k_0slzph0000gn/T/build-env-sd3oh5ko/bin/python",
+        "version": "3.12"
+      },
+      "SIMD Extensions": {
+        "baseline": [
+          "NEON",
+          "NEON_FP16",
+          "NEON_VFPV4",
+          "ASIMD"
+        ],
+        "found": [
+          "ASIMDHP",
+          "ASIMDDP"
+        ],
+        "not found": [
+          "ASIMDFHM"
+        ]
+      }
+    },
+    "scipy_config": {
+      "Compilers": {
+        "c": {
+          "name": "clang",
+          "linker": "ld64",
+          "version": "15.0.0",
+          "commands": "cc"
+        },
+        "cython": {
+          "name": "cython",
+          "linker": "cython",
+          "version": "3.2.9",
+          "commands": "cython"
+        },
+        "c++": {
+          "name": "clang",
+          "linker": "ld64",
+          "version": "15.0.0",
+          "commands": "c++"
+        },
+        "fortran": {
+          "name": "gcc",
+          "linker": "ld64",
+          "version": "13.4.0",
+          "commands": "gfortran"
+        },
+        "pythran": {
+          "version": "0.19.0",
+          "include directory": "../../../../../../../private/var/folders/g3/pffjr_y96bq06blnkf72x_hw0000gn/T/build-env-qsdhhi00/lib/python3.12/site-packages/pythran"
+        }
+      },
+      "Machine Information": {
+        "host": {
+          "cpu": "aarch64",
+          "family": "aarch64",
+          "endian": "little",
+          "system": "darwin"
+        },
+        "build": {
+          "cpu": "aarch64",
+          "family": "aarch64",
+          "endian": "little",
+          "system": "darwin"
+        },
+        "cross-compiled": false
+      },
+      "Build Dependencies": {
+        "blas": {
+          "name": "Accelerate",
+          "found": true,
+          "version": "unknown",
+          "detection method": "extraframeworks",
+          "include directory": "unknown",
+          "lib directory": "unknown",
+          "openblas configuration": "unknown",
+          "pc file directory": "unknown",
+          "has ilp64": false,
+          "cython blas ilp64": false
+        },
+        "lapack": {
+          "name": "Accelerate",
+          "found": true,
+          "version": "unknown",
+          "detection method": "extraframeworks",
+          "include directory": "unknown",
+          "lib directory": "unknown",
+          "openblas configuration": "unknown",
+          "pc file directory": "unknown",
+          "has ilp64": false
+        },
+        "pybind11": {
+          "name": "pybind11",
+          "version": "3.0.4",
+          "detection method": "config-tool",
+          "include directory": "unknown"
+        }
+      },
+      "Python Information": {
+        "path": "/private/var/folders/g3/pffjr_y96bq06blnkf72x_hw0000gn/T/build-env-qsdhhi00/bin/python",
+        "version": "3.12"
+      }
+    },
+    "numerical_binaries": {
+      "numpy._core._multiarray_umath": "3432cd9093d7e84b4080015b6a889598fea4c305da967063cb916215193bf85d",
+      "scipy.special._ufuncs": "a0889d5c82454d79d4cd4cc8a589a62a382d667da8e2b030e637f58708bd340c",
+      "scipy.sparse._sparsetools": "077b33d61dc1a677cb56bb4835572623986f7f0a1c0d35d6eaf85fc0df5dade2",
+      "scipy.linalg._fblas": "6502e4e093d03932479317d45bfea018ef0999bc5c4bd46687253322c13e9448"
+    },
+    "thread_environment": {
+      "OMP_NUM_THREADS": null,
+      "OPENBLAS_NUM_THREADS": null,
+      "MKL_NUM_THREADS": null,
+      "VECLIB_MAXIMUM_THREADS": null,
+      "NUMEXPR_NUM_THREADS": null
+    },
+    "sha256": "734eddc7d5a49af317fdedcd669ef30ac9d3a34847a389f01335a545e700261d"
+  },
+  "numerical_contract": {
+    "version": 2,
+    "score_dtype": "float64",
+    "tie_absolute_tolerance": 1e-12,
+    "tie_relative_tolerance": 0.0,
+    "tie_action": "lowest admissible action ID within absolute tolerance of maximum",
+    "bellman_value": "Q of the action selected by the same tie rule",
+    "invalid_action": "negative infinity; no decision at remaining horizon zero"
+  },
+  "python": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+  "platform": "macOS-27.2-arm64-arm-64bit",
+  "seconds": 2.009685500001069,
+  "scope": "New separate paired synthetic research; source/arrays authenticated. Numerical error is distinct from empirical sampling uncertainty. "
+}

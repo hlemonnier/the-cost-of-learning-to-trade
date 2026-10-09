@@ -1,0 +1,521 @@
+{
+  "families": [
+    {
+      "all_arrays_byte_identical": true,
+      "arrays": [
+        {
+          "byte_identical": true,
+          "file": "known-q-0.npy",
+          "max_finite_absolute_difference": 0.0,
+          "new_sha256": "64e03da12a551811a15e09944c5359a15e937cfb2a2a0d09bcf2044c4c0a5a99",
+          "old_sha256": "64e03da12a551811a15e09944c5359a15e937cfb2a2a0d09bcf2044c4c0a5a99",
+          "shape": [
+            5,
+            5,
+            3,
+            321,
+            11
+          ]
+        },
+        {
+          "byte_identical": true,
+          "file": "known-q-1.npy",
+          "max_finite_absolute_difference": 0.0,
+          "new_sha256": "9d0e18b8e0d2d624662064f4ff75dfd2d150a6a566968fb60523c2fd15553351",
+          "old_sha256": "9d0e18b8e0d2d624662064f4ff75dfd2d150a6a566968fb60523c2fd15553351",
+          "shape": [
+            5,
+            5,
+            3,
+            321,
+            11
+          ]
+        },
+        {
+          "byte_identical": true,
+          "file": "q-bayes.npy",
+          "max_finite_absolute_difference": 0.0,
+          "new_sha256": "59cc4bc252ea3ba6e6d7d420e8447e4deb5a3426d281d3dfa90ca5afe4ad9166",
+          "old_sha256": "59cc4bc252ea3ba6e6d7d420e8447e4deb5a3426d281d3dfa90ca5afe4ad9166",
+          "shape": [
+            5,
+            5,
+            3,
+            245,
+            11
+          ]
+        },
+        {
+          "byte_identical": true,
+          "file": "q-frozen_model.npy",
+          "max_finite_absolute_difference": 0.0,
+          "new_sha256": "a9b0dc06305c831f484c42a7da28af6baf9670c4e10b07eb88ac743947a8dacc",
+          "old_sha256": "a9b0dc06305c831f484c42a7da28af6baf9670c4e10b07eb88ac743947a8dacc",
+          "shape": [
+            5,
+            5,
+            3,
+            245,
+            11
+          ]
+        },
+        {
+          "byte_identical": true,
+          "file": "q-no_feedback.npy",
+          "max_finite_absolute_difference": 0.0,
+          "new_sha256": "d84472e470b09d87715587d31ccfaacbe2f63a70036585c54e6de7e5f8d3d1b6",
+          "old_sha256": "d84472e470b09d87715587d31ccfaacbe2f63a70036585c54e6de7e5f8d3d1b6",
+          "shape": [
+            5,
+            5,
+            3,
+            245,
+            11
+          ]
+        },
+        {
+          "byte_identical": true,
+          "file": "value-bayes.npy",
+          "max_finite_absolute_difference": 0.0,
+          "new_sha256": "60b8a113cad5f3d4c3e370b356a13091d7950e77b2f26e6ec9210b7bf52fc42b",
+          "old_sha256": "60b8a113cad5f3d4c3e370b356a13091d7950e77b2f26e6ec9210b7bf52fc42b",
+          "shape": [
+            5,
+            5,
+            3,
+            245
+          ]
+        },
+        {
+          "byte_identical": true,
+          "file": "value-frozen_model.npy",
+          "max_finite_absolute_difference": 0.0,
+          "new_sha256": "67c5f9e9dcf393278d55a2af0541db314e22772333e5814f0883be8981532959",
+          "old_sha256": "67c5f9e9dcf393278d55a2af0541db314e22772333e5814f0883be8981532959",
+          "shape": [
+            5,
+            5,
+            3,
+            245
+          ]
+        },
+        {
+          "byte_identical": true,
+          "file": "value-no_feedback.npy",
+          "max_finite_absolute_difference": 0.0,
+          "new_sha256": "d64f3e55cbc101bba6ebd1bfcdf53ba072cfa8d0d787f7feef021bdb61cbe5fd",
+          "old_sha256": "d64f3e55cbc101bba6ebd1bfcdf53ba072cfa8d0d787f7feef021bdb61cbe5fd",
+          "shape": [
+            5,
+            5,
+            3,
+            245
+          ]
+        },
+        {
+          "byte_identical": true,
+          "file": "value-reveal1.npy",
+          "max_finite_absolute_difference": 0.0,
+          "new_sha256": "937dd53ad78775c3e6b0a6aa5bfa264318de635e15b4296e9a4e82cbd2c29f9e",
+          "old_sha256": "937dd53ad78775c3e6b0a6aa5bfa264318de635e15b4296e9a4e82cbd2c29f9e",
+          "shape": [
+            5,
+            5,
+            3,
+            245
+          ]
+        },
+        {
+          "byte_identical": true,
+          "file": "value-reveal2.npy",
+          "max_finite_absolute_difference": 0.0,
+          "new_sha256": "a2b9493aeb8d4e43e20616f15add443e21da912eef81380c80af293b0a16fd93",
+          "old_sha256": "a2b9493aeb8d4e43e20616f15add443e21da912eef81380c80af293b0a16fd93",
+          "shape": [
+            5,
+            5,
+            3,
+            245
+          ]
+        },
+        {
+          "byte_identical": true,
+          "file": "value-reveal3.npy",
+          "max_finite_absolute_difference": 0.0,
+          "new_sha256": "e75d959194821b764912a7da84f5517d9b16e9e1dca53ea68f676fa516dd8d74",
+          "old_sha256": "e75d959194821b764912a7da84f5517d9b16e9e1dca53ea68f676fa516dd8d74",
+          "shape": [
+            5,
+            5,
+            3,
+            245
+          ]
+        }
+      ],
+      "new_artifact_sha256": "bad66488fef9467eaf147f583e0b0f80b75cee9a39788df17a66c0a496c0fbc0",
+      "new_solve_seconds": 3.2948692920035683,
+      "old_artifact_sha256": "1e616df907a20327780daef78f68327bd24b0a3e9293b1568f22e2ecaea51295",
+      "old_solve_seconds": 3.020343457988929,
+      "specification": {
+        "belief_points": 7,
+        "horizon": 4,
+        "kappas": [
+          0.002,
+          0.1
+        ],
+        "known_belief_points": 321,
+        "known_quadrature_points": 161,
+        "qmax": 2,
+        "quadrature_points": 15,
+        "theta": 0.35,
+        "weight_points": 5
+      }
+    },
+    {
+      "all_arrays_byte_identical": true,
+      "arrays": [
+        {
+          "byte_identical": true,
+          "file": "known-q-0.npy",
+          "max_finite_absolute_difference": 0.0,
+          "new_sha256": "00e35300b03912eeea778492b748e538a2c4ff49a0f90d5227cc4c72189f204f",
+          "old_sha256": "00e35300b03912eeea778492b748e538a2c4ff49a0f90d5227cc4c72189f204f",
+          "shape": [
+            8,
+            5,
+            3,
+            321,
+            11
+          ]
+        },
+        {
+          "byte_identical": true,
+          "file": "known-q-1.npy",
+          "max_finite_absolute_difference": 0.0,
+          "new_sha256": "e522afa750ca2a9baad38014cf11096bca3437f3a036b4df2d5ffc20ef74e159",
+          "old_sha256": "e522afa750ca2a9baad38014cf11096bca3437f3a036b4df2d5ffc20ef74e159",
+          "shape": [
+            8,
+            5,
+            3,
+            321,
+            11
+          ]
+        },
+        {
+          "byte_identical": true,
+          "file": "q-bayes.npy",
+          "max_finite_absolute_difference": 0.0,
+          "new_sha256": "bca640d62cf545a33fc95f6830cda9e3f69b3c90655483b033c0fc864fda3148",
+          "old_sha256": "bca640d62cf545a33fc95f6830cda9e3f69b3c90655483b033c0fc864fda3148",
+          "shape": [
+            8,
+            5,
+            3,
+            405,
+            11
+          ]
+        },
+        {
+          "byte_identical": true,
+          "file": "q-frozen_model.npy",
+          "max_finite_absolute_difference": 0.0,
+          "new_sha256": "ad48e326ad3df8aa2c51bce4dcb0de8ea1c19b45c3251e01456bb00de97342ad",
+          "old_sha256": "ad48e326ad3df8aa2c51bce4dcb0de8ea1c19b45c3251e01456bb00de97342ad",
+          "shape": [
+            8,
+            5,
+            3,
+            405,
+            11
+          ]
+        },
+        {
+          "byte_identical": true,
+          "file": "q-no_feedback.npy",
+          "max_finite_absolute_difference": 0.0,
+          "new_sha256": "707ba81638cbe653e37022c8219973ed9c0fee91650a101a5b83e2edeb04d0aa",
+          "old_sha256": "707ba81638cbe653e37022c8219973ed9c0fee91650a101a5b83e2edeb04d0aa",
+          "shape": [
+            8,
+            5,
+            3,
+            405,
+            11
+          ]
+        },
+        {
+          "byte_identical": true,
+          "file": "value-bayes.npy",
+          "max_finite_absolute_difference": 0.0,
+          "new_sha256": "dad2f46424f0c5095c240080b4341dbe9c2beb631258d4f37038c608256b7276",
+          "old_sha256": "dad2f46424f0c5095c240080b4341dbe9c2beb631258d4f37038c608256b7276",
+          "shape": [
+            8,
+            5,
+            3,
+            405
+          ]
+        },
+        {
+          "byte_identical": true,
+          "file": "value-frozen_model.npy",
+          "max_finite_absolute_difference": 0.0,
+          "new_sha256": "18febdc5d3d4ef6b43eeeef83e55b8de7c94ea74b9941c1542f00fcd84371396",
+          "old_sha256": "18febdc5d3d4ef6b43eeeef83e55b8de7c94ea74b9941c1542f00fcd84371396",
+          "shape": [
+            8,
+            5,
+            3,
+            405
+          ]
+        },
+        {
+          "byte_identical": true,
+          "file": "value-no_feedback.npy",
+          "max_finite_absolute_difference": 0.0,
+          "new_sha256": "daa565a8655e2fc498e9bf9ce63ce7de4dad13653efcc8350de84e3557609957",
+          "old_sha256": "daa565a8655e2fc498e9bf9ce63ce7de4dad13653efcc8350de84e3557609957",
+          "shape": [
+            8,
+            5,
+            3,
+            405
+          ]
+        },
+        {
+          "byte_identical": true,
+          "file": "value-reveal1.npy",
+          "max_finite_absolute_difference": 0.0,
+          "new_sha256": "3929a889cc111c06ca782b642447baa4bba80b94e5da68b9fa50d03eaa15ae3d",
+          "old_sha256": "3929a889cc111c06ca782b642447baa4bba80b94e5da68b9fa50d03eaa15ae3d",
+          "shape": [
+            8,
+            5,
+            3,
+            405
+          ]
+        },
+        {
+          "byte_identical": true,
+          "file": "value-reveal2.npy",
+          "max_finite_absolute_difference": 0.0,
+          "new_sha256": "125f9459fe1b665ee027dd59aa656cd2b5892282b963185ed6eefcc21f692357",
+          "old_sha256": "125f9459fe1b665ee027dd59aa656cd2b5892282b963185ed6eefcc21f692357",
+          "shape": [
+            8,
+            5,
+            3,
+            405
+          ]
+        },
+        {
+          "byte_identical": true,
+          "file": "value-reveal3.npy",
+          "max_finite_absolute_difference": 0.0,
+          "new_sha256": "7e21d0861a456bcdfa6f8e39267e3414554f7168bd4b76487ad12d2c659a0fe3",
+          "old_sha256": "7e21d0861a456bcdfa6f8e39267e3414554f7168bd4b76487ad12d2c659a0fe3",
+          "shape": [
+            8,
+            5,
+            3,
+            405
+          ]
+        }
+      ],
+      "new_artifact_sha256": "e81a31b79de3776e8fec3d54791670ae7e2a9bc1a1adfd1d6253f7d0805168df",
+      "new_solve_seconds": 3.0445754999818746,
+      "old_artifact_sha256": "ecc19c8992deeef5d568f7104627c49db817508d53eab89e3109ba68ed130fcc",
+      "old_solve_seconds": 3.627670332993148,
+      "specification": {
+        "belief_points": 9,
+        "horizon": 7,
+        "kappas": [
+          0.002,
+          0.1
+        ],
+        "known_belief_points": 321,
+        "known_quadrature_points": 161,
+        "qmax": 2,
+        "quadrature_points": 25,
+        "theta": 0.35,
+        "weight_points": 5
+      }
+    },
+    {
+      "all_arrays_byte_identical": true,
+      "arrays": [
+        {
+          "byte_identical": true,
+          "file": "known-q-0.npy",
+          "max_finite_absolute_difference": 0.0,
+          "new_sha256": "9e0e0a5cb0497b1b4346ca13ba4ba2d8c910736253392204344c759731e29501",
+          "old_sha256": "9e0e0a5cb0497b1b4346ca13ba4ba2d8c910736253392204344c759731e29501",
+          "shape": [
+            31,
+            5,
+            3,
+            321,
+            11
+          ]
+        },
+        {
+          "byte_identical": true,
+          "file": "known-q-1.npy",
+          "max_finite_absolute_difference": 0.0,
+          "new_sha256": "e9df3b9cf747bcb440ae97700b48227e0b4b5afa16942dff435a6541bdb5a8c8",
+          "old_sha256": "e9df3b9cf747bcb440ae97700b48227e0b4b5afa16942dff435a6541bdb5a8c8",
+          "shape": [
+            31,
+            5,
+            3,
+            321,
+            11
+          ]
+        },
+        {
+          "byte_identical": true,
+          "file": "q-bayes.npy",
+          "max_finite_absolute_difference": 0.0,
+          "new_sha256": "89a753a31e15c8a387b045c70bb6e2bd1db1e9bbef6013c5fa7c1a557eeab130",
+          "old_sha256": "89a753a31e15c8a387b045c70bb6e2bd1db1e9bbef6013c5fa7c1a557eeab130",
+          "shape": [
+            31,
+            5,
+            3,
+            2601,
+            11
+          ]
+        },
+        {
+          "byte_identical": true,
+          "file": "q-frozen_model.npy",
+          "max_finite_absolute_difference": 0.0,
+          "new_sha256": "8ecaeefebf917dfd71afe8076b6f2f336be3fd9b7989fdb9597499d8c6515b92",
+          "old_sha256": "8ecaeefebf917dfd71afe8076b6f2f336be3fd9b7989fdb9597499d8c6515b92",
+          "shape": [
+            31,
+            5,
+            3,
+            2601,
+            11
+          ]
+        },
+        {
+          "byte_identical": true,
+          "file": "q-no_feedback.npy",
+          "max_finite_absolute_difference": 0.0,
+          "new_sha256": "9a5e6f0672cc0ca51691ee05033f070c9699215214a73ed184bd279173ee70fc",
+          "old_sha256": "9a5e6f0672cc0ca51691ee05033f070c9699215214a73ed184bd279173ee70fc",
+          "shape": [
+            31,
+            5,
+            3,
+            2601,
+            11
+          ]
+        },
+        {
+          "byte_identical": true,
+          "file": "value-bayes.npy",
+          "max_finite_absolute_difference": 0.0,
+          "new_sha256": "b6fcbf093e2a98b879427cf2f35c17c752c8f7291ae113f7e8d1ad041e09b9e8",
+          "old_sha256": "b6fcbf093e2a98b879427cf2f35c17c752c8f7291ae113f7e8d1ad041e09b9e8",
+          "shape": [
+            31,
+            5,
+            3,
+            2601
+          ]
+        },
+        {
+          "byte_identical": true,
+          "file": "value-frozen_model.npy",
+          "max_finite_absolute_difference": 0.0,
+          "new_sha256": "b3be7534fd1a9c601ffc2be9774ee1a19f6fa56143e349ff295dc65602092f00",
+          "old_sha256": "b3be7534fd1a9c601ffc2be9774ee1a19f6fa56143e349ff295dc65602092f00",
+          "shape": [
+            31,
+            5,
+            3,
+            2601
+          ]
+        },
+        {
+          "byte_identical": true,
+          "file": "value-no_feedback.npy",
+          "max_finite_absolute_difference": 0.0,
+          "new_sha256": "685212d7d6189f8eae371373bac858c2a56616046d694787bc6fbb25f20c43e3",
+          "old_sha256": "685212d7d6189f8eae371373bac858c2a56616046d694787bc6fbb25f20c43e3",
+          "shape": [
+            31,
+            5,
+            3,
+            2601
+          ]
+        },
+        {
+          "byte_identical": true,
+          "file": "value-reveal1.npy",
+          "max_finite_absolute_difference": 0.0,
+          "new_sha256": "087d782e21d9156d7d822197ad4d4ecdd5b6fa9c1c15d8931d6e7af4084804b7",
+          "old_sha256": "087d782e21d9156d7d822197ad4d4ecdd5b6fa9c1c15d8931d6e7af4084804b7",
+          "shape": [
+            31,
+            5,
+            3,
+            2601
+          ]
+        },
+        {
+          "byte_identical": true,
+          "file": "value-reveal2.npy",
+          "max_finite_absolute_difference": 0.0,
+          "new_sha256": "94ec79af5d4465c99ae75b966fb4b5b1248eedacb933504a1f5066695a177233",
+          "old_sha256": "94ec79af5d4465c99ae75b966fb4b5b1248eedacb933504a1f5066695a177233",
+          "shape": [
+            31,
+            5,
+            3,
+            2601
+          ]
+        },
+        {
+          "byte_identical": true,
+          "file": "value-reveal3.npy",
+          "max_finite_absolute_difference": 0.0,
+          "new_sha256": "b0c9237d2dac37ea54e1984121d6fc3a171f79dee8ced68f26711f957fe421d3",
+          "old_sha256": "b0c9237d2dac37ea54e1984121d6fc3a171f79dee8ced68f26711f957fe421d3",
+          "shape": [
+            31,
+            5,
+            3,
+            2601
+          ]
+        }
+      ],
+      "new_artifact_sha256": "b5ec46904c0f7208b354efa8f1c75eb13c77180d9f9ade01508b30f57dd425a3",
+      "new_solve_seconds": 10.62922258299659,
+      "old_artifact_sha256": "a42442d638ed28952a5548a9d2c55c7007f3881e28b55daa402ca7637959602a",
+      "old_solve_seconds": 11.843100957979914,
+      "specification": {
+        "belief_points": 17,
+        "horizon": 30,
+        "kappas": [
+          0.002,
+          0.1
+        ],
+        "known_belief_points": 321,
+        "known_quadrature_points": 161,
+        "qmax": 2,
+        "quadrature_points": 25,
+        "theta": 0.35,
+        "weight_points": 9
+      }
+    }
+  ],
+  "passed": true,
+  "purpose": "Full numerical pipeline equivalence of a storage/continuation batching revision; no economic observations",
+  "v1_source_sha256": "ba716aaf7231e3aac3dceaf977f6439b84ebea0984c34cec8ef681f483f2a313",
+  "v2_source_sha256": "d22fcc3a460eb75c6bac239e1d383f333811dcfe0db3d768109f56f913e853fc"
+}

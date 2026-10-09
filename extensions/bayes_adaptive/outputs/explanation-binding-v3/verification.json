@@ -1,0 +1,333 @@
+{
+  "cases": [
+    {
+      "analysis_output_created": false,
+      "case": "matched_fixture_reaches_candidate_gate",
+      "command": [
+        "/recorded-environment Learning/.venv/bin/python",
+        "/recorded-environment Learning/extensions/bayes_adaptive/explain.py",
+        "analyze",
+        "--candidates",
+        "/recorded-environment Learning/extensions/bayes_adaptive/outputs/explanation-binding-v3/deliberately_absent_candidates",
+        "--family",
+        "/recorded-environment Learning/extensions/bayes_adaptive/cache/v2/w9-b17-gh25",
+        "--numerical-checks",
+        "/recorded-environment Learning/extensions/bayes_adaptive/outputs/explanation-binding-v3/matched_fixture_reaches_candidate_gate.json",
+        "--output",
+        "/recorded-environment Learning/extensions/bayes_adaptive/outputs/explanation-binding-v3/matched_fixture_reaches_candidate_gate-analysis"
+      ],
+      "expected_error": "FileNotFoundError",
+      "fixture_sha256": "c474ec47d0ced5e5472d73bbe0dde8d06a8ff453d745c4ed0a5990b98681b5c8",
+      "passed": true,
+      "returncode": 1,
+      "stderr_last_lines": [
+        "  File \"/recorded-environment", line 1013, in open",
+        "    return io.open(self, mode, buffering, encoding, errors, newline)",
+        "           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "FileNotFoundError: [Errno 2] No such file or directory: '/recorded-environment Learning/extensions/bayes_adaptive/outputs/explanation-binding-v3/deliberately_absent_candidates/manifest.json'"
+      ]
+    },
+    {
+      "analysis_output_created": false,
+      "case": "different_selected_artifact",
+      "command": [
+        "/recorded-environment Learning/.venv/bin/python",
+        "/recorded-environment Learning/extensions/bayes_adaptive/explain.py",
+        "analyze",
+        "--candidates",
+        "/recorded-environment Learning/extensions/bayes_adaptive/outputs/explanation-binding-v3/deliberately_absent_candidates",
+        "--family",
+        "/recorded-environment Learning/extensions/bayes_adaptive/cache/v2/w9-b17-gh25",
+        "--numerical-checks",
+        "/recorded-environment Learning/extensions/bayes_adaptive/outputs/explanation-binding-v3/different_selected_artifact.json",
+        "--output",
+        "/recorded-environment Learning/extensions/bayes_adaptive/outputs/explanation-binding-v3/different_selected_artifact-analysis"
+      ],
+      "expected_error": "numerical acceptance does not authenticate selected family: selected_artifact",
+      "fixture_sha256": "2fb566f75aa7cb88e9a8762dd42e5832c44fd041f6d3a2417d445099f1400378",
+      "passed": true,
+      "returncode": 1,
+      "stderr_last_lines": [
+        "                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "  File \"/recorded-environment Learning/extensions/bayes_adaptive/explain.py\", line 602, in _numerical_selection_evidence",
+        "    raise ValueError(\"numerical acceptance does not authenticate selected family: \" + \", \".join(failed))",
+        "ValueError: numerical acceptance does not authenticate selected family: selected_artifact"
+      ]
+    },
+    {
+      "analysis_output_created": false,
+      "case": "missing_selected_artifact",
+      "command": [
+        "/recorded-environment Learning/.venv/bin/python",
+        "/recorded-environment Learning/extensions/bayes_adaptive/explain.py",
+        "analyze",
+        "--candidates",
+        "/recorded-environment Learning/extensions/bayes_adaptive/outputs/explanation-binding-v3/deliberately_absent_candidates",
+        "--family",
+        "/recorded-environment Learning/extensions/bayes_adaptive/cache/v2/w9-b17-gh25",
+        "--numerical-checks",
+        "/recorded-environment Learning/extensions/bayes_adaptive/outputs/explanation-binding-v3/missing_selected_artifact.json",
+        "--output",
+        "/recorded-environment Learning/extensions/bayes_adaptive/outputs/explanation-binding-v3/missing_selected_artifact-analysis"
+      ],
+      "expected_error": "numerical acceptance does not authenticate selected family: selected_artifact",
+      "fixture_sha256": "711de3b1cc02567e2866fa2dadc271897adda4860deb78e68ccf981a93d635d2",
+      "passed": true,
+      "returncode": 1,
+      "stderr_last_lines": [
+        "                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "  File \"/recorded-environment Learning/extensions/bayes_adaptive/explain.py\", line 602, in _numerical_selection_evidence",
+        "    raise ValueError(\"numerical acceptance does not authenticate selected family: \" + \", \".join(failed))",
+        "ValueError: numerical acceptance does not authenticate selected family: selected_artifact"
+      ]
+    },
+    {
+      "analysis_output_created": false,
+      "case": "different_selected_specification",
+      "command": [
+        "/recorded-environment Learning/.venv/bin/python",
+        "/recorded-environment Learning/extensions/bayes_adaptive/explain.py",
+        "analyze",
+        "--candidates",
+        "/recorded-environment Learning/extensions/bayes_adaptive/outputs/explanation-binding-v3/deliberately_absent_candidates",
+        "--family",
+        "/recorded-environment Learning/extensions/bayes_adaptive/cache/v2/w9-b17-gh25",
+        "--numerical-checks",
+        "/recorded-environment Learning/extensions/bayes_adaptive/outputs/explanation-binding-v3/different_selected_specification.json",
+        "--output",
+        "/recorded-environment Learning/extensions/bayes_adaptive/outputs/explanation-binding-v3/different_selected_specification-analysis"
+      ],
+      "expected_error": "numerical acceptance does not authenticate selected family: selected_specification",
+      "fixture_sha256": "7ed12427b22635140b5e8dfe4696f2e38c46df4458fe36da097d0fe2b334e57b",
+      "passed": true,
+      "returncode": 1,
+      "stderr_last_lines": [
+        "                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "  File \"/recorded-environment Learning/extensions/bayes_adaptive/explain.py\", line 602, in _numerical_selection_evidence",
+        "    raise ValueError(\"numerical acceptance does not authenticate selected family: \" + \", \".join(failed))",
+        "ValueError: numerical acceptance does not authenticate selected family: selected_specification"
+      ]
+    },
+    {
+      "analysis_output_created": false,
+      "case": "missing_selected_specification",
+      "command": [
+        "/recorded-environment Learning/.venv/bin/python",
+        "/recorded-environment Learning/extensions/bayes_adaptive/explain.py",
+        "analyze",
+        "--candidates",
+        "/recorded-environment Learning/extensions/bayes_adaptive/outputs/explanation-binding-v3/deliberately_absent_candidates",
+        "--family",
+        "/recorded-environment Learning/extensions/bayes_adaptive/cache/v2/w9-b17-gh25",
+        "--numerical-checks",
+        "/recorded-environment Learning/extensions/bayes_adaptive/outputs/explanation-binding-v3/missing_selected_specification.json",
+        "--output",
+        "/recorded-environment Learning/extensions/bayes_adaptive/outputs/explanation-binding-v3/missing_selected_specification-analysis"
+      ],
+      "expected_error": "numerical acceptance does not authenticate selected family: selected_specification",
+      "fixture_sha256": "c50c3a0de78188d6bfee1617e9ed1b2467cd14ede607e8529e2abe25860ece41",
+      "passed": true,
+      "returncode": 1,
+      "stderr_last_lines": [
+        "                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "  File \"/recorded-environment Learning/extensions/bayes_adaptive/explain.py\", line 602, in _numerical_selection_evidence",
+        "    raise ValueError(\"numerical acceptance does not authenticate selected family: \" + \", \".join(failed))",
+        "ValueError: numerical acceptance does not authenticate selected family: selected_specification"
+      ]
+    },
+    {
+      "analysis_output_created": false,
+      "case": "different_solver_source",
+      "command": [
+        "/recorded-environment Learning/.venv/bin/python",
+        "/recorded-environment Learning/extensions/bayes_adaptive/explain.py",
+        "analyze",
+        "--candidates",
+        "/recorded-environment Learning/extensions/bayes_adaptive/outputs/explanation-binding-v3/deliberately_absent_candidates",
+        "--family",
+        "/recorded-environment Learning/extensions/bayes_adaptive/cache/v2/w9-b17-gh25",
+        "--numerical-checks",
+        "/recorded-environment Learning/extensions/bayes_adaptive/outputs/explanation-binding-v3/different_solver_source.json",
+        "--output",
+        "/recorded-environment Learning/extensions/bayes_adaptive/outputs/explanation-binding-v3/different_solver_source-analysis"
+      ],
+      "expected_error": "numerical acceptance does not authenticate selected family: solver_source",
+      "fixture_sha256": "741fc615185bb6382a4e1faff5972dbee46bee46405a87f6ffe2e1fa65c2ad1a",
+      "passed": true,
+      "returncode": 1,
+      "stderr_last_lines": [
+        "                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "  File \"/recorded-environment Learning/extensions/bayes_adaptive/explain.py\", line 602, in _numerical_selection_evidence",
+        "    raise ValueError(\"numerical acceptance does not authenticate selected family: \" + \", \".join(failed))",
+        "ValueError: numerical acceptance does not authenticate selected family: solver_source"
+      ]
+    },
+    {
+      "analysis_output_created": false,
+      "case": "missing_solver_source",
+      "command": [
+        "/recorded-environment Learning/.venv/bin/python",
+        "/recorded-environment Learning/extensions/bayes_adaptive/explain.py",
+        "analyze",
+        "--candidates",
+        "/recorded-environment Learning/extensions/bayes_adaptive/outputs/explanation-binding-v3/deliberately_absent_candidates",
+        "--family",
+        "/recorded-environment Learning/extensions/bayes_adaptive/cache/v2/w9-b17-gh25",
+        "--numerical-checks",
+        "/recorded-environment Learning/extensions/bayes_adaptive/outputs/explanation-binding-v3/missing_solver_source.json",
+        "--output",
+        "/recorded-environment Learning/extensions/bayes_adaptive/outputs/explanation-binding-v3/missing_solver_source-analysis"
+      ],
+      "expected_error": "numerical acceptance does not authenticate selected family: solver_source",
+      "fixture_sha256": "4960768dab7b444704eca08f9a7ff3773e4819e97f8e45680f70ab61ca9c28c3",
+      "passed": true,
+      "returncode": 1,
+      "stderr_last_lines": [
+        "                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "  File \"/recorded-environment Learning/extensions/bayes_adaptive/explain.py\", line 602, in _numerical_selection_evidence",
+        "    raise ValueError(\"numerical acceptance does not authenticate selected family: \" + \", \".join(failed))",
+        "ValueError: numerical acceptance does not authenticate selected family: solver_source"
+      ]
+    },
+    {
+      "analysis_output_created": false,
+      "case": "different_numerical_build",
+      "command": [
+        "/recorded-environment Learning/.venv/bin/python",
+        "/recorded-environment Learning/extensions/bayes_adaptive/explain.py",
+        "analyze",
+        "--candidates",
+        "/recorded-environment Learning/extensions/bayes_adaptive/outputs/explanation-binding-v3/deliberately_absent_candidates",
+        "--family",
+        "/recorded-environment Learning/extensions/bayes_adaptive/cache/v2/w9-b17-gh25",
+        "--numerical-checks",
+        "/recorded-environment Learning/extensions/bayes_adaptive/outputs/explanation-binding-v3/different_numerical_build.json",
+        "--output",
+        "/recorded-environment Learning/extensions/bayes_adaptive/outputs/explanation-binding-v3/different_numerical_build-analysis"
+      ],
+      "expected_error": "numerical acceptance does not authenticate selected family: numerical_build",
+      "fixture_sha256": "d446624322d487810b46ec2b17bcfc30d271738477439f104c4ac57b71d929c4",
+      "passed": true,
+      "returncode": 1,
+      "stderr_last_lines": [
+        "                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "  File \"/recorded-environment Learning/extensions/bayes_adaptive/explain.py\", line 602, in _numerical_selection_evidence",
+        "    raise ValueError(\"numerical acceptance does not authenticate selected family: \" + \", \".join(failed))",
+        "ValueError: numerical acceptance does not authenticate selected family: numerical_build"
+      ]
+    },
+    {
+      "analysis_output_created": false,
+      "case": "missing_numerical_build",
+      "command": [
+        "/recorded-environment Learning/.venv/bin/python",
+        "/recorded-environment Learning/extensions/bayes_adaptive/explain.py",
+        "analyze",
+        "--candidates",
+        "/recorded-environment Learning/extensions/bayes_adaptive/outputs/explanation-binding-v3/deliberately_absent_candidates",
+        "--family",
+        "/recorded-environment Learning/extensions/bayes_adaptive/cache/v2/w9-b17-gh25",
+        "--numerical-checks",
+        "/recorded-environment Learning/extensions/bayes_adaptive/outputs/explanation-binding-v3/missing_numerical_build.json",
+        "--output",
+        "/recorded-environment Learning/extensions/bayes_adaptive/outputs/explanation-binding-v3/missing_numerical_build-analysis"
+      ],
+      "expected_error": "numerical acceptance does not authenticate selected family: numerical_build",
+      "fixture_sha256": "cde42909c9be91020efd32047779ab7544dcd69c8d0acb217032988d174fb04b",
+      "passed": true,
+      "returncode": 1,
+      "stderr_last_lines": [
+        "                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "  File \"/recorded-environment Learning/extensions/bayes_adaptive/explain.py\", line 602, in _numerical_selection_evidence",
+        "    raise ValueError(\"numerical acceptance does not authenticate selected family: \" + \", \".join(failed))",
+        "ValueError: numerical acceptance does not authenticate selected family: numerical_build"
+      ]
+    },
+    {
+      "analysis_output_created": false,
+      "case": "nonboolean_flag",
+      "command": [
+        "/recorded-environment Learning/.venv/bin/python",
+        "/recorded-environment Learning/extensions/bayes_adaptive/explain.py",
+        "analyze",
+        "--candidates",
+        "/recorded-environment Learning/extensions/bayes_adaptive/outputs/explanation-binding-v3/deliberately_absent_candidates",
+        "--family",
+        "/recorded-environment Learning/extensions/bayes_adaptive/cache/v2/w9-b17-gh25",
+        "--numerical-checks",
+        "/recorded-environment Learning/extensions/bayes_adaptive/outputs/explanation-binding-v3/nonboolean_flag.json",
+        "--output",
+        "/recorded-environment Learning/extensions/bayes_adaptive/outputs/explanation-binding-v3/nonboolean_flag-analysis"
+      ],
+      "expected_error": "numerical receipt requires a Boolean acceptance flag",
+      "fixture_sha256": "6f396290679289f85917085a19e3ffbafed324eba3254abf0b8c7e1ea0aedcef",
+      "passed": true,
+      "returncode": 1,
+      "stderr_last_lines": [
+        "                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "  File \"/recorded-environment Learning/extensions/bayes_adaptive/explain.py\", line 590, in _numerical_selection_evidence",
+        "    raise ValueError(\"numerical receipt requires a Boolean acceptance flag\")",
+        "ValueError: numerical receipt requires a Boolean acceptance flag"
+      ]
+    },
+    {
+      "analysis_output_created": false,
+      "case": "missing_flag",
+      "command": [
+        "/recorded-environment Learning/.venv/bin/python",
+        "/recorded-environment Learning/extensions/bayes_adaptive/explain.py",
+        "analyze",
+        "--candidates",
+        "/recorded-environment Learning/extensions/bayes_adaptive/outputs/explanation-binding-v3/deliberately_absent_candidates",
+        "--family",
+        "/recorded-environment Learning/extensions/bayes_adaptive/cache/v2/w9-b17-gh25",
+        "--numerical-checks",
+        "/recorded-environment Learning/extensions/bayes_adaptive/outputs/explanation-binding-v3/missing_flag.json",
+        "--output",
+        "/recorded-environment Learning/extensions/bayes_adaptive/outputs/explanation-binding-v3/missing_flag-analysis"
+      ],
+      "expected_error": "numerical receipt requires a Boolean acceptance flag",
+      "fixture_sha256": "794836858f3c888a4b625148ce97c8cba5c399202880046deda6cd88ef67083e",
+      "passed": true,
+      "returncode": 1,
+      "stderr_last_lines": [
+        "                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "  File \"/recorded-environment Learning/extensions/bayes_adaptive/explain.py\", line 590, in _numerical_selection_evidence",
+        "    raise ValueError(\"numerical receipt requires a Boolean acceptance flag\")",
+        "ValueError: numerical receipt requires a Boolean acceptance flag"
+      ]
+    },
+    {
+      "analysis_output_created": false,
+      "case": "unresolved_fixture_reaches_candidate_gate",
+      "command": [
+        "/recorded-environment Learning/.venv/bin/python",
+        "/recorded-environment Learning/extensions/bayes_adaptive/explain.py",
+        "analyze",
+        "--candidates",
+        "/recorded-environment Learning/extensions/bayes_adaptive/outputs/explanation-binding-v3/deliberately_absent_candidates",
+        "--family",
+        "/recorded-environment Learning/extensions/bayes_adaptive/cache/v2/w9-b17-gh25",
+        "--numerical-checks",
+        "/recorded-environment Learning/extensions/bayes_adaptive/outputs/explanation-binding-v3/unresolved_fixture_reaches_candidate_gate.json",
+        "--output",
+        "/recorded-environment Learning/extensions/bayes_adaptive/outputs/explanation-binding-v3/unresolved_fixture_reaches_candidate_gate-analysis"
+      ],
+      "expected_error": "FileNotFoundError",
+      "fixture_sha256": "02fbad52bc8087ed331dbe9f62f97d3ac649ef18b5158af8ab7b5c752a9e4b4d",
+      "passed": true,
+      "returncode": 1,
+      "stderr_last_lines": [
+        "  File \"/recorded-environment", line 1013, in open",
+        "    return io.open(self, mode, buffering, encoding, errors, newline)",
+        "           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "FileNotFoundError: [Errno 2] No such file or directory: '/recorded-environment Learning/extensions/bayes_adaptive/outputs/explanation-binding-v3/deliberately_absent_candidates/manifest.json'"
+      ]
+    }
+  ],
+  "family_artifact_sha256": "b5ec46904c0f7208b354efa8f1c75eb13c77180d9f9ade01508b30f57dd425a3",
+  "passed": true,
+  "producer_sha256": "c4536c3ed03070988e73f59ba02da29cfc8477d6116e6f4e965e4f353edaa866",
+  "reproduce_sha256": "38e3ef5c2c8efbb82e9fcd46bb74ba6417ff46a464cb7b6bddb3632cb125dbcf",
+  "scope": "Receipt binding only; synthetic successes are not numerical acceptance"
+}

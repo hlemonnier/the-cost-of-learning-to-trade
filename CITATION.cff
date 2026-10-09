@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+message: "If you use this research software, please cite the project."
+type: software
+title: "The Cost of Learning to Trade"
+authors:
+  - family-names: "Lemonnier"
+    given-names: "Hugo"
+version: 1.0.0
+date-released: 2026-10-09
+url: "https://github.com/hlemonnier/the-cost-of-learning-to-trade"
+repository-code: "https://github.com/hlemonnier/the-cost-of-learning-to-trade"
+license: MIT
+keywords: [market making, Bayesian inference, sequential decision making, value of information]

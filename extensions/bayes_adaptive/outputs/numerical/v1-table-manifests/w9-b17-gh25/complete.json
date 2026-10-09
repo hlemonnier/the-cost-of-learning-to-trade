@@ -1,0 +1,1903 @@
+{
+  "arrays": [
+    {
+      "bytes": 13135448,
+      "dtype": "float64",
+      "file": "known-q-0.npy",
+      "sha256": "9e0e0a5cb0497b1b4346ca13ba4ba2d8c910736253392204344c759731e29501",
+      "shape": [
+        31,
+        5,
+        3,
+        321,
+        11
+      ]
+    },
+    {
+      "bytes": 13135448,
+      "dtype": "float64",
+      "file": "known-q-1.npy",
+      "sha256": "e9df3b9cf747bcb440ae97700b48227e0b4b5afa16942dff435a6541bdb5a8c8",
+      "shape": [
+        31,
+        5,
+        3,
+        321,
+        11
+      ]
+    },
+    {
+      "bytes": 106433048,
+      "dtype": "float64",
+      "file": "q-bayes.npy",
+      "sha256": "89a753a31e15c8a387b045c70bb6e2bd1db1e9bbef6013c5fa7c1a557eeab130",
+      "shape": [
+        31,
+        5,
+        3,
+        2601,
+        11
+      ]
+    },
+    {
+      "bytes": 106433048,
+      "dtype": "float64",
+      "file": "q-frozen_model.npy",
+      "sha256": "8ecaeefebf917dfd71afe8076b6f2f336be3fd9b7989fdb9597499d8c6515b92",
+      "shape": [
+        31,
+        5,
+        3,
+        2601,
+        11
+      ]
+    },
+    {
+      "bytes": 106433048,
+      "dtype": "float64",
+      "file": "q-no_feedback.npy",
+      "sha256": "9a5e6f0672cc0ca51691ee05033f070c9699215214a73ed184bd279173ee70fc",
+      "shape": [
+        31,
+        5,
+        3,
+        2601,
+        11
+      ]
+    },
+    {
+      "bytes": 9675848,
+      "dtype": "float64",
+      "file": "value-bayes.npy",
+      "sha256": "b6fcbf093e2a98b879427cf2f35c17c752c8f7291ae113f7e8d1ad041e09b9e8",
+      "shape": [
+        31,
+        5,
+        3,
+        2601
+      ]
+    },
+    {
+      "bytes": 9675848,
+      "dtype": "float64",
+      "file": "value-frozen_model.npy",
+      "sha256": "b3be7534fd1a9c601ffc2be9774ee1a19f6fa56143e349ff295dc65602092f00",
+      "shape": [
+        31,
+        5,
+        3,
+        2601
+      ]
+    },
+    {
+      "bytes": 9675848,
+      "dtype": "float64",
+      "file": "value-no_feedback.npy",
+      "sha256": "685212d7d6189f8eae371373bac858c2a56616046d694787bc6fbb25f20c43e3",
+      "shape": [
+        31,
+        5,
+        3,
+        2601
+      ]
+    },
+    {
+      "bytes": 9675848,
+      "dtype": "float64",
+      "file": "value-reveal1.npy",
+      "sha256": "087d782e21d9156d7d822197ad4d4ecdd5b6fa9c1c15d8931d6e7af4084804b7",
+      "shape": [
+        31,
+        5,
+        3,
+        2601
+      ]
+    },
+    {
+      "bytes": 9675848,
+      "dtype": "float64",
+      "file": "value-reveal2.npy",
+      "sha256": "94ec79af5d4465c99ae75b966fb4b5b1248eedacb933504a1f5066695a177233",
+      "shape": [
+        31,
+        5,
+        3,
+        2601
+      ]
+    },
+    {
+      "bytes": 9675848,
+      "dtype": "float64",
+      "file": "value-reveal3.npy",
+      "sha256": "b0c9237d2dac37ea54e1984121d6fc3a171f79dee8ced68f26711f957fe421d3",
+      "shape": [
+        31,
+        5,
+        3,
+        2601
+      ]
+    }
+  ],
+  "artifact_sha256": "a42442d638ed28952a5548a9d2c55c7007f3881e28b55daa402ca7637959602a",
+  "build": {
+    "byteorder": "little",
+    "implementation": "CPython",
+    "machine": "arm64",
+    "numerical_binaries": {
+      "numpy._core._multiarray_umath": "3432cd9093d7e84b4080015b6a889598fea4c305da967063cb916215193bf85d",
+      "scipy.linalg._fblas": "6502e4e093d03932479317d45bfea018ef0999bc5c4bd46687253322c13e9448",
+      "scipy.sparse._sparsetools": "077b33d61dc1a677cb56bb4835572623986f7f0a1c0d35d6eaf85fc0df5dade2",
+      "scipy.special._ufuncs": "a0889d5c82454d79d4cd4cc8a589a62a382d667da8e2b030e637f58708bd340c"
+    },
+    "numpy": "2.5.3",
+    "numpy_config": {
+      "Build Dependencies": {
+        "blas": {
+          "detection method": "system",
+          "found": true,
+          "include directory": "unknown",
+          "lib directory": "unknown",
+          "name": "accelerate",
+          "openblas configuration": "unknown",
+          "pc file directory": "unknown",
+          "version": "unknown"
+        },
+        "lapack": {
+          "detection method": "system",
+          "found": true,
+          "include directory": "unknown",
+          "lib directory": "unknown",
+          "name": "accelerate",
+          "openblas configuration": "unknown",
+          "pc file directory": "unknown",
+          "version": "unknown"
+        }
+      },
+      "Compilers": {
+        "c": {
+          "commands": "cc",
+          "linker": "ld64",
+          "name": "clang",
+          "version": "15.0.0"
+        },
+        "c++": {
+          "commands": "c++",
+          "linker": "ld64",
+          "name": "clang",
+          "version": "15.0.0"
+        },
+        "cython": {
+          "commands": "cython",
+          "linker": "cython",
+          "name": "cython",
+          "version": "3.3.0"
+        }
+      },
+      "Machine Information": {
+        "build": {
+          "cpu": "aarch64",
+          "endian": "little",
+          "family": "aarch64",
+          "system": "darwin"
+        },
+        "host": {
+          "cpu": "aarch64",
+          "endian": "little",
+          "family": "aarch64",
+          "system": "darwin"
+        }
+      },
+      "Python Information": {
+        "path": "/private/var/folders/s6/5hzmn6lx4dz5nxs7k_0slzph0000gn/T/build-env-sd3oh5ko/bin/python",
+        "version": "3.12"
+      },
+      "SIMD Extensions": {
+        "baseline": [
+          "NEON",
+          "NEON_FP16",
+          "NEON_VFPV4",
+          "ASIMD"
+        ],
+        "found": [
+          "ASIMDHP",
+          "ASIMDDP"
+        ],
+        "not found": [
+          "ASIMDFHM"
+        ]
+      }
+    },
+    "python": "3.12.14",
+    "scipy": "1.18.1",
+    "scipy_config": {
+      "Build Dependencies": {
+        "blas": {
+          "cython blas ilp64": false,
+          "detection method": "extraframeworks",
+          "found": true,
+          "has ilp64": false,
+          "include directory": "unknown",
+          "lib directory": "unknown",
+          "name": "Accelerate",
+          "openblas configuration": "unknown",
+          "pc file directory": "unknown",
+          "version": "unknown"
+        },
+        "lapack": {
+          "detection method": "extraframeworks",
+          "found": true,
+          "has ilp64": false,
+          "include directory": "unknown",
+          "lib directory": "unknown",
+          "name": "Accelerate",
+          "openblas configuration": "unknown",
+          "pc file directory": "unknown",
+          "version": "unknown"
+        },
+        "pybind11": {
+          "detection method": "config-tool",
+          "include directory": "unknown",
+          "name": "pybind11",
+          "version": "3.0.4"
+        }
+      },
+      "Compilers": {
+        "c": {
+          "commands": "cc",
+          "linker": "ld64",
+          "name": "clang",
+          "version": "15.0.0"
+        },
+        "c++": {
+          "commands": "c++",
+          "linker": "ld64",
+          "name": "clang",
+          "version": "15.0.0"
+        },
+        "cython": {
+          "commands": "cython",
+          "linker": "cython",
+          "name": "cython",
+          "version": "3.2.9"
+        },
+        "fortran": {
+          "commands": "gfortran",
+          "linker": "ld64",
+          "name": "gcc",
+          "version": "13.4.0"
+        },
+        "pythran": {
+          "include directory": "../../../../../../../private/var/folders/g3/pffjr_y96bq06blnkf72x_hw0000gn/T/build-env-qsdhhi00/lib/python3.12/site-packages/pythran",
+          "version": "0.19.0"
+        }
+      },
+      "Machine Information": {
+        "build": {
+          "cpu": "aarch64",
+          "endian": "little",
+          "family": "aarch64",
+          "system": "darwin"
+        },
+        "cross-compiled": false,
+        "host": {
+          "cpu": "aarch64",
+          "endian": "little",
+          "family": "aarch64",
+          "system": "darwin"
+        }
+      },
+      "Python Information": {
+        "path": "/private/var/folders/g3/pffjr_y96bq06blnkf72x_hw0000gn/T/build-env-qsdhhi00/bin/python",
+        "version": "3.12"
+      }
+    },
+    "sha256": "734eddc7d5a49af317fdedcd669ef30ac9d3a34847a389f01335a545e700261d",
+    "system": "Darwin",
+    "thread_environment": {
+      "MKL_NUM_THREADS": null,
+      "NUMEXPR_NUM_THREADS": null,
+      "OMP_NUM_THREADS": null,
+      "OPENBLAS_NUM_THREADS": null,
+      "VECLIB_MAXIMUM_THREADS": null
+    }
+  },
+  "format_version": 1,
+  "metadata": {
+    "approximation": "Float64 trilinear product-belief interpolation and Gauss-Hermite continuation",
+    "certified_bound": false,
+    "flatten_order": "C order: weight0, conditional_plus0, conditional_plus1",
+    "frozen_model_semantics": "freeze marginal model weights, update conditional regimes in planning; artificial intervention",
+    "known_models": [
+      {
+        "approximation": "Gauss-Hermite continuation integration; uniform linear belief interpolation",
+        "effective_planning_theta": 0.35,
+        "full_semantics": "current regime observed, next regime averaged; no future innovation access",
+        "max_transition_mass_error": 7.771561172376096e-16,
+        "noinfo_semantics": "prediction-only belief in planning; runtime filtering external",
+        "operator_build_seconds": 0.510472166002728,
+        "requested_belief_points": 321,
+        "reward_integration": "analytic expected marked-wealth increment",
+        "solve_seconds": 0.7245459999830928,
+        "table_storage_bytes": 14332008,
+        "tie_breaking": {
+          "bellman_value": "Q of the action selected by the same tie rule",
+          "invalid_action": "negative infinity; no decision at remaining horizon zero",
+          "score_dtype": "float64",
+          "tie_absolute_tolerance": 1e-12,
+          "tie_action": "lowest admissible action ID within absolute tolerance of maximum",
+          "tie_relative_tolerance": 0.0,
+          "version": 2
+        },
+        "transition_nonzeros": 6625875,
+        "transition_storage_bytes": 79722364
+      },
+      {
+        "approximation": "Gauss-Hermite continuation integration; uniform linear belief interpolation",
+        "effective_planning_theta": 0.35,
+        "full_semantics": "current regime observed, next regime averaged; no future innovation access",
+        "max_transition_mass_error": 6.661338147750939e-16,
+        "noinfo_semantics": "prediction-only belief in planning; runtime filtering external",
+        "operator_build_seconds": 0.39101791600114666,
+        "requested_belief_points": 321,
+        "reward_integration": "analytic expected marked-wealth increment",
+        "solve_seconds": 0.578905250004027,
+        "table_storage_bytes": 14332008,
+        "tie_breaking": {
+          "bellman_value": "Q of the action selected by the same tie rule",
+          "invalid_action": "negative infinity; no decision at remaining horizon zero",
+          "score_dtype": "float64",
+          "tie_absolute_tolerance": 1e-12,
+          "tie_action": "lowest admissible action ID within absolute tolerance of maximum",
+          "tie_relative_tolerance": 0.0,
+          "version": 2
+        },
+        "transition_nonzeros": 6014979,
+        "transition_storage_bytes": 72391612
+      }
+    ],
+    "no_feedback_semantics": "prediction-only beliefs in planning; evaluator uses full exact filtering",
+    "operators": [
+      {
+        "build_seconds": 1.946086666022893,
+        "kernels": [
+          {
+            "action": 0,
+            "bytes": 120892,
+            "dq": 0,
+            "nonzeros": 9207,
+            "xi": 0
+          },
+          {
+            "action": 1,
+            "bytes": 2407300,
+            "dq": -1,
+            "nonzeros": 199741,
+            "xi": 0
+          },
+          {
+            "action": 1,
+            "bytes": 2587444,
+            "dq": 0,
+            "nonzeros": 214753,
+            "xi": 0
+          },
+          {
+            "action": 2,
+            "bytes": 2147128,
+            "dq": -1,
+            "nonzeros": 178060,
+            "xi": 0
+          },
+          {
+            "action": 2,
+            "bytes": 2632972,
+            "dq": 0,
+            "nonzeros": 218547,
+            "xi": 0
+          },
+          {
+            "action": 3,
+            "bytes": 2529724,
+            "dq": 0,
+            "nonzeros": 209943,
+            "xi": 0
+          },
+          {
+            "action": 3,
+            "bytes": 2504476,
+            "dq": 1,
+            "nonzeros": 207839,
+            "xi": 0
+          },
+          {
+            "action": 4,
+            "bytes": 1836280,
+            "dq": -1,
+            "nonzeros": 152156,
+            "xi": 0
+          },
+          {
+            "action": 4,
+            "bytes": 1199836,
+            "dq": 0,
+            "nonzeros": 99119,
+            "xi": 0
+          },
+          {
+            "action": 4,
+            "bytes": 2069008,
+            "dq": 1,
+            "nonzeros": 171550,
+            "xi": 0
+          },
+          {
+            "action": 5,
+            "bytes": 1649356,
+            "dq": -1,
+            "nonzeros": 136579,
+            "xi": 0
+          },
+          {
+            "action": 5,
+            "bytes": 2374144,
+            "dq": 0,
+            "nonzeros": 196978,
+            "xi": 0
+          },
+          {
+            "action": 5,
+            "bytes": 2196280,
+            "dq": 1,
+            "nonzeros": 182156,
+            "xi": 0
+          },
+          {
+            "action": 6,
+            "bytes": 2638936,
+            "dq": 0,
+            "nonzeros": 219044,
+            "xi": 0
+          },
+          {
+            "action": 6,
+            "bytes": 2275780,
+            "dq": 1,
+            "nonzeros": 188781,
+            "xi": 0
+          },
+          {
+            "action": 7,
+            "bytes": 1989028,
+            "dq": -1,
+            "nonzeros": 164885,
+            "xi": 0
+          },
+          {
+            "action": 7,
+            "bytes": 1005448,
+            "dq": 0,
+            "nonzeros": 82920,
+            "xi": 0
+          },
+          {
+            "action": 7,
+            "bytes": 1836508,
+            "dq": 1,
+            "nonzeros": 152175,
+            "xi": 0
+          },
+          {
+            "action": 8,
+            "bytes": 1779628,
+            "dq": -1,
+            "nonzeros": 147435,
+            "xi": 0
+          },
+          {
+            "action": 8,
+            "bytes": 1272064,
+            "dq": 0,
+            "nonzeros": 105138,
+            "xi": 0
+          },
+          {
+            "action": 8,
+            "bytes": 2001280,
+            "dq": 1,
+            "nonzeros": 165906,
+            "xi": 0
+          },
+          {
+            "action": 9,
+            "bytes": 120892,
+            "dq": 1,
+            "nonzeros": 9207,
+            "xi": 0
+          },
+          {
+            "action": 10,
+            "bytes": 120892,
+            "dq": -1,
+            "nonzeros": 9207,
+            "xi": 0
+          },
+          {
+            "action": 0,
+            "bytes": 120892,
+            "dq": 0,
+            "nonzeros": 9207,
+            "xi": 1
+          },
+          {
+            "action": 1,
+            "bytes": 2455588,
+            "dq": -1,
+            "nonzeros": 203765,
+            "xi": 1
+          },
+          {
+            "action": 1,
+            "bytes": 2557132,
+            "dq": 0,
+            "nonzeros": 212227,
+            "xi": 1
+          },
+          {
+            "action": 2,
+            "bytes": 2214628,
+            "dq": -1,
+            "nonzeros": 183685,
+            "xi": 1
+          },
+          {
+            "action": 2,
+            "bytes": 2623696,
+            "dq": 0,
+            "nonzeros": 217774,
+            "xi": 1
+          },
+          {
+            "action": 3,
+            "bytes": 2557132,
+            "dq": 0,
+            "nonzeros": 212227,
+            "xi": 1
+          },
+          {
+            "action": 3,
+            "bytes": 2455588,
+            "dq": 1,
+            "nonzeros": 203765,
+            "xi": 1
+          },
+          {
+            "action": 4,
+            "bytes": 1942204,
+            "dq": -1,
+            "nonzeros": 160983,
+            "xi": 1
+          },
+          {
+            "action": 4,
+            "bytes": 217156,
+            "dq": 0,
+            "nonzeros": 17229,
+            "xi": 1
+          },
+          {
+            "action": 4,
+            "bytes": 1942204,
+            "dq": 1,
+            "nonzeros": 160983,
+            "xi": 1
+          },
+          {
+            "action": 5,
+            "bytes": 1745440,
+            "dq": -1,
+            "nonzeros": 144586,
+            "xi": 1
+          },
+          {
+            "action": 5,
+            "bytes": 1860148,
+            "dq": 0,
+            "nonzeros": 154145,
+            "xi": 1
+          },
+          {
+            "action": 5,
+            "bytes": 2097760,
+            "dq": 1,
+            "nonzeros": 173946,
+            "xi": 1
+          },
+          {
+            "action": 6,
+            "bytes": 2623696,
+            "dq": 0,
+            "nonzeros": 217774,
+            "xi": 1
+          },
+          {
+            "action": 6,
+            "bytes": 2214628,
+            "dq": 1,
+            "nonzeros": 183685,
+            "xi": 1
+          },
+          {
+            "action": 7,
+            "bytes": 2097760,
+            "dq": -1,
+            "nonzeros": 173946,
+            "xi": 1
+          },
+          {
+            "action": 7,
+            "bytes": 1860148,
+            "dq": 0,
+            "nonzeros": 154145,
+            "xi": 1
+          },
+          {
+            "action": 7,
+            "bytes": 1745440,
+            "dq": 1,
+            "nonzeros": 144586,
+            "xi": 1
+          },
+          {
+            "action": 8,
+            "bytes": 1897156,
+            "dq": -1,
+            "nonzeros": 157229,
+            "xi": 1
+          },
+          {
+            "action": 8,
+            "bytes": 247444,
+            "dq": 0,
+            "nonzeros": 19753,
+            "xi": 1
+          },
+          {
+            "action": 8,
+            "bytes": 1897156,
+            "dq": 1,
+            "nonzeros": 157229,
+            "xi": 1
+          },
+          {
+            "action": 9,
+            "bytes": 120892,
+            "dq": 1,
+            "nonzeros": 9207,
+            "xi": 1
+          },
+          {
+            "action": 10,
+            "bytes": 120892,
+            "dq": -1,
+            "nonzeros": 9207,
+            "xi": 1
+          },
+          {
+            "action": 0,
+            "bytes": 120892,
+            "dq": 0,
+            "nonzeros": 9207,
+            "xi": 2
+          },
+          {
+            "action": 1,
+            "bytes": 2504476,
+            "dq": -1,
+            "nonzeros": 207839,
+            "xi": 2
+          },
+          {
+            "action": 1,
+            "bytes": 2529724,
+            "dq": 0,
+            "nonzeros": 209943,
+            "xi": 2
+          },
+          {
+            "action": 2,
+            "bytes": 2275780,
+            "dq": -1,
+            "nonzeros": 188781,
+            "xi": 2
+          },
+          {
+            "action": 2,
+            "bytes": 2638936,
+            "dq": 0,
+            "nonzeros": 219044,
+            "xi": 2
+          },
+          {
+            "action": 3,
+            "bytes": 2587444,
+            "dq": 0,
+            "nonzeros": 214753,
+            "xi": 2
+          },
+          {
+            "action": 3,
+            "bytes": 2407300,
+            "dq": 1,
+            "nonzeros": 199741,
+            "xi": 2
+          },
+          {
+            "action": 4,
+            "bytes": 2069008,
+            "dq": -1,
+            "nonzeros": 171550,
+            "xi": 2
+          },
+          {
+            "action": 4,
+            "bytes": 1199836,
+            "dq": 0,
+            "nonzeros": 99119,
+            "xi": 2
+          },
+          {
+            "action": 4,
+            "bytes": 1836280,
+            "dq": 1,
+            "nonzeros": 152156,
+            "xi": 2
+          },
+          {
+            "action": 5,
+            "bytes": 1836508,
+            "dq": -1,
+            "nonzeros": 152175,
+            "xi": 2
+          },
+          {
+            "action": 5,
+            "bytes": 1005448,
+            "dq": 0,
+            "nonzeros": 82920,
+            "xi": 2
+          },
+          {
+            "action": 5,
+            "bytes": 1989028,
+            "dq": 1,
+            "nonzeros": 164885,
+            "xi": 2
+          },
+          {
+            "action": 6,
+            "bytes": 2632972,
+            "dq": 0,
+            "nonzeros": 218547,
+            "xi": 2
+          },
+          {
+            "action": 6,
+            "bytes": 2147128,
+            "dq": 1,
+            "nonzeros": 178060,
+            "xi": 2
+          },
+          {
+            "action": 7,
+            "bytes": 2196280,
+            "dq": -1,
+            "nonzeros": 182156,
+            "xi": 2
+          },
+          {
+            "action": 7,
+            "bytes": 2374144,
+            "dq": 0,
+            "nonzeros": 196978,
+            "xi": 2
+          },
+          {
+            "action": 7,
+            "bytes": 1649356,
+            "dq": 1,
+            "nonzeros": 136579,
+            "xi": 2
+          },
+          {
+            "action": 8,
+            "bytes": 2001280,
+            "dq": -1,
+            "nonzeros": 165906,
+            "xi": 2
+          },
+          {
+            "action": 8,
+            "bytes": 1272064,
+            "dq": 0,
+            "nonzeros": 105138,
+            "xi": 2
+          },
+          {
+            "action": 8,
+            "bytes": 1779628,
+            "dq": 1,
+            "nonzeros": 147435,
+            "xi": 2
+          },
+          {
+            "action": 9,
+            "bytes": 120892,
+            "dq": 1,
+            "nonzeros": 9207,
+            "xi": 2
+          },
+          {
+            "action": 10,
+            "bytes": 120892,
+            "dq": -1,
+            "nonzeros": 9207,
+            "xi": 2
+          }
+        ],
+        "max_transition_mass_error": 4.440892098500626e-16,
+        "mode": "bayes",
+        "total_bytes": 122205372,
+        "total_nonzeros": 10123935
+      },
+      {
+        "build_seconds": 0.8488661250157747,
+        "kernels": [
+          {
+            "action": 0,
+            "bytes": 120892,
+            "dq": 0,
+            "nonzeros": 9207,
+            "xi": 0
+          },
+          {
+            "action": 1,
+            "bytes": 120892,
+            "dq": -1,
+            "nonzeros": 9207,
+            "xi": 0
+          },
+          {
+            "action": 1,
+            "bytes": 120892,
+            "dq": 0,
+            "nonzeros": 9207,
+            "xi": 0
+          },
+          {
+            "action": 2,
+            "bytes": 120892,
+            "dq": -1,
+            "nonzeros": 9207,
+            "xi": 0
+          },
+          {
+            "action": 2,
+            "bytes": 120892,
+            "dq": 0,
+            "nonzeros": 9207,
+            "xi": 0
+          },
+          {
+            "action": 3,
+            "bytes": 120892,
+            "dq": 0,
+            "nonzeros": 9207,
+            "xi": 0
+          },
+          {
+            "action": 3,
+            "bytes": 120892,
+            "dq": 1,
+            "nonzeros": 9207,
+            "xi": 0
+          },
+          {
+            "action": 4,
+            "bytes": 120892,
+            "dq": -1,
+            "nonzeros": 9207,
+            "xi": 0
+          },
+          {
+            "action": 4,
+            "bytes": 120892,
+            "dq": 0,
+            "nonzeros": 9207,
+            "xi": 0
+          },
+          {
+            "action": 4,
+            "bytes": 120892,
+            "dq": 1,
+            "nonzeros": 9207,
+            "xi": 0
+          },
+          {
+            "action": 5,
+            "bytes": 120892,
+            "dq": -1,
+            "nonzeros": 9207,
+            "xi": 0
+          },
+          {
+            "action": 5,
+            "bytes": 120892,
+            "dq": 0,
+            "nonzeros": 9207,
+            "xi": 0
+          },
+          {
+            "action": 5,
+            "bytes": 120892,
+            "dq": 1,
+            "nonzeros": 9207,
+            "xi": 0
+          },
+          {
+            "action": 6,
+            "bytes": 120892,
+            "dq": 0,
+            "nonzeros": 9207,
+            "xi": 0
+          },
+          {
+            "action": 6,
+            "bytes": 120892,
+            "dq": 1,
+            "nonzeros": 9207,
+            "xi": 0
+          },
+          {
+            "action": 7,
+            "bytes": 120892,
+            "dq": -1,
+            "nonzeros": 9207,
+            "xi": 0
+          },
+          {
+            "action": 7,
+            "bytes": 120892,
+            "dq": 0,
+            "nonzeros": 9207,
+            "xi": 0
+          },
+          {
+            "action": 7,
+            "bytes": 120892,
+            "dq": 1,
+            "nonzeros": 9207,
+            "xi": 0
+          },
+          {
+            "action": 8,
+            "bytes": 120892,
+            "dq": -1,
+            "nonzeros": 9207,
+            "xi": 0
+          },
+          {
+            "action": 8,
+            "bytes": 120892,
+            "dq": 0,
+            "nonzeros": 9207,
+            "xi": 0
+          },
+          {
+            "action": 8,
+            "bytes": 120892,
+            "dq": 1,
+            "nonzeros": 9207,
+            "xi": 0
+          },
+          {
+            "action": 9,
+            "bytes": 120892,
+            "dq": 1,
+            "nonzeros": 9207,
+            "xi": 0
+          },
+          {
+            "action": 10,
+            "bytes": 120892,
+            "dq": -1,
+            "nonzeros": 9207,
+            "xi": 0
+          },
+          {
+            "action": 0,
+            "bytes": 120892,
+            "dq": 0,
+            "nonzeros": 9207,
+            "xi": 1
+          },
+          {
+            "action": 1,
+            "bytes": 120892,
+            "dq": -1,
+            "nonzeros": 9207,
+            "xi": 1
+          },
+          {
+            "action": 1,
+            "bytes": 120892,
+            "dq": 0,
+            "nonzeros": 9207,
+            "xi": 1
+          },
+          {
+            "action": 2,
+            "bytes": 120892,
+            "dq": -1,
+            "nonzeros": 9207,
+            "xi": 1
+          },
+          {
+            "action": 2,
+            "bytes": 120892,
+            "dq": 0,
+            "nonzeros": 9207,
+            "xi": 1
+          },
+          {
+            "action": 3,
+            "bytes": 120892,
+            "dq": 0,
+            "nonzeros": 9207,
+            "xi": 1
+          },
+          {
+            "action": 3,
+            "bytes": 120892,
+            "dq": 1,
+            "nonzeros": 9207,
+            "xi": 1
+          },
+          {
+            "action": 4,
+            "bytes": 120892,
+            "dq": -1,
+            "nonzeros": 9207,
+            "xi": 1
+          },
+          {
+            "action": 4,
+            "bytes": 120892,
+            "dq": 0,
+            "nonzeros": 9207,
+            "xi": 1
+          },
+          {
+            "action": 4,
+            "bytes": 120892,
+            "dq": 1,
+            "nonzeros": 9207,
+            "xi": 1
+          },
+          {
+            "action": 5,
+            "bytes": 120892,
+            "dq": -1,
+            "nonzeros": 9207,
+            "xi": 1
+          },
+          {
+            "action": 5,
+            "bytes": 120892,
+            "dq": 0,
+            "nonzeros": 9207,
+            "xi": 1
+          },
+          {
+            "action": 5,
+            "bytes": 120892,
+            "dq": 1,
+            "nonzeros": 9207,
+            "xi": 1
+          },
+          {
+            "action": 6,
+            "bytes": 120892,
+            "dq": 0,
+            "nonzeros": 9207,
+            "xi": 1
+          },
+          {
+            "action": 6,
+            "bytes": 120892,
+            "dq": 1,
+            "nonzeros": 9207,
+            "xi": 1
+          },
+          {
+            "action": 7,
+            "bytes": 120892,
+            "dq": -1,
+            "nonzeros": 9207,
+            "xi": 1
+          },
+          {
+            "action": 7,
+            "bytes": 120892,
+            "dq": 0,
+            "nonzeros": 9207,
+            "xi": 1
+          },
+          {
+            "action": 7,
+            "bytes": 120892,
+            "dq": 1,
+            "nonzeros": 9207,
+            "xi": 1
+          },
+          {
+            "action": 8,
+            "bytes": 120892,
+            "dq": -1,
+            "nonzeros": 9207,
+            "xi": 1
+          },
+          {
+            "action": 8,
+            "bytes": 120892,
+            "dq": 0,
+            "nonzeros": 9207,
+            "xi": 1
+          },
+          {
+            "action": 8,
+            "bytes": 120892,
+            "dq": 1,
+            "nonzeros": 9207,
+            "xi": 1
+          },
+          {
+            "action": 9,
+            "bytes": 120892,
+            "dq": 1,
+            "nonzeros": 9207,
+            "xi": 1
+          },
+          {
+            "action": 10,
+            "bytes": 120892,
+            "dq": -1,
+            "nonzeros": 9207,
+            "xi": 1
+          },
+          {
+            "action": 0,
+            "bytes": 120892,
+            "dq": 0,
+            "nonzeros": 9207,
+            "xi": 2
+          },
+          {
+            "action": 1,
+            "bytes": 120892,
+            "dq": -1,
+            "nonzeros": 9207,
+            "xi": 2
+          },
+          {
+            "action": 1,
+            "bytes": 120892,
+            "dq": 0,
+            "nonzeros": 9207,
+            "xi": 2
+          },
+          {
+            "action": 2,
+            "bytes": 120892,
+            "dq": -1,
+            "nonzeros": 9207,
+            "xi": 2
+          },
+          {
+            "action": 2,
+            "bytes": 120892,
+            "dq": 0,
+            "nonzeros": 9207,
+            "xi": 2
+          },
+          {
+            "action": 3,
+            "bytes": 120892,
+            "dq": 0,
+            "nonzeros": 9207,
+            "xi": 2
+          },
+          {
+            "action": 3,
+            "bytes": 120892,
+            "dq": 1,
+            "nonzeros": 9207,
+            "xi": 2
+          },
+          {
+            "action": 4,
+            "bytes": 120892,
+            "dq": -1,
+            "nonzeros": 9207,
+            "xi": 2
+          },
+          {
+            "action": 4,
+            "bytes": 120892,
+            "dq": 0,
+            "nonzeros": 9207,
+            "xi": 2
+          },
+          {
+            "action": 4,
+            "bytes": 120892,
+            "dq": 1,
+            "nonzeros": 9207,
+            "xi": 2
+          },
+          {
+            "action": 5,
+            "bytes": 120892,
+            "dq": -1,
+            "nonzeros": 9207,
+            "xi": 2
+          },
+          {
+            "action": 5,
+            "bytes": 120892,
+            "dq": 0,
+            "nonzeros": 9207,
+            "xi": 2
+          },
+          {
+            "action": 5,
+            "bytes": 120892,
+            "dq": 1,
+            "nonzeros": 9207,
+            "xi": 2
+          },
+          {
+            "action": 6,
+            "bytes": 120892,
+            "dq": 0,
+            "nonzeros": 9207,
+            "xi": 2
+          },
+          {
+            "action": 6,
+            "bytes": 120892,
+            "dq": 1,
+            "nonzeros": 9207,
+            "xi": 2
+          },
+          {
+            "action": 7,
+            "bytes": 120892,
+            "dq": -1,
+            "nonzeros": 9207,
+            "xi": 2
+          },
+          {
+            "action": 7,
+            "bytes": 120892,
+            "dq": 0,
+            "nonzeros": 9207,
+            "xi": 2
+          },
+          {
+            "action": 7,
+            "bytes": 120892,
+            "dq": 1,
+            "nonzeros": 9207,
+            "xi": 2
+          },
+          {
+            "action": 8,
+            "bytes": 120892,
+            "dq": -1,
+            "nonzeros": 9207,
+            "xi": 2
+          },
+          {
+            "action": 8,
+            "bytes": 120892,
+            "dq": 0,
+            "nonzeros": 9207,
+            "xi": 2
+          },
+          {
+            "action": 8,
+            "bytes": 120892,
+            "dq": 1,
+            "nonzeros": 9207,
+            "xi": 2
+          },
+          {
+            "action": 9,
+            "bytes": 120892,
+            "dq": 1,
+            "nonzeros": 9207,
+            "xi": 2
+          },
+          {
+            "action": 10,
+            "bytes": 120892,
+            "dq": -1,
+            "nonzeros": 9207,
+            "xi": 2
+          }
+        ],
+        "max_transition_mass_error": 4.440892098500626e-16,
+        "mode": "no_feedback",
+        "total_bytes": 8341548,
+        "total_nonzeros": 635283
+      },
+      {
+        "build_seconds": 1.5560530420043506,
+        "kernels": [
+          {
+            "action": 0,
+            "bytes": 120892,
+            "dq": 0,
+            "nonzeros": 9207,
+            "xi": 0
+          },
+          {
+            "action": 1,
+            "bytes": 1359868,
+            "dq": -1,
+            "nonzeros": 112455,
+            "xi": 0
+          },
+          {
+            "action": 1,
+            "bytes": 1442596,
+            "dq": 0,
+            "nonzeros": 119349,
+            "xi": 0
+          },
+          {
+            "action": 2,
+            "bytes": 1240528,
+            "dq": -1,
+            "nonzeros": 102510,
+            "xi": 0
+          },
+          {
+            "action": 2,
+            "bytes": 1446484,
+            "dq": 0,
+            "nonzeros": 119673,
+            "xi": 0
+          },
+          {
+            "action": 3,
+            "bytes": 1419916,
+            "dq": 0,
+            "nonzeros": 117459,
+            "xi": 0
+          },
+          {
+            "action": 3,
+            "bytes": 1403068,
+            "dq": 1,
+            "nonzeros": 116055,
+            "xi": 0
+          },
+          {
+            "action": 4,
+            "bytes": 1065676,
+            "dq": -1,
+            "nonzeros": 87939,
+            "xi": 0
+          },
+          {
+            "action": 4,
+            "bytes": 650956,
+            "dq": 0,
+            "nonzeros": 53379,
+            "xi": 0
+          },
+          {
+            "action": 4,
+            "bytes": 1194412,
+            "dq": 1,
+            "nonzeros": 98667,
+            "xi": 0
+          },
+          {
+            "action": 5,
+            "bytes": 970852,
+            "dq": -1,
+            "nonzeros": 80037,
+            "xi": 0
+          },
+          {
+            "action": 5,
+            "bytes": 1288696,
+            "dq": 0,
+            "nonzeros": 106524,
+            "xi": 0
+          },
+          {
+            "action": 5,
+            "bytes": 1259860,
+            "dq": 1,
+            "nonzeros": 104121,
+            "xi": 0
+          },
+          {
+            "action": 6,
+            "bytes": 1457068,
+            "dq": 0,
+            "nonzeros": 120555,
+            "xi": 0
+          },
+          {
+            "action": 6,
+            "bytes": 1306948,
+            "dq": 1,
+            "nonzeros": 108045,
+            "xi": 0
+          },
+          {
+            "action": 7,
+            "bytes": 1155964,
+            "dq": -1,
+            "nonzeros": 95463,
+            "xi": 0
+          },
+          {
+            "action": 7,
+            "bytes": 542308,
+            "dq": 0,
+            "nonzeros": 44325,
+            "xi": 0
+          },
+          {
+            "action": 7,
+            "bytes": 1073236,
+            "dq": 1,
+            "nonzeros": 88569,
+            "xi": 0
+          },
+          {
+            "action": 8,
+            "bytes": 1042564,
+            "dq": -1,
+            "nonzeros": 86013,
+            "xi": 0
+          },
+          {
+            "action": 8,
+            "bytes": 686380,
+            "dq": 0,
+            "nonzeros": 56331,
+            "xi": 0
+          },
+          {
+            "action": 8,
+            "bytes": 1145596,
+            "dq": 1,
+            "nonzeros": 94599,
+            "xi": 0
+          },
+          {
+            "action": 9,
+            "bytes": 120892,
+            "dq": 1,
+            "nonzeros": 9207,
+            "xi": 0
+          },
+          {
+            "action": 10,
+            "bytes": 120892,
+            "dq": -1,
+            "nonzeros": 9207,
+            "xi": 0
+          },
+          {
+            "action": 0,
+            "bytes": 120892,
+            "dq": 0,
+            "nonzeros": 9207,
+            "xi": 1
+          },
+          {
+            "action": 1,
+            "bytes": 1378228,
+            "dq": -1,
+            "nonzeros": 113985,
+            "xi": 1
+          },
+          {
+            "action": 1,
+            "bytes": 1430932,
+            "dq": 0,
+            "nonzeros": 118377,
+            "xi": 1
+          },
+          {
+            "action": 2,
+            "bytes": 1276492,
+            "dq": -1,
+            "nonzeros": 105507,
+            "xi": 1
+          },
+          {
+            "action": 2,
+            "bytes": 1444324,
+            "dq": 0,
+            "nonzeros": 119493,
+            "xi": 1
+          },
+          {
+            "action": 3,
+            "bytes": 1430932,
+            "dq": 0,
+            "nonzeros": 118377,
+            "xi": 1
+          },
+          {
+            "action": 3,
+            "bytes": 1378228,
+            "dq": 1,
+            "nonzeros": 113985,
+            "xi": 1
+          },
+          {
+            "action": 4,
+            "bytes": 1123132,
+            "dq": -1,
+            "nonzeros": 92727,
+            "xi": 1
+          },
+          {
+            "action": 4,
+            "bytes": 124456,
+            "dq": 0,
+            "nonzeros": 9504,
+            "xi": 1
+          },
+          {
+            "action": 4,
+            "bytes": 1123132,
+            "dq": 1,
+            "nonzeros": 92727,
+            "xi": 1
+          },
+          {
+            "action": 5,
+            "bytes": 1017076,
+            "dq": -1,
+            "nonzeros": 83889,
+            "xi": 1
+          },
+          {
+            "action": 5,
+            "bytes": 998932,
+            "dq": 0,
+            "nonzeros": 82377,
+            "xi": 1
+          },
+          {
+            "action": 5,
+            "bytes": 1207372,
+            "dq": 1,
+            "nonzeros": 99747,
+            "xi": 1
+          },
+          {
+            "action": 6,
+            "bytes": 1444324,
+            "dq": 0,
+            "nonzeros": 119493,
+            "xi": 1
+          },
+          {
+            "action": 6,
+            "bytes": 1276492,
+            "dq": 1,
+            "nonzeros": 105507,
+            "xi": 1
+          },
+          {
+            "action": 7,
+            "bytes": 1207372,
+            "dq": -1,
+            "nonzeros": 99747,
+            "xi": 1
+          },
+          {
+            "action": 7,
+            "bytes": 998932,
+            "dq": 0,
+            "nonzeros": 82377,
+            "xi": 1
+          },
+          {
+            "action": 7,
+            "bytes": 1017076,
+            "dq": 1,
+            "nonzeros": 83889,
+            "xi": 1
+          },
+          {
+            "action": 8,
+            "bytes": 1093756,
+            "dq": -1,
+            "nonzeros": 90279,
+            "xi": 1
+          },
+          {
+            "action": 8,
+            "bytes": 128020,
+            "dq": 0,
+            "nonzeros": 9801,
+            "xi": 1
+          },
+          {
+            "action": 8,
+            "bytes": 1093756,
+            "dq": 1,
+            "nonzeros": 90279,
+            "xi": 1
+          },
+          {
+            "action": 9,
+            "bytes": 120892,
+            "dq": 1,
+            "nonzeros": 9207,
+            "xi": 1
+          },
+          {
+            "action": 10,
+            "bytes": 120892,
+            "dq": -1,
+            "nonzeros": 9207,
+            "xi": 1
+          },
+          {
+            "action": 0,
+            "bytes": 120892,
+            "dq": 0,
+            "nonzeros": 9207,
+            "xi": 2
+          },
+          {
+            "action": 1,
+            "bytes": 1403068,
+            "dq": -1,
+            "nonzeros": 116055,
+            "xi": 2
+          },
+          {
+            "action": 1,
+            "bytes": 1419916,
+            "dq": 0,
+            "nonzeros": 117459,
+            "xi": 2
+          },
+          {
+            "action": 2,
+            "bytes": 1306948,
+            "dq": -1,
+            "nonzeros": 108045,
+            "xi": 2
+          },
+          {
+            "action": 2,
+            "bytes": 1457068,
+            "dq": 0,
+            "nonzeros": 120555,
+            "xi": 2
+          },
+          {
+            "action": 3,
+            "bytes": 1442596,
+            "dq": 0,
+            "nonzeros": 119349,
+            "xi": 2
+          },
+          {
+            "action": 3,
+            "bytes": 1359868,
+            "dq": 1,
+            "nonzeros": 112455,
+            "xi": 2
+          },
+          {
+            "action": 4,
+            "bytes": 1194412,
+            "dq": -1,
+            "nonzeros": 98667,
+            "xi": 2
+          },
+          {
+            "action": 4,
+            "bytes": 650956,
+            "dq": 0,
+            "nonzeros": 53379,
+            "xi": 2
+          },
+          {
+            "action": 4,
+            "bytes": 1065676,
+            "dq": 1,
+            "nonzeros": 87939,
+            "xi": 2
+          },
+          {
+            "action": 5,
+            "bytes": 1073236,
+            "dq": -1,
+            "nonzeros": 88569,
+            "xi": 2
+          },
+          {
+            "action": 5,
+            "bytes": 542308,
+            "dq": 0,
+            "nonzeros": 44325,
+            "xi": 2
+          },
+          {
+            "action": 5,
+            "bytes": 1155964,
+            "dq": 1,
+            "nonzeros": 95463,
+            "xi": 2
+          },
+          {
+            "action": 6,
+            "bytes": 1446484,
+            "dq": 0,
+            "nonzeros": 119673,
+            "xi": 2
+          },
+          {
+            "action": 6,
+            "bytes": 1240528,
+            "dq": 1,
+            "nonzeros": 102510,
+            "xi": 2
+          },
+          {
+            "action": 7,
+            "bytes": 1259860,
+            "dq": -1,
+            "nonzeros": 104121,
+            "xi": 2
+          },
+          {
+            "action": 7,
+            "bytes": 1288696,
+            "dq": 0,
+            "nonzeros": 106524,
+            "xi": 2
+          },
+          {
+            "action": 7,
+            "bytes": 970852,
+            "dq": 1,
+            "nonzeros": 80037,
+            "xi": 2
+          },
+          {
+            "action": 8,
+            "bytes": 1145596,
+            "dq": -1,
+            "nonzeros": 94599,
+            "xi": 2
+          },
+          {
+            "action": 8,
+            "bytes": 686380,
+            "dq": 0,
+            "nonzeros": 56331,
+            "xi": 2
+          },
+          {
+            "action": 8,
+            "bytes": 1042564,
+            "dq": 1,
+            "nonzeros": 86013,
+            "xi": 2
+          },
+          {
+            "action": 9,
+            "bytes": 120892,
+            "dq": 1,
+            "nonzeros": 9207,
+            "xi": 2
+          },
+          {
+            "action": 10,
+            "bytes": 120892,
+            "dq": -1,
+            "nonzeros": 9207,
+            "xi": 2
+          }
+        ],
+        "max_transition_mass_error": 4.440892098500626e-16,
+        "mode": "frozen_model",
+        "total_bytes": 69586944,
+        "total_nonzeros": 5739066
+      }
+    ],
+    "solve_seconds": 11.843100957979914,
+    "state_order": [
+      "M0,H-",
+      "M0,H+",
+      "M1,H-",
+      "M1,H+"
+    ]
+  },
+  "numerical_contract": {
+    "bellman_value": "Q of the action selected by the same tie rule",
+    "invalid_action": "negative infinity; no decision at remaining horizon zero",
+    "score_dtype": "float64",
+    "tie_absolute_tolerance": 1e-12,
+    "tie_action": "lowest admissible action ID within absolute tolerance of maximum",
+    "tie_relative_tolerance": 0.0,
+    "version": 2
+  },
+  "retain_q": [
+    "bayes",
+    "no_feedback",
+    "frozen_model"
+  ],
+  "source": {
+    "files": {
+      "trade_learning.control": "2ad1a96921e2b6d595608e279e3d40fef74d29642188e7b297e32473278b78c4",
+      "trade_learning.filtering": "711997ebc28c7981ffb848ddded400650aee28488b5982d07cdc1fe563cf6ec1",
+      "trade_learning.model": "7a120a7faabd8aec2c1345a486128129105e9d564ec60908f1c07ea0cf5a897f",
+      "trade_learning.numerics": "bd30936513b1da7237ead270382a281943e558f95628ea930a1c1c149fbe8347",
+      "solver.py": "ba716aaf7231e3aac3dceaf977f6439b84ebea0984c34cec8ef681f483f2a313"
+    },
+    "sha256": "9f0f5fb377e3a6d31487ff82332c2325e87874c2839e91b155487221f427bf86"
+  },
+  "specification": {
+    "belief_points": 17,
+    "horizon": 30,
+    "kappas": [
+      0.002,
+      0.1
+    ],
+    "known_belief_points": 321,
+    "known_quadrature_points": 161,
+    "qmax": 2,
+    "quadrature_points": 25,
+    "theta": 0.35,
+    "weight_points": 9
+  }
+}

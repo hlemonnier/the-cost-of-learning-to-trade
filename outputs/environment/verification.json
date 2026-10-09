@@ -1,0 +1,392 @@
+{
+  "ledger": {
+    "actions_exhaustively_checked": 209,
+    "forced_trajectory_actions": 11
+  },
+  "public_and_pilot": {
+    "pilot_rows": 30000,
+    "max_uniform_action_z": 2.2365690240332943,
+    "max_reconciliation_error": 8.765876913230386e-12
+  },
+  "conditional_distributions": [
+    {
+      "theta": 0.15,
+      "kappa": 0.002,
+      "variant": "nominal",
+      "periods": 120000,
+      "max_fill_standard_error_units": 1.890062819723462,
+      "max_execution_moment_standard_error_units": 1.8956655256306745,
+      "joint_fill_observed": 0.1757838014369693,
+      "joint_fill_expected": 0.17764324537845522
+    },
+    {
+      "theta": 0.15,
+      "kappa": 0.002,
+      "variant": "state_dependence",
+      "periods": 120000,
+      "max_fill_standard_error_units": 1.5234201174834163,
+      "max_execution_moment_standard_error_units": 1.9400715959905446,
+      "joint_fill_observed": 0.18216872912666784,
+      "joint_fill_expected": 0.17764324537845522
+    },
+    {
+      "theta": 0.15,
+      "kappa": 0.002,
+      "variant": "fixed_duration",
+      "periods": 120000,
+      "max_fill_standard_error_units": 3.1848129519648776,
+      "max_execution_moment_standard_error_units": 1.5417251152200335,
+      "joint_fill_observed": 0.17368514141462865,
+      "joint_fill_expected": 0.17764324537845522
+    },
+    {
+      "theta": 0.15,
+      "kappa": 0.02,
+      "variant": "nominal",
+      "periods": 120000,
+      "max_fill_standard_error_units": 1.9550046075895653,
+      "max_execution_moment_standard_error_units": 2.279490072764074,
+      "joint_fill_observed": 0.17639659398787252,
+      "joint_fill_expected": 0.17764324537845522
+    },
+    {
+      "theta": 0.15,
+      "kappa": 0.02,
+      "variant": "state_dependence",
+      "periods": 120000,
+      "max_fill_standard_error_units": 1.4462946869474846,
+      "max_execution_moment_standard_error_units": 2.523275263410559,
+      "joint_fill_observed": 0.17864021104080013,
+      "joint_fill_expected": 0.17764324537845522
+    },
+    {
+      "theta": 0.15,
+      "kappa": 0.02,
+      "variant": "fixed_duration",
+      "periods": 120000,
+      "max_fill_standard_error_units": 1.5200114689449402,
+      "max_execution_moment_standard_error_units": 1.968246925743581,
+      "joint_fill_observed": 0.1786369894446994,
+      "joint_fill_expected": 0.17764324537845522
+    },
+    {
+      "theta": 0.15,
+      "kappa": 0.1,
+      "variant": "nominal",
+      "periods": 120000,
+      "max_fill_standard_error_units": 1.4252163155722921,
+      "max_execution_moment_standard_error_units": 2.489991678024856,
+      "joint_fill_observed": 0.1793527508090615,
+      "joint_fill_expected": 0.17764324537845522
+    },
+    {
+      "theta": 0.15,
+      "kappa": 0.1,
+      "variant": "state_dependence",
+      "periods": 120000,
+      "max_fill_standard_error_units": 3.2042676922409257,
+      "max_execution_moment_standard_error_units": 2.6719330235030143,
+      "joint_fill_observed": 0.1790079313483292,
+      "joint_fill_expected": 0.17764324537845522
+    },
+    {
+      "theta": 0.15,
+      "kappa": 0.1,
+      "variant": "fixed_duration",
+      "periods": 120000,
+      "max_fill_standard_error_units": 1.9911722625534252,
+      "max_execution_moment_standard_error_units": 2.7729436166148034,
+      "joint_fill_observed": 0.17774791113414082,
+      "joint_fill_expected": 0.17764324537845522
+    },
+    {
+      "theta": 0.35,
+      "kappa": 0.002,
+      "variant": "nominal",
+      "periods": 120000,
+      "max_fill_standard_error_units": 1.2289638598755146,
+      "max_execution_moment_standard_error_units": 1.6626966699702792,
+      "joint_fill_observed": 0.16241303102234592,
+      "joint_fill_expected": 0.1622745629845731
+    },
+    {
+      "theta": 0.35,
+      "kappa": 0.002,
+      "variant": "state_dependence",
+      "periods": 120000,
+      "max_fill_standard_error_units": 1.6830251221208317,
+      "max_execution_moment_standard_error_units": 1.4356861853772254,
+      "joint_fill_observed": 0.1594074946046694,
+      "joint_fill_expected": 0.1622745629845731
+    },
+    {
+      "theta": 0.35,
+      "kappa": 0.002,
+      "variant": "fixed_duration",
+      "periods": 120000,
+      "max_fill_standard_error_units": 2.1063765464843853,
+      "max_execution_moment_standard_error_units": 2.1969225050262087,
+      "joint_fill_observed": 0.16368653777878192,
+      "joint_fill_expected": 0.1622745629845731
+    },
+    {
+      "theta": 0.35,
+      "kappa": 0.02,
+      "variant": "nominal",
+      "periods": 120000,
+      "max_fill_standard_error_units": 1.4191638755829243,
+      "max_execution_moment_standard_error_units": 1.9477236800888142,
+      "joint_fill_observed": 0.16084792086939545,
+      "joint_fill_expected": 0.1622745629845731
+    },
+    {
+      "theta": 0.35,
+      "kappa": 0.02,
+      "variant": "state_dependence",
+      "periods": 120000,
+      "max_fill_standard_error_units": 1.7404615068455978,
+      "max_execution_moment_standard_error_units": 2.521961790688183,
+      "joint_fill_observed": 0.16235105407882677,
+      "joint_fill_expected": 0.1622745629845731
+    },
+    {
+      "theta": 0.35,
+      "kappa": 0.02,
+      "variant": "fixed_duration",
+      "periods": 120000,
+      "max_fill_standard_error_units": 2.1061832130463953,
+      "max_execution_moment_standard_error_units": 1.9525855865438313,
+      "joint_fill_observed": 0.16069737830160957,
+      "joint_fill_expected": 0.1622745629845731
+    },
+    {
+      "theta": 0.35,
+      "kappa": 0.1,
+      "variant": "nominal",
+      "periods": 120000,
+      "max_fill_standard_error_units": 1.9456190753052793,
+      "max_execution_moment_standard_error_units": 1.4147952726990218,
+      "joint_fill_observed": 0.16261201514024134,
+      "joint_fill_expected": 0.1622745629845731
+    },
+    {
+      "theta": 0.35,
+      "kappa": 0.1,
+      "variant": "state_dependence",
+      "periods": 120000,
+      "max_fill_standard_error_units": 1.900112650067558,
+      "max_execution_moment_standard_error_units": 2.1271484382125663,
+      "joint_fill_observed": 0.1634704835893,
+      "joint_fill_expected": 0.1622745629845731
+    },
+    {
+      "theta": 0.35,
+      "kappa": 0.1,
+      "variant": "fixed_duration",
+      "periods": 120000,
+      "max_fill_standard_error_units": 1.7803376641810622,
+      "max_execution_moment_standard_error_units": 1.8634150080371215,
+      "joint_fill_observed": 0.16105419668970475,
+      "joint_fill_expected": 0.1622745629845731
+    },
+    {
+      "theta": 0.65,
+      "kappa": 0.002,
+      "variant": "nominal",
+      "periods": 120000,
+      "max_fill_standard_error_units": 2.247274602677751,
+      "max_execution_moment_standard_error_units": 2.840002134748049,
+      "joint_fill_observed": 0.11286520233469362,
+      "joint_fill_expected": 0.11479435212779329
+    },
+    {
+      "theta": 0.65,
+      "kappa": 0.002,
+      "variant": "state_dependence",
+      "periods": 120000,
+      "max_fill_standard_error_units": 1.7376121883927356,
+      "max_execution_moment_standard_error_units": 1.8591297055333527,
+      "joint_fill_observed": 0.11513886866922243,
+      "joint_fill_expected": 0.11479435212779329
+    },
+    {
+      "theta": 0.65,
+      "kappa": 0.002,
+      "variant": "fixed_duration",
+      "periods": 120000,
+      "max_fill_standard_error_units": 1.052901343234481,
+      "max_execution_moment_standard_error_units": 2.566350338166502,
+      "joint_fill_observed": 0.11207332387429261,
+      "joint_fill_expected": 0.11479435212779329
+    },
+    {
+      "theta": 0.65,
+      "kappa": 0.02,
+      "variant": "nominal",
+      "periods": 120000,
+      "max_fill_standard_error_units": 1.2494815318983028,
+      "max_execution_moment_standard_error_units": 1.4531863613921479,
+      "joint_fill_observed": 0.11603673900674633,
+      "joint_fill_expected": 0.11479435212779329
+    },
+    {
+      "theta": 0.65,
+      "kappa": 0.02,
+      "variant": "state_dependence",
+      "periods": 120000,
+      "max_fill_standard_error_units": 1.9572807035208588,
+      "max_execution_moment_standard_error_units": 1.5384812846059621,
+      "joint_fill_observed": 0.11395609209949861,
+      "joint_fill_expected": 0.11479435212779329
+    },
+    {
+      "theta": 0.65,
+      "kappa": 0.02,
+      "variant": "fixed_duration",
+      "periods": 120000,
+      "max_fill_standard_error_units": 1.8460824849281103,
+      "max_execution_moment_standard_error_units": 1.9462845860028883,
+      "joint_fill_observed": 0.11440629819008197,
+      "joint_fill_expected": 0.11479435212779329
+    },
+    {
+      "theta": 0.65,
+      "kappa": 0.1,
+      "variant": "nominal",
+      "periods": 120000,
+      "max_fill_standard_error_units": 1.5641092043106795,
+      "max_execution_moment_standard_error_units": 1.3958184550144215,
+      "joint_fill_observed": 0.11433700019761545,
+      "joint_fill_expected": 0.11479435212779329
+    },
+    {
+      "theta": 0.65,
+      "kappa": 0.1,
+      "variant": "state_dependence",
+      "periods": 120000,
+      "max_fill_standard_error_units": 1.888440498611054,
+      "max_execution_moment_standard_error_units": 3.4534770763251754,
+      "joint_fill_observed": 0.11523180955778617,
+      "joint_fill_expected": 0.11479435212779329
+    },
+    {
+      "theta": 0.65,
+      "kappa": 0.1,
+      "variant": "fixed_duration",
+      "periods": 120000,
+      "max_fill_standard_error_units": 1.219718550685648,
+      "max_execution_moment_standard_error_units": 2.5572888843734396,
+      "joint_fill_observed": 0.11297294671912186,
+      "joint_fill_expected": 0.11479435212779329
+    }
+  ],
+  "filter": {
+    "enumeration_max_log_likelihood_error": 0.0,
+    "known_parameter_predictive_brier": 0.09581499797381997,
+    "uninformed_brier": 0.25,
+    "conditional_fill_log_score_per_period": -0.5492091580869515,
+    "calibration": [
+      {
+        "low": 0.0,
+        "high": 0.1,
+        "n": 9382,
+        "mean_prediction": 0.05092710889663658,
+        "frequency": 0.054146237476017905
+      },
+      {
+        "low": 0.1,
+        "high": 0.2,
+        "n": 3008,
+        "mean_prediction": 0.13942560957188446,
+        "frequency": 0.16289893617021275
+      },
+      {
+        "low": 0.2,
+        "high": 0.30000000000000004,
+        "n": 1223,
+        "mean_prediction": 0.24282152961102046,
+        "frequency": 0.30580539656582173
+      },
+      {
+        "low": 0.30000000000000004,
+        "high": 0.4,
+        "n": 742,
+        "mean_prediction": 0.34750228490824736,
+        "frequency": 0.3221024258760108
+      },
+      {
+        "low": 0.4,
+        "high": 0.5,
+        "n": 582,
+        "mean_prediction": 0.4497040312134392,
+        "frequency": 0.39690721649484534
+      },
+      {
+        "low": 0.5,
+        "high": 0.6000000000000001,
+        "n": 809,
+        "mean_prediction": 0.5399485072201128,
+        "frequency": 0.4932014833127318
+      },
+      {
+        "low": 0.6000000000000001,
+        "high": 0.7000000000000001,
+        "n": 764,
+        "mean_prediction": 0.65058377405988,
+        "frequency": 0.6020942408376964
+      },
+      {
+        "low": 0.7000000000000001,
+        "high": 0.8,
+        "n": 1164,
+        "mean_prediction": 0.7562470306560604,
+        "frequency": 0.7663230240549829
+      },
+      {
+        "low": 0.8,
+        "high": 0.9,
+        "n": 2945,
+        "mean_prediction": 0.8598509517768922,
+        "frequency": 0.8560271646859083
+      },
+      {
+        "low": 0.9,
+        "high": 1.0,
+        "n": 9381,
+        "mean_prediction": 0.9488034745365677,
+        "frequency": 0.9461677859503251
+      }
+    ],
+    "pilot_grid_posterior": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      2.8230405588843604e-233,
+      1.0,
+      4.448209740933283e-224
+    ],
+    "pilot_grid_log_posterior": [
+      -2277.1846881646743,
+      -2225.9964591110256,
+      -2552.3729793678285,
+      -1254.166621956625,
+      -1008.3556077162939,
+      -1587.1703801464246,
+      -535.4645121511458,
+      0.0,
+      -514.2865591208429
+    ]
+  },
+  "status": "PASS",
+  "seconds": 1.256996958021773,
+  "command": "PYTHONPATH=src .venv/bin/python verification/verify_environment.py",
+  "source_sha256": {
+    "/recorded-environment Learning/verification/verify_environment.py": "94cfe9b26ccc9b54f0056842fc5a51da5b17e084dd28b2af1c43e7f06b71b0e4",
+    "src/trade_learning/model.py": "7a120a7faabd8aec2c1345a486128129105e9d564ec60908f1c07ea0cf5a897f",
+    "src/trade_learning/environment.py": "dc50eb8f5d8cb884da02404445d299b3bffefb3cc6ac7a3a6f28a737ca8e8eef",
+    "src/trade_learning/filtering.py": "711997ebc28c7981ffb848ddded400650aee28488b5982d07cdc1fe563cf6ec1"
+  }
+}

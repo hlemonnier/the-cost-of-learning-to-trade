@@ -1,0 +1,18 @@
+{
+  "command": [
+    "/recorded-environment Learning/.venv/bin/python",
+    "/recorded-environment Learning/extensions/bayes_adaptive/refine_geometry.py",
+    "--output",
+    "/recorded-environment Learning/extensions/bayes_adaptive/outputs/numerical-endpoint",
+    "--cache",
+    "/recorded-environment Learning/extensions/bayes_adaptive/cache/v3_endpoint"
+  ],
+  "completed_utc": "2026-09-27T20:30:54.574186+00:00",
+  "exit_code": 0,
+  "launch_mode": "Supervisor detached with start_new_session=True, stdin /dev/null and file stdout/stderr",
+  "process_running": false,
+  "solver_sha256": "8fdf88cae1b6b74ebd738e8b07942c15fd99042e2fd4f80f112660fc77f9e1ff",
+  "started_utc": "2026-09-27T19:31:36.201195+00:00",
+  "wall_seconds": 3558.37974462501,
+  "worker_pid": 22987
+}

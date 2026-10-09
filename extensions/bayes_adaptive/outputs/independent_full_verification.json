@@ -1,0 +1,175 @@
+{
+  "passed": true,
+  "profile": "full",
+  "scope": "Independent full raw/action/filter/ledger/paired-statistics replay; no producer runner/statistics imports",
+  "verifier_sha256": "f258fe671a5031b60d7c7ce671477e5bdf24874a8de88d2abc8ebc05702870f9",
+  "validation_failure_modes_sha256": "e41a8d71662903732f74f1aa6aca56f9c14ccd0b14919e9b0a62ce739245033b",
+  "config_sha256": "8681e5a8c48f25967f95a4b7d42b76531cbc4e8e00d013114c3e6efe93aee462",
+  "manifest_sha256": "d946db4cdec14a483eb43e4e4c8c7662e319f3cee6375c79f1275ee4e94ea1c1",
+  "study_file_count": 187,
+  "rows": 900000,
+  "policy_decisions_recomputed": 27000000,
+  "trace_rows": 108000,
+  "pilot_records": 60,
+  "paired_market_trajectories": 60000,
+  "maximum_ledger_errors": {
+    "spread_capture": 5.551115123125783e-16,
+    "passive_fees": 6.938893903907228e-18,
+    "market_fees": 0.0,
+    "market_spread_cost": 0.0,
+    "directional_pnl": 0.0,
+    "execution_exposure_pnl": 0.0,
+    "inventory_sq_sum": 0.0,
+    "inventory_post_sq_sum": 0.0,
+    "inventory_abs_sum": 0.0,
+    "max_abs_inventory": 0.0,
+    "passive_fills": 0.0,
+    "market_fills": 0.0,
+    "directional_exposure": 0.0,
+    "execution_selection": 0.0,
+    "market_innovation": 0.0,
+    "terminal_inventory": 0.0,
+    "terminal_units": 0.0,
+    "liquidation_cost": 6.938893903907228e-18,
+    "liquidation_fees": 0.0,
+    "liquidation_spread": 0.0,
+    "pnl": 2.5011104298755527e-12,
+    "risk_penalty": 0.0,
+    "inventory_penalty": 0.0,
+    "objective": 2.5011104298755527e-12,
+    "reconciled_pnl": 1.7763568394002505e-15,
+    "reconciliation_error": 2.5011104298755527e-12,
+    "turnover": 0.0,
+    "terminal_inventory_after_liquidation": 0.0,
+    "model_entropy_initial": 1.865174681370263e-14,
+    "model_entropy_final": 2.0261570199409107e-14,
+    "true_model_probability_final": 2.2093438190040615e-14,
+    "model_entropy_period_mean": 1.9373391779708982e-14,
+    "true_model_probability_period_mean": 1.9872992140790302e-14
+  },
+  "maximum_trace_error": 1.5916157281026244e-12,
+  "maximum_pilot_model_weight_error": 1.7930101847696278e-14,
+  "recomputed_inference": {
+    "contrasts_checked": 24,
+    "policy_means_checked": 30,
+    "primary": {
+      "budget": 0,
+      "policy": "bayes",
+      "baseline": "weighted_q",
+      "metric": "objective",
+      "mean": 0.00449837258493674,
+      "se": 0.00277809494970488,
+      "df": 56.55518639732497,
+      "low": -0.0010656150058491569,
+      "high": 0.010062360175722637,
+      "simultaneous_low": -0.004466153051317135,
+      "simultaneous_high": 0.013462898221190615,
+      "stratum_means": [
+        -0.011294534034976739,
+        0.02029127920485022
+      ],
+      "replicate_mean_sample_variances": [
+        0.0005370829036850619,
+        0.00038905448226402906
+      ],
+      "independent_replicates_per_model": 30,
+      "episodes_per_replicate": 1000,
+      "alpha": 0.05,
+      "zero_empirical_variance": false
+    },
+    "primary_threshold_passed": false,
+    "uncertainty_scope": "Empirical paired pilot-aware Welch intervals; no numerical/global/evolving-market guarantee"
+  },
+  "table_identity_mode": "exact_artifact",
+  "original_evaluated_table_artifact_sha256": "ed158983727bdf3c2fd06f4eaf8d79d6bfd840bd6cbd2979342733aaffa0a60e",
+  "supplied_table_artifact_sha256": "ed158983727bdf3c2fd06f4eaf8d79d6bfd840bd6cbd2979342733aaffa0a60e",
+  "secondary_tables": {
+    "planning_rows": 180,
+    "timing_rows": 900,
+    "diagnostic_rows": 30,
+    "planning_table_rows_replayed": 180,
+    "max_planning_table_error": 7.327471962526033e-15,
+    "max_reveal1_interpolation_gap": 2.220446049250313e-16,
+    "max_numerical_hierarchy_violation": 3.1695976527745806e-05,
+    "numerical_scope": "Planning and revelation values replayed from authenticated tables when supplied; exact hierarchy reversals are reported, not claimed to be certified bounds"
+  },
+  "table_artifact": {
+    "checked": true,
+    "artifact_sha256": "ed158983727bdf3c2fd06f4eaf8d79d6bfd840bd6cbd2979342733aaffa0a60e",
+    "original_evaluated_artifact_sha256": "ed158983727bdf3c2fd06f4eaf8d79d6bfd840bd6cbd2979342733aaffa0a60e",
+    "supplied_artifact_sha256": "ed158983727bdf3c2fd06f4eaf8d79d6bfd840bd6cbd2979342733aaffa0a60e",
+    "identity_mode": "exact_artifact",
+    "equivalent_array_option_requested": false,
+    "arrays_checked": 11,
+    "grid_geometry_sha256": "9e3452532b197f40d8ed9e4afda7e520b6b49e72504166dff4104ce7ba1561b8",
+    "array_bytes": 20254051048,
+    "finite_value_cells": 388995750,
+    "finite_legal_q_cells": 1545803730,
+    "specification": {
+      "belief_geometry": "endpoint_sine",
+      "belief_points": 65,
+      "horizon": 30,
+      "kappas": [
+        0.002,
+        0.1
+      ],
+      "known_belief_points": 321,
+      "known_quadrature_points": 161,
+      "qmax": 2,
+      "quadrature_points": 25,
+      "theta": 0.35,
+      "weight_points": 33
+    }
+  },
+  "numerical_acceptance": {
+    "passed": true,
+    "comparisons": 6,
+    "horizon_policy_rows_checked": 1080,
+    "known_reference_rows_checked": 120,
+    "independent_probe_states_recreated": 2581,
+    "selected_resolution": {
+      "theta": 0.35,
+      "kappas": [
+        0.002,
+        0.1
+      ],
+      "horizon": 30,
+      "qmax": 2,
+      "weight_points": 33,
+      "belief_points": 65,
+      "quadrature_points": 25,
+      "known_belief_points": 321,
+      "known_quadrature_points": 161,
+      "belief_geometry": "endpoint_sine"
+    },
+    "belief_geometry": "endpoint_sine",
+    "selected_grid_axes_sha256": "9e3452532b197f40d8ed9e4afda7e520b6b49e72504166dff4104ce7ba1561b8",
+    "selected_artifact_sha256": "ed158983727bdf3c2fd06f4eaf8d79d6bfd840bd6cbd2979342733aaffa0a60e",
+    "supplied_array_equivalent_artifact_sha256": "ed158983727bdf3c2fd06f4eaf8d79d6bfd840bd6cbd2979342733aaffa0a60e",
+    "certified_bound": false
+  },
+  "original_zip": {
+    "checked": true,
+    "sha256": "0fbfb9c73989747dc220b7cff5f7b0a65f25a2679a1001cd78bfeec760a0fcf3",
+    "bytes": 116773796
+  },
+  "math": {
+    "mass_error": 2.220446049250313e-16,
+    "cold_first_step_model_weight_drift": 1.1102230246251565e-16,
+    "no_feedback_belief_error": 0.0,
+    "one_step_sign_symmetry_error": 4.163336342344337e-17,
+    "scope": "Independent four-state selected likelihood and timing identities"
+  },
+  "solver_short_horizon": {
+    "checked": false
+  },
+  "explanatory_candidates": {
+    "checked": true,
+    "artifact_sha256": "9b74b3f2ac56c774d07446af41b79407a9835531ce8c2260be7006aff47c8bde",
+    "public_decisions_replayed": 60000,
+    "candidate_states_checked": 137430,
+    "max_public_posterior_error": 2.248201624865942e-15,
+    "scope": "Every reached pre-decision belief and inventory independently replayed from saved selected public feedback"
+  },
+  "limits": "Sampling intervals are empirical pilot-aware Welch intervals; solver refinement does not certify a 0.002 optimality gap or exact upper bound"
+}

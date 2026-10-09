@@ -1,0 +1,259 @@
+{
+  "amendment_sha256": "a23139363166be0502af795f5c907a830451d2b92cfdcaaab3006ecee347ca56",
+  "cold_array_count": 11,
+  "cold_arrays_identical": true,
+  "commands": [
+    {
+      "command": [
+        "/recorded-environment Learning/.venv/bin/python",
+        "/recorded-environment Learning/extensions/bayes_adaptive/geometry_end_to_end.py",
+        "--worker",
+        "--revision",
+        "v2",
+        "--belief-geometry",
+        "uniform",
+        "--horizon",
+        "4",
+        "--weight-points",
+        "5",
+        "--belief-points",
+        "7",
+        "--quadrature-points",
+        "15",
+        "--cache",
+        "/recorded-environment Learning/extensions/bayes_adaptive/cache/geometry-e2e-2/uniform-v2-0"
+      ],
+      "label": "uniform-v2-0",
+      "log_sha256": "3fa2981ada99dd183d07a6169ed65cbc3f3d0cfb5482593f67e0650b65d59740",
+      "returncode": 0
+    },
+    {
+      "command": [
+        "/recorded-environment Learning/.venv/bin/python",
+        "/recorded-environment Learning/extensions/bayes_adaptive/geometry_end_to_end.py",
+        "--worker",
+        "--revision",
+        "v3",
+        "--belief-geometry",
+        "uniform",
+        "--horizon",
+        "4",
+        "--weight-points",
+        "5",
+        "--belief-points",
+        "7",
+        "--quadrature-points",
+        "15",
+        "--cache",
+        "/recorded-environment Learning/extensions/bayes_adaptive/cache/geometry-e2e-2/uniform-v3-0"
+      ],
+      "label": "uniform-v3-0",
+      "log_sha256": "4d3beed51c49449d13f4eb709d9fc0cc437a7719269886abeb37d0e095ff77d6",
+      "returncode": 0
+    },
+    {
+      "command": [
+        "/recorded-environment Learning/.venv/bin/python",
+        "/recorded-environment Learning/extensions/bayes_adaptive/geometry_end_to_end.py",
+        "--worker",
+        "--revision",
+        "v2",
+        "--belief-geometry",
+        "uniform",
+        "--horizon",
+        "7",
+        "--weight-points",
+        "5",
+        "--belief-points",
+        "9",
+        "--quadrature-points",
+        "25",
+        "--cache",
+        "/recorded-environment Learning/extensions/bayes_adaptive/cache/geometry-e2e-2/uniform-v2-1"
+      ],
+      "label": "uniform-v2-1",
+      "log_sha256": "845d9f0a3d427718166e71a7261a53c88f95f8eeb18f7a9062404483d0944d34",
+      "returncode": 0
+    },
+    {
+      "command": [
+        "/recorded-environment Learning/.venv/bin/python",
+        "/recorded-environment Learning/extensions/bayes_adaptive/geometry_end_to_end.py",
+        "--worker",
+        "--revision",
+        "v3",
+        "--belief-geometry",
+        "uniform",
+        "--horizon",
+        "7",
+        "--weight-points",
+        "5",
+        "--belief-points",
+        "9",
+        "--quadrature-points",
+        "25",
+        "--cache",
+        "/recorded-environment Learning/extensions/bayes_adaptive/cache/geometry-e2e-2/uniform-v3-1"
+      ],
+      "label": "uniform-v3-1",
+      "log_sha256": "c233747be7fc499d75ebb6beea60abe9d8ea926820b64a058c01801409947c18",
+      "returncode": 0
+    },
+    {
+      "command": [
+        "/recorded-environment Learning/.venv/bin/python",
+        "/recorded-environment Learning/extensions/bayes_adaptive/geometry_end_to_end.py",
+        "--worker",
+        "--revision",
+        "v3",
+        "--belief-geometry",
+        "endpoint_sine",
+        "--horizon",
+        "7",
+        "--weight-points",
+        "5",
+        "--belief-points",
+        "9",
+        "--quadrature-points",
+        "25",
+        "--cache",
+        "/recorded-environment Learning/extensions/bayes_adaptive/cache/geometry-e2e-2/endpoint-first"
+      ],
+      "label": "endpoint-first",
+      "log_sha256": "b0ff4cae9f6adf231cd47b432a63478b480921aa97cad32bf06173083a3a3bf1",
+      "returncode": 0
+    },
+    {
+      "command": [
+        "/recorded-environment Learning/.venv/bin/python",
+        "/recorded-environment Learning/extensions/bayes_adaptive/geometry_end_to_end.py",
+        "--worker",
+        "--revision",
+        "v3",
+        "--belief-geometry",
+        "endpoint_sine",
+        "--horizon",
+        "7",
+        "--weight-points",
+        "5",
+        "--belief-points",
+        "9",
+        "--quadrature-points",
+        "25",
+        "--cache",
+        "/recorded-environment Learning/extensions/bayes_adaptive/cache/geometry-e2e-2/endpoint-cold"
+      ],
+      "label": "endpoint-cold",
+      "log_sha256": "befda3c56f74dccbd90ef0af75fa21552702fc3d3fab37167a4e78cf77ed93cb",
+      "returncode": 0
+    }
+  ],
+  "endpoint_artifact": "5b3a71ab67469d40764c97a54857a751ba453b2019b236d51c5939751e44b205",
+  "endpoint_geometry": {
+    "axes": {
+      "conditional_plus0": [
+        0.0,
+        0.03806023374435662,
+        0.14644660940672624,
+        0.3086582838174551,
+        0.5,
+        0.6913417161825449,
+        0.8535533905932737,
+        0.9619397662556434,
+        1.0
+      ],
+      "conditional_plus1": [
+        0.0,
+        0.03806023374435662,
+        0.14644660940672624,
+        0.3086582838174551,
+        0.5,
+        0.6913417161825449,
+        0.8535533905932737,
+        0.9619397662556434,
+        1.0
+      ],
+      "weight0": [
+        0.0,
+        0.25,
+        0.5,
+        0.75,
+        1.0
+      ]
+    },
+    "axes_sha256": "e5441e434d894cf76776b59d10908aff5e849153e7b87f287ed7139f5c8fd92c",
+    "axis_generation": "uniform-weight_symmetric-sine-squared-beliefs-v1",
+    "axis_order": [
+      "weight0",
+      "conditional_plus0",
+      "conditional_plus1"
+    ],
+    "interpolation": "physical-interval-search-trilinear-v1",
+    "name": "endpoint_sine"
+  },
+  "harness_sha256": "c18bcd4f3c77da373d8bd5bc8e390c062c2ff4752d38005ad4fe5e321eb1f56e",
+  "maximum_transition_mass_error": 5.551115123125783e-16,
+  "one_step_max_errors": {
+    "bayes": 5.551115123125783e-17,
+    "frozen_model": 5.551115123125783e-17,
+    "no_feedback": 5.551115123125783e-17
+  },
+  "passed": true,
+  "physical_interpolation_max_error": 1.3322676295501878e-15,
+  "preserved_v2_sha256": "d22fcc3a460eb75c6bac239e1d383f333811dcfe0db3d768109f56f913e853fc",
+  "rejections": [
+    {
+      "case": "v2_format",
+      "message": "invalid Bayes control manifest identity/version",
+      "rejected": true
+    },
+    {
+      "case": "geometry_name",
+      "message": "Bayes control physical grid geometry differs from its specification",
+      "rejected": true
+    },
+    {
+      "case": "axis_values",
+      "message": "Bayes control physical grid geometry differs from its specification",
+      "rejected": true
+    },
+    {
+      "case": "interpolation_recipe",
+      "message": "Bayes control physical grid geometry differs from its specification",
+      "rejected": true
+    },
+    {
+      "case": "axis_digest",
+      "message": "Bayes control physical grid geometry differs from its specification",
+      "rejected": true
+    }
+  ],
+  "scope": "Bounded production E2E; no full-horizon acceptance or economic evaluation",
+  "solver_sha256": "8fdf88cae1b6b74ebd738e8b07942c15fd99042e2fd4f80f112660fc77f9e1ff",
+  "uniform_equivalence": [
+    {
+      "array_count": 11,
+      "arrays_identical": true,
+      "dimensions": [
+        4,
+        5,
+        7,
+        15
+      ],
+      "v2_artifact": "f45152759047ab0a7068d50437b9372b5475793e7782a1dd905f592e02a06930",
+      "v3_artifact": "7c0c8e095c2347b70a7cc1286f16d83633fff549b61435985222c3dd2f24cc0d"
+    },
+    {
+      "array_count": 11,
+      "arrays_identical": true,
+      "dimensions": [
+        7,
+        5,
+        9,
+        25
+      ],
+      "v2_artifact": "365673a4475a4fa4038ae0de6c99f5a6c899d938d867e0abde0c35d591f0f9a6",
+      "v3_artifact": "fe408707373d83086823999df7b77d0a7c5642b1aabeac2163c3aec5c01fd38d"
+    }
+  ]
+}

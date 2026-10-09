@@ -1,0 +1,26 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+*.egg-info/
+.DS_Store
+tmp/
+outputs/control_cache/
+outputs/reference/practical_cache/
+outputs/reference/reduced_*/
+outputs/**/batches/
+*.log
+extensions/bayes_adaptive/cache/
+extensions/bayes_adaptive/tmp/
+extensions/bayes_adaptive/outputs-numerical-progress.jsonl
+# The canonical gzip exceeds GitHub's per-file limit. Exact bytes are retained
+# in extensions/bayes_adaptive/data_transport/ and restored by data_transport.py.
+extensions/bayes_adaptive/outputs/full/episodes.csv.gz
+
+# Disposable reproduction outputs and local compilation files.
+outputs/reproduction/
+.venv-*/
+build/
+dist/
+*.aux
+*.synctex.gz

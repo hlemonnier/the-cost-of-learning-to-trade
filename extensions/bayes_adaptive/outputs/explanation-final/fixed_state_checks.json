@@ -1,0 +1,38 @@
+{
+  "by_family": [
+    {
+      "equal_conditional_states": 135,
+      "family": "selected",
+      "max_equal_conditional_frozen_difference": 0.0,
+      "max_equal_conditional_model_information": 3.0033211149002594e-17,
+      "max_final_horizon_suppression_difference": 1.5612511283791264e-17,
+      "max_information_chain_residual": 7.632783294297951e-17,
+      "max_mass_error": 3.3306690738754696e-16,
+      "passed": true,
+      "states": 151
+    },
+    {
+      "equal_conditional_states": 135,
+      "family": "comparison_1",
+      "max_equal_conditional_frozen_difference": 0.0,
+      "max_equal_conditional_model_information": 3.0033211149002594e-17,
+      "max_final_horizon_suppression_difference": 1.3877787807814457e-17,
+      "max_information_chain_residual": 7.632783294297951e-17,
+      "max_mass_error": 3.3306690738754696e-16,
+      "passed": true,
+      "states": 151
+    },
+    {
+      "equal_conditional_states": 135,
+      "family": "comparison_2",
+      "max_equal_conditional_frozen_difference": 0.0,
+      "max_equal_conditional_model_information": 3.0033211149002594e-17,
+      "max_final_horizon_suppression_difference": 1.3877787807814457e-17,
+      "max_information_chain_residual": 7.632783294297951e-17,
+      "max_mass_error": 3.3306690738754696e-16,
+      "passed": true,
+      "states": 151
+    }
+  ],
+  "passed": true
+}

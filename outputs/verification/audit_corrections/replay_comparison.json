@@ -1,0 +1,391 @@
+{
+  "passed": true,
+  "comparison": "corrective replay on identical seeds; no fresh-independent-confirmation claim",
+  "original_rows": 189000,
+  "corrected_rows": 189000,
+  "identical_pilots": true,
+  "identical_complete_stream_records": true,
+  "original_csv_sha256": "098ac2ced552c16f090d5ea9a2dc9199116c4f12e4686df5e1a991fcec253ef3",
+  "corrected_csv_sha256": "1f2f28f70bc92c90b98a4d0ed1fcf8689e7e018fdd17230fc0798a919ad48057",
+  "identical_starting_posteriors": true,
+  "results": [
+    {
+      "variant": "fixed_duration",
+      "policy": "abstain",
+      "original_mean": 0.0,
+      "corrected_mean": 0.0,
+      "corrected_minus_original": {
+        "mean": 0.0,
+        "se": 0.0,
+        "df": 1.0,
+        "low": 0.0,
+        "high": 0.0,
+        "one_sided_lower": 0.0,
+        "environments": 9,
+        "pilots": 90,
+        "episodes": 9000
+      },
+      "changed_episode_objectives": 0
+    },
+    {
+      "variant": "fixed_duration",
+      "policy": "active",
+      "original_mean": 11.642804503637155,
+      "corrected_mean": 11.667878374119642,
+      "corrected_minus_original": {
+        "mean": 0.025073870482487055,
+        "se": 0.010643137202269753,
+        "df": 29.163628562454637,
+        "low": 0.0033115145798014896,
+        "high": 0.046836226385172625,
+        "one_sided_lower": 0.006993174539780499,
+        "environments": 9,
+        "pilots": 90,
+        "episodes": 9000
+      },
+      "changed_episode_objectives": 2762
+    },
+    {
+      "variant": "fixed_duration",
+      "policy": "full_information",
+      "original_mean": 17.077980039921563,
+      "corrected_mean": 17.077980039921563,
+      "corrected_minus_original": {
+        "mean": 0.0,
+        "se": 0.0,
+        "df": 1.0,
+        "low": 0.0,
+        "high": 0.0,
+        "one_sided_lower": 0.0,
+        "environments": 9,
+        "pilots": 90,
+        "episodes": 9000
+      },
+      "changed_episode_objectives": 0
+    },
+    {
+      "variant": "fixed_duration",
+      "policy": "independent",
+      "original_mean": 8.396139653931682,
+      "corrected_mean": 8.396139653931682,
+      "corrected_minus_original": {
+        "mean": 0.0,
+        "se": 0.0,
+        "df": 1.0,
+        "low": 0.0,
+        "high": 0.0,
+        "one_sided_lower": 0.0,
+        "environments": 9,
+        "pilots": 90,
+        "episodes": 9000
+      },
+      "changed_episode_objectives": 0
+    },
+    {
+      "variant": "fixed_duration",
+      "policy": "myopic",
+      "original_mean": 7.114460802424339,
+      "corrected_mean": 7.181973743264909,
+      "corrected_minus_original": {
+        "mean": 0.06751294084057134,
+        "se": 0.012556078335388075,
+        "df": 27.115675182527703,
+        "low": 0.04175513770365684,
+        "high": 0.09327074397748585,
+        "one_sided_lower": 0.0461295570515442,
+        "environments": 9,
+        "pilots": 90,
+        "episodes": 9000
+      },
+      "changed_episode_objectives": 3011
+    },
+    {
+      "variant": "fixed_duration",
+      "policy": "noinfo",
+      "original_mean": 9.673622201555487,
+      "corrected_mean": 9.67354882664871,
+      "corrected_minus_original": {
+        "mean": -7.337490677610919e-05,
+        "se": 6.264867433637782e-05,
+        "df": 9.015960636897333,
+        "low": -0.00021505781976163794,
+        "high": 6.830800620941956e-05,
+        "one_sided_lower": -0.0001881938600785403,
+        "environments": 9,
+        "pilots": 90,
+        "episodes": 9000
+      },
+      "changed_episode_objectives": 4
+    },
+    {
+      "variant": "fixed_duration",
+      "policy": "taker",
+      "original_mean": 3.4747452693085,
+      "corrected_mean": 3.4747452693085,
+      "corrected_minus_original": {
+        "mean": 0.0,
+        "se": 0.0,
+        "df": 1.0,
+        "low": 0.0,
+        "high": 0.0,
+        "one_sided_lower": 0.0,
+        "environments": 9,
+        "pilots": 90,
+        "episodes": 9000
+      },
+      "changed_episode_objectives": 0
+    },
+    {
+      "variant": "nominal",
+      "policy": "abstain",
+      "original_mean": 0.0,
+      "corrected_mean": 0.0,
+      "corrected_minus_original": {
+        "mean": 0.0,
+        "se": 0.0,
+        "df": 1.0,
+        "low": 0.0,
+        "high": 0.0,
+        "one_sided_lower": 0.0,
+        "environments": 9,
+        "pilots": 90,
+        "episodes": 9000
+      },
+      "changed_episode_objectives": 0
+    },
+    {
+      "variant": "nominal",
+      "policy": "active",
+      "original_mean": 13.254368577810217,
+      "corrected_mean": 13.246730076186955,
+      "corrected_minus_original": {
+        "mean": -0.007638501623261851,
+        "se": 0.011243836386909572,
+        "df": 35.72577755185885,
+        "low": -0.030448137927334546,
+        "high": 0.015171134680810845,
+        "one_sided_lower": -0.026625293383865573,
+        "environments": 9,
+        "pilots": 90,
+        "episodes": 9000
+      },
+      "changed_episode_objectives": 2450
+    },
+    {
+      "variant": "nominal",
+      "policy": "full_information",
+      "original_mean": 17.25607919675128,
+      "corrected_mean": 17.25607919675128,
+      "corrected_minus_original": {
+        "mean": 0.0,
+        "se": 0.0,
+        "df": 1.0,
+        "low": 0.0,
+        "high": 0.0,
+        "one_sided_lower": 0.0,
+        "environments": 9,
+        "pilots": 90,
+        "episodes": 9000
+      },
+      "changed_episode_objectives": 0
+    },
+    {
+      "variant": "nominal",
+      "policy": "independent",
+      "original_mean": 8.559870928072248,
+      "corrected_mean": 8.559870928072248,
+      "corrected_minus_original": {
+        "mean": 0.0,
+        "se": 0.0,
+        "df": 1.0,
+        "low": 0.0,
+        "high": 0.0,
+        "one_sided_lower": 0.0,
+        "environments": 9,
+        "pilots": 90,
+        "episodes": 9000
+      },
+      "changed_episode_objectives": 0
+    },
+    {
+      "variant": "nominal",
+      "policy": "myopic",
+      "original_mean": 9.347969997665256,
+      "corrected_mean": 9.376686594006857,
+      "corrected_minus_original": {
+        "mean": 0.028716596341602688,
+        "se": 0.017792129350114053,
+        "df": 22.521707840432256,
+        "low": -0.008132526965583413,
+        "high": 0.0655657196487888,
+        "one_sided_lower": -0.0018040068634605604,
+        "environments": 9,
+        "pilots": 90,
+        "episodes": 9000
+      },
+      "changed_episode_objectives": 2765
+    },
+    {
+      "variant": "nominal",
+      "policy": "noinfo",
+      "original_mean": 11.854171583687133,
+      "corrected_mean": 11.854168753880044,
+      "corrected_minus_original": {
+        "mean": -2.8298070890237565e-06,
+        "se": 2.829807089023756e-06,
+        "df": 9.0,
+        "low": -9.231275464795983e-06,
+        "high": 3.5716612867484705e-06,
+        "one_sided_lower": -8.017163060835503e-06,
+        "environments": 9,
+        "pilots": 90,
+        "episodes": 9000
+      },
+      "changed_episode_objectives": 1
+    },
+    {
+      "variant": "nominal",
+      "policy": "taker",
+      "original_mean": 3.390331571822102,
+      "corrected_mean": 3.390331571822102,
+      "corrected_minus_original": {
+        "mean": 0.0,
+        "se": 0.0,
+        "df": 1.0,
+        "low": 0.0,
+        "high": 0.0,
+        "one_sided_lower": 0.0,
+        "environments": 9,
+        "pilots": 90,
+        "episodes": 9000
+      },
+      "changed_episode_objectives": 0
+    },
+    {
+      "variant": "state_dependence",
+      "policy": "abstain",
+      "original_mean": 0.0,
+      "corrected_mean": 0.0,
+      "corrected_minus_original": {
+        "mean": 0.0,
+        "se": 0.0,
+        "df": 1.0,
+        "low": 0.0,
+        "high": 0.0,
+        "one_sided_lower": 0.0,
+        "environments": 9,
+        "pilots": 90,
+        "episodes": 9000
+      },
+      "changed_episode_objectives": 0
+    },
+    {
+      "variant": "state_dependence",
+      "policy": "active",
+      "original_mean": 12.930159390948036,
+      "corrected_mean": 12.924036411325355,
+      "corrected_minus_original": {
+        "mean": -0.006122979622682257,
+        "se": 0.011545743800446512,
+        "df": 37.11288832290241,
+        "low": -0.029514476987274135,
+        "high": 0.01726851774190962,
+        "one_sided_lower": -0.02560020917824376,
+        "environments": 9,
+        "pilots": 90,
+        "episodes": 9000
+      },
+      "changed_episode_objectives": 2512
+    },
+    {
+      "variant": "state_dependence",
+      "policy": "full_information",
+      "original_mean": 16.977993211099882,
+      "corrected_mean": 16.977993211099882,
+      "corrected_minus_original": {
+        "mean": 0.0,
+        "se": 0.0,
+        "df": 1.0,
+        "low": 0.0,
+        "high": 0.0,
+        "one_sided_lower": 0.0,
+        "environments": 9,
+        "pilots": 90,
+        "episodes": 9000
+      },
+      "changed_episode_objectives": 0
+    },
+    {
+      "variant": "state_dependence",
+      "policy": "independent",
+      "original_mean": 8.204984586812667,
+      "corrected_mean": 8.204984586812667,
+      "corrected_minus_original": {
+        "mean": 0.0,
+        "se": 0.0,
+        "df": 1.0,
+        "low": 0.0,
+        "high": 0.0,
+        "one_sided_lower": 0.0,
+        "environments": 9,
+        "pilots": 90,
+        "episodes": 9000
+      },
+      "changed_episode_objectives": 0
+    },
+    {
+      "variant": "state_dependence",
+      "policy": "myopic",
+      "original_mean": 9.163736231430944,
+      "corrected_mean": 9.184243289542776,
+      "corrected_minus_original": {
+        "mean": 0.020507058111831976,
+        "se": 0.01656833794972496,
+        "df": 30.22957231977947,
+        "low": -0.013319229777856233,
+        "high": 0.054333346001520184,
+        "one_sided_lower": -0.007606933404585774,
+        "environments": 9,
+        "pilots": 90,
+        "episodes": 9000
+      },
+      "changed_episode_objectives": 2807
+    },
+    {
+      "variant": "state_dependence",
+      "policy": "noinfo",
+      "original_mean": 11.654776043049846,
+      "corrected_mean": 11.65481063106158,
+      "corrected_minus_original": {
+        "mean": 3.4588011732304305e-05,
+        "se": 8.583816509106177e-05,
+        "df": 14.398678783433933,
+        "low": -0.00014903945149151391,
+        "high": 0.00021821547495612254,
+        "one_sided_lower": -0.00011630437482568949,
+        "environments": 9,
+        "pilots": 90,
+        "episodes": 9000
+      },
+      "changed_episode_objectives": 3
+    },
+    {
+      "variant": "state_dependence",
+      "policy": "taker",
+      "original_mean": 3.4139328458323703,
+      "corrected_mean": 3.4139328458323703,
+      "corrected_minus_original": {
+        "mean": 0.0,
+        "se": 0.0,
+        "df": 1.0,
+        "low": 0.0,
+        "high": 0.0,
+        "one_sided_lower": 0.0,
+        "environments": 9,
+        "pilots": 90,
+        "episodes": 9000
+      },
+      "changed_episode_objectives": 0
+    }
+  ]
+}

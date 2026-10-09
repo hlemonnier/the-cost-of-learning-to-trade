@@ -1,0 +1,810 @@
+# Model uncertainty, delayed revelation, and computational ablations
+
+This is a separate extension to the core synthetic study. All results below
+refer to the specified synthetic model, the finite prior support
+
+\[
+M\in\{1,2\},\qquad \theta_1=\theta_2=0.35,\qquad
+(\kappa_1,\kappa_2)=(0.002,0.10),\qquad T=30,\quad q_{\max}=2.
+\]
+
+The model label is fixed within an environment, including its independent pilot
+episodes. The initial regime of each episode is drawn independently with equal
+sign probabilities. The cold-start model probabilities are equal. Every other
+market, execution, accounting, and inventory convention is inherited unchanged
+from the task statement. None of the propositions below establishes performance
+in a misspecified or real market.
+
+The mathematical quantities in this document are exact expectations and optima.
+Implemented tables, computed action scores, and Monte Carlo policy returns are
+different objects. Section 8 makes their numerical relationship explicit.
+
+## 1. Decision state and chronology
+
+Let \(n=T-t\) be the number of decisions remaining. Immediately before decision
+\(t\), write
+
+\[
+p_{jh}=\Pr(M=j,H_t=h\mid\mathcal I_t),\qquad
+w_j=\sum_h p_{jh},\qquad
+b_j=\Pr(H_t=+1\mid M=j,\mathcal I_t).
+\]
+
+The four joint masses are ordered as
+\((1,-1),(1,+1),(2,-1),(2,+1)\). When \(w_j>0\),
+\(p_{j,+}=w_jb_j\) and \(p_{j,-}=w_j(1-b_j)\). At zero model weight,
+the corresponding conditional probability is immaterial. Calculations at that
+boundary must not depend on its arbitrary representation.
+
+The sufficient decision state is \((n,q,x,p)\). The following order is essential:
+
+1. Observe the current public state and select one admissible action.
+2. Generate \(Z_t\), the return, and selected passive outcomes using **the
+   current** \(H_t\). Book actual executions.
+3. Observe the return and the outcomes of the submitted quotes. Condition the
+   joint belief on those observations to obtain a posterior on \((M,H_t)\).
+4. Apply each model's regime transition to obtain the pre-decision belief on
+   \((M,H_{t+1})\). Transition the public signal independently and disclose it.
+
+Thus the observation update precedes the hidden-state prediction. A textbook
+POMDP convention that observes an emission from the *next* state cannot be
+copied into this simulator without changing the indexing.
+
+Cash and absolute midpoint need not appear in the optimization state. If
+\(W_t=C_t+Q_tP_t\), marked wealth satisfies the accounting identity derived in
+Section 3. Current wealth is an additive constant in the remaining objective;
+price levels and cash do not affect admissibility, observation laws, or future
+increments. The ledger is still required for independent execution verification.
+Observed cash and inventory are deterministic functions of the already observed
+actions and selected fills and hence supply no additional latent-state evidence.
+
+## 2. Exact action-dependent joint filter
+
+Set \(\mu=0.03\), \(\sigma=0.30\), and recover the observed innovation as
+\(z=(r-\mu x)/\sigma\). For a submitted side \(s\in\{+1,-1\}\) at depth
+\(k_s\in\{0,1\}\), define
+
+\[
+u_s(x)=\{1+\exp(0.3+0.7k_s+0.2sx)\}^{-1},\qquad
+\tau_s(x)=\Phi^{-1}(u_s(x)),
+\]
+
+\[
+\ell_h(z,f;x,a)=
+\prod_{s\in S(a)}
+\Phi\!\left(
+ (2f_s-1)\frac{\tau_s(x)-h\theta s z}{\sqrt{1-\theta^2}}
+\right).
+\tag{1}
+\]
+
+Here \(S(a)\) is the set of submitted passive sides and \(f\) ranges over their
+binary outcomes. The product is one for an empty set. A submitted non-fill is
+\(f_s=0\); an unsubmitted side contributes no factor. The selected sides are
+independent conditional on \((z,h)\), so their factors are multiplied **before**
+mixing over \(h\). They are generally not independent after that mixture.
+
+Both models have the same \(\theta\), so (1) depends on the model only through
+its current regime distribution. The full observation density with respect to
+\(dz\) and counting measure on \(f\) is
+
+\[
+\phi(z)m(p,z,f),\qquad
+m_j=(1-b_j)\ell_-+b_j\ell_+,\qquad
+m=\sum_j w_jm_j=\sum_{j,h}p_{jh}\ell_h.
+\tag{2}
+\]
+
+The common factor \(\phi(z)\) cancels in filtering, but must remain in the
+control expectation. The public signal transition similarly cancels from
+posterior odds because its known matrix \(K\) is model independent.
+
+The posterior on the just-observed current state and the next decision belief
+are, respectively,
+
+\[
+\widetilde p_{jh}=\frac{p_{jh}\ell_h}{m},\qquad
+p'_{jh'}=\sum_h\widetilde p_{jh}T_j(h,h'),\qquad
+T_j=\begin{pmatrix}1-\kappa_j&\kappa_j\\
+\kappa_j&1-\kappa_j\end{pmatrix}.
+\tag{3}
+\]
+
+Equivalently,
+
+\[
+w'_j=\frac{w_jm_j}{m},\qquad
+\widetilde b_j=\frac{b_j\ell_+}{m_j},\qquad
+b'_j=\kappa_j+(1-2\kappa_j)\widetilde b_j.
+\tag{4}
+\]
+
+Denote (3) by \(\Psi(p,z,f;x,a)\). For finite \(z\), the present model has
+strictly positive emission probabilities, so the normalization is positive.
+Implementations should nevertheless use log probabilities for filtering and a
+defined harmless representation for underflowed zero-mass branches. An exactly
+excluded model stays excluded.
+
+For abstention or a market order, \(\ell_- =\ell_+=1\). Model weights are
+unchanged, and only each conditional regime prediction moves. Public returns
+alone contain no evidence about either latent quantity in this model.
+
+## 3. Reward and exact Bellman recursion
+
+Write \(h_0=0.025\) for the half spread, \(\Delta=0.025\),
+\(c_P=0.001\), \(c_T=0.002\), and \(\lambda=0.002\), to avoid confusing
+the half spread with the hidden sign \(h\). Define
+\(d_k=h_0+k\Delta\) and \(\ell_T(q)=-(h_0+c_T)|q|\).
+
+For a passive action let
+
+\[
+\delta q(a,f)=\sum_{s\in S(a)}sf_s,\qquad
+c(a,f)=\sum_{s\in S(a)}f_s(d_{k_s}-c_P).
+\]
+
+For a market order of sign \(s\), set \(\delta q=s\) and
+\(c=-(h_0+c_T)\); for abstention both are zero. In all cases,
+
+\[
+W_{t+1}-W_t=c(a,f)+(q+\delta q)(\mu x+\sigma z).
+\tag{5}
+\]
+
+The realized one-period objective increment is (5) minus \(\lambda q^2\).
+Its conditional expectation is denoted \(r(q,x,p,a)\). Let
+\(\overline h(p)=\sum_{j,h}hp_{jh}=\sum_jw_j(2b_j-1)\). Then
+
+\[
+\begin{split}
+r(q,x,p,a)
+={}&q\mu x-\lambda q^2\\
+&+\sum_{s\in S(a)}
+\left[u_s(x)(d_{k_s}-c_P+s\mu x)
+-\sigma\theta\overline h(p)\phi(\tau_s(x))\right]
+\end{split}
+\tag{6}
+\]
+
+for passive actions, and
+
+\[
+r(q,x,p,M_s)=(q+s)\mu x-\lambda q^2-h_0-c_T.
+\tag{7}
+\]
+
+To verify the covariance term in (6), conditional on \(H_t=h\), the pair
+\((Z,V_s)\) is standard bivariate normal with correlation \(h\theta s\).
+Therefore
+\(E[ZF_s\mid h,x,a]=h\theta s\int_{-\infty}^{\tau_s}v\phi(v)dv
+=-h\theta s\phi(\tau_s)\). Multiplication by the inventory sign \(s\)
+gives the last term of (6). The pre-decision inventory penalty is unchanged,
+including when both quotes fill.
+
+For any continuation function \(F\), define the common-action backup
+
+\[
+\begin{split}
+(\mathcal B F)(q,x,p)
+=\max_{a\in\mathcal A(q)}\bigg\{r(q,x,p,a)
+ +\sum_f\int_{\mathbb R}\phi(z)m(p,z,f)\,
+ \sum_{x'}K_{xx'}
+ F(q+\delta q(a,f),x',\Psi(p,z,f;x,a))\,dz\bigg\}.
+\end{split}
+\tag{8}
+\]
+
+The action set is safe for every possible selected-fill subset. In particular,
+an otherwise inadmissible bid at \(q=2\) cannot be made safe by also quoting
+an ask. Each branch has one future action policy based on its observed joint
+posterior. No model-specific maximization occurs inside the model mixture.
+
+**Proposition 1 (Bayes-adaptive optimum).** The exact optimal value satisfies
+
+\[
+V^{\mathrm{BA}}_0(q,x,p)=\ell_T(q),\qquad
+V^{\mathrm{BA}}_n=\mathcal B V^{\mathrm{BA}}_{n-1}.
+\tag{9}
+\]
+
+*Proof.* Equations (1)–(4), inventory accounting, and \(K\) give the conditional
+law of the next sufficient state from the present sufficient state and action.
+Equation (5) telescopes the wealth ledger; the remaining terminal adjustment is
+exactly \(\ell_T\). Conditional expectation followed by optimization over the
+finite admissible action set gives (8). Backward induction proves (9). A
+maximizing measurable action exists at every stage; a deterministic tie rule
+selects one. Integrability follows from bounded inventory and finite Gaussian
+first moments. \(\square\)
+
+For a fixed admissible policy \(\pi\), its actual value \(V^\pi_n\) follows the
+same recursion with its chosen action in place of the maximum. Consequently,
+
+\[
+V^\pi_n(q,x,p)\le V^{\mathrm{BA}}_n(q,x,p).
+\tag{10}
+\]
+
+This is a Bayesian expectation under the displayed prior \(p\), not a claim
+that the Bayes-optimal policy dominates every comparator separately in each
+true-model environment.
+
+## 4. Exact interpretation of posterior-weighted known-model Q values
+
+Let \(V^j_n(q,x,b)\) be the exact optimum when model \(j\) is known but the
+current regime is hidden. Its filter still uses \(\widetilde b\) followed by
+the transition with \(\kappa_j\). Let \(Q^j_n(q,x,b,a)\) force the first
+action to be \(a\), with optimal **known-model, hidden-regime** control after
+that action. No future shock or future regime is observed by this reference.
+
+Consider an information relaxation that reveals \(M\) for free after the
+current action and its normal feedback, before the next decision. The regime
+remains hidden, including at the revelation time. Revealing the static model
+label before or after the independent hidden transition has the same effect
+provided the next conditional belief is (4).
+
+**Proposition 2 (one-action model revelation).** Its optimal objective is
+
+\[
+U^1_n(q,x,p)=\max_{a\in\mathcal A(q)}
+\sum_j w_j Q^j_n(q,x,b_j,a).
+\tag{11}
+\]
+
+*Proof.* Before revelation the first action is common to both models. After
+normal feedback, the model has posterior probability \(w'_j\); if it is
+revealed to be \(j\), its optimal remaining value is
+\(V^j_{n-1}(q+\delta q,x',b'_j)\). The branchwise identity
+\(m w'_j=w_jm_j\) gives
+
+\[
+\begin{split}
+&r(q,x,p,a)+E\!\left[\sum_jw'_j
+ V^j_{n-1}(q+\delta q,X',b'_j)\right]\\
+&\hspace{20mm}=\sum_jw_jQ^j_n(q,x,b_j,a).
+\end{split}
+\tag{12}
+\]
+
+Maximizing the common first action proves (11). \(\square\)
+
+The information available to the relaxed controller contains that of the real
+controller. It can ignore its additional label and imitate any admissible
+real policy. Combining this observation with (10) gives
+
+\[
+\boxed{\quad V^\pi_n\le V^{\mathrm{BA}}_n\le U^1_n.\quad}
+\tag{13}
+\]
+
+The executable weighted-Q policy selects the maximizing action in (11), updates
+its real posterior, and repeats at the next decision. **Its realized value is
+\(V^{\pi_{\mathrm{WQ}}}\), not \(U^1\)**: the promised model revelation never
+actually arrives. Weighted-Q can learn the model through its online filter and
+can value regime feedback through each \(Q^j\). Its planning simplification
+is that future *model uncertainty* is removed after the current action.
+
+Equation (13) requires exact optimal known-model Q functions. If those functions
+are heuristics or uncertified numerical approximations, the raw computed
+maximum is not automatically an upper bound. A regime-observing oracle also
+defines a different, more informative comparator than (11).
+
+## 5. A hierarchy of delayed-revelation bounds
+
+For an integer \(d\ge0\), reveal the model after exactly \(d\) further
+decisions, before any later decision. Let \(U^d_n\) be the optimum in that
+relaxed problem. Revelation at \(d=0\) precedes the current decision, so
+
+\[
+U^0_n(q,x,p)=\sum_jw_jV^j_n(q,x,b_j),\qquad
+U^d_0(q,x,p)=\ell_T(q),
+\tag{14}
+\]
+
+and for \(d\ge1,n\ge1\),
+
+\[
+U^d_n=\mathcal B U^{d-1}_{n-1}.
+\tag{15}
+\]
+
+The delay decreases after each unrevealed decision. Recursing on \(U^d_{n-1}\)
+with the same delay would define a different problem.
+
+**Proposition 3 (nested information sets).** For all states and \(n\),
+
+\[
+U^0_n\ge U^1_n\ge U^2_n\ge\cdots\ge U^n_n
+=U^{n+1}_n=\cdots=V^{\mathrm{BA}}_n.
+\tag{16}
+\]
+
+*Proof.* A controller told the model after \(d\) actions can ignore it until
+after action \(d+1\) and implement any policy from the later-revelation
+problem. The physical dynamics and permissible actions are the same, proving
+each inequality. If \(d\ge n\), no remaining decision can use the label;
+terminal liquidation is fixed and model independent. Such a label changes no
+payoff, proving equality to (9). Equivalently, induction in (15) reaches the
+common terminal condition before any useful revelation. \(\square\)
+
+This proves a hierarchy of *objectives*. It does not prove a monotone ranking
+of the real returns of the policies greedy with respect to those objectives.
+Their remaining optimism and resulting action errors can differ. Delays one,
+two, and three at horizon 30 are limited-lookahead information relaxations;
+they are not full Bayes-adaptive optima at horizon 30. At horizon two, delay two
+must agree with the exact Bayes-adaptive recursion; at horizon three, delay
+three must agree.
+
+Useful exact limiting cases are a singleton model posterior; two identical
+models; and \(\theta=0\), where the hidden process has no execution or reward
+effect. In each case the economically relevant model uncertainty disappears.
+For a singleton posterior every delay agrees with the corresponding
+known-model hidden-regime optimum.
+
+For a genuine feasible-policy lower value \(L\le V^{\mathrm{BA}}\) and a
+certified upper value \(U\ge V^{\mathrm{BA}}\), \(U-L\) bounds the remaining
+optimality gap. A simulation estimate of \(V^\pi\) and an uncertified
+interpolated \(U^d\) do not, by themselves, supply such a certificate. Also,
+(16) concerns the prior-weighted population. A realized episode or a
+true-model-specific mean can exceed a prior-averaged relaxation value without
+contradicting the theorem.
+
+## 6. What an observation teaches about the model and the regime
+
+### 6.1 The two information quantities share an observation channel
+
+Condition throughout on the pre-decision information and selected action. With
+common \(\theta\), the emission depends on \(H_t\), not directly on \(M\):
+
+\[
+M\longrightarrow H_t\longrightarrow O_t.
+\tag{17}
+\]
+
+This conditional Markov chain implies
+
+\[
+I(M,H_t;O_t)=I(H_t;O_t)
+=I(M;O_t)+I(H_t;O_t\mid M).
+\tag{18}
+\]
+
+The two summands give a valid information decomposition, not an additive
+decomposition of economic value. Their numerical forms include
+
+\[
+\mathcal I_M(p,a)
+=\sum_f\int\phi(z)m
+ \sum_jw'_j\log\frac{w'_j}{w_j}\,dz,
+\tag{19}
+\]
+
+\[
+\mathcal I_{H\mid M}(p,a)
+=\sum_jw_j\sum_{h\in\{-1,+1\}}b_{jh}
+ \sum_f\int\phi(z)\ell_h\log\frac{\ell_h}{m_j}\,dz,
+\quad(b_{j,-},b_{j,+})=(1-b_j,b_j).
+\tag{20}
+\]
+
+Zero-weight terms are interpreted by continuity. These are nonnegative
+expected information gains. A particular realized posterior entropy can
+increase. Entropy computed after predicting \(H_{t+1}\) additionally includes
+uncertainty introduced by switching and is not the information acquired about
+\(H_t\). Conditional regime information can be lost through that transition;
+the model posterior is unchanged by prediction because the model is static.
+
+The sign-free marginal fill law alone cannot identify either \(H_t\) or
+\(\kappa\) here. This also holds for the two selected side outcomes observed
+without their return: simultaneous sign reversal is absorbed by the symmetric
+Gaussian innovation, and their joint law depends on \(\theta^2\), not the
+regime sign. Returns alone are likewise uninformative. Their **joint**
+observation is informative. These statements condition on the known action
+and public signal, rather than treating a policy's selected actions as an
+independent evidence source.
+
+### 6.2 Cold start has exactly zero first-observation model information
+
+At cold start \(b_1=b_2=1/2\). For every action and every observation,
+\(m_1=m_2\), and hence \(w'_j=w_j\) and \(\mathcal I_M(p,a)=0\).
+More generally this holds whenever the two conditional current-regime beliefs
+coincide. The first observation may nevertheless update their common
+current-regime posterior \(\widetilde b\). Subsequent prediction gives
+
+\[
+b'_1=0.002+0.996\widetilde b,\qquad
+b'_2=0.10+0.80\widetilde b.
+\tag{21}
+\]
+
+Unless \(\widetilde b=1/2\), those probabilities differ. A later informative
+observation can then distinguish persistence models. Initial information
+acquisition can prepare a later model-learning opportunity even though its
+own immediate model information gain is zero. A one-period pilot episode
+therefore supplies no information about \(\kappa\) in this two-model family.
+
+The absence of first-step model information is not a reason for the optimal
+initial action to match weighted-Q. The policies make different assumptions
+about information and uncertainty at future decisions.
+
+### 6.3 Complete regime evidence generally cannot be kept while model evidence is erased
+
+For positive likelihoods, let \(R=\ell_+/\ell_-\). The conditional regime
+posterior odds multiply by \(R\), while the model Bayes factor is
+
+\[
+\frac{m_1}{m_2}
+=\frac{1-b_1+b_1R}{1-b_2+b_2R}.
+\tag{22}
+\]
+
+When \(b_1\ne b_2\), the right side is strictly monotone in \(R\): its
+derivative is \((b_1-b_2)/(1-b_2+b_2R)^2\). Thus preserving the full
+likelihood-ratio evidence needed by both regime filters also preserves the
+model Bayes factor. Except at special states or uninformative observations,
+there is no coherent observation deletion that removes model evidence while
+retaining all that regime evidence. This is a structural limitation of the
+proposed attribution experiment, not a numerical defect.
+
+## 7. Matched suppression of model-weight updates in planning
+
+A useful controlled computational intervention is still available. Starting
+from the same actual belief \((w,b_1,b_2)\), compute the true predictive outcome
+probability and the true conditional regime updates in (4). Replace only the
+next model weights by the current ones when reading a continuation value:
+
+\[
+\Psi_{\mathrm{FM}}(p,z,f)
+=\big(w_j(1-b'_j),\ w_jb'_j\big)_{j=1,2}.
+\tag{23}
+\]
+
+For a fixed common continuation \(F\), define
+
+\[
+Q_{F}^{\mathrm{BA}}(a)=r+E_p[F(q',X',\Psi)],\qquad
+Q_{F}^{\mathrm{FM}}(a)=r+E_p[F(q',X',\Psi_{\mathrm{FM}})].
+\tag{24}
+\]
+
+The two expectations use identical true current outcome probabilities,
+immediate rewards, inventory transitions, legal actions, and continuation
+function. Only the model-weight update at the next planning boundary changes.
+Using \(F=V^{\mathrm{BA}}_{n-1}\) makes (24) a direct action-level diagnostic
+without changing the downstream continuation function at the same time.
+
+For the executable recursive ablation, let \(W_0=\ell_T\) and apply (23) at
+every hypothetical step to construct \(W_n\). Its policy reads these scores
+from the **true current posterior**, and its online filter uses (3), just as
+the other feasible policies do. Thus it suppresses future model-weight updates
+in planning, not actual permitted feedback at deployment. Distinguish this
+recursive policy comparison from the single-backup experiment in (24).
+
+Important limits are part of its definition:
+
+- \(\Psi_{\mathrm{FM}}\) is an artificial belief intervention, not the Bayes
+  posterior for the physical observation experiment. It defines a planning
+  surrogate; no upper- or lower-bound claim attaches to \(W_n\) or to the
+  score difference in (24).
+- The conditional regime filters \(b'_j\) are retained, but the marginal
+  regime probability changes from \(\sum_jw'_jb'_j\) to
+  \(\sum_jw_jb'_j\). Subsequent forecasts can therefore change along with
+  model learning. By (22), a completely clean separation generally cannot be
+  realized while preserving all regime evidence.
+- Neither each realized difference in (24) nor its expectation must be
+  nonnegative. Jensen's theorem for coherent posterior conditioning does not
+  apply to (23).
+- At a state with \(b_1=b_2\), (23) agrees with the true update for every
+  current observation. The one-backup diagnostic must then be exactly zero
+  for any fixed \(F\). Recursive BA and frozen-model policies can still
+  disagree there because their future continuation functions differ.
+
+For comparison, a prediction-only intervention freezes both the observation
+update of \(w\) and that of each \(b_j\), reading continuation at
+\(b'_j=\kappa_j+(1-2\kappa_j)b_j\). It still integrates the actual stochastic
+inventory outcomes. It changes more than the model-weight intervention and
+cannot isolate its contribution.
+
+An action-level finding should retain the complete state, admissibility mask,
+all action scores under (24), immediate rewards, numerical refinements, and
+model/regime information diagnostics. An action difference stable at relevant
+numerical resolutions supports sensitivity to the declared planning update.
+Fresh paired objective comparisons are needed to establish economic value.
+Lower entropy, a selected action disagreement, or a negative immediate reward
+alone establishes neither model-learning benefit nor profitable exploration.
+If the specified contrast is negligible, adverse, or numerically unstable,
+that is the finding; it is not a reason to relabel regime information as model
+information or to select a new preferred hypothesis after evaluation.
+
+## 8. Numerical error: what can be proved and what remains empirical
+
+### 8.1 Convexity and the product coordinates
+
+For a fixed \((n,q,x)\) and a fixed nonanticipative policy tree, the expected
+remaining payoff is linear in the initial four-state mass vector \(p\).
+Taking the supremum over the same class of admissible policy trees proves
+convexity of \(V_n^{\mathrm{BA}}\) in \(p\). The same argument holds for
+\(U^d_n\), where the policy tree also has its prescribed future revelation.
+Continuous observations mean that this need not be a maximum of finitely many
+linear functions; a finite latent state space alone does not justify a finite
+piecewise-linear representation.
+
+On a rectangular grid in \((w,b_1,b_2)\), with \(w=w_1\), the mapping
+
+\[
+p(w,b_1,b_2)=\big(w(1-b_1),wb_1,(1-w)(1-b_2),(1-w)b_2\big)
+\tag{25}
+\]
+
+is multiaffine. The nonnegative tensor interpolation weights \(\alpha_v\) on
+the eight corners satisfy
+\(p(w,b_1,b_2)=\sum_v\alpha_vp_v\). Therefore, for exact nodal values of
+any convex joint-belief value \(V\),
+
+\[
+V(p)\le\sum_v\alpha_vV(p_v).
+\tag{26}
+\]
+
+This fact concerns joint-mass barycenters; convexity in the three conditional
+coordinates is not assumed. With exact integration, exact maximization, and
+nonnegative interpolation, an induction from the terminal payoff makes the
+gridded BA calculation an upper approximation. Positive quadrature weights
+preserve monotonicity but **do not give a sign to Gaussian quadrature error**.
+Thus (26) alone does not certify the implemented Gauss–Hermite tables.
+
+### 8.2 A global payoff and interpolation envelope
+
+A conservative exact bound for any conditional expected stage reward is
+\(|r(q,x,\delta_{jh},a)|\le r_*=0.231\). To check it, \(|q\mu x|\le0.06\),
+\(\lambda q^2\le0.008\), \(u_s<1/2\),
+\(|d_k-c_P+s\mu x|\le0.079\), and
+\(\sigma\theta\phi(\tau_s)<0.042\). There are at most two submitted sides.
+Market actions have a smaller bound. Terminal liquidation lies in
+\([-0.054,0]\). Consequently every policy tree's expected payoff, conditional
+on any initial hidden state, lies in
+
+\[
+[-0.231n-0.054,\ 0.231n].
+\]
+
+Let \(D_n=0.231n+0.027\), half this common payoff envelope's width. Subtracting
+its midpoint from each linear policy coefficient proves
+
+\[
+|V_n(p)-V_n(\bar p)|\le D_n\|p-\bar p\|_1
+\tag{27}
+\]
+
+for exact BA and fixed-delay revelation values at fixed \((q,x)\).
+This uses a bound on **conditional expected** stage rewards, not an incorrect
+bounded-support assertion about Gaussian realized PnL.
+
+If the cell widths are \(\Delta_w,\Delta_{b_1},\Delta_{b_2}\), the tensor
+corner distribution gives
+
+\[
+\sum_v\alpha_v\|p_v-p\|_1
+\le \Delta_w+w\Delta_{b_1}+(1-w)\Delta_{b_2}
+\le\Delta_w+\max_j\Delta_{b_j}.
+\tag{28}
+\]
+
+For example, split the difference by first changing \(w\) and then \(b_1,b_2\).
+The respective \(\ell_1\) changes are \(2|\delta w|\) and
+\(2[w|\delta b_1|+(1-w)|\delta b_2|]\). Linear endpoint sampling has expected
+absolute displacement at most half its interval width, proving (28).
+Equations (26)–(28) bound interpolation error by
+\(D_n(\Delta_w+\max_j\Delta_{b_j})\).
+
+### 8.3 A global Gaussian quadrature envelope without dividing by a tiny posterior mass
+
+Set
+
+\[
+c_\theta=\frac{\theta}{\sqrt{1-\theta^2}\sqrt{2\pi}}<0.15.
+\]
+
+Each conditional Bernoulli fill probability is \(c_\theta\)-Lipschitz in
+\(z\). For \(s_a\le2\) submitted sides, the \(\ell_1\) distance between
+the two product Bernoulli outcome distributions at \(z\) and \(\bar z\)
+is at most \(2s_ac_\theta|z-\bar z|\).
+
+For each fill branch, use its **unnormalized** next-state vector
+\(v_f(z)_{jh'}=\sum_hp_{jh}\ell_h(z,f)T_j(h,h')\). It has mass \(m\).
+The homogeneous value perspective
+\(mV(q',x',v_f/m)\) is the supremum of linear policy payoffs in \(v_f\).
+After subtracting the common payoff-envelope midpoint times the mass, it is
+\(D_n\)-Lipschitz in \(v_f\). Hidden-state prediction contracts
+\(\ell_1\) distance. Summing over fills and averaging over \(K\) therefore
+shows that the exact continuation integrand
+
+\[
+g(z)=\sum_fm(p,z,f)\sum_{x'}K_{xx'}V_n(q',x',\Psi(p,z,f))
+\]
+
+is \(2s_ac_\theta D_n\)-Lipschitz. The midpoint terms cancel because
+\(\sum_fm(p,z,f)=1\) at every \(z\). This proof avoids any lower bound on
+individual posterior denominators.
+
+Let \(\nu=\sum_i\omega_i\delta_{z_i}\) be a normalized positive numerical
+quadrature law and let
+\(\mathcal W_1=W_1(\mathcal N(0,1),\nu)\). Coupling the two scalar variables
+gives the deterministic inequality
+
+\[
+\left|E[g(Z)]-\sum_i\omega_i g(z_i)\right|
+\le 2s_ac_\theta D_n\mathcal W_1
+\le 4c_\theta D_n\mathcal W_1.
+\tag{29}
+\]
+
+This applies even though continuation has decision kinks. It requires no
+unjustified high-order derivative bound for Gauss–Hermite quadrature.
+
+The transport distance has a one-dimensional exact expression. Sort the nodes,
+put \(c_i=\sum_{k\le i}\omega_k\), and
+\(a_i=\Phi^{-1}(c_i)\), with \(a_0=-\infty\) and \(a_N=+\infty\). Then
+
+\[
+\mathcal W_1=\sum_{i=1}^N
+\int_{a_{i-1}}^{a_i}|z-z_i|\phi(z)\,dz.
+\tag{30}
+\]
+
+Each term can be evaluated by splitting at \(z_i\) and using
+\(\int z\phi(z)dz=-\phi(z)\). Floating evaluation for ideal normalized
+Gauss–Hermite rules gives approximately 0.2020035, 0.1567188, 0.1224879, and
+0.1004662 for 15, 25, 41, and 61 nodes. These displayed evaluations are not
+outward-rounded interval certificates for the stored floating-point rule.
+
+### 8.4 Propagation, one-sided control, and the size of the allowance
+
+Bellman maximization and expectation are nonexpansive in the uniform norm.
+With one grid, quadrature rule, exact analytic rewards, and exact arithmetic,
+let \(\delta_G=\Delta_w+\max_j\Delta_{b_j}\). Starting from the exact terminal
+value, the error at computed grid nodes obeys
+
+\[
+\max_{q,x,p\ \mathrm{on\ grid}}
+|\widehat V_n(q,x,p)-V_n^{\mathrm{BA}}(q,x,p)|
+\le\sum_{k=0}^{n-1}D_k(\delta_G+4c_\theta\mathcal W_1).
+\tag{31}
+\]
+
+To see this, interpolate the exact preceding-horizon nodal values, apply (28),
+and add (29). The previous uniform nodal error passes through the positive
+normalized operator without amplification. The maximum over actions cannot
+increase that error. Off-grid value queries can require an additional
+\(D_n\delta_G\) for the last interpolation; this term must not be omitted
+from a claimed two-sided guarantee.
+
+There is a useful one-sided improvement: interpolation of the exact value
+never lowers it. At every backup, compare the computed continuation to the
+exact value using (26) before applying (29). Induction proves, including for
+an interpolated final value,
+
+\[
+V_n^{\mathrm{BA}}(q,x,p)
+\le\widehat V_n(q,x,p)+
+\sum_{k=0}^{n-1}4c_\theta D_k\mathcal W_1.
+\tag{32}
+\]
+
+The bound has no interpolation penalty on this side. Analogous arguments
+apply to delayed-revelation recursions if the terminal known-model values
+carry their own applicable error allowance. They must not be assumed exact
+merely because they came from the frozen known-model solver.
+
+These formulas are a route to a conservative certificate, not evidence that a
+tight certificate has been implemented. Validating floating normalization,
+special-function evaluations, all arithmetic, and tie tolerance adds its own
+per-stage allowance. A chosen action whose score is within the \(10^{-12}\)
+tie tolerance of the maximum adds at most that tolerance per exact backup;
+floating arithmetic requires a separately justified allowance.
+
+The magnitude matters. At \(n=30\), \(\sum_{k=0}^{29}D_k=101.295\).
+Using the displayed 61-node transport distance makes the allowance in (32)
+about **6.07 objective units**, before floating-point certification. The
+uniform 33-by-65-by-65 grid has \(\delta_G=0.046875\), adding about 4.75 units to the
+two-sided nodal envelope (31). An endpoint-resolved grid uses its actual maximum
+physical cell widths instead. These safe-envelope calculations are far too
+loose to certify a 0.002 economic gap. Their existence does not justify
+calling a much smaller observed refinement difference a rigorous error bound.
+
+For an action choice, a uniform \(\varepsilon\) bound on every action score
+would certify a unique leading action when its estimated lead exceeds
+\(2\varepsilon\). It would bound the chosen action's true one-step loss by
+\(2\varepsilon\), and such losses could be accumulated over a finite horizon.
+No such small uniform \(\varepsilon\) follows from a few checked states.
+
+The practical validation must therefore report grid and quadrature refinement,
+short-horizon exact-recursion checks, singleton-model agreement, reached-state
+action stability, and independently integrated Bellman residuals as **numerical
+evidence**. Pointwise residuals do not control unsampled states. Monte Carlo
+intervals address sampling variability of an executable policy under the
+evaluation population; they do not cover solver bias or supply an optimality
+gap. Plots should identify \(\widehat U^d\) as numerical relaxation estimates,
+separately from achieved-policy means and their sampling intervals.
+
+## 9. Pilot episodes, reset semantics, and validation identities
+
+For independent pilot episodes \(D_1,\ldots,D_E\) from the same fixed model,
+
+\[
+w_j(D_{1:E})\propto w_j^{\mathrm{prior}}
+\prod_{e=1}^E L_j(D_e),\qquad
+L_j(D_e)=\sum_{h_0,\ldots,h_{T-1}}
+\frac12\left[\prod_{t=0}^{T-1}\ell_{h_t}(z_t,f_t)\right]
+\left[\prod_{t=0}^{T-2}T_j(h_t,h_{t+1})\right].
+\tag{33}
+\]
+
+Common return and signal densities are omitted only because they cancel in
+model odds. The pilot action probabilities also cancel: the behavior policy
+is known and chooses uniformly among publicly admissible actions. Conditioning
+on the realized actions does not license access to unselected fills.
+
+Each episode starts the conditional regime filter at \(b_j=1/2\).
+Accumulate its model log evidence, retain model weights across pilot episodes,
+and reset regime beliefs at the next independent episode. Carrying the final
+regime posterior into the next independent pilot fabricates persistence;
+resetting model weights discards valid shared-model evidence.
+
+Every fresh evaluation episode starts at
+\(q=0,x=0,p_{jh}=w_j(D_{1:E})/2\). If the declared estimand is performance
+after a fixed pilot budget, evaluation episodes independently reuse that same
+pilot posterior. They do not gradually increase each other's training budget.
+All feasible policies receive the identical pilot within a replicate. Model
+labels and exogenous tapes belong to the evaluator, not the policy interface.
+
+Useful independent checks of the derivation are:
+
+- Joint prediction equals (3), and its model marginal equals (4).
+- All selected-fill branches integrate to one; market/abstention updates
+  change no model weights; the unused conditional belief at zero weight has
+  no effect.
+- A one-period evaluation uses \(\ell_T(q')\), not a second liquidation;
+  post-terminal hidden prediction cannot change its value. Every belief-update
+  suppression has identical one-period scores when it shares the actual
+  inventory outcomes, because the terminal continuation is independent of
+  belief.
+- Singleton-model BA values agree with the known-model hidden-regime
+  recursion. Identical models collapse in the same way.
+- Delay one equals weighted exact known-model Q action by action;
+  delay \(n\) agrees with BA at short horizon \(n\).
+- Model information and the single-backup frozen-weight score difference are
+  exactly zero when \(b_1=b_2\), including cold start.
+- The online policy value, the numerical Bellman table, and a model-revelation
+  objective are never substituted for one another in reports.
+
+These checks belong to the predeclared E2E validation artifact. They are not a
+request to add post-implementation unit tests to the frozen core.
+
+## 10. Attribution to established work
+
+The Bayes-adaptive idea—include uncertainty about the environment model in the
+hidden state and plan jointly for model learning, state identification, and
+reward—is established. Ross, Chaib-draa, and Pineau formulate it for uncertain
+transition and observation probabilities using count-augmented states. The
+present two-point prior is a finite, simpler instance of the same decision
+principle; it does not require their Dirichlet construction.
+[Ross, Chaib-draa and Pineau (2007), *Bayes-Adaptive POMDPs*, §§2–3](https://papers.nips.cc/paper_files/paper/2007/file/3b3dbaf68507998acd6a5a5254ab2d76-Paper.pdf).
+
+The use of extra information to upper-bound partially observed control and
+the distinction between an approximate value and the control policy extracted
+from it are also established. Hauskrecht analyzes QMDP, bound hierarchies, and
+convex interpolation. Our weighted-Q interpretation is related to QMDP but
+reveals **only the model**, while its regime remains hidden. Equations
+(11)–(16) explicitly derive the appropriate information relaxation for this
+task instead of importing the fully state-observing QMDP formula.
+[Hauskrecht (2000), *Value-Function Approximations for Partially Observable Markov Decision Processes*, §§3.2, 4.1–4.2, 4.5](https://jair.org/index.php/jair/article/download/10262/24449).
+
+Smallwood and Sondik establish finite-horizon belief-space control and the
+convex piecewise-linear structure in their finite formulation. We use the
+policy-as-linear-payoff argument to establish convexity directly for this
+task's continuous return observation, without claiming finitely many value
+pieces. The filter, accounting specialization, model-only revelation proof,
+delayed hierarchy, common-emission attribution limitation, and error envelopes
+above are worked derivations for this particular extension; no general-method
+novelty is claimed.
+[Smallwood and Sondik (1973), *The Optimal Control of Partially Observable Markov Processes over a Finite Horizon*](https://pubsonline.informs.org/doi/10.1287/opre.21.5.1071).

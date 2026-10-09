@@ -1,0 +1,151 @@
+{
+  "mesh_parameter": "conditional belief intervals16,32,48; weight intervals are half these",
+  "purpose": "Numerical feasibility estimate before economic evaluation",
+  "records": {
+    "bayes": {
+      "metrics": {
+        "finite_q_change": {
+          "indicative_change_48_to64": 0.00219754977072855,
+          "indicative_change_64_to96": 0.0020235059100289863,
+          "observed_changes_16_to32_and32_to48": [
+            0.016545432847078267,
+            0.004790799581331773
+          ],
+          "two_point_power_order_fit": 1.243409398245106
+        },
+        "initial_value_change": {
+          "indicative_change_48_to64": 0.0006071442220489622,
+          "indicative_change_64_to96": 0.0004909064314329983,
+          "observed_changes_16_to32_and32_to48": [
+            0.0065765311021386275,
+            0.0015186840293552883
+          ],
+          "two_point_power_order_fit": 1.6293017674592278
+        },
+        "probe_value_change": {
+          "indicative_change_48_to64": 0.0025603619569908305,
+          "indicative_change_64_to96": 0.002471031237617195,
+          "observed_changes_16_to32_and32_to48": [
+            0.016932696863796837,
+            0.005313762168457414
+          ],
+          "two_point_power_order_fit": 1.1046204089685492
+        }
+      },
+      "worst_second_change_state": {
+        "action": 10,
+        "coordinates": [
+          0.7892562908883137,
+          0.9786971393618726,
+          0.12383821013899735
+        ],
+        "probe": 1500,
+        "q": 2,
+        "same_state_changes": [
+          0.013523601810240204,
+          0.004790799581331773
+        ],
+        "same_state_q_at_three_meshes": [
+          0.3467060323062925,
+          0.3331824304960523,
+          0.3283916309147205
+        ],
+        "x": 1
+      }
+    },
+    "frozen_model": {
+      "metrics": {
+        "finite_q_change": {
+          "indicative_change_48_to64": 0.010800927128984153,
+          "indicative_change_64_to96": 0.012375434602079724,
+          "observed_changes_16_to32_and32_to48": [
+            0.044858336321643266,
+            0.018771967306605575
+          ],
+          "two_point_power_order_fit": 0.6011006620438033
+        },
+        "initial_value_change": {
+          "indicative_change_48_to64": 0.0012482013169038833,
+          "indicative_change_64_to96": 0.001177653647460751,
+          "observed_changes_16_to32_and32_to48": [
+            0.008786509907723561,
+            0.002652630498228614
+          ],
+          "two_point_power_order_fit": 1.1715084280929886
+        },
+        "probe_value_change": {
+          "indicative_change_48_to64": 0.010947998061565213,
+          "indicative_change_64_to96": 0.01283136367235397,
+          "observed_changes_16_to32_and32_to48": [
+            0.04280150050854892,
+            0.01859187481864666
+          ],
+          "two_point_power_order_fit": 0.5349977568991733
+        }
+      },
+      "worst_second_change_state": {
+        "action": 5,
+        "coordinates": [
+          0.4393096510533918,
+          0.013304007502365304,
+          0.7923795092976014
+        ],
+        "probe": 1094,
+        "q": 0,
+        "same_state_changes": [
+          0.03135334100581422,
+          0.018771967306605575
+        ],
+        "same_state_q_at_three_meshes": [
+          1.457038735005696,
+          1.4256853939998817,
+          1.4069134266932761
+        ],
+        "x": 0
+      }
+    },
+    "no_feedback": {
+      "metrics": {
+        "finite_q_change": {
+          "indicative_change_48_to64": 0.0013565878803511648,
+          "indicative_change_64_to96": 0.0013015841996668119,
+          "observed_changes_16_to32_and32_to48": [
+            0.00911784396454185,
+            0.002832791975684923
+          ],
+          "two_point_power_order_fit": 1.1219560192855975
+        },
+        "probe_value_change": {
+          "indicative_change_48_to64": 0.001054500378697879,
+          "indicative_change_64_to96": 0.0008749792091481561,
+          "observed_changes_16_to32_and32_to48": [
+            0.010617809366641418,
+            0.0025660256154702576
+          ],
+          "two_point_power_order_fit": 1.552214930458148
+        }
+      },
+      "worst_second_change_state": {
+        "action": 10,
+        "coordinates": [
+          0.8328591706771535,
+          0.7326614663031105,
+          0.38609445270905546
+        ],
+        "probe": 793,
+        "q": 1,
+        "same_state_changes": [
+          0.007152638075091922,
+          0.002832791975684923
+        ],
+        "same_state_q_at_three_meshes": [
+          0.29229303965737746,
+          0.28514040158228554,
+          0.2823076096066006
+        ],
+        "x": 0
+      }
+    }
+  },
+  "warning": "Only two mesh changes are available. Fitted powers of maximum differences are non-asymptotic heuristics, not rates, bounds, or acceptance evidence. The maximizing state may change."
+}

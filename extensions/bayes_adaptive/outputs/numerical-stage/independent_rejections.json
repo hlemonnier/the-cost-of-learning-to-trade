@@ -1,0 +1,52 @@
+{
+  "passed": true,
+  "verifier_sha256": "0c61548d16c662e616a5f32748102a938385007206e7aefdb7f0d6f728169851",
+  "harness_sha256": "b1964c6bcf8d774f3c6d755c3028bec83e63fafa1e8834ab34d75c6ec1d87469",
+  "reference_receipt_sha256": "ed11bc4b2c33106553275d5790cff1dddd7cbaa889d38d9efe0fad0d5f3e119e",
+  "cases": [
+    {
+      "case": "changed_threshold",
+      "rejected": true,
+      "returncode": 1,
+      "stderr": "{\"audit_status\": \"failed\", \"error\": \"Numerical thresholds or certification claim changed\"}"
+    },
+    {
+      "case": "missing_horizon",
+      "rejected": true,
+      "returncode": 1,
+      "stderr": "{\"audit_status\": \"failed\", \"error\": \"Pair 0 belief has incomplete policy/horizon rows\"}"
+    },
+    {
+      "case": "changed_grid_axis",
+      "rejected": true,
+      "returncode": 1,
+      "stderr": "{\"audit_status\": \"failed\", \"error\": \"Pair 0 belief skips a level or changes another setting\"}"
+    },
+    {
+      "case": "unresolved_declared_accepted",
+      "rejected": true,
+      "returncode": 1,
+      "stderr": "{\"audit_status\": \"failed\", \"error\": \"Receipt declares acceptance without joint and known-model gates\"}"
+    },
+    {
+      "case": "changed_probe_identity",
+      "rejected": true,
+      "returncode": 1,
+      "stderr": "{\"audit_status\": \"failed\", \"error\": \"Numerical probe file does not match receipt\"}"
+    },
+    {
+      "case": "changed_producer_source",
+      "rejected": true,
+      "returncode": 1,
+      "stderr": "{\"audit_status\": \"failed\", \"error\": \"Numerical receipt source is stale\"}"
+    },
+    {
+      "case": "false_declared_dtype_with_valid_manifest_hash",
+      "rejected": true,
+      "returncode": 1,
+      "stderr": "{\"audit_status\": \"failed\", \"error\": \"Array shape/dtype differs from manifest: /private/var/folders/8z/mp96_9353w79bsgv7kftgk2h0000gn/T/bayes-numeric-array-metadata-xrrgmth2/w9-b17-gh25/known-q-0.npy\"}"
+    }
+  ],
+  "scope": "CLI rejection of changed numerical receipt or cache metadata; no economic outcomes",
+  "rejection_cases": 7
+}

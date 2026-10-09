@@ -1,0 +1,265 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[margin=18mm]{geometry}
+\usepackage{amsmath,amssymb,booktabs,array,graphicx,xcolor,hyperref,fancyhdr}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\hypersetup{colorlinks=true,urlcolor=blue,linkcolor=blue,pdftitle={The Price of Assuming You Will Know},pdfauthor={Hugo Lemonnier}}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt}
+\setlength{\tabcolsep}{3.3pt}
+\setlength{\headheight}{14pt}
+\emergencystretch=1.5em
+\pagestyle{fancy}\fancyhf{}
+\fancyhead[L]{\small Bayes-adaptive market making}
+\fancyhead[R]{\small Separate research extension}
+\fancyfoot[L]{\small Hugo Lemonnier}
+\fancyfoot[R]{\small\thepage}
+\newcommand{\E}{\mathbb E}
+\newcommand{\BA}{\mathrm{BA}}
+\input{generated/numbers.tex}
+\begin{document}
+\thispagestyle{empty}
+{\LARGE\bfseries The Price of Assuming You Will Know}\par
+\vspace{4pt}
+{\large Bayes-adaptive market making under genuine model uncertainty}\par
+Hugo Lemonnier \hfill 27 September 2026\par
+\textit{Joint model-and-regime planning under persistent uncertainty.}
+
+\section*{1. Question and result}
+The original practical trader averages separately optimized, known-model action
+values. It learns from public data during execution, but its planning score assumes
+that the model will become known after the current decision. How costly is that
+shortcut when regime persistence is uncertain? This extension implements a joint
+model-and-regime Bellman recursion, derives model-revelation relaxations and
+compares executable policies on fresh, paired market trajectories.
+
+\textbf{Prespecified cold-start result.} Joint-belief minus weighted-Q net objective
+is \textbf{\PrimaryMean}, with an empirical paired 95\% interval
+\textbf{[\PrimaryLow,\ \PrimaryHigh]} per 30-decision episode.
+\PrimaryConclusion{} The threshold is 0.002, the fee on one market execution
+excluding its spread. Sampling uncertainty and numerical approximation error are
+different: this interval describes the implemented policies, not a certified
+optimality gap.
+
+\input{generated/result_interpretation.tex}
+
+\textbf{Fixed setting.} The model has $\theta=.35$ and unknown
+$\kappa\in\{.002,.10\}$ with an equal prior, $T=30$ and inventory cap two.
+Everything else---returns, selected-fill observation law, fees, spread, inventory
+penalty, safe actions and terminal liquidation---is unchanged. The latent state
+has four possibilities $(M,H)$, while the public signal has three values.
+This is a restricted synthetic experiment, separate from the original campaign.
+
+\begin{center}
+\includegraphics[width=\linewidth]{generated/economic_performance.pdf}
+\end{center}
+{\small\textbf{Figure 1.} Actual policy performance versus pilot information.
+Left: policy means with ordinary empirical 95\% intervals; the known-model curve
+is privileged about $M$ only, with $H$ still hidden. Right: paired joint-belief
+minus weighted-Q differences, using the same trajectories and pilot at each
+budget. Only the zero-pilot comparison is the primary hypothesis. The two other
+budgets are prespecified sensitivity conditions. Numerical relaxation values are
+reported separately on the next page.}
+
+\textbf{What is preserved.} The original eight-page main report, eleven-page
+appendix and canonical outcomes are retained.
+This extension neither enlarges their deployment population nor revises their
+reported results. Its conclusions concern only the experiment defined here.
+
+{\small Implementation and computational checks used Codex with Astra and Sol agents.\par}
+
+\newpage
+\section*{2. Joint learning and the model-revelation shortcut}
+\input{mathematics.tex}
+
+\begin{center}\small
+\input{generated/revelation.tex}
+\end{center}
+{\small\textbf{Table 1.} Numerical planning values at $q=x=0$, fresh conditional
+regime priors $b_1=b_2=.5$, and the model posterior fitted from each pilot.
+Entries average over the balanced pilot population. These are approximate
+relaxed or Bellman objectives, \emph{not} policy rollout returns and \emph{not}
+certified numerical upper bounds. $U^1$ is evaluated directly from weighted
+known-model Q values; the stored nodal relaxation has a distinct interpolation.
+The largest observed local hierarchy reversal is \MaxHierarchyViolation{}.}
+
+\textbf{Why the hierarchy is useful.} Each delay removes fictitious information
+while retaining the physical market and admissible actions. The optimizing first
+action may change. The exact hierarchy applies to prior-weighted values, not
+individual outcomes or true-model strata. It explains optimism in weighted-Q
+planning. Uncertified numerical relaxation values and Monte Carlo returns do not
+certify near-optimality.
+
+\input{generated/planning_interpretation.tex}
+
+\newpage
+\section*{3. A fixed experiment that can contradict the hypothesis}
+Each true model has 30 independent replicates. Every replicate supplies five
+independent 30-step uniform-safe-action pilot episodes, and 1,000 fresh evaluation
+episodes. The budgets use no pilot, the first pilot, and all five. The model is
+fixed within a replicate; every episode starts with a new hidden regime.
+Evaluation resets the conditional regime beliefs to one half, retains only the
+pilot model posterior, and never transfers evaluation learning to another episode.
+
+Five policies share each pilot and market tape: joint-belief planning, weighted-Q,
+no future feedback, frozen future model weights, and the known-model reference.
+Every feasible policy filters all permitted feedback online. The two suppressions
+change hypothetical planning updates, not the observations supplied at runtime.
+Only the privileged reference receives the true model label; it never sees $H$.
+
+There are \textbf{60,000 paired market trajectories and 900,000 policy-episode
+records}. Their reuse across policies and pilot budgets does not create additional
+independent markets. Pairing uses the complete model/replicate/episode/budget key.
+Within each model, paired episode differences are averaged by replicate; the two
+stratum means receive equal weight. Welch intervals estimate between-replicate
+uncertainty. Missing cells, broken pairs, duplicate keys, insufficient replicates
+and nonfinite outcomes are rejected before inference.
+
+\begin{center}\scriptsize
+\input{generated/contrasts.tex}
+\end{center}
+{\small\textbf{Table 2.} All 24 prespecified supplementary contrasts: four
+comparisons, three pilot budgets and two metrics. Brackets are Bonferroni-adjusted
+empirical intervals for this family. The ordinary primary interval is stated on
+page 1; it is not replaced by a favorable supplementary result. Net PnL includes
+execution and liquidation costs; net objective additionally deducts the original
+pre-decision inventory penalty.}
+
+\begin{center}
+\includegraphics[width=\linewidth]{generated/information_and_compute.pdf}
+\end{center}
+{\small\textbf{Figure 2.} Left: model-posterior entropy after the pilot and after
+trading; lower entropy alone is not evidence of economic benefit. Right: measured
+policy-choice time, including table access on this numerical build. These timings
+are workload observations on a shared machine, not universal latency guarantees.
+The known-model reference's shadow public posterior is excluded from the entropy
+plot because its own model uncertainty is zero.}
+
+\newpage
+\section*{4. What a controlled decision can establish}
+With common $\theta$, an observation depends on the model only through the current
+hidden regime. Thus $M\to H_t\to O_t$ conditional on public history and action,
+and
+\[
+ I(M,H_t;O_t)=I(H_t;O_t)=I(M;O_t)+I(H_t;O_t\mid M).
+\]
+At cold start, $b_1=b_2=.5$: every action's first observation has identical
+likelihood under both models, so its model information is exactly zero. Regime
+updating followed by different persistence transitions separates the conditional
+beliefs; later observations can then identify the model. Parameter information
+comes from temporal dependence, not a direct model label in a fill.
+
+The explanation search was fixed before evaluation: 60,000 public states reached
+by uniform-safe actions, plus 77,430 fixed arbitrary belief/horizon probes.
+It screens action disagreements, ranks by declared score margins and examines a
+bounded ordered candidate set, without choosing favorable realized PnL paths.
+Reached and arbitrary-prior states are identified separately.
+
+\input{generated/action_explanation.tex}
+
+\textbf{Attribution limit.} The matched diagnostic keeps immediate rewards,
+outcome probabilities, inventory transitions, conditional regime updates and the
+same joint-belief continuation fixed. It freezes only the model weights at the
+next hypothetical planning boundary. This is an artificial computational
+intervention, not a Bayesian observation deletion or an information bound.
+When $b_1\ne b_2$, preserving the likelihood ratio needed by both regime filters
+also preserves the model Bayes factor:
+\[
+\frac{m_1}{m_2}=\frac{1-b_1+b_1R}{1-b_2+b_2R},\qquad R=\ell_+/\ell_-.
+\]
+Freezing model weights changes the aggregate regime forecast as well. A stable
+decision reversal establishes sensitivity to that update; it does not isolate
+a pure model-information channel. Economic value requires the paired policy
+comparison, not just entropy reduction or a selected negative immediate reward.
+
+\newpage
+\section*{5. Numerical accuracy and reproducibility}
+The solver uses float64 product coordinates $(w,b_1,b_2)$, trilinear interpolation
+in physical probabilities, analytic expected one-step rewards and positive
+Gauss--Hermite quadrature. Model-weight nodes are uniform; conditional-regime
+nodes follow $b(u)=\sin^2(\pi u/2)$, concentrating resolution near the endpoints.
+This numerical-only amendment follows retained uniform-mesh failures and was
+frozen before local final evaluation, with unchanged probes and tolerances.
+The selected joint grid is $\GridWeights\times\GridBeliefs\times\GridBeliefs$
+with \GHNodes{} quadrature nodes. The independent known-model scalar references
+use 321 beliefs and 161 nodes, compared with separate belief and quadrature
+refinements. The absolute tie tolerance is $10^{-12}$; the lowest safe action ID
+wins, and the Bellman value uses that selected action's Q.
+
+\begin{center}
+\includegraphics[width=\linewidth]{generated/numerical_refinement.pdf}
+\end{center}
+{\small\textbf{Figure 3.} Independent refinement axes, retaining failures.
+All 30 remaining horizons use identical fixed off-grid probes. Acceptance requires
+initial value change at most .001, probe value and finite-Q change at most .005,
+and robust-action disagreement at most .005 when the finer gap exceeds .001.
+The same rule covers six value modes and all three joint action-score modes.}
+
+\input{generated/numerical_validation.tex}
+
+\textbf{A proved envelope, not a small optimality certificate.}
+For a fixed policy tree, its expected payoff is linear in the four-state prior.
+The exact optimal value is therefore convex. The product-grid corner weights
+have the correct joint-mass barycenter, giving an upper interpolation of exact
+nodal values. Quadrature error has no known sign, so this fact does not make the
+computed tables certified upper bounds.
+
+A conservative conditional expected stage-reward bound is $r_*=.231$, with
+terminal payoff in $[-.054,0]$. For $D_n=.231n+.027$, exact values satisfy
+$|V_n(p)-V_n(\bar p)|\le D_n\|p-\bar p\|_1$. Grid and observation-integration
+errors can consequently be bounded using the mesh widths and the Wasserstein
+distance between the normal law and its quadrature measure. The full derivation,
+computed allowances and omitted floating-arithmetic certification are explicit
+in \href{Mathematical_Appendix.pdf}{the mathematical appendix} and
+\texttt{THEORY.md}. These conservative bounds are too wide to certify the
+economic threshold. Refinement and independent rollouts give useful numerical
+evidence, while remaining logically distinct from a uniform mathematical error bound.
+
+\newpage
+\section*{6. Validation, interpretation and review entry point}
+\input{generated/final_validation.tex}
+The cold-reproduction duration sums active command execution and excludes the
+pause for recovering the preserved original archive's local path. The failed
+path check and its successful continuation remain in the evidence; no second
+cold build is claimed.
+
+\subsection*{Interpretation and limits}
+This extension supplies a different decision recursion and a testable account of
+the weighted-Q shortcut. It does not claim to invent Bayes-adaptive control:
+model uncertainty and hidden-state uncertainty are treated jointly in the
+Bayes-adaptive POMDP literature [1], and information relaxations and approximate
+POMDP value methods have an established history [2,3]. Our contribution is the
+specialized model-only revelation interpretation, its implementation in this
+selected-feedback trading model, and the separately registered evidence.
+
+\input{generated/final_interpretation.tex}
+
+The scope is two correctly specified persistence models with known dependence
+magnitude, a finite horizon and small inventory. It establishes neither commercial
+trading validity nor a result under off-grid parameters or arbitrary shifts.
+Pilot uncertainty is genuine here, but the known finite support remains an
+assumption. Entropy, relaxed planning optimism and realized policy benefit answer
+different questions and cannot be substituted for one another.
+
+\subsection*{Reproduction}
+The public repository contains the protocol, source, numerical refinement,
+pilots, evaluation tapes, actions, outcomes, posterior traces and statistical
+tables. \texttt{REPRODUCING.md} gives installation and mathematical checks.
+Four authenticated byte chunks restore the complete compressed ledger.
+
+Recorded evidence belongs to its original numerical build. Fresh runs bind
+their own source, tables and outputs. Regenerable control arrays are excluded;
+their specifications and content fingerprints are retained. The small E2E
+reproduction verifies installation and integration, not the numerical precision
+of a new full campaign.
+
+\subsection*{References and authorship}
+\begin{enumerate}\small
+\item S. Ross, B. Chaib-draa and J. Pineau (2007),
+\href{https://papers.nips.cc/paper_files/paper/2007/file/3b3dbaf68507998acd6a5a5254ab2d76-Paper.pdf}{Bayes-Adaptive POMDPs}, NeurIPS.
+\item M. Hauskrecht (2000),
+\href{https://jair.org/index.php/jair/article/download/10262/24449}{Value-Function Approximations for Partially Observable Markov Decision Processes}, JAIR 13, 33--94.
+\item R. D. Smallwood and E. J. Sondik (1973),
+\href{https://pubsonline.informs.org/doi/10.1287/opre.21.5.1071}{The Optimal Control of Partially Observable Markov Processes over a Finite Horizon}, Operations Research 21(5), 1071--1088.
+\end{enumerate}
+\end{document}

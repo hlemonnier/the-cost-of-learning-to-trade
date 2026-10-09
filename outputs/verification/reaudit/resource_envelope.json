@@ -1,0 +1,318 @@
+{
+  "started_utc": "2026-09-24T15:28:27.863830+00:00",
+  "working_directory": "/recorded-environment Learning",
+  "command": [
+    "/recorded-environment Learning/.venv/bin/python",
+    "/recorded-environment Learning/verification/profile_resources.py",
+    "--artifact",
+    "/recorded-environment Learning/outputs/control_cache/reaudit_canonical_cold_20260924",
+    "--output",
+    "/recorded-environment Learning/outputs/verification/reaudit/resource_envelope.json",
+    "--child",
+    "--child-result",
+    "/recorded-environment Learning/outputs/verification/reaudit/resource_envelope_child.json"
+  ],
+  "environment_override": {
+    "PYTHONPATH": "/recorded-environment Learning/src"
+  },
+  "settings": {
+    "theta": 0.35,
+    "kappa": 0.02,
+    "horizon": 300,
+    "qmax": 5,
+    "belief_points": 641,
+    "quadrature_points": 161,
+    "mode": "active"
+  },
+  "host": {
+    "platform": "macOS-27.2-arm64-arm-64bit",
+    "machine": "arm64",
+    "python": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "cpu_count": 10,
+    "physical_memory_bytes": 17179869184
+  },
+  "scope": "one new Python process: direct solve_control then save_control; no cache load",
+  "finished_utc": "2026-09-24T15:28:47.375587+00:00",
+  "elapsed_seconds": 19.497101833985653,
+  "child_exit_code": 0,
+  "peak_process_rss_bytes": 3628892160,
+  "peak_process_rss_source": "wait4 rusage.ru_maxrss",
+  "peak_process_rss_unit_conversion": "bytes on Darwin; KiB multiplied by 1024 on Linux",
+  "sampled_max_rss_bytes": 3628564480,
+  "rss_samples": 329,
+  "rss_sample_method": "ps rss KiB at about 50 ms intervals; may miss a brief peak",
+  "child_log": "outputs/verification/reaudit/resource_envelope_child.log",
+  "artifact": "outputs/control_cache/reaudit_canonical_cold_20260924",
+  "artifact_bytes": {
+    "files": [
+      {
+        "path": "outputs/control_cache/reaudit_canonical_cold_20260924/beliefs.npy",
+        "logical_bytes": 5256,
+        "allocated_bytes": 8192
+      },
+      {
+        "path": "outputs/control_cache/reaudit_canonical_cold_20260924/metadata.json",
+        "logical_bytes": 8386,
+        "allocated_bytes": 12288
+      },
+      {
+        "path": "outputs/control_cache/reaudit_canonical_cold_20260924/q_values.npy",
+        "logical_bytes": 560300792,
+        "allocated_bytes": 560304128
+      },
+      {
+        "path": "outputs/control_cache/reaudit_canonical_cold_20260924/values.npy",
+        "logical_bytes": 50936552,
+        "allocated_bytes": 50937856
+      }
+    ],
+    "logical_bytes": 611250986,
+    "allocated_bytes": 611262464
+  },
+  "child_result": {
+    "settings": {
+      "theta": 0.35,
+      "kappa": 0.02,
+      "horizon": 300,
+      "qmax": 5,
+      "belief_points": 641,
+      "quadrature_points": 161,
+      "mode": "active"
+    },
+    "solver_metadata": {
+      "operator_build_seconds": 2.251224166015163,
+      "transition_nonzeros": 46148150,
+      "transition_storage_bytes": 554708536,
+      "max_transition_mass_error": 6.661338147750939e-16,
+      "effective_planning_theta": 0.35,
+      "solve_seconds": 17.989713916991604,
+      "table_storage_bytes": 611242216,
+      "approximation": "Gauss-Hermite continuation integration; uniform linear belief interpolation",
+      "reward_integration": "analytic expected marked-wealth increment",
+      "tie_breaking": {
+        "version": 2,
+        "score_dtype": "float64",
+        "tie_absolute_tolerance": 1e-12,
+        "tie_relative_tolerance": 0.0,
+        "tie_action": "lowest admissible action ID within absolute tolerance of maximum",
+        "bellman_value": "Q of the action selected by the same tie rule",
+        "invalid_action": "negative infinity; no decision at remaining horizon zero"
+      },
+      "requested_belief_points": 641,
+      "noinfo_semantics": "prediction-only belief in planning; runtime filtering external",
+      "full_semantics": "current regime observed, next regime averaged; no future innovation access"
+    },
+    "solve_elapsed_seconds": 17.989820957998745,
+    "solve_and_save_elapsed_seconds": 19.089869957999326
+  },
+  "child_result_path": "outputs/verification/reaudit/resource_envelope_child.json",
+  "validation": "load_control validated complete artifact and authenticated arrays",
+  "passed": true,
+  "artifact_record": {
+    "format_version": 2,
+    "specification": {
+      "theta": 0.35,
+      "kappa": 0.02,
+      "horizon": 300,
+      "qmax": 5,
+      "mode": "active",
+      "belief_points": 641,
+      "quadrature_points": 161
+    },
+    "key": "v2-dead41f6c9c1fac1a804bff5",
+    "source": {
+      "files": {
+        "control.py": "2ad1a96921e2b6d595608e279e3d40fef74d29642188e7b297e32473278b78c4",
+        "model.py": "7a120a7faabd8aec2c1345a486128129105e9d564ec60908f1c07ea0cf5a897f",
+        "numerics.py": "bd30936513b1da7237ead270382a281943e558f95628ea930a1c1c149fbe8347",
+        "policies.py": "496759e539fabf4774a7ba77c7b9e0c9c951f1bc34d270b1052b4fa8597f22d5"
+      },
+      "sha256": "c90b00d6369c3da0626bd1378062a94badbb9217e97d2f306f31be5ec849d2af"
+    },
+    "build": {
+      "python": "3.12.14",
+      "implementation": "CPython",
+      "system": "Darwin",
+      "machine": "arm64",
+      "byteorder": "little",
+      "numpy": "2.5.3",
+      "scipy": "1.18.1",
+      "numpy_config": {
+        "Compilers": {
+          "c": {
+            "name": "clang",
+            "linker": "ld64",
+            "version": "15.0.0",
+            "commands": "cc"
+          },
+          "cython": {
+            "name": "cython",
+            "linker": "cython",
+            "version": "3.3.0",
+            "commands": "cython"
+          },
+          "c++": {
+            "name": "clang",
+            "linker": "ld64",
+            "version": "15.0.0",
+            "commands": "c++"
+          }
+        },
+        "Machine Information": {
+          "host": {
+            "cpu": "aarch64",
+            "family": "aarch64",
+            "endian": "little",
+            "system": "darwin"
+          },
+          "build": {
+            "cpu": "aarch64",
+            "family": "aarch64",
+            "endian": "little",
+            "system": "darwin"
+          }
+        },
+        "Build Dependencies": {
+          "blas": {
+            "name": "accelerate",
+            "found": true,
+            "version": "unknown",
+            "detection method": "system",
+            "include directory": "unknown",
+            "lib directory": "unknown",
+            "openblas configuration": "unknown",
+            "pc file directory": "unknown"
+          },
+          "lapack": {
+            "name": "accelerate",
+            "found": true,
+            "version": "unknown",
+            "detection method": "system",
+            "include directory": "unknown",
+            "lib directory": "unknown",
+            "openblas configuration": "unknown",
+            "pc file directory": "unknown"
+          }
+        },
+        "Python Information": {
+          "path": "/private/var/folders/s6/5hzmn6lx4dz5nxs7k_0slzph0000gn/T/build-env-sd3oh5ko/bin/python",
+          "version": "3.12"
+        },
+        "SIMD Extensions": {
+          "baseline": [
+            "NEON",
+            "NEON_FP16",
+            "NEON_VFPV4",
+            "ASIMD"
+          ],
+          "found": [
+            "ASIMDHP",
+            "ASIMDDP"
+          ],
+          "not found": [
+            "ASIMDFHM"
+          ]
+        }
+      },
+      "scipy_config": {
+        "Compilers": {
+          "c": {
+            "name": "clang",
+            "linker": "ld64",
+            "version": "15.0.0",
+            "commands": "cc"
+          },
+          "cython": {
+            "name": "cython",
+            "linker": "cython",
+            "version": "3.2.9",
+            "commands": "cython"
+          },
+          "c++": {
+            "name": "clang",
+            "linker": "ld64",
+            "version": "15.0.0",
+            "commands": "c++"
+          },
+          "fortran": {
+            "name": "gcc",
+            "linker": "ld64",
+            "version": "13.4.0",
+            "commands": "gfortran"
+          },
+          "pythran": {
+            "version": "0.19.0",
+            "include directory": "../../../../../../../private/var/folders/g3/pffjr_y96bq06blnkf72x_hw0000gn/T/build-env-qsdhhi00/lib/python3.12/site-packages/pythran"
+          }
+        },
+        "Machine Information": {
+          "host": {
+            "cpu": "aarch64",
+            "family": "aarch64",
+            "endian": "little",
+            "system": "darwin"
+          },
+          "build": {
+            "cpu": "aarch64",
+            "family": "aarch64",
+            "endian": "little",
+            "system": "darwin"
+          },
+          "cross-compiled": false
+        },
+        "Build Dependencies": {
+          "blas": {
+            "name": "Accelerate",
+            "found": true,
+            "version": "unknown",
+            "detection method": "extraframeworks",
+            "include directory": "unknown",
+            "lib directory": "unknown",
+            "openblas configuration": "unknown",
+            "pc file directory": "unknown",
+            "has ilp64": false,
+            "cython blas ilp64": false
+          },
+          "lapack": {
+            "name": "Accelerate",
+            "found": true,
+            "version": "unknown",
+            "detection method": "extraframeworks",
+            "include directory": "unknown",
+            "lib directory": "unknown",
+            "openblas configuration": "unknown",
+            "pc file directory": "unknown",
+            "has ilp64": false
+          },
+          "pybind11": {
+            "name": "pybind11",
+            "version": "3.0.4",
+            "detection method": "config-tool",
+            "include directory": "unknown"
+          }
+        },
+        "Python Information": {
+          "path": "/private/var/folders/g3/pffjr_y96bq06blnkf72x_hw0000gn/T/build-env-qsdhhi00/bin/python",
+          "version": "3.12"
+        }
+      },
+      "numerical_binaries": {
+        "numpy._core._multiarray_umath": "3432cd9093d7e84b4080015b6a889598fea4c305da967063cb916215193bf85d",
+        "scipy.special._ufuncs": "a0889d5c82454d79d4cd4cc8a589a62a382d667da8e2b030e637f58708bd340c",
+        "scipy.sparse._sparsetools": "077b33d61dc1a677cb56bb4835572623986f7f0a1c0d35d6eaf85fc0df5dade2",
+        "scipy.linalg._fblas": "6502e4e093d03932479317d45bfea018ef0999bc5c4bd46687253322c13e9448"
+      },
+      "thread_environment": {
+        "OMP_NUM_THREADS": null,
+        "OPENBLAS_NUM_THREADS": null,
+        "MKL_NUM_THREADS": null,
+        "VECLIB_MAXIMUM_THREADS": null,
+        "NUMEXPR_NUM_THREADS": null
+      },
+      "sha256": "734eddc7d5a49af317fdedcd669ef30ac9d3a34847a389f01335a545e700261d"
+    },
+    "artifact_sha256": "25a4a541b674c0c458643055b04dd26d40f2aef68a891d33e1af13cfd5281861"
+  }
+}

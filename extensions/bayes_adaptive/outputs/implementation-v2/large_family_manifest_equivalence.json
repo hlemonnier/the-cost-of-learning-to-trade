@@ -1,0 +1,30 @@
+{
+  "all11_array_content_identities_equal": true,
+  "array_count": 11,
+  "comparison": "Recorded raw-array identities from independently built v1 and v2 artifacts; not manifest restamping",
+  "family": "w25-b49-gh25",
+  "v1_artifact_sha256": "3cc0a61ecde8fb11c94985f6e88ffb83d7dd749cca6948a3b070142d5004e283",
+  "v1_solve_seconds": 300.9046640410088,
+  "v1_source": {
+    "files": {
+      "trade_learning.control": "2ad1a96921e2b6d595608e279e3d40fef74d29642188e7b297e32473278b78c4",
+      "trade_learning.filtering": "711997ebc28c7981ffb848ddded400650aee28488b5982d07cdc1fe563cf6ec1",
+      "trade_learning.model": "7a120a7faabd8aec2c1345a486128129105e9d564ec60908f1c07ea0cf5a897f",
+      "trade_learning.numerics": "bd30936513b1da7237ead270382a281943e558f95628ea930a1c1c149fbe8347",
+      "solver.py": "ba716aaf7231e3aac3dceaf977f6439b84ebea0984c34cec8ef681f483f2a313"
+    },
+    "sha256": "9f0f5fb377e3a6d31487ff82332c2325e87874c2839e91b155487221f427bf86"
+  },
+  "v2_artifact_sha256": "18b7efe4267d49fe632e6f6b3bc6c8a1c008f65f11dbb8c6a5dff65335d915ae",
+  "v2_solve_seconds": 567.8124930000049,
+  "v2_source": {
+    "files": {
+      "trade_learning.control": "2ad1a96921e2b6d595608e279e3d40fef74d29642188e7b297e32473278b78c4",
+      "trade_learning.filtering": "711997ebc28c7981ffb848ddded400650aee28488b5982d07cdc1fe563cf6ec1",
+      "trade_learning.model": "7a120a7faabd8aec2c1345a486128129105e9d564ec60908f1c07ea0cf5a897f",
+      "trade_learning.numerics": "bd30936513b1da7237ead270382a281943e558f95628ea930a1c1c149fbe8347",
+      "solver.py": "d22fcc3a460eb75c6bac239e1d383f333811dcfe0db3d768109f56f913e853fc"
+    },
+    "sha256": "c60d987e07890d5eb65afe1eefe125e6591aa9f897b555efbad91ed94347c058"
+  }
+}

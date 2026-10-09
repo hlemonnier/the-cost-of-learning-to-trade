@@ -1,0 +1,37 @@
+{
+  "passed": true,
+  "scope": "Primary-agent review of delegated mathematical design, verifier implementation, and exact accepted mechanism artifacts; not external sign-off",
+  "reviewed_sources": {
+    "verification/mechanism_study.py": "3ec88aebb7e523a674922db9cf4eba023a5e58c21c5a4c506b85876946a8338a",
+    "verification/verify_mechanism_study.py": "4270730ca3a3a3bb6ba766483b8690548c6921578fc74f7e11e5469382b2db9f",
+    "configs/mechanism_study.json": "d2c6f2edd919e7ff0f08b7a09ea05ec109234f6f4ef17c2eaef392aae04d942a",
+    "report/mechanism_study_protocol.md": "773cdeca929f732d6c3662a46a9e2cb1f5c25698f8ed4d2dfcd4b357d2755364"
+  },
+  "independent_receipt_sha256": "663231403024dbdcae2bdcb488e238246e6173faae70064bbaafdbce02ba3f76",
+  "manifest_sha256": "e62e458491176736a7923ee1a10904e268c4a43119201c76d7d3dbfcb89190d4",
+  "code_review": {
+    "astra_max": "Read-only intervention/design review; independent in-memory B81/GH81 checks; no mathematical blocker",
+    "sol_max": "Independent cash/tape/filter/statistical verifier, reviewed by primary; archive Git-provenance gap corrected before acceptance",
+    "primary": "Reviewed every intervention and verifier; executed own independent full-study/cold-repeat/fault-probe command and checked hashes/results"
+  },
+  "verified": {
+    "canonical_source_and_raw_unchanged": true,
+    "fresh_policy_rows": 140000,
+    "paired_market_episodes": 20000,
+    "decisions_independently_replayed": 4200000,
+    "public_trace_decisions": 2520,
+    "faults_rejected": 10,
+    "maximum_ledger_difference": 2.7284841053187847e-12,
+    "four_paired_intervals_recomputed": true,
+    "all_five_files_and_table_hashes_repeat_exactly": true,
+    "no_additive_attribution": true
+  },
+  "development_failure_retained": {
+    "source_commit": "4d8f11b",
+    "before_evaluation": true,
+    "failure": "Independent terminal check compared decimal .027 with .025+.002 using bit equality; differs by one rounding step",
+    "correction_commit": "15771fd",
+    "correction": "Use 1e-15 for independent decimal identity; retain exact bit equality between ablated and reference terminal scores",
+    "statistical_design_or_policies_changed": false
+  }
+}

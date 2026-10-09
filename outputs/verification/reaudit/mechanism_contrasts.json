@@ -1,0 +1,146 @@
+{
+  "confidence_method": "paired episode differences; ten pilot means per environment; Student t9 and fixed-uniform-grid Welch-Satterthwaite approximate two-sided 95% intervals",
+  "contrast": "noinfo_minus_myopic_objective",
+  "interpretation": "remaining-horizon continuation package, including inventory carry and internal terminal timing; not pure inventory value",
+  "original_family_size_unchanged": 162,
+  "per_environment": {
+    "theta0.15_kappa0.002": {
+      "df": 9,
+      "estimated_between_pilot_variance": 0.13167735355369503,
+      "high": 2.950290481989589,
+      "low": 1.6115524666352097,
+      "mean": 2.2809214743123993,
+      "observed_pilot_mean_variance": 0.8755594753191442,
+      "paired_episodes": 1000,
+      "pilots": 10,
+      "se": 0.29589854263229215,
+      "within_pilot_mean_variance": 0.7438821217654492
+    },
+    "theta0.15_kappa0.02": {
+      "df": 9,
+      "estimated_between_pilot_variance": 0.024806844151767038,
+      "high": 2.477626317478946,
+      "low": 1.384245842760692,
+      "mean": 1.9309360801198192,
+      "observed_pilot_mean_variance": 0.5840325987125162,
+      "paired_episodes": 1000,
+      "pilots": 10,
+      "se": 0.24166766409938178,
+      "within_pilot_mean_variance": 0.5592257545607492
+    },
+    "theta0.15_kappa0.1": {
+      "df": 9,
+      "estimated_between_pilot_variance": 0.0,
+      "high": 2.01194098977365,
+      "low": 1.1146399648295904,
+      "mean": 1.5632904773016203,
+      "observed_pilot_mean_variance": 0.39334242238985895,
+      "paired_episodes": 1000,
+      "pilots": 10,
+      "se": 0.19832862183503897,
+      "within_pilot_mean_variance": 0.48048299332020805
+    },
+    "theta0.35_kappa0.002": {
+      "df": 9,
+      "estimated_between_pilot_variance": 0.41807802490817547,
+      "high": 4.07023710503897,
+      "low": 2.335587069184136,
+      "mean": 3.202912087111553,
+      "observed_pilot_mean_variance": 1.4700029261806142,
+      "paired_episodes": 1000,
+      "pilots": 10,
+      "se": 0.3834061718570287,
+      "within_pilot_mean_variance": 1.0519249012724388
+    },
+    "theta0.35_kappa0.02": {
+      "df": 9,
+      "estimated_between_pilot_variance": 0.0,
+      "high": 3.1439561920988948,
+      "low": 1.9703731641911202,
+      "mean": 2.5571646781450075,
+      "observed_pilot_mean_variance": 0.6728559556325637,
+      "paired_episodes": 1000,
+      "pilots": 10,
+      "se": 0.25939467142417627,
+      "within_pilot_mean_variance": 0.797980839582099
+    },
+    "theta0.35_kappa0.1": {
+      "df": 9,
+      "estimated_between_pilot_variance": 0.0586424136389575,
+      "high": 1.9330783841632149,
+      "low": 0.8092111273374172,
+      "mean": 1.371144755750316,
+      "observed_pilot_mean_variance": 0.6170558832434542,
+      "paired_episodes": 1000,
+      "pilots": 10,
+      "se": 0.24840609558612972,
+      "within_pilot_mean_variance": 0.5584134696044967
+    },
+    "theta0.65_kappa0.002": {
+      "df": 9,
+      "estimated_between_pilot_variance": 0.0,
+      "high": 4.658465960299466,
+      "low": 3.15075994378544,
+      "mean": 3.904612952042453,
+      "observed_pilot_mean_variance": 1.1105236099811442,
+      "paired_episodes": 1000,
+      "pilots": 10,
+      "se": 0.33324519651168927,
+      "within_pilot_mean_variance": 1.3207278408804455
+    },
+    "theta0.65_kappa0.02": {
+      "df": 9,
+      "estimated_between_pilot_variance": 0.0016259109519269899,
+      "high": 4.758338957798784,
+      "low": 3.2362126165815974,
+      "mean": 3.9972757871901905,
+      "observed_pilot_mean_variance": 1.131868213856255,
+      "paired_episodes": 1000,
+      "pilots": 10,
+      "se": 0.33643249157241856,
+      "within_pilot_mean_variance": 1.130242302904328
+    },
+    "theta0.65_kappa0.1": {
+      "df": 9,
+      "estimated_between_pilot_variance": 0.18692544176892356,
+      "high": 2.1620993568053737,
+      "low": 0.8160629369652926,
+      "mean": 1.489081146885333,
+      "observed_pilot_mean_variance": 0.8851320815137089,
+      "paired_episodes": 1000,
+      "pilots": 10,
+      "se": 0.297511694142215,
+      "within_pilot_mean_variance": 0.6982066397447854
+    }
+  },
+  "primary_unchanged": "active_minus_noinfo",
+  "source": {
+    "manifest": "outputs/full/manifest.json",
+    "manifest_sha256": "8dfec1a33e07c96ef625b9b7150046f878d2875510493b9ec37ab143d0b45e58",
+    "pilot_moments": "outputs/tables/pilot_paired_moments.csv",
+    "pilot_moments_sha256": "a7abf4a3026a7210eb31e41d59f932ebd33b811e566c56a05e9d646fae38764b",
+    "raw_csv": "outputs/full/episodes.csv.gz",
+    "raw_csv_sha256": "1f2f28f70bc92c90b98a4d0ed1fcf8689e7e018fdd17230fc0798a919ad48057",
+    "script_sha256": "35a5056718e378a259b267061088887bd66ddad33941a7d8304004b343cb6a11"
+  },
+  "status": "verified_secondary_descriptive_contrast",
+  "uniform_mixture": {
+    "df": 71.37581210073145,
+    "environments": 9,
+    "high": 2.6723820679697003,
+    "low": 2.282582251776676,
+    "mean": 2.477482159873188,
+    "paired_episodes_per_environment": 1000,
+    "pilots_per_environment": 10,
+    "se": 0.09775487842222896
+  },
+  "validated": {
+    "distinct_pilots": 90,
+    "full_rows": 189000,
+    "max_pilot_export_difference": 1.7763568394002505e-15,
+    "nominal_paired_records": 18000,
+    "paired_episode_differences": 9000,
+    "pilot_export_comparisons": 90
+  },
+  "variant": "nominal"
+}

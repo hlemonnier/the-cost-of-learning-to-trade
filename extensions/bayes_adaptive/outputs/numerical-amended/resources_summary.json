@@ -1,0 +1,42 @@
+{
+  "active_pid": null,
+  "lowest_observed_disk_available_bytes": 236226342912,
+  "measurement": "ps RSS samples every15seconds; combined peak across original and resumed v2 sessions, not a continuous OS peak",
+  "process_running": false,
+  "sampled_peak_rss_bytes": 5809995776,
+  "sessions": [
+    {
+      "completed_utc": "2026-09-24T23:17:58.718178+00:00",
+      "lowest_observed_disk_available_bytes": 236226342912,
+      "measurement": "ps RSS samples every15seconds, not a continuous operating-system peak",
+      "pid": 82921,
+      "process_running": false,
+      "sampled_peak_rss_bytes": 5453201408,
+      "samples": 13,
+      "started_utc": "2026-09-24T23:14:43.590404+00:00"
+    },
+    {
+      "exit_code": null,
+      "last_observed_utc": "2026-09-24T23:58:50.119999+00:00",
+      "lowest_observed_disk_available_bytes": 254731710464,
+      "pid": 84903,
+      "process_running": false,
+      "sampled_peak_rss_bytes": 5055512576,
+      "samples": 65,
+      "started_utc": "2026-09-24T23:42:49.240614+00:00",
+      "stop_detected_utc": "2026-09-25T00:11:35.916536+00:00",
+      "stop_reason": "Unexpected process/session disappearance; exit code unavailable"
+    },
+    {
+      "completed_utc": "2026-09-25T00:21:01.132374+00:00",
+      "exit_code": -2,
+      "lowest_observed_disk_available_bytes": 240676028416,
+      "pid": 88763,
+      "process_running": false,
+      "sampled_peak_rss_bytes": 5809995776,
+      "samples": 34,
+      "started_utc": "2026-09-25T00:12:30.657013+00:00",
+      "wall_seconds": 510.4773714999901
+    }
+  ]
+}

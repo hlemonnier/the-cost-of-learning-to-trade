@@ -1,0 +1,1663 @@
+{
+  "analysis": {
+    "cold_rebuild_recommendation": "The actual 16 GiB host supports execution but is I/O-limited at this mesh. Recommend at least 32 GiB RAM for faster resident caching, while keeping the same source, build, geometry and precision. Record its own cold-run wall time, RSS/footprint, disk space and successful full array comparison; a speedup is not yet measured.",
+    "current_run_recommendation": "Keep frozen source and running process unchanged; avoid other memory-intensive work or concurrent cold builds. Do not purge caches or delete/open-map files as a speed workaround.",
+    "estimate_assumptions": "Assumes roughly one full operator reread per horizon and that host aggregate throughput approximates its effective transfer rate. This is an illustrative inference, not a measured worker-only I/O time. MB follows displayed iostat units approximately.",
+    "future_source_amendment": "Not justified to interrupt this run. If many repeated solves are necessary, separately benchmark smaller transient score blocks and explicit retirement of completed V pages, preserving sum/tie ordering and all eleven arrays. Kernel close/reopen alone cannot remove the full reread workload. Any source change needs new cache identity plus complete equivalence and cold validation.",
+    "illustrative_one_operator_sweep_seconds_at_observed_host_transfer_rate_decimal_MB": 31.45965733276764,
+    "leak_conclusion": "No memory leak is proved present or absent. Observed mapped-file magnitude/count is consistent with the current family, without obvious accumulation of all completed families.",
+    "likely_primary_constraint": "Resident file-cache capacity: the 12.43 GiB operator exceeds practical available cache on a shared 16 GiB host. Sequential horizon application rereads all CSR arrays. Observed disk activity, compression and low process CPU are consistent with file paging/cache pressure.",
+    "measured_operator_size_ratio": 2.543901003071112,
+    "memory_lifecycle": "Current family retains 11 NPY arrays and 207 operator NPY mappings. All kernels are traversed each horizon and deleted only after finishing a mode. Q horizons are flushed and advised discard after write. Six V histories remain mapped. Explicit result/continuation arrays are freed by the loop, though the allocator may retain free regions."
+  },
+  "current_family_complete": false,
+  "current_operator": {
+    "array_payload_bytes": 13347074220,
+    "by_array_type": {
+      "data": {
+        "array_payload_bytes": 8872395096,
+        "logical_bytes": 8872403928
+      },
+      "indices": {
+        "array_payload_bytes": 4436197548,
+        "logical_bytes": 4436206380
+      },
+      "indptr": {
+        "array_payload_bytes": 38481576,
+        "logical_bytes": 38490408
+      }
+    },
+    "directory": "/recorded-environment Learning/extensions/bayes_adaptive/cache/v3_endpoint/w33-b65-gh25/operators-bayes",
+    "file_records": [
+      {
+        "array_payload_bytes": 4393224,
+        "dtype": "float64",
+        "elements": 549153,
+        "file": "x0-a0-dq0/data.npy",
+        "logical_bytes": 4393352
+      },
+      {
+        "array_payload_bytes": 2196612,
+        "dtype": "int32",
+        "elements": 549153,
+        "file": "x0-a0-dq0/indices.npy",
+        "logical_bytes": 2196740
+      },
+      {
+        "array_payload_bytes": 557704,
+        "dtype": "int32",
+        "elements": 139426,
+        "file": "x0-a0-dq0/indptr.npy",
+        "logical_bytes": 557832
+      },
+      {
+        "array_payload_bytes": 171439880,
+        "dtype": "float64",
+        "elements": 21429985,
+        "file": "x0-a1-dq-1/data.npy",
+        "logical_bytes": 171440008
+      },
+      {
+        "array_payload_bytes": 85719940,
+        "dtype": "int32",
+        "elements": 21429985,
+        "file": "x0-a1-dq-1/indices.npy",
+        "logical_bytes": 85720068
+      },
+      {
+        "array_payload_bytes": 557704,
+        "dtype": "int32",
+        "elements": 139426,
+        "file": "x0-a1-dq-1/indptr.npy",
+        "logical_bytes": 557832
+      },
+      {
+        "array_payload_bytes": 186861616,
+        "dtype": "float64",
+        "elements": 23357702,
+        "file": "x0-a1-dq0/data.npy",
+        "logical_bytes": 186861744
+      },
+      {
+        "array_payload_bytes": 93430808,
+        "dtype": "int32",
+        "elements": 23357702,
+        "file": "x0-a1-dq0/indices.npy",
+        "logical_bytes": 93430936
+      },
+      {
+        "array_payload_bytes": 557704,
+        "dtype": "int32",
+        "elements": 139426,
+        "file": "x0-a1-dq0/indptr.npy",
+        "logical_bytes": 557832
+      },
+      {
+        "array_payload_bytes": 4393224,
+        "dtype": "float64",
+        "elements": 549153,
+        "file": "x0-a10-dq-1/data.npy",
+        "logical_bytes": 4393352
+      },
+      {
+        "array_payload_bytes": 2196612,
+        "dtype": "int32",
+        "elements": 549153,
+        "file": "x0-a10-dq-1/indices.npy",
+        "logical_bytes": 2196740
+      },
+      {
+        "array_payload_bytes": 557704,
+        "dtype": "int32",
+        "elements": 139426,
+        "file": "x0-a10-dq-1/indptr.npy",
+        "logical_bytes": 557832
+      },
+      {
+        "array_payload_bytes": 154786152,
+        "dtype": "float64",
+        "elements": 19348269,
+        "file": "x0-a2-dq-1/data.npy",
+        "logical_bytes": 154786280
+      },
+      {
+        "array_payload_bytes": 77393076,
+        "dtype": "int32",
+        "elements": 19348269,
+        "file": "x0-a2-dq-1/indices.npy",
+        "logical_bytes": 77393204
+      },
+      {
+        "array_payload_bytes": 557704,
+        "dtype": "int32",
+        "elements": 139426,
+        "file": "x0-a2-dq-1/indptr.npy",
+        "logical_bytes": 557832
+      },
+      {
+        "array_payload_bytes": 186328016,
+        "dtype": "float64",
+        "elements": 23291002,
+        "file": "x0-a2-dq0/data.npy",
+        "logical_bytes": 186328144
+      },
+      {
+        "array_payload_bytes": 93164008,
+        "dtype": "int32",
+        "elements": 23291002,
+        "file": "x0-a2-dq0/indices.npy",
+        "logical_bytes": 93164136
+      },
+      {
+        "array_payload_bytes": 557704,
+        "dtype": "int32",
+        "elements": 139426,
+        "file": "x0-a2-dq0/indptr.npy",
+        "logical_bytes": 557832
+      },
+      {
+        "array_payload_bytes": 181563112,
+        "dtype": "float64",
+        "elements": 22695389,
+        "file": "x0-a3-dq0/data.npy",
+        "logical_bytes": 181563240
+      },
+      {
+        "array_payload_bytes": 90781556,
+        "dtype": "int32",
+        "elements": 22695389,
+        "file": "x0-a3-dq0/indices.npy",
+        "logical_bytes": 90781684
+      },
+      {
+        "array_payload_bytes": 557704,
+        "dtype": "int32",
+        "elements": 139426,
+        "file": "x0-a3-dq0/indptr.npy",
+        "logical_bytes": 557832
+      },
+      {
+        "array_payload_bytes": 179147856,
+        "dtype": "float64",
+        "elements": 22393482,
+        "file": "x0-a3-dq1/data.npy",
+        "logical_bytes": 179147984
+      },
+      {
+        "array_payload_bytes": 89573928,
+        "dtype": "int32",
+        "elements": 22393482,
+        "file": "x0-a3-dq1/indices.npy",
+        "logical_bytes": 89574056
+      },
+      {
+        "array_payload_bytes": 557704,
+        "dtype": "int32",
+        "elements": 139426,
+        "file": "x0-a3-dq1/indptr.npy",
+        "logical_bytes": 557832
+      },
+      {
+        "array_payload_bytes": 128193280,
+        "dtype": "float64",
+        "elements": 16024160,
+        "file": "x0-a4-dq-1/data.npy",
+        "logical_bytes": 128193408
+      },
+      {
+        "array_payload_bytes": 64096640,
+        "dtype": "int32",
+        "elements": 16024160,
+        "file": "x0-a4-dq-1/indices.npy",
+        "logical_bytes": 64096768
+      },
+      {
+        "array_payload_bytes": 557704,
+        "dtype": "int32",
+        "elements": 139426,
+        "file": "x0-a4-dq-1/indptr.npy",
+        "logical_bytes": 557832
+      },
+      {
+        "array_payload_bytes": 103035352,
+        "dtype": "float64",
+        "elements": 12879419,
+        "file": "x0-a4-dq0/data.npy",
+        "logical_bytes": 103035480
+      },
+      {
+        "array_payload_bytes": 51517676,
+        "dtype": "int32",
+        "elements": 12879419,
+        "file": "x0-a4-dq0/indices.npy",
+        "logical_bytes": 51517804
+      },
+      {
+        "array_payload_bytes": 557704,
+        "dtype": "int32",
+        "elements": 139426,
+        "file": "x0-a4-dq0/indptr.npy",
+        "logical_bytes": 557832
+      },
+      {
+        "array_payload_bytes": 142014952,
+        "dtype": "float64",
+        "elements": 17751869,
+        "file": "x0-a4-dq1/data.npy",
+        "logical_bytes": 142015080
+      },
+      {
+        "array_payload_bytes": 71007476,
+        "dtype": "int32",
+        "elements": 17751869,
+        "file": "x0-a4-dq1/indices.npy",
+        "logical_bytes": 71007604
+      },
+      {
+        "array_payload_bytes": 557704,
+        "dtype": "int32",
+        "elements": 139426,
+        "file": "x0-a4-dq1/indptr.npy",
+        "logical_bytes": 557832
+      },
+      {
+        "array_payload_bytes": 117143168,
+        "dtype": "float64",
+        "elements": 14642896,
+        "file": "x0-a5-dq-1/data.npy",
+        "logical_bytes": 117143296
+      },
+      {
+        "array_payload_bytes": 58571584,
+        "dtype": "int32",
+        "elements": 14642896,
+        "file": "x0-a5-dq-1/indices.npy",
+        "logical_bytes": 58571712
+      },
+      {
+        "array_payload_bytes": 557704,
+        "dtype": "int32",
+        "elements": 139426,
+        "file": "x0-a5-dq-1/indptr.npy",
+        "logical_bytes": 557832
+      },
+      {
+        "array_payload_bytes": 214256104,
+        "dtype": "float64",
+        "elements": 26782013,
+        "file": "x0-a5-dq0/data.npy",
+        "logical_bytes": 214256232
+      },
+      {
+        "array_payload_bytes": 107128052,
+        "dtype": "int32",
+        "elements": 26782013,
+        "file": "x0-a5-dq0/indices.npy",
+        "logical_bytes": 107128180
+      },
+      {
+        "array_payload_bytes": 557704,
+        "dtype": "int32",
+        "elements": 139426,
+        "file": "x0-a5-dq0/indptr.npy",
+        "logical_bytes": 557832
+      },
+      {
+        "array_payload_bytes": 152370056,
+        "dtype": "float64",
+        "elements": 19046257,
+        "file": "x0-a5-dq1/data.npy",
+        "logical_bytes": 152370184
+      },
+      {
+        "array_payload_bytes": 76185028,
+        "dtype": "int32",
+        "elements": 19046257,
+        "file": "x0-a5-dq1/indices.npy",
+        "logical_bytes": 76185156
+      },
+      {
+        "array_payload_bytes": 557704,
+        "dtype": "int32",
+        "elements": 139426,
+        "file": "x0-a5-dq1/indptr.npy",
+        "logical_bytes": 557832
+      },
+      {
+        "array_payload_bytes": 188819968,
+        "dtype": "float64",
+        "elements": 23602496,
+        "file": "x0-a6-dq0/data.npy",
+        "logical_bytes": 188820096
+      },
+      {
+        "array_payload_bytes": 94409984,
+        "dtype": "int32",
+        "elements": 23602496,
+        "file": "x0-a6-dq0/indices.npy",
+        "logical_bytes": 94410112
+      },
+      {
+        "array_payload_bytes": 557704,
+        "dtype": "int32",
+        "elements": 139426,
+        "file": "x0-a6-dq0/indptr.npy",
+        "logical_bytes": 557832
+      },
+      {
+        "array_payload_bytes": 163650120,
+        "dtype": "float64",
+        "elements": 20456265,
+        "file": "x0-a6-dq1/data.npy",
+        "logical_bytes": 163650248
+      },
+      {
+        "array_payload_bytes": 81825060,
+        "dtype": "int32",
+        "elements": 20456265,
+        "file": "x0-a6-dq1/indices.npy",
+        "logical_bytes": 81825188
+      },
+      {
+        "array_payload_bytes": 557704,
+        "dtype": "int32",
+        "elements": 139426,
+        "file": "x0-a6-dq1/indptr.npy",
+        "logical_bytes": 557832
+      },
+      {
+        "array_payload_bytes": 138356744,
+        "dtype": "float64",
+        "elements": 17294593,
+        "file": "x0-a7-dq-1/data.npy",
+        "logical_bytes": 138356872
+      },
+      {
+        "array_payload_bytes": 69178372,
+        "dtype": "int32",
+        "elements": 17294593,
+        "file": "x0-a7-dq-1/indices.npy",
+        "logical_bytes": 69178500
+      },
+      {
+        "array_payload_bytes": 557704,
+        "dtype": "int32",
+        "elements": 139426,
+        "file": "x0-a7-dq-1/indptr.npy",
+        "logical_bytes": 557832
+      },
+      {
+        "array_payload_bytes": 85927824,
+        "dtype": "float64",
+        "elements": 10740978,
+        "file": "x0-a7-dq0/data.npy",
+        "logical_bytes": 85927952
+      },
+      {
+        "array_payload_bytes": 42963912,
+        "dtype": "int32",
+        "elements": 10740978,
+        "file": "x0-a7-dq0/indices.npy",
+        "logical_bytes": 42964040
+      },
+      {
+        "array_payload_bytes": 557704,
+        "dtype": "int32",
+        "elements": 139426,
+        "file": "x0-a7-dq0/indptr.npy",
+        "logical_bytes": 557832
+      },
+      {
+        "array_payload_bytes": 128456888,
+        "dtype": "float64",
+        "elements": 16057111,
+        "file": "x0-a7-dq1/data.npy",
+        "logical_bytes": 128457016
+      },
+      {
+        "array_payload_bytes": 64228444,
+        "dtype": "int32",
+        "elements": 16057111,
+        "file": "x0-a7-dq1/indices.npy",
+        "logical_bytes": 64228572
+      },
+      {
+        "array_payload_bytes": 557704,
+        "dtype": "int32",
+        "elements": 139426,
+        "file": "x0-a7-dq1/indptr.npy",
+        "logical_bytes": 557832
+      },
+      {
+        "array_payload_bytes": 126034088,
+        "dtype": "float64",
+        "elements": 15754261,
+        "file": "x0-a8-dq-1/data.npy",
+        "logical_bytes": 126034216
+      },
+      {
+        "array_payload_bytes": 63017044,
+        "dtype": "int32",
+        "elements": 15754261,
+        "file": "x0-a8-dq-1/indices.npy",
+        "logical_bytes": 63017172
+      },
+      {
+        "array_payload_bytes": 557704,
+        "dtype": "int32",
+        "elements": 139426,
+        "file": "x0-a8-dq-1/indptr.npy",
+        "logical_bytes": 557832
+      },
+      {
+        "array_payload_bytes": 110526696,
+        "dtype": "float64",
+        "elements": 13815837,
+        "file": "x0-a8-dq0/data.npy",
+        "logical_bytes": 110526824
+      },
+      {
+        "array_payload_bytes": 55263348,
+        "dtype": "int32",
+        "elements": 13815837,
+        "file": "x0-a8-dq0/indices.npy",
+        "logical_bytes": 55263476
+      },
+      {
+        "array_payload_bytes": 557704,
+        "dtype": "int32",
+        "elements": 139426,
+        "file": "x0-a8-dq0/indptr.npy",
+        "logical_bytes": 557832
+      },
+      {
+        "array_payload_bytes": 138971536,
+        "dtype": "float64",
+        "elements": 17371442,
+        "file": "x0-a8-dq1/data.npy",
+        "logical_bytes": 138971664
+      },
+      {
+        "array_payload_bytes": 69485768,
+        "dtype": "int32",
+        "elements": 17371442,
+        "file": "x0-a8-dq1/indices.npy",
+        "logical_bytes": 69485896
+      },
+      {
+        "array_payload_bytes": 557704,
+        "dtype": "int32",
+        "elements": 139426,
+        "file": "x0-a8-dq1/indptr.npy",
+        "logical_bytes": 557832
+      },
+      {
+        "array_payload_bytes": 4393224,
+        "dtype": "float64",
+        "elements": 549153,
+        "file": "x0-a9-dq1/data.npy",
+        "logical_bytes": 4393352
+      },
+      {
+        "array_payload_bytes": 2196612,
+        "dtype": "int32",
+        "elements": 549153,
+        "file": "x0-a9-dq1/indices.npy",
+        "logical_bytes": 2196740
+      },
+      {
+        "array_payload_bytes": 557704,
+        "dtype": "int32",
+        "elements": 139426,
+        "file": "x0-a9-dq1/indptr.npy",
+        "logical_bytes": 557832
+      },
+      {
+        "array_payload_bytes": 4393224,
+        "dtype": "float64",
+        "elements": 549153,
+        "file": "x1-a0-dq0/data.npy",
+        "logical_bytes": 4393352
+      },
+      {
+        "array_payload_bytes": 2196612,
+        "dtype": "int32",
+        "elements": 549153,
+        "file": "x1-a0-dq0/indices.npy",
+        "logical_bytes": 2196740
+      },
+      {
+        "array_payload_bytes": 557704,
+        "dtype": "int32",
+        "elements": 139426,
+        "file": "x1-a0-dq0/indptr.npy",
+        "logical_bytes": 557832
+      },
+      {
+        "array_payload_bytes": 175244216,
+        "dtype": "float64",
+        "elements": 21905527,
+        "file": "x1-a1-dq-1/data.npy",
+        "logical_bytes": 175244344
+      },
+      {
+        "array_payload_bytes": 87622108,
+        "dtype": "int32",
+        "elements": 21905527,
+        "file": "x1-a1-dq-1/indices.npy",
+        "logical_bytes": 87622236
+      },
+      {
+        "array_payload_bytes": 557704,
+        "dtype": "int32",
+        "elements": 139426,
+        "file": "x1-a1-dq-1/indptr.npy",
+        "logical_bytes": 557832
+      },
+      {
+        "array_payload_bytes": 184603808,
+        "dtype": "float64",
+        "elements": 23075476,
+        "file": "x1-a1-dq0/data.npy",
+        "logical_bytes": 184603936
+      },
+      {
+        "array_payload_bytes": 92301904,
+        "dtype": "int32",
+        "elements": 23075476,
+        "file": "x1-a1-dq0/indices.npy",
+        "logical_bytes": 92302032
+      },
+      {
+        "array_payload_bytes": 557704,
+        "dtype": "int32",
+        "elements": 139426,
+        "file": "x1-a1-dq0/indptr.npy",
+        "logical_bytes": 557832
+      },
+      {
+        "array_payload_bytes": 4393224,
+        "dtype": "float64",
+        "elements": 549153,
+        "file": "x1-a10-dq-1/data.npy",
+        "logical_bytes": 4393352
+      },
+      {
+        "array_payload_bytes": 2196612,
+        "dtype": "int32",
+        "elements": 549153,
+        "file": "x1-a10-dq-1/indices.npy",
+        "logical_bytes": 2196740
+      },
+      {
+        "array_payload_bytes": 557704,
+        "dtype": "int32",
+        "elements": 139426,
+        "file": "x1-a10-dq-1/indptr.npy",
+        "logical_bytes": 557832
+      },
+      {
+        "array_payload_bytes": 158805456,
+        "dtype": "float64",
+        "elements": 19850682,
+        "file": "x1-a2-dq-1/data.npy",
+        "logical_bytes": 158805584
+      },
+      {
+        "array_payload_bytes": 79402728,
+        "dtype": "int32",
+        "elements": 19850682,
+        "file": "x1-a2-dq-1/indices.npy",
+        "logical_bytes": 79402856
+      },
+      {
+        "array_payload_bytes": 557704,
+        "dtype": "int32",
+        "elements": 139426,
+        "file": "x1-a2-dq-1/indptr.npy",
+        "logical_bytes": 557832
+      },
+      {
+        "array_payload_bytes": 188332408,
+        "dtype": "float64",
+        "elements": 23541551,
+        "file": "x1-a2-dq0/data.npy",
+        "logical_bytes": 188332536
+      },
+      {
+        "array_payload_bytes": 94166204,
+        "dtype": "int32",
+        "elements": 23541551,
+        "file": "x1-a2-dq0/indices.npy",
+        "logical_bytes": 94166332
+      },
+      {
+        "array_payload_bytes": 557704,
+        "dtype": "int32",
+        "elements": 139426,
+        "file": "x1-a2-dq0/indptr.npy",
+        "logical_bytes": 557832
+      },
+      {
+        "array_payload_bytes": 184603808,
+        "dtype": "float64",
+        "elements": 23075476,
+        "file": "x1-a3-dq0/data.npy",
+        "logical_bytes": 184603936
+      },
+      {
+        "array_payload_bytes": 92301904,
+        "dtype": "int32",
+        "elements": 23075476,
+        "file": "x1-a3-dq0/indices.npy",
+        "logical_bytes": 92302032
+      },
+      {
+        "array_payload_bytes": 557704,
+        "dtype": "int32",
+        "elements": 139426,
+        "file": "x1-a3-dq0/indptr.npy",
+        "logical_bytes": 557832
+      },
+      {
+        "array_payload_bytes": 175244216,
+        "dtype": "float64",
+        "elements": 21905527,
+        "file": "x1-a3-dq1/data.npy",
+        "logical_bytes": 175244344
+      },
+      {
+        "array_payload_bytes": 87622108,
+        "dtype": "int32",
+        "elements": 21905527,
+        "file": "x1-a3-dq1/indices.npy",
+        "logical_bytes": 87622236
+      },
+      {
+        "array_payload_bytes": 557704,
+        "dtype": "int32",
+        "elements": 139426,
+        "file": "x1-a3-dq1/indptr.npy",
+        "logical_bytes": 557832
+      },
+      {
+        "array_payload_bytes": 135394912,
+        "dtype": "float64",
+        "elements": 16924364,
+        "file": "x1-a4-dq-1/data.npy",
+        "logical_bytes": 135395040
+      },
+      {
+        "array_payload_bytes": 67697456,
+        "dtype": "int32",
+        "elements": 16924364,
+        "file": "x1-a4-dq-1/indices.npy",
+        "logical_bytes": 67697584
+      },
+      {
+        "array_payload_bytes": 557704,
+        "dtype": "int32",
+        "elements": 139426,
+        "file": "x1-a4-dq-1/indptr.npy",
+        "logical_bytes": 557832
+      },
+      {
+        "array_payload_bytes": 10698720,
+        "dtype": "float64",
+        "elements": 1337340,
+        "file": "x1-a4-dq0/data.npy",
+        "logical_bytes": 10698848
+      },
+      {
+        "array_payload_bytes": 5349360,
+        "dtype": "int32",
+        "elements": 1337340,
+        "file": "x1-a4-dq0/indices.npy",
+        "logical_bytes": 5349488
+      },
+      {
+        "array_payload_bytes": 557704,
+        "dtype": "int32",
+        "elements": 139426,
+        "file": "x1-a4-dq0/indptr.npy",
+        "logical_bytes": 557832
+      },
+      {
+        "array_payload_bytes": 135394912,
+        "dtype": "float64",
+        "elements": 16924364,
+        "file": "x1-a4-dq1/data.npy",
+        "logical_bytes": 135395040
+      },
+      {
+        "array_payload_bytes": 67697456,
+        "dtype": "int32",
+        "elements": 16924364,
+        "file": "x1-a4-dq1/indices.npy",
+        "logical_bytes": 67697584
+      },
+      {
+        "array_payload_bytes": 557704,
+        "dtype": "int32",
+        "elements": 139426,
+        "file": "x1-a4-dq1/indptr.npy",
+        "logical_bytes": 557832
+      },
+      {
+        "array_payload_bytes": 123078184,
+        "dtype": "float64",
+        "elements": 15384773,
+        "file": "x1-a5-dq-1/data.npy",
+        "logical_bytes": 123078312
+      },
+      {
+        "array_payload_bytes": 61539092,
+        "dtype": "int32",
+        "elements": 15384773,
+        "file": "x1-a5-dq-1/indices.npy",
+        "logical_bytes": 61539220
+      },
+      {
+        "array_payload_bytes": 557704,
+        "dtype": "int32",
+        "elements": 139426,
+        "file": "x1-a5-dq-1/indptr.npy",
+        "logical_bytes": 557832
+      },
+      {
+        "array_payload_bytes": 164249360,
+        "dtype": "float64",
+        "elements": 20531170,
+        "file": "x1-a5-dq0/data.npy",
+        "logical_bytes": 164249488
+      },
+      {
+        "array_payload_bytes": 82124680,
+        "dtype": "int32",
+        "elements": 20531170,
+        "file": "x1-a5-dq0/indices.npy",
+        "logical_bytes": 82124808
+      },
+      {
+        "array_payload_bytes": 557704,
+        "dtype": "int32",
+        "elements": 139426,
+        "file": "x1-a5-dq0/indptr.npy",
+        "logical_bytes": 557832
+      },
+      {
+        "array_payload_bytes": 145499656,
+        "dtype": "float64",
+        "elements": 18187457,
+        "file": "x1-a5-dq1/data.npy",
+        "logical_bytes": 145499784
+      },
+      {
+        "array_payload_bytes": 72749828,
+        "dtype": "int32",
+        "elements": 18187457,
+        "file": "x1-a5-dq1/indices.npy",
+        "logical_bytes": 72749956
+      },
+      {
+        "array_payload_bytes": 557704,
+        "dtype": "int32",
+        "elements": 139426,
+        "file": "x1-a5-dq1/indptr.npy",
+        "logical_bytes": 557832
+      },
+      {
+        "array_payload_bytes": 188332408,
+        "dtype": "float64",
+        "elements": 23541551,
+        "file": "x1-a6-dq0/data.npy",
+        "logical_bytes": 188332536
+      },
+      {
+        "array_payload_bytes": 94166204,
+        "dtype": "int32",
+        "elements": 23541551,
+        "file": "x1-a6-dq0/indices.npy",
+        "logical_bytes": 94166332
+      },
+      {
+        "array_payload_bytes": 557704,
+        "dtype": "int32",
+        "elements": 139426,
+        "file": "x1-a6-dq0/indptr.npy",
+        "logical_bytes": 557832
+      },
+      {
+        "array_payload_bytes": 158805456,
+        "dtype": "float64",
+        "elements": 19850682,
+        "file": "x1-a6-dq1/data.npy",
+        "logical_bytes": 158805584
+      },
+      {
+        "array_payload_bytes": 79402728,
+        "dtype": "int32",
+        "elements": 19850682,
+        "file": "x1-a6-dq1/indices.npy",
+        "logical_bytes": 79402856
+      },
+      {
+        "array_payload_bytes": 557704,
+        "dtype": "int32",
+        "elements": 139426,
+        "file": "x1-a6-dq1/indptr.npy",
+        "logical_bytes": 557832
+      },
+      {
+        "array_payload_bytes": 145499656,
+        "dtype": "float64",
+        "elements": 18187457,
+        "file": "x1-a7-dq-1/data.npy",
+        "logical_bytes": 145499784
+      },
+      {
+        "array_payload_bytes": 72749828,
+        "dtype": "int32",
+        "elements": 18187457,
+        "file": "x1-a7-dq-1/indices.npy",
+        "logical_bytes": 72749956
+      },
+      {
+        "array_payload_bytes": 557704,
+        "dtype": "int32",
+        "elements": 139426,
+        "file": "x1-a7-dq-1/indptr.npy",
+        "logical_bytes": 557832
+      },
+      {
+        "array_payload_bytes": 164249360,
+        "dtype": "float64",
+        "elements": 20531170,
+        "file": "x1-a7-dq0/data.npy",
+        "logical_bytes": 164249488
+      },
+      {
+        "array_payload_bytes": 82124680,
+        "dtype": "int32",
+        "elements": 20531170,
+        "file": "x1-a7-dq0/indices.npy",
+        "logical_bytes": 82124808
+      },
+      {
+        "array_payload_bytes": 557704,
+        "dtype": "int32",
+        "elements": 139426,
+        "file": "x1-a7-dq0/indptr.npy",
+        "logical_bytes": 557832
+      },
+      {
+        "array_payload_bytes": 123078184,
+        "dtype": "float64",
+        "elements": 15384773,
+        "file": "x1-a7-dq1/data.npy",
+        "logical_bytes": 123078312
+      },
+      {
+        "array_payload_bytes": 61539092,
+        "dtype": "int32",
+        "elements": 15384773,
+        "file": "x1-a7-dq1/indices.npy",
+        "logical_bytes": 61539220
+      },
+      {
+        "array_payload_bytes": 557704,
+        "dtype": "int32",
+        "elements": 139426,
+        "file": "x1-a7-dq1/indptr.npy",
+        "logical_bytes": 557832
+      },
+      {
+        "array_payload_bytes": 132605240,
+        "dtype": "float64",
+        "elements": 16575655,
+        "file": "x1-a8-dq-1/data.npy",
+        "logical_bytes": 132605368
+      },
+      {
+        "array_payload_bytes": 66302620,
+        "dtype": "int32",
+        "elements": 16575655,
+        "file": "x1-a8-dq-1/indices.npy",
+        "logical_bytes": 66302748
+      },
+      {
+        "array_payload_bytes": 557704,
+        "dtype": "int32",
+        "elements": 139426,
+        "file": "x1-a8-dq-1/indptr.npy",
+        "logical_bytes": 557832
+      },
+      {
+        "array_payload_bytes": 10764064,
+        "dtype": "float64",
+        "elements": 1345508,
+        "file": "x1-a8-dq0/data.npy",
+        "logical_bytes": 10764192
+      },
+      {
+        "array_payload_bytes": 5382032,
+        "dtype": "int32",
+        "elements": 1345508,
+        "file": "x1-a8-dq0/indices.npy",
+        "logical_bytes": 5382160
+      },
+      {
+        "array_payload_bytes": 557704,
+        "dtype": "int32",
+        "elements": 139426,
+        "file": "x1-a8-dq0/indptr.npy",
+        "logical_bytes": 557832
+      },
+      {
+        "array_payload_bytes": 132605240,
+        "dtype": "float64",
+        "elements": 16575655,
+        "file": "x1-a8-dq1/data.npy",
+        "logical_bytes": 132605368
+      },
+      {
+        "array_payload_bytes": 66302620,
+        "dtype": "int32",
+        "elements": 16575655,
+        "file": "x1-a8-dq1/indices.npy",
+        "logical_bytes": 66302748
+      },
+      {
+        "array_payload_bytes": 557704,
+        "dtype": "int32",
+        "elements": 139426,
+        "file": "x1-a8-dq1/indptr.npy",
+        "logical_bytes": 557832
+      },
+      {
+        "array_payload_bytes": 4393224,
+        "dtype": "float64",
+        "elements": 549153,
+        "file": "x1-a9-dq1/data.npy",
+        "logical_bytes": 4393352
+      },
+      {
+        "array_payload_bytes": 2196612,
+        "dtype": "int32",
+        "elements": 549153,
+        "file": "x1-a9-dq1/indices.npy",
+        "logical_bytes": 2196740
+      },
+      {
+        "array_payload_bytes": 557704,
+        "dtype": "int32",
+        "elements": 139426,
+        "file": "x1-a9-dq1/indptr.npy",
+        "logical_bytes": 557832
+      },
+      {
+        "array_payload_bytes": 4393224,
+        "dtype": "float64",
+        "elements": 549153,
+        "file": "x2-a0-dq0/data.npy",
+        "logical_bytes": 4393352
+      },
+      {
+        "array_payload_bytes": 2196612,
+        "dtype": "int32",
+        "elements": 549153,
+        "file": "x2-a0-dq0/indices.npy",
+        "logical_bytes": 2196740
+      },
+      {
+        "array_payload_bytes": 557704,
+        "dtype": "int32",
+        "elements": 139426,
+        "file": "x2-a0-dq0/indptr.npy",
+        "logical_bytes": 557832
+      },
+      {
+        "array_payload_bytes": 179147856,
+        "dtype": "float64",
+        "elements": 22393482,
+        "file": "x2-a1-dq-1/data.npy",
+        "logical_bytes": 179147984
+      },
+      {
+        "array_payload_bytes": 89573928,
+        "dtype": "int32",
+        "elements": 22393482,
+        "file": "x2-a1-dq-1/indices.npy",
+        "logical_bytes": 89574056
+      },
+      {
+        "array_payload_bytes": 557704,
+        "dtype": "int32",
+        "elements": 139426,
+        "file": "x2-a1-dq-1/indptr.npy",
+        "logical_bytes": 557832
+      },
+      {
+        "array_payload_bytes": 181563112,
+        "dtype": "float64",
+        "elements": 22695389,
+        "file": "x2-a1-dq0/data.npy",
+        "logical_bytes": 181563240
+      },
+      {
+        "array_payload_bytes": 90781556,
+        "dtype": "int32",
+        "elements": 22695389,
+        "file": "x2-a1-dq0/indices.npy",
+        "logical_bytes": 90781684
+      },
+      {
+        "array_payload_bytes": 557704,
+        "dtype": "int32",
+        "elements": 139426,
+        "file": "x2-a1-dq0/indptr.npy",
+        "logical_bytes": 557832
+      },
+      {
+        "array_payload_bytes": 4393224,
+        "dtype": "float64",
+        "elements": 549153,
+        "file": "x2-a10-dq-1/data.npy",
+        "logical_bytes": 4393352
+      },
+      {
+        "array_payload_bytes": 2196612,
+        "dtype": "int32",
+        "elements": 549153,
+        "file": "x2-a10-dq-1/indices.npy",
+        "logical_bytes": 2196740
+      },
+      {
+        "array_payload_bytes": 557704,
+        "dtype": "int32",
+        "elements": 139426,
+        "file": "x2-a10-dq-1/indptr.npy",
+        "logical_bytes": 557832
+      },
+      {
+        "array_payload_bytes": 163650120,
+        "dtype": "float64",
+        "elements": 20456265,
+        "file": "x2-a2-dq-1/data.npy",
+        "logical_bytes": 163650248
+      },
+      {
+        "array_payload_bytes": 81825060,
+        "dtype": "int32",
+        "elements": 20456265,
+        "file": "x2-a2-dq-1/indices.npy",
+        "logical_bytes": 81825188
+      },
+      {
+        "array_payload_bytes": 557704,
+        "dtype": "int32",
+        "elements": 139426,
+        "file": "x2-a2-dq-1/indptr.npy",
+        "logical_bytes": 557832
+      },
+      {
+        "array_payload_bytes": 188819968,
+        "dtype": "float64",
+        "elements": 23602496,
+        "file": "x2-a2-dq0/data.npy",
+        "logical_bytes": 188820096
+      },
+      {
+        "array_payload_bytes": 94409984,
+        "dtype": "int32",
+        "elements": 23602496,
+        "file": "x2-a2-dq0/indices.npy",
+        "logical_bytes": 94410112
+      },
+      {
+        "array_payload_bytes": 557704,
+        "dtype": "int32",
+        "elements": 139426,
+        "file": "x2-a2-dq0/indptr.npy",
+        "logical_bytes": 557832
+      },
+      {
+        "array_payload_bytes": 186861616,
+        "dtype": "float64",
+        "elements": 23357702,
+        "file": "x2-a3-dq0/data.npy",
+        "logical_bytes": 186861744
+      },
+      {
+        "array_payload_bytes": 93430808,
+        "dtype": "int32",
+        "elements": 23357702,
+        "file": "x2-a3-dq0/indices.npy",
+        "logical_bytes": 93430936
+      },
+      {
+        "array_payload_bytes": 557704,
+        "dtype": "int32",
+        "elements": 139426,
+        "file": "x2-a3-dq0/indptr.npy",
+        "logical_bytes": 557832
+      },
+      {
+        "array_payload_bytes": 171439880,
+        "dtype": "float64",
+        "elements": 21429985,
+        "file": "x2-a3-dq1/data.npy",
+        "logical_bytes": 171440008
+      },
+      {
+        "array_payload_bytes": 85719940,
+        "dtype": "int32",
+        "elements": 21429985,
+        "file": "x2-a3-dq1/indices.npy",
+        "logical_bytes": 85720068
+      },
+      {
+        "array_payload_bytes": 557704,
+        "dtype": "int32",
+        "elements": 139426,
+        "file": "x2-a3-dq1/indptr.npy",
+        "logical_bytes": 557832
+      },
+      {
+        "array_payload_bytes": 142014952,
+        "dtype": "float64",
+        "elements": 17751869,
+        "file": "x2-a4-dq-1/data.npy",
+        "logical_bytes": 142015080
+      },
+      {
+        "array_payload_bytes": 71007476,
+        "dtype": "int32",
+        "elements": 17751869,
+        "file": "x2-a4-dq-1/indices.npy",
+        "logical_bytes": 71007604
+      },
+      {
+        "array_payload_bytes": 557704,
+        "dtype": "int32",
+        "elements": 139426,
+        "file": "x2-a4-dq-1/indptr.npy",
+        "logical_bytes": 557832
+      },
+      {
+        "array_payload_bytes": 103035352,
+        "dtype": "float64",
+        "elements": 12879419,
+        "file": "x2-a4-dq0/data.npy",
+        "logical_bytes": 103035480
+      },
+      {
+        "array_payload_bytes": 51517676,
+        "dtype": "int32",
+        "elements": 12879419,
+        "file": "x2-a4-dq0/indices.npy",
+        "logical_bytes": 51517804
+      },
+      {
+        "array_payload_bytes": 557704,
+        "dtype": "int32",
+        "elements": 139426,
+        "file": "x2-a4-dq0/indptr.npy",
+        "logical_bytes": 557832
+      },
+      {
+        "array_payload_bytes": 128193280,
+        "dtype": "float64",
+        "elements": 16024160,
+        "file": "x2-a4-dq1/data.npy",
+        "logical_bytes": 128193408
+      },
+      {
+        "array_payload_bytes": 64096640,
+        "dtype": "int32",
+        "elements": 16024160,
+        "file": "x2-a4-dq1/indices.npy",
+        "logical_bytes": 64096768
+      },
+      {
+        "array_payload_bytes": 557704,
+        "dtype": "int32",
+        "elements": 139426,
+        "file": "x2-a4-dq1/indptr.npy",
+        "logical_bytes": 557832
+      },
+      {
+        "array_payload_bytes": 128456888,
+        "dtype": "float64",
+        "elements": 16057111,
+        "file": "x2-a5-dq-1/data.npy",
+        "logical_bytes": 128457016
+      },
+      {
+        "array_payload_bytes": 64228444,
+        "dtype": "int32",
+        "elements": 16057111,
+        "file": "x2-a5-dq-1/indices.npy",
+        "logical_bytes": 64228572
+      },
+      {
+        "array_payload_bytes": 557704,
+        "dtype": "int32",
+        "elements": 139426,
+        "file": "x2-a5-dq-1/indptr.npy",
+        "logical_bytes": 557832
+      },
+      {
+        "array_payload_bytes": 85927824,
+        "dtype": "float64",
+        "elements": 10740978,
+        "file": "x2-a5-dq0/data.npy",
+        "logical_bytes": 85927952
+      },
+      {
+        "array_payload_bytes": 42963912,
+        "dtype": "int32",
+        "elements": 10740978,
+        "file": "x2-a5-dq0/indices.npy",
+        "logical_bytes": 42964040
+      },
+      {
+        "array_payload_bytes": 557704,
+        "dtype": "int32",
+        "elements": 139426,
+        "file": "x2-a5-dq0/indptr.npy",
+        "logical_bytes": 557832
+      },
+      {
+        "array_payload_bytes": 138356744,
+        "dtype": "float64",
+        "elements": 17294593,
+        "file": "x2-a5-dq1/data.npy",
+        "logical_bytes": 138356872
+      },
+      {
+        "array_payload_bytes": 69178372,
+        "dtype": "int32",
+        "elements": 17294593,
+        "file": "x2-a5-dq1/indices.npy",
+        "logical_bytes": 69178500
+      },
+      {
+        "array_payload_bytes": 557704,
+        "dtype": "int32",
+        "elements": 139426,
+        "file": "x2-a5-dq1/indptr.npy",
+        "logical_bytes": 557832
+      },
+      {
+        "array_payload_bytes": 186328016,
+        "dtype": "float64",
+        "elements": 23291002,
+        "file": "x2-a6-dq0/data.npy",
+        "logical_bytes": 186328144
+      },
+      {
+        "array_payload_bytes": 93164008,
+        "dtype": "int32",
+        "elements": 23291002,
+        "file": "x2-a6-dq0/indices.npy",
+        "logical_bytes": 93164136
+      },
+      {
+        "array_payload_bytes": 557704,
+        "dtype": "int32",
+        "elements": 139426,
+        "file": "x2-a6-dq0/indptr.npy",
+        "logical_bytes": 557832
+      },
+      {
+        "array_payload_bytes": 154786152,
+        "dtype": "float64",
+        "elements": 19348269,
+        "file": "x2-a6-dq1/data.npy",
+        "logical_bytes": 154786280
+      },
+      {
+        "array_payload_bytes": 77393076,
+        "dtype": "int32",
+        "elements": 19348269,
+        "file": "x2-a6-dq1/indices.npy",
+        "logical_bytes": 77393204
+      },
+      {
+        "array_payload_bytes": 557704,
+        "dtype": "int32",
+        "elements": 139426,
+        "file": "x2-a6-dq1/indptr.npy",
+        "logical_bytes": 557832
+      },
+      {
+        "array_payload_bytes": 152370056,
+        "dtype": "float64",
+        "elements": 19046257,
+        "file": "x2-a7-dq-1/data.npy",
+        "logical_bytes": 152370184
+      },
+      {
+        "array_payload_bytes": 76185028,
+        "dtype": "int32",
+        "elements": 19046257,
+        "file": "x2-a7-dq-1/indices.npy",
+        "logical_bytes": 76185156
+      },
+      {
+        "array_payload_bytes": 557704,
+        "dtype": "int32",
+        "elements": 139426,
+        "file": "x2-a7-dq-1/indptr.npy",
+        "logical_bytes": 557832
+      },
+      {
+        "array_payload_bytes": 214256104,
+        "dtype": "float64",
+        "elements": 26782013,
+        "file": "x2-a7-dq0/data.npy",
+        "logical_bytes": 214256232
+      },
+      {
+        "array_payload_bytes": 107128052,
+        "dtype": "int32",
+        "elements": 26782013,
+        "file": "x2-a7-dq0/indices.npy",
+        "logical_bytes": 107128180
+      },
+      {
+        "array_payload_bytes": 557704,
+        "dtype": "int32",
+        "elements": 139426,
+        "file": "x2-a7-dq0/indptr.npy",
+        "logical_bytes": 557832
+      },
+      {
+        "array_payload_bytes": 117143168,
+        "dtype": "float64",
+        "elements": 14642896,
+        "file": "x2-a7-dq1/data.npy",
+        "logical_bytes": 117143296
+      },
+      {
+        "array_payload_bytes": 58571584,
+        "dtype": "int32",
+        "elements": 14642896,
+        "file": "x2-a7-dq1/indices.npy",
+        "logical_bytes": 58571712
+      },
+      {
+        "array_payload_bytes": 557704,
+        "dtype": "int32",
+        "elements": 139426,
+        "file": "x2-a7-dq1/indptr.npy",
+        "logical_bytes": 557832
+      },
+      {
+        "array_payload_bytes": 138971536,
+        "dtype": "float64",
+        "elements": 17371442,
+        "file": "x2-a8-dq-1/data.npy",
+        "logical_bytes": 138971664
+      },
+      {
+        "array_payload_bytes": 69485768,
+        "dtype": "int32",
+        "elements": 17371442,
+        "file": "x2-a8-dq-1/indices.npy",
+        "logical_bytes": 69485896
+      },
+      {
+        "array_payload_bytes": 557704,
+        "dtype": "int32",
+        "elements": 139426,
+        "file": "x2-a8-dq-1/indptr.npy",
+        "logical_bytes": 557832
+      },
+      {
+        "array_payload_bytes": 110526696,
+        "dtype": "float64",
+        "elements": 13815837,
+        "file": "x2-a8-dq0/data.npy",
+        "logical_bytes": 110526824
+      },
+      {
+        "array_payload_bytes": 55263348,
+        "dtype": "int32",
+        "elements": 13815837,
+        "file": "x2-a8-dq0/indices.npy",
+        "logical_bytes": 55263476
+      },
+      {
+        "array_payload_bytes": 557704,
+        "dtype": "int32",
+        "elements": 139426,
+        "file": "x2-a8-dq0/indptr.npy",
+        "logical_bytes": 557832
+      },
+      {
+        "array_payload_bytes": 126034088,
+        "dtype": "float64",
+        "elements": 15754261,
+        "file": "x2-a8-dq1/data.npy",
+        "logical_bytes": 126034216
+      },
+      {
+        "array_payload_bytes": 63017044,
+        "dtype": "int32",
+        "elements": 15754261,
+        "file": "x2-a8-dq1/indices.npy",
+        "logical_bytes": 63017172
+      },
+      {
+        "array_payload_bytes": 557704,
+        "dtype": "int32",
+        "elements": 139426,
+        "file": "x2-a8-dq1/indptr.npy",
+        "logical_bytes": 557832
+      },
+      {
+        "array_payload_bytes": 4393224,
+        "dtype": "float64",
+        "elements": 549153,
+        "file": "x2-a9-dq1/data.npy",
+        "logical_bytes": 4393352
+      },
+      {
+        "array_payload_bytes": 2196612,
+        "dtype": "int32",
+        "elements": 549153,
+        "file": "x2-a9-dq1/indices.npy",
+        "logical_bytes": 2196740
+      },
+      {
+        "array_payload_bytes": 557704,
+        "dtype": "int32",
+        "elements": 139426,
+        "file": "x2-a9-dq1/indptr.npy",
+        "logical_bytes": 557832
+      }
+    ],
+    "kernel_count": 69,
+    "logical_bytes_including_npy_headers": 13347100716,
+    "maximum_kernel_logical_bytes": 321942244,
+    "measured_utc": "2026-09-27T19:53:20.164130+00:00",
+    "npy_file_count": 207
+  },
+  "derived_shape_sizes_bytes": {
+    "all_six_value_histories_float64": 3111966000,
+    "all_three_Q_histories_float64": 17115813000,
+    "combined_three_scores_float64": 552123000,
+    "one_retained_Q_horizon_float64": 184041000,
+    "rewards_float64": 184041000,
+    "signal_expected_values_float64": 50193000,
+    "three_continuations_float64": 50193000
+  },
+  "frozen_inputs_unchanged_during_diagnosis": true,
+  "generated_utc": "2026-09-27T19:53:28.333232+00:00",
+  "geometry_amendment_sha256": "a23139363166be0502af795f5c907a830451d2b92cfdcaaab3006ecee347ca56",
+  "horizon_timing_observations": [
+    {
+      "completed_horizons": 30,
+      "family": "w25-b49-gh25",
+      "max_seconds": 15.91545420800685,
+      "median_seconds": 3.765264291985659,
+      "min_seconds": 3.468436916999053,
+      "mode": "bayes",
+      "note": "First horizon excluded because its elapsed time includes setup before completion",
+      "successive_horizon_intervals": 29
+    },
+    {
+      "completed_horizons": 30,
+      "family": "w25-b49-gh25",
+      "max_seconds": 0.39330116601195186,
+      "median_seconds": 0.26630225000553764,
+      "min_seconds": 0.23386041598860174,
+      "mode": "no_feedback",
+      "note": "First horizon excluded because its elapsed time includes setup before completion",
+      "successive_horizon_intervals": 29
+    },
+    {
+      "completed_horizons": 30,
+      "family": "w25-b49-gh25",
+      "max_seconds": 1.1079467079835013,
+      "median_seconds": 1.0102299579884857,
+      "min_seconds": 0.9812054170179181,
+      "mode": "frozen_model",
+      "note": "First horizon excluded because its elapsed time includes setup before completion",
+      "successive_horizon_intervals": 29
+    },
+    {
+      "completed_horizons": 14,
+      "family": "w33-b65-gh25_incomplete",
+      "max_seconds": 38.15202124998905,
+      "median_seconds": 33.64682495800662,
+      "min_seconds": 31.636212708981475,
+      "mode": "bayes",
+      "note": "First horizon excluded because its elapsed time includes setup before completion",
+      "successive_horizon_intervals": 13
+    }
+  ],
+  "host_io": {
+    "command": [
+      "iostat",
+      "-d",
+      "-w",
+      "2",
+      "-c",
+      "4"
+    ],
+    "finished_utc": "2026-09-27T19:53:26.211211+00:00",
+    "first_since_boot_sample_excluded": [
+      26.42,
+      350.0,
+      9.02
+    ],
+    "raw_stdout": "              disk0 \n    KB/t  tps  MB/s \n   26.42  350  9.02 \n   33.31 13043 424.26 \n   33.55 13729 449.75 \n   47.97 5997 280.98 \n",
+    "scope": "whole disk0 aggregate activity, not a worker-exclusive read counter",
+    "started_utc": "2026-09-27T19:53:20.176058+00:00",
+    "subsequent_two_second_samples": [
+      {
+        "KB_per_transfer": 33.31,
+        "reported_MB_per_second": 424.26,
+        "transfers_per_second": 13043.0
+      },
+      {
+        "KB_per_transfer": 33.55,
+        "reported_MB_per_second": 449.75,
+        "transfers_per_second": 13729.0
+      },
+      {
+        "KB_per_transfer": 47.97,
+        "reported_MB_per_second": 280.98,
+        "transfers_per_second": 5997.0
+      }
+    ]
+  },
+  "host_physical_ram": {
+    "stdout": "hw.memsize: 17179869184\n",
+    "utc": "2026-09-27T19:53:28.327959+00:00"
+  },
+  "host_swapusage": {
+    "stdout": "vm.swapusage: total = 2048.00M  used = 981.38M  free = 1066.62M  (encrypted)\n",
+    "utc": "2026-09-27T19:53:28.322920+00:00"
+  },
+  "host_vm_counters_delta": {
+    "Compressions": 100917,
+    "Decompressions": 173716,
+    "Pageins": 151551,
+    "Pageouts": 76,
+    "Swapins": 4,
+    "Swapouts": 0
+  },
+  "previous_complete_operator": {
+    "array_payload_bytes": 5246695608,
+    "build_seconds": 37.66384350002045,
+    "family": "w25-b49-gh25",
+    "manifest_sha256": "db0dba6f0dad79de3254485531ddd8d00c5e50bcb84f5f06060765a3f367e4af",
+    "nonzeros": 435844036
+  },
+  "scope": "Read-only observational diagnosis; no solver input/source mutation, interruption or additional research calculation",
+  "snapshots": [
+    {
+      "host_vm": {
+        "Compressions": 386769011,
+        "Decompressions": 337772931,
+        "Pageins": 198922276,
+        "Pageouts": 1824596,
+        "Pages free": 4115,
+        "Pages occupied by compressor": 383234,
+        "Swapins": 4282312,
+        "Swapouts": 5868055
+      },
+      "host_vm_scope": "all processes and kernel; not uniquely attributable to worker",
+      "process_ps": "  PID  PPID  %CPU    RSS      VSZ ELAPSED      TIME\n22987 22983  39.9 5565008 523175872   21:44  14:16.79\n",
+      "ps_percent_cpu_scope": "process, not percentage of all CPU cores",
+      "ps_rss_unit": "KiB",
+      "utc": "2026-09-27T19:53:20.164130+00:00",
+      "vm_page_size_bytes": 16384
+    },
+    {
+      "host_vm": {
+        "Compressions": 386869928,
+        "Decompressions": 337946647,
+        "Pageins": 199073827,
+        "Pageouts": 1824672,
+        "Pages free": 4153,
+        "Pages occupied by compressor": 326029,
+        "Swapins": 4282316,
+        "Swapouts": 5868055
+      },
+      "host_vm_scope": "all processes and kernel; not uniquely attributable to worker",
+      "process_ps": "  PID  PPID  %CPU    RSS      VSZ ELAPSED      TIME\n22987 22983  56.9 5953616 523175872   21:50  14:19.97\n",
+      "ps_percent_cpu_scope": "process, not percentage of all CPU cores",
+      "ps_rss_unit": "KiB",
+      "utc": "2026-09-27T19:53:26.211324+00:00",
+      "vm_page_size_bytes": 16384
+    }
+  ],
+  "solver_sha256": "8fdf88cae1b6b74ebd738e8b07942c15fd99042e2fd4f80f112660fc77f9e1ff",
+  "vmmap": {
+    "command": [
+      "vmmap",
+      "-summary",
+      "22987"
+    ],
+    "finished_utc": "2026-09-27T19:53:28.322870+00:00",
+    "note": "Virtual file mapping size is not resident RAM. vmmap SWAPPED labels are retained as reported, without assigning all of them to physical swap I/O.",
+    "returncode": 0,
+    "started_utc": "2026-09-27T19:53:26.221525+00:00",
+    "summary_excerpt": [
+      "Physical footprint:         1.5G",
+      "Physical footprint (peak):  3.3G",
+      "Writable regions: Total=2.1G written=1.3G(61%) resident=861.3M(41%) swapped_out=660.6M(31%) unallocated=598.6M(28%)",
+      "Malloc Large                     931.3M   551.5M   551.5M   378.9M       0K       0K       0K       15         see MALLOC ZONE table below",
+      "Malloc Large (empty)             397.3M   292.5M   292.5M   102.1M       0K       0K       0K       12         see MALLOC ZONE table below",
+      "mapped file                       31.3G     4.3G       0K       0K       0K       0K       0K      218 ",
+      "TOTAL                            420.5G     5.3G   862.2M   667.5M       0K       0K       0K     2963 ",
+      "TOTAL                               1.5G     555.6M     555.6M     514.3M      37822     967.4M     102.5M     10%     169"
+    ]
+  },
+  "worker_pid": 22987
+}

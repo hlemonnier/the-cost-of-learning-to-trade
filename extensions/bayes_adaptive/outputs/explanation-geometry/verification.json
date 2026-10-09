@@ -1,0 +1,255 @@
+{
+  "commands": [
+    {
+      "command": [
+        "/recorded-environment Learning/.venv/bin/python",
+        "/recorded-environment Learning/extensions/bayes_adaptive/verify_explanation_geometry.py",
+        "--emit",
+        "uniform",
+        "--out",
+        "/recorded-environment Learning/extensions/bayes_adaptive/outputs/explanation-geometry/uniform.json"
+      ],
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "returncode": 0
+    },
+    {
+      "command": [
+        "/recorded-environment Learning/.venv/bin/python",
+        "/recorded-environment Learning/extensions/bayes_adaptive/verify_explanation_geometry.py",
+        "--emit",
+        "endpoint_sine",
+        "--out",
+        "/recorded-environment Learning/extensions/bayes_adaptive/outputs/explanation-geometry/endpoint_sine.json"
+      ],
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "returncode": 0
+    },
+    {
+      "command": [
+        "/recorded-environment Learning/.venv/bin/python",
+        "/recorded-environment Learning/extensions/bayes_adaptive/verify_explanation_geometry.py",
+        "--emit",
+        "misspelled_endpoint",
+        "--out",
+        "/recorded-environment Learning/extensions/bayes_adaptive/outputs/explanation-geometry/misspelled_endpoint.json"
+      ],
+      "log_sha256": "a3a90798fffe930cb953a5c374cd2620a10680f7372e3c4fb95b85cc532d87ef",
+      "returncode": 1
+    }
+  ],
+  "explain_sha256": "21503a858f7f6d8e8a3c3b0337b632e4ea15f080c010168a5e41081fe254ba18",
+  "independent_normal_transport": {
+    "1": 0.7978845608028654,
+    "25": 0.1567187669850324
+  },
+  "independently_recomputed_horizon_rows": 310,
+  "independently_recomputed_levels": 10,
+  "levels": [
+    {
+      "belief_points": 17,
+      "final": {
+        "additional_final_off_grid_interpolation": 1.548246685133103,
+        "one_sided_allowance": 48.1884113770826,
+        "remaining": 30,
+        "sum_D_continuations": 101.29500000000002,
+        "two_sided_nodal_allowance": 70.73112346139446,
+        "two_sided_off_grid_allowance": 72.27937014652757
+      },
+      "independent_delta_grid": 0.2225451610080642,
+      "independent_max_cell_widths": {
+        "conditional_plus0": 0.09754516100806421,
+        "conditional_plus1": 0.09754516100806421,
+        "weight0": 0.125
+      },
+      "quadrature_points": 1,
+      "weight_points": 9
+    },
+    {
+      "belief_points": 17,
+      "final": {
+        "additional_final_off_grid_interpolation": 1.548246685133103,
+        "one_sided_allowance": 9.465063976654482,
+        "remaining": 30,
+        "sum_D_continuations": 101.29500000000002,
+        "two_sided_nodal_allowance": 32.00777606096635,
+        "two_sided_off_grid_allowance": 33.55602274609945
+      },
+      "independent_delta_grid": 0.2225451610080642,
+      "independent_max_cell_widths": {
+        "conditional_plus0": 0.09754516100806421,
+        "conditional_plus1": 0.09754516100806421,
+        "weight0": 0.125
+      },
+      "quadrature_points": 25,
+      "weight_points": 9
+    },
+    {
+      "belief_points": 33,
+      "final": {
+        "additional_final_off_grid_interpolation": 0.7757651226363776,
+        "one_sided_allowance": 48.1884113770826,
+        "remaining": 30,
+        "sum_D_continuations": 101.29500000000002,
+        "two_sided_nodal_allowance": 59.483671991924034,
+        "two_sided_off_grid_allowance": 60.25943711456041
+      },
+      "independent_delta_grid": 0.11150857016478044,
+      "independent_max_cell_widths": {
+        "conditional_plus0": 0.04900857016478044,
+        "conditional_plus1": 0.04900857016478044,
+        "weight0": 0.0625
+      },
+      "quadrature_points": 1,
+      "weight_points": 17
+    },
+    {
+      "belief_points": 33,
+      "final": {
+        "additional_final_off_grid_interpolation": 0.7757651226363776,
+        "one_sided_allowance": 9.465063976654482,
+        "remaining": 30,
+        "sum_D_continuations": 101.29500000000002,
+        "two_sided_nodal_allowance": 20.76032459149592,
+        "two_sided_off_grid_allowance": 21.5360897141323
+      },
+      "independent_delta_grid": 0.11150857016478044,
+      "independent_max_cell_widths": {
+        "conditional_plus0": 0.04900857016478044,
+        "conditional_plus1": 0.04900857016478044,
+        "weight0": 0.0625
+      },
+      "quadrature_points": 25,
+      "weight_points": 17
+    },
+    {
+      "belief_points": 49,
+      "final": {
+        "additional_final_off_grid_interpolation": 0.5173797850270534,
+        "one_sided_allowance": 48.1884113770826,
+        "remaining": 30,
+        "sum_D_continuations": 101.29500000000002,
+        "two_sided_nodal_allowance": 55.721541364766296,
+        "two_sided_off_grid_allowance": 56.23892114979335
+      },
+      "independent_delta_grid": 0.0743682312817383,
+      "independent_max_cell_widths": {
+        "conditional_plus0": 0.032701564615071566,
+        "conditional_plus1": 0.032701564615071566,
+        "weight0": 0.04166666666666674
+      },
+      "quadrature_points": 1,
+      "weight_points": 25
+    },
+    {
+      "belief_points": 49,
+      "final": {
+        "additional_final_off_grid_interpolation": 0.5173797850270534,
+        "one_sided_allowance": 9.465063976654482,
+        "remaining": 30,
+        "sum_D_continuations": 101.29500000000002,
+        "two_sided_nodal_allowance": 16.998193964338164,
+        "two_sided_off_grid_allowance": 17.515573749365217
+      },
+      "independent_delta_grid": 0.0743682312817383,
+      "independent_max_cell_widths": {
+        "conditional_plus0": 0.032701564615071566,
+        "conditional_plus1": 0.032701564615071566,
+        "weight0": 0.04166666666666674
+      },
+      "quadrature_points": 25,
+      "weight_points": 25
+    },
+    {
+      "belief_points": 65,
+      "final": {
+        "additional_final_off_grid_interpolation": 0.38808815514792466,
+        "one_sided_allowance": 48.1884113770826,
+        "remaining": 30,
+        "sum_D_continuations": 101.29500000000002,
+        "two_sided_nodal_allowance": 53.83903516258052,
+        "two_sided_off_grid_allowance": 54.22712331772845
+      },
+      "independent_delta_grid": 0.05578383716370916,
+      "independent_max_cell_widths": {
+        "conditional_plus0": 0.02453383716370916,
+        "conditional_plus1": 0.02453383716370916,
+        "weight0": 0.03125
+      },
+      "quadrature_points": 1,
+      "weight_points": 33
+    },
+    {
+      "belief_points": 65,
+      "final": {
+        "additional_final_off_grid_interpolation": 0.38808815514792466,
+        "one_sided_allowance": 9.465063976654482,
+        "remaining": 30,
+        "sum_D_continuations": 101.29500000000002,
+        "two_sided_nodal_allowance": 15.115687762152403,
+        "two_sided_off_grid_allowance": 15.503775917300327
+      },
+      "independent_delta_grid": 0.05578383716370916,
+      "independent_max_cell_widths": {
+        "conditional_plus0": 0.02453383716370916,
+        "conditional_plus1": 0.02453383716370916,
+        "weight0": 0.03125
+      },
+      "quadrature_points": 25,
+      "weight_points": 33
+    },
+    {
+      "belief_points": 97,
+      "final": {
+        "additional_final_off_grid_interpolation": 0.25875082959554824,
+        "one_sided_allowance": 48.1884113770826,
+        "remaining": 30,
+        "sum_D_continuations": 101.29500000000002,
+        "two_sided_nodal_allowance": 51.95586362429851,
+        "two_sided_off_grid_allowance": 52.21461445389406
+      },
+      "independent_delta_grid": 0.037192874744221394,
+      "independent_max_cell_widths": {
+        "conditional_plus0": 0.016359541410888023,
+        "conditional_plus1": 0.016359541410888023,
+        "weight0": 0.02083333333333337
+      },
+      "quadrature_points": 1,
+      "weight_points": 49
+    },
+    {
+      "belief_points": 97,
+      "final": {
+        "additional_final_off_grid_interpolation": 0.25875082959554824,
+        "one_sided_allowance": 9.465063976654482,
+        "remaining": 30,
+        "sum_D_continuations": 101.29500000000002,
+        "two_sided_nodal_allowance": 13.23251622387039,
+        "two_sided_off_grid_allowance": 13.491267053465938
+      },
+      "independent_delta_grid": 0.037192874744221394,
+      "independent_max_cell_widths": {
+        "conditional_plus0": 0.016359541410888023,
+        "conditional_plus1": 0.016359541410888023,
+        "weight0": 0.02083333333333337
+      },
+      "quadrature_points": 25,
+      "weight_points": 49
+    }
+  ],
+  "maximum_absolute_errors": {
+    "axis": 2.220446049250313e-16,
+    "envelope": 1.2079226507921703e-13,
+    "transport": 1.887379141862766e-15,
+    "width": 0.0
+  },
+  "numerical_certification_claimed": false,
+  "original_uniform_records_identical": true,
+  "output_sha256": {
+    "endpoint_sine.json": "dda6118505ce01b9607ae3dcb16dca53764dde916059564c7015c614f61cbade",
+    "uniform.json": "307b08f18c1f81ea3a15899fbd3bcd1fcc5f505a82836a63f26695272c217b5b"
+  },
+  "passed": true,
+  "preparation_sha256": "90c93b42e6c134199f4577329947e7d0eb9aa97b3d801842711df91ec2de2898",
+  "scope": "Geometry-aware error-envelope E2E, no solve or economic evaluation",
+  "unknown_geometry_rejected": true
+}

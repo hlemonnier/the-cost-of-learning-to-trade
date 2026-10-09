@@ -1,0 +1,29 @@
+{
+  "passes_predeclared_rule": true,
+  "scope": "Synthetic diagnostic fixture; not actual refinement acceptance",
+  "selected_artifact_sha256": "b5ec46904c0f7208b354efa8f1c75eb13c77180d9f9ade01508b30f57dd425a3",
+  "selected_resolution": {
+    "belief_points": 17,
+    "horizon": 30,
+    "kappas": [
+      0.002,
+      0.1
+    ],
+    "known_belief_points": 321,
+    "known_quadrature_points": 161,
+    "qmax": 2,
+    "quadrature_points": 25,
+    "theta": 0.35,
+    "weight_points": 9
+  },
+  "source": {
+    "files": {
+      "trade_learning.control": "2ad1a96921e2b6d595608e279e3d40fef74d29642188e7b297e32473278b78c4",
+      "trade_learning.filtering": "711997ebc28c7981ffb848ddded400650aee28488b5982d07cdc1fe563cf6ec1",
+      "trade_learning.model": "7a120a7faabd8aec2c1345a486128129105e9d564ec60908f1c07ea0cf5a897f",
+      "trade_learning.numerics": "bd30936513b1da7237ead270382a281943e558f95628ea930a1c1c149fbe8347",
+      "solver.py": "d22fcc3a460eb75c6bac239e1d383f333811dcfe0db3d768109f56f913e853fc"
+    },
+    "sha256": "c60d987e07890d5eb65afe1eefe125e6591aa9f897b555efbad91ed94347c058"
+  }
+}

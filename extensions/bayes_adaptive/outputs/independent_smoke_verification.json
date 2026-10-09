@@ -1,0 +1,204 @@
+{
+  "passed": true,
+  "profile": "smoke",
+  "scope": "Independent full raw/action/filter/ledger/paired-statistics replay; no producer runner/statistics imports",
+  "verifier_sha256": "002cbe9009f90648178f8e1ad552cfdcb0ad1670ba7d839aba120a1892c1ed10",
+  "validation_failure_modes_sha256": "8664849c2b6c6c874bcfa32d317d3f2a75cd0bea62aea43e73b4e09b60a19055",
+  "config_sha256": "8681e5a8c48f25967f95a4b7d42b76531cbc4e8e00d013114c3e6efe93aee462",
+  "manifest_sha256": "6d150e4e0ebf36ee68d0719af0949e6fce673f6c373ebe20d7879878833a4cad",
+  "study_file_count": 19,
+  "rows": 720,
+  "trace_rows": 7200,
+  "pilot_records": 4,
+  "paired_market_trajectories": 48,
+  "maximum_ledger_errors": {
+    "spread_capture": 3.3306690738754696e-16,
+    "passive_fees": 6.938893903907228e-18,
+    "market_fees": 0.0,
+    "market_spread_cost": 0.0,
+    "directional_pnl": 0.0,
+    "execution_exposure_pnl": 0.0,
+    "inventory_sq_sum": 0.0,
+    "inventory_post_sq_sum": 0.0,
+    "inventory_abs_sum": 0.0,
+    "max_abs_inventory": 0.0,
+    "passive_fills": 0.0,
+    "market_fills": 0.0,
+    "directional_exposure": 0.0,
+    "execution_selection": 0.0,
+    "market_innovation": 0.0,
+    "terminal_inventory": 0.0,
+    "terminal_units": 0.0,
+    "liquidation_cost": 6.938893903907228e-18,
+    "liquidation_fees": 0.0,
+    "liquidation_spread": 0.0,
+    "pnl": 1.9326762412674725e-12,
+    "risk_penalty": 0.0,
+    "inventory_penalty": 0.0,
+    "objective": 1.9326762412674725e-12,
+    "reconciled_pnl": 8.881784197001252e-16,
+    "reconciliation_error": 1.9326762412674725e-12,
+    "turnover": 0.0,
+    "terminal_inventory_after_liquidation": 0.0,
+    "model_entropy_initial": 6.106226635438361e-15,
+    "model_entropy_final": 7.271960811294775e-15,
+    "true_model_probability_final": 7.66053886991358e-15,
+    "model_entropy_period_mean": 6.328271240363392e-15,
+    "true_model_probability_period_mean": 6.938893903907228e-15
+  },
+  "maximum_trace_error": 1.9326762412674725e-12,
+  "maximum_pilot_model_weight_error": 7.993605777301127e-15,
+  "recomputed_inference": {
+    "contrasts_checked": 24,
+    "policy_means_checked": 30,
+    "primary": {
+      "budget": 0,
+      "policy": "bayes",
+      "baseline": "weighted_q",
+      "metric": "objective",
+      "mean": -0.11503888186248715,
+      "se": 0.08124081348842349,
+      "df": 1.1514377816717398,
+      "low": -0.8758047969110454,
+      "high": 0.6457270331860712,
+      "simultaneous_low": -12.189389236004207,
+      "simultaneous_high": 11.959311472279232,
+      "stratum_means": [
+        -0.11265055690463333,
+        -0.11742720682034095
+      ],
+      "replicate_mean_sample_variances": [
+        0.003736614943435368,
+        0.04906394326665113
+      ],
+      "independent_replicates_per_model": 2,
+      "episodes_per_replicate": 12,
+      "alpha": 0.05,
+      "zero_empirical_variance": false
+    },
+    "primary_threshold_passed": false,
+    "uncertainty_scope": "Empirical paired pilot-aware Welch intervals; no numerical/global/evolving-market guarantee"
+  },
+  "secondary_tables": {
+    "planning_rows": 12,
+    "timing_rows": 60,
+    "diagnostic_rows": 30,
+    "max_reveal1_interpolation_gap": 1.1102230246251565e-16,
+    "max_numerical_hierarchy_violation": 0.0002740828915768212,
+    "numerical_scope": "Planning/revelation table rows checked for identity/finite values and numerical hierarchy; nonzero deviations require numerical interpretation"
+  },
+  "table_artifact": {
+    "checked": true,
+    "artifact_sha256": "5d77653a56cb56ea6e6582322eee10c3591c6b497abb2dfe74ceeabfc590eac9",
+    "arrays_checked": 11,
+    "array_bytes": 2712138088,
+    "specification": {
+      "belief_points": 33,
+      "horizon": 30,
+      "kappas": [
+        0.002,
+        0.1
+      ],
+      "known_belief_points": 321,
+      "known_quadrature_points": 161,
+      "qmax": 2,
+      "quadrature_points": 25,
+      "theta": 0.35,
+      "weight_points": 17
+    }
+  },
+  "original_zip": {
+    "checked": true,
+    "sha256": "0fbfb9c73989747dc220b7cff5f7b0a65f25a2679a1001cd78bfeec760a0fcf3",
+    "bytes": 116773796
+  },
+  "math": {
+    "mass_error": 2.220446049250313e-16,
+    "cold_first_step_model_weight_drift": 1.1102230246251565e-16,
+    "no_feedback_belief_error": 0.0,
+    "one_step_sign_symmetry_error": 4.163336342344337e-17,
+    "scope": "Independent four-state selected likelihood and timing identities"
+  },
+  "solver_short_horizon": {
+    "checked": false
+  },
+  "limits": "Sampling intervals are empirical pilot-aware Welch intervals; solver refinement does not certify a 0.002 optimality gap or exact upper bound",
+  "fault_probes": [
+    {
+      "case": "missing_file",
+      "rejected": true,
+      "reason": "Missing or stale study artifact: tapes/m0_r0.npz"
+    },
+    {
+      "case": "stale_manifest_hash",
+      "rejected": true,
+      "reason": "Missing or stale study artifact: episodes.csv.gz"
+    },
+    {
+      "case": "missing_row",
+      "rejected": true,
+      "reason": "Wrong or unpaired raw episode key: m0/r0/b0/bayes/e0/episode"
+    },
+    {
+      "case": "duplicate_row",
+      "rejected": true,
+      "reason": "Wrong or unpaired raw episode key: m0/r0/b0/bayes/e1/episode"
+    },
+    {
+      "case": "unpaired_key",
+      "rejected": true,
+      "reason": "Wrong or unpaired raw episode key: m0/r0/b0/bayes/e0/budget"
+    },
+    {
+      "case": "nonfinite_outcome",
+      "rejected": true,
+      "reason": "Nonfinite m0/r0/b0/bayes/e0/objective"
+    },
+    {
+      "case": "changed_terminal_pnl",
+      "rejected": true,
+      "reason": "Independent ledger mismatch m0/r0/b0/bayes/e0/pnl: 0.5"
+    },
+    {
+      "case": "changed_legal_action",
+      "rejected": true,
+      "reason": "Independent ledger mismatch m0/r0/b0/bayes/e0/spread_capture: 0.025"
+    },
+    {
+      "case": "invalid_action_id",
+      "rejected": true,
+      "reason": "Wrong action dtype or ID: /private/var/folders/8z/mp96_9353w79bsgv7kftgk2h0000gn/T/bayes-extension-faults-wbq6hp29/invalid_action_id/actions/m0_r0.npz/b0_bayes"
+    },
+    {
+      "case": "changed_tape",
+      "rejected": true,
+      "reason": "Tape does not match independent seed regeneration: /private/var/folders/8z/mp96_9353w79bsgv7kftgk2h0000gn/T/bayes-extension-faults-wbq6hp29/changed_tape/tapes/m0_r0.npz/z"
+    },
+    {
+      "case": "reused_pilot",
+      "rejected": true,
+      "reason": "Unsafe buy/quote at upper boundary, t=4"
+    },
+    {
+      "case": "changed_selected_pilot_fill",
+      "rejected": true,
+      "reason": "Pilot selected fills mismatch: /private/var/folders/8z/mp96_9353w79bsgv7kftgk2h0000gn/T/bayes-extension-faults-wbq6hp29/changed_selected_pilot_fill/pilots/m0_r0.npz"
+    },
+    {
+      "case": "wrong_trace_posterior",
+      "rejected": true,
+      "reason": "Invalid trace posterior simplex: m0/r0/b0/bayes/e0/t0/p"
+    },
+    {
+      "case": "wrong_summary_contrast",
+      "rejected": true,
+      "reason": "Inference mismatch contrast/0/mean: 0.8849611181375129 versus -0.11503888186248715 (tol=2e-09)"
+    },
+    {
+      "case": "wrong_source_hash",
+      "rejected": true,
+      "reason": "Study source bytes differ from currently supplied source"
+    }
+  ],
+  "fault_probes_rejected": 15
+}

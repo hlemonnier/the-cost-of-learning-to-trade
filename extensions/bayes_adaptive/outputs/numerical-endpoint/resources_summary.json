@@ -1,0 +1,19 @@
+{
+  "active_pid": null,
+  "lowest_observed_disk_available_bytes": 200474046464,
+  "process_running": false,
+  "sampled_peak_rss_bytes": 6631374848,
+  "sessions": [
+    {
+      "completed_utc": "2026-09-27T20:30:54.572552+00:00",
+      "exit_code": 0,
+      "lowest_observed_disk_available_bytes": 200474046464,
+      "pid": 22987,
+      "process_running": false,
+      "sampled_peak_rss_bytes": 6631374848,
+      "samples": 237,
+      "started_utc": "2026-09-27T19:31:36.201195+00:00",
+      "wall_seconds": 3558.37974462501
+    }
+  ]
+}

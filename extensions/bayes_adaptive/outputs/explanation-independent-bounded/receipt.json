@@ -1,0 +1,34 @@
+{
+  "bellman_modes_per_state": 3,
+  "candidate_state_sha256": "8ecd738dd877535656356bb31c8a063f10d5545a334b1b9c00f1fe6d1102b025",
+  "error_envelopes": {
+    "families": 1,
+    "horizon_rows_recomputed": 31,
+    "maximum_absolute_report_error": 1.2079226507921703e-13,
+    "passed": true,
+    "quadrature_rules_integrated": 1
+  },
+  "family_artifact_sha256": "5b3a71ab67469d40764c97a54857a751ba453b2019b236d51c5939751e44b205",
+  "family_manifest_sha256": "f7b1beb9c4482b1b791c74fc0a1d05a831efa60fbc6abf7f7046f1f78c24023b",
+  "frozen_probe_sha256": "663ccedec00b567efb27e9d3dde4c5332acf2cf21db4a892fec21c8b75580a77",
+  "illustrative_posteriors": {
+    "branches_checked": 30,
+    "maximum_absolute_error": 2.220446049250313e-16
+  },
+  "maximum_absolute_errors": {
+    "direct_q": 5.551115123125783e-17,
+    "information": 2.220446049250313e-16,
+    "reward": 0.0,
+    "terminal_suppression": 1.3877787807814457e-17
+  },
+  "mutations_rejected": [
+    "changed_delta_grid",
+    "false_certification"
+  ],
+  "passed": true,
+  "probe_count_bound_to_candidates": 2581,
+  "reproduction_script_sha256": "2ea47b8cd0f59cb1156e28c9c949e49296176e647820e762b12b8e256e5cc473",
+  "scope": "bounded_development_e2e_only; no h30 explanation acceptance",
+  "states_checked": 4,
+  "verifier_sha256": "8bbf7e93e8ef803f433bb082d7bf114a5d6d46b184784541602686b80099bc62"
+}

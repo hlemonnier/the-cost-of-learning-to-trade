@@ -1,0 +1,147 @@
+{
+  "all_saved_joint_comparisons_audited": true,
+  "audit_status": "raw_rows_reconciled",
+  "audited_comparisons": [
+    {
+      "axis": "belief",
+      "coarse_artifact_sha256": "f37b0481a32e115e8e6da855a9de983faf661625d902f60fce7dc43fc7aaacfb",
+      "fine_artifact_sha256": "8bfbd1f847b3ba14e41c7b2637eb351f043f80ed5960cd4b9a597aee135d43a0",
+      "horizon_policy_rows_reconciled": 180,
+      "maxima_from_raw_arrays": {
+        "max_finite_q_change": 0.01814190013922312,
+        "max_initial_value_change": 0.008037525039117699,
+        "max_probe_value_change": 0.018298870365182518,
+        "max_robust_disagreement_fraction": 0.0013043478260869566
+      },
+      "pair_index": 0,
+      "passes_unchanged_joint_gate": false
+    },
+    {
+      "axis": "quadrature",
+      "coarse_artifact_sha256": "1f98993e038463d40f525ba10a2e7c6fac2bc2a3f2eb2d09f048b0900df33de4",
+      "fine_artifact_sha256": "8bfbd1f847b3ba14e41c7b2637eb351f043f80ed5960cd4b9a597aee135d43a0",
+      "horizon_policy_rows_reconciled": 180,
+      "maxima_from_raw_arrays": {
+        "max_finite_q_change": 0.0005996452311617939,
+        "max_initial_value_change": 0.0005952891241072233,
+        "max_probe_value_change": 0.0005952891241072233,
+        "max_robust_disagreement_fraction": 0.0
+      },
+      "pair_index": 0,
+      "passes_unchanged_joint_gate": true
+    },
+    {
+      "axis": "belief",
+      "coarse_artifact_sha256": "8bfbd1f847b3ba14e41c7b2637eb351f043f80ed5960cd4b9a597aee135d43a0",
+      "fine_artifact_sha256": "9e572f2fbe378bedf6bbe85dcd46a351212e503f050b7c1247c8eba939738542",
+      "horizon_policy_rows_reconciled": 180,
+      "maxima_from_raw_arrays": {
+        "max_finite_q_change": 0.004713908051070748,
+        "max_initial_value_change": 0.0015946896609839722,
+        "max_probe_value_change": 0.004713908051070748,
+        "max_robust_disagreement_fraction": 0.0
+      },
+      "pair_index": 1,
+      "passes_unchanged_joint_gate": false
+    },
+    {
+      "axis": "quadrature",
+      "coarse_artifact_sha256": "b134398e511e2f3bf0887fb0821cadde42578253e7b59f5f5ca02758f6437ed1",
+      "fine_artifact_sha256": "9e572f2fbe378bedf6bbe85dcd46a351212e503f050b7c1247c8eba939738542",
+      "horizon_policy_rows_reconciled": 180,
+      "maxima_from_raw_arrays": {
+        "max_finite_q_change": 0.0003821260234343482,
+        "max_initial_value_change": 0.00033274034328745206,
+        "max_probe_value_change": 0.0003561718282577564,
+        "max_robust_disagreement_fraction": 0.0
+      },
+      "pair_index": 1,
+      "passes_unchanged_joint_gate": true
+    },
+    {
+      "axis": "belief",
+      "coarse_artifact_sha256": "9e572f2fbe378bedf6bbe85dcd46a351212e503f050b7c1247c8eba939738542",
+      "fine_artifact_sha256": "ed158983727bdf3c2fd06f4eaf8d79d6bfd840bd6cbd2979342733aaffa0a60e",
+      "horizon_policy_rows_reconciled": 180,
+      "maxima_from_raw_arrays": {
+        "max_finite_q_change": 0.002088666574590059,
+        "max_initial_value_change": 0.0005836434702429782,
+        "max_probe_value_change": 0.0020204686376043,
+        "max_robust_disagreement_fraction": 0.0
+      },
+      "pair_index": 2,
+      "passes_unchanged_joint_gate": true
+    },
+    {
+      "axis": "quadrature",
+      "coarse_artifact_sha256": "e45e4c62aecb4c374172f1e0c797f480f2173bc4cd1ae729ec75f93299c97088",
+      "fine_artifact_sha256": "ed158983727bdf3c2fd06f4eaf8d79d6bfd840bd6cbd2979342733aaffa0a60e",
+      "horizon_policy_rows_reconciled": 180,
+      "maxima_from_raw_arrays": {
+        "max_finite_q_change": 0.00043662850028736155,
+        "max_initial_value_change": 0.00036803570026067156,
+        "max_probe_value_change": 0.00039173554119620313,
+        "max_robust_disagreement_fraction": 0.0
+      },
+      "pair_index": 2,
+      "passes_unchanged_joint_gate": true
+    }
+  ],
+  "authenticated_array_bytes": 106953126816,
+  "belief_geometry": "endpoint_sine",
+  "core_root": "/recorded-environment Learning",
+  "current_source_identity": {
+    "files": {
+      "trade_learning.control": "2ad1a96921e2b6d595608e279e3d40fef74d29642188e7b297e32473278b78c4",
+      "trade_learning.filtering": "711997ebc28c7981ffb848ddded400650aee28488b5982d07cdc1fe563cf6ec1",
+      "trade_learning.model": "7a120a7faabd8aec2c1345a486128129105e9d564ec60908f1c07ea0cf5a897f",
+      "trade_learning.numerics": "bd30936513b1da7237ead270382a281943e558f95628ea930a1c1c149fbe8347",
+      "solver.py": "8fdf88cae1b6b74ebd738e8b07942c15fd99042e2fd4f80f112660fc77f9e1ff"
+    },
+    "sha256": "c6ad66295c5f45b948669ee57ef5b7cc785228b1dd6630af4fc50652878ead65"
+  },
+  "last_pair_joint_gate_passed_if_audited": true,
+  "note": "A reconciled unresolved gate remains unresolved. This audit does not independently recompute scalar known-model references or certify a mathematical error bound.",
+  "numerical_config_sha256": "10e311f1d7b7bdf44bafa5b948811831a6d09d6bcc8d7cbbe64953e1d89caff6",
+  "numerical_receipt": "/recorded-environment Learning/extensions/bayes_adaptive/outputs/numerical-endpoint/numerical_checks.json",
+  "numerical_receipt_sha256": "3625857e7b44fc5b0e0873d7f2043fcef8da1ba716c24c17fb62f28747277a56",
+  "probe_count": 2581,
+  "probe_sha256": "663ccedec00b567efb27e9d3dde4c5332acf2cf21db4a892fec21c8b75580a77",
+  "raw_reconciliation_is_numerical_acceptance": false,
+  "receipt_build_sha256": "734eddc7d5a49af317fdedcd669ef30ac9d3a34847a389f01335a545e700261d",
+  "receipt_claims_numerical_acceptance": true,
+  "receipt_last_attempted_resolution": {
+    "belief_geometry": "endpoint_sine",
+    "belief_points": 65,
+    "horizon": 30,
+    "kappas": [
+      0.002,
+      0.1
+    ],
+    "known_belief_points": 321,
+    "known_quadrature_points": 161,
+    "qmax": 2,
+    "quadrature_points": 25,
+    "theta": 0.35,
+    "weight_points": 33
+  },
+  "receipt_protocol_config_sha256": "10e311f1d7b7bdf44bafa5b948811831a6d09d6bcc8d7cbbe64953e1d89caff6",
+  "receipt_selected_resolution": {
+    "belief_geometry": "endpoint_sine",
+    "belief_points": 65,
+    "horizon": 30,
+    "kappas": [
+      0.002,
+      0.1
+    ],
+    "known_belief_points": 321,
+    "known_quadrature_points": 161,
+    "qmax": 2,
+    "quadrature_points": 25,
+    "theta": 0.35,
+    "weight_points": 33
+  },
+  "scope": "joint saved-array comparisons only",
+  "statistical_protocol_sha256": "8681e5a8c48f25967f95a4b7d42b76531cbc4e8e00d013114c3e6efe93aee462",
+  "verifier_sha256": "372f088f7f3be1645bb21a86a29675fab4222fbd04868962be69bec10955432c"
+}

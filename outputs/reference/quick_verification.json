@@ -1,0 +1,463 @@
+{
+  "protocol": "report/control_notes.md (written before implementation)",
+  "quick": true,
+  "checks": {
+    "one_step_independent_accounting": {
+      "passed": true,
+      "maximum_error": 8.673617379884035e-17
+    },
+    "one_step_invalid_actions": {
+      "passed": true
+    },
+    "terminal_liquidation": {
+      "passed": true
+    },
+    "zero_dependence_mode_equality": {
+      "passed": true,
+      "maximum_error": 1.1102230246251565e-16
+    },
+    "full_information_dominance": {
+      "passed": true,
+      "minimum_gap": -6.938893903907228e-18
+    },
+    "active_planning_dominates_no_learning_planning": {
+      "passed": true,
+      "minimum_gap": -2.7755575615628914e-17,
+      "note": "Stored noinfo V is its planning value, not its runtime filtered policy value."
+    },
+    "sign_symmetry": {
+      "passed": true,
+      "maximum_error": 5.551115123125783e-16
+    },
+    "belief_convexity": {
+      "passed": true,
+      "minimum_second_difference": -1.1102230246251565e-16
+    },
+    "transition_mass": {
+      "passed": true,
+      "maximum_error": 4.440892098500626e-16
+    },
+    "float64_tables": {
+      "passed": true
+    },
+    "taker_action_restriction": {
+      "passed": true
+    },
+    "serialization": {
+      "passed": true
+    }
+  },
+  "runs": [
+    {
+      "theta": 0.35,
+      "kappa": 0.02,
+      "horizon": 1,
+      "qmax": 2,
+      "belief_points": 5,
+      "quadrature_points": 81,
+      "mode": "active",
+      "initial_value": 0.015035056302563498,
+      "metadata": {
+        "operator_build_seconds": 0.013352624999242835,
+        "transition_nonzeros": 4131,
+        "transition_storage_bytes": 52876,
+        "max_transition_mass_error": 3.3306690738754696e-16,
+        "effective_planning_theta": 0.35,
+        "solve_seconds": 0.013659832999110222,
+        "table_storage_bytes": 14440,
+        "approximation": "Gauss-Hermite continuation integration; uniform linear belief interpolation",
+        "reward_integration": "analytic expected marked-wealth increment",
+        "tie_breaking": "lowest action ID via numpy.argmax",
+        "noinfo_semantics": "prediction-only belief in planning; runtime filtering external",
+        "full_semantics": "current regime observed, next regime averaged; no future innovation access"
+      }
+    },
+    {
+      "theta": 0,
+      "kappa": 0.02,
+      "horizon": 8,
+      "qmax": 2,
+      "belief_points": 41,
+      "quadrature_points": 21,
+      "mode": "active",
+      "initial_value": 0.17505219572619532,
+      "metadata": {
+        "operator_build_seconds": 0.012601457987329923,
+        "transition_nonzeros": 19683,
+        "transition_storage_bytes": 263260,
+        "max_transition_mass_error": 5.551115123125783e-16,
+        "effective_planning_theta": 0,
+        "solve_seconds": 0.01323687499098014,
+        "table_storage_bytes": 531688,
+        "approximation": "Gauss-Hermite continuation integration; uniform linear belief interpolation",
+        "reward_integration": "analytic expected marked-wealth increment",
+        "tie_breaking": "lowest action ID via numpy.argmax",
+        "noinfo_semantics": "prediction-only belief in planning; runtime filtering external",
+        "full_semantics": "current regime observed, next regime averaged; no future innovation access"
+      }
+    },
+    {
+      "theta": 0,
+      "kappa": 0.02,
+      "horizon": 8,
+      "qmax": 2,
+      "belief_points": 41,
+      "quadrature_points": 21,
+      "mode": "noinfo",
+      "initial_value": 0.17505219572619526,
+      "metadata": {
+        "operator_build_seconds": 0.009622291996493004,
+        "transition_nonzeros": 19683,
+        "transition_storage_bytes": 263260,
+        "max_transition_mass_error": 5.551115123125783e-16,
+        "effective_planning_theta": 0,
+        "solve_seconds": 0.010127250003279187,
+        "table_storage_bytes": 531688,
+        "approximation": "Gauss-Hermite continuation integration; uniform linear belief interpolation",
+        "reward_integration": "analytic expected marked-wealth increment",
+        "tie_breaking": "lowest action ID via numpy.argmax",
+        "noinfo_semantics": "prediction-only belief in planning; runtime filtering external",
+        "full_semantics": "current regime observed, next regime averaged; no future innovation access"
+      }
+    },
+    {
+      "theta": 0,
+      "kappa": 0.02,
+      "horizon": 8,
+      "qmax": 2,
+      "belief_points": 41,
+      "quadrature_points": 21,
+      "mode": "independent",
+      "initial_value": 0.17505219572619526,
+      "metadata": {
+        "operator_build_seconds": 0.009683500000392087,
+        "transition_nonzeros": 19683,
+        "transition_storage_bytes": 263260,
+        "max_transition_mass_error": 5.551115123125783e-16,
+        "effective_planning_theta": 0.0,
+        "solve_seconds": 0.01027425000211224,
+        "table_storage_bytes": 531688,
+        "approximation": "Gauss-Hermite continuation integration; uniform linear belief interpolation",
+        "reward_integration": "analytic expected marked-wealth increment",
+        "tie_breaking": "lowest action ID via numpy.argmax",
+        "noinfo_semantics": "prediction-only belief in planning; runtime filtering external",
+        "full_semantics": "current regime observed, next regime averaged; no future innovation access"
+      }
+    },
+    {
+      "theta": 0,
+      "kappa": 0.02,
+      "horizon": 8,
+      "qmax": 2,
+      "belief_points": 2,
+      "quadrature_points": 21,
+      "mode": "full",
+      "initial_value": 0.17505219572619524,
+      "metadata": {
+        "operator_build_seconds": 0.009280459009460174,
+        "transition_nonzeros": 972,
+        "transition_storage_bytes": 12988,
+        "max_transition_mass_error": 5.551115123125783e-16,
+        "effective_planning_theta": 0,
+        "solve_seconds": 0.009665208999649622,
+        "table_storage_bytes": 25936,
+        "approximation": "Gauss-Hermite continuation integration; uniform linear belief interpolation",
+        "reward_integration": "analytic expected marked-wealth increment",
+        "tie_breaking": "lowest action ID via numpy.argmax",
+        "noinfo_semantics": "prediction-only belief in planning; runtime filtering external",
+        "full_semantics": "current regime observed, next regime averaged; no future innovation access"
+      }
+    },
+    {
+      "theta": 0.35,
+      "kappa": 0.02,
+      "horizon": 8,
+      "qmax": 2,
+      "belief_points": 41,
+      "quadrature_points": 41,
+      "mode": "active",
+      "initial_value": 0.21862943879777383,
+      "metadata": {
+        "operator_build_seconds": 0.02419887500582263,
+        "transition_nonzeros": 224943,
+        "transition_storage_bytes": 2726380,
+        "max_transition_mass_error": 4.440892098500626e-16,
+        "effective_planning_theta": 0.35,
+        "solve_seconds": 0.025950832990929484,
+        "table_storage_bytes": 531688,
+        "approximation": "Gauss-Hermite continuation integration; uniform linear belief interpolation",
+        "reward_integration": "analytic expected marked-wealth increment",
+        "tie_breaking": "lowest action ID via numpy.argmax",
+        "noinfo_semantics": "prediction-only belief in planning; runtime filtering external",
+        "full_semantics": "current regime observed, next regime averaged; no future innovation access"
+      }
+    },
+    {
+      "theta": 0.35,
+      "kappa": 0.02,
+      "horizon": 8,
+      "qmax": 2,
+      "belief_points": 41,
+      "quadrature_points": 41,
+      "mode": "noinfo",
+      "initial_value": 0.17273610996008149,
+      "metadata": {
+        "operator_build_seconds": 0.01165108400164172,
+        "transition_nonzeros": 19683,
+        "transition_storage_bytes": 263260,
+        "max_transition_mass_error": 4.440892098500626e-16,
+        "effective_planning_theta": 0.35,
+        "solve_seconds": 0.012196625000797212,
+        "table_storage_bytes": 531688,
+        "approximation": "Gauss-Hermite continuation integration; uniform linear belief interpolation",
+        "reward_integration": "analytic expected marked-wealth increment",
+        "tie_breaking": "lowest action ID via numpy.argmax",
+        "noinfo_semantics": "prediction-only belief in planning; runtime filtering external",
+        "full_semantics": "current regime observed, next regime averaged; no future innovation access"
+      }
+    },
+    {
+      "theta": 0.35,
+      "kappa": 0.02,
+      "horizon": 8,
+      "qmax": 2,
+      "belief_points": 2,
+      "quadrature_points": 41,
+      "mode": "full",
+      "initial_value": 0.3777036704282514,
+      "metadata": {
+        "operator_build_seconds": 0.009447290998650715,
+        "transition_nonzeros": 972,
+        "transition_storage_bytes": 12988,
+        "max_transition_mass_error": 2.220446049250313e-16,
+        "effective_planning_theta": 0.35,
+        "solve_seconds": 0.009707459001219831,
+        "table_storage_bytes": 25936,
+        "approximation": "Gauss-Hermite continuation integration; uniform linear belief interpolation",
+        "reward_integration": "analytic expected marked-wealth increment",
+        "tie_breaking": "lowest action ID via numpy.argmax",
+        "noinfo_semantics": "prediction-only belief in planning; runtime filtering external",
+        "full_semantics": "current regime observed, next regime averaged; no future innovation access"
+      }
+    },
+    {
+      "theta": 0.35,
+      "kappa": 0.02,
+      "horizon": 8,
+      "qmax": 2,
+      "belief_points": 11,
+      "quadrature_points": 21,
+      "mode": "taker",
+      "initial_value": 0.03221822706249997,
+      "metadata": {
+        "operator_build_seconds": 0.0014863750111544505,
+        "transition_nonzeros": 819,
+        "transition_storage_bytes": 17092,
+        "max_transition_mass_error": 2.220446049250313e-16,
+        "effective_planning_theta": 0.35,
+        "solve_seconds": 0.0018090420053340495,
+        "table_storage_bytes": 142648,
+        "approximation": "Gauss-Hermite continuation integration; uniform linear belief interpolation",
+        "reward_integration": "analytic expected marked-wealth increment",
+        "tie_breaking": "lowest action ID via numpy.argmax",
+        "noinfo_semantics": "prediction-only belief in planning; runtime filtering external",
+        "full_semantics": "current regime observed, next regime averaged; no future innovation access"
+      }
+    }
+  ],
+  "refinements": {},
+  "tolerances": {
+    "initial": 0.001,
+    "sup": 0.005,
+    "robust_gap": 0.001,
+    "robust_disagreement": 0.005
+  },
+  "same_state_feedback_contrast": {
+    "same_continuation": "active V[remaining-1] used for both choices",
+    "action_differences": 86,
+    "states": 615,
+    "meaningful_differences_above_0.001": 65,
+    "maximum_active_score_loss_from_suppressing_feedback": 0.010909259652136807,
+    "minimum_feedback_bonus": -2.220446049250313e-16,
+    "economic_illustration": {
+      "selection": "worked state illustration after solving; not a statistical test",
+      "remaining": 8,
+      "q": 0,
+      "x": 0,
+      "belief": 0.75,
+      "active_action": 6,
+      "suppressed_action": 0,
+      "active_expected_stage_reward": -0.004146613814384999,
+      "suppressed_expected_stage_reward": 0.0,
+      "active_Q_advantage": 0.002970362309790489,
+      "active_feedback_bonus": 0.00869610233930418
+    },
+    "examples": [
+      {
+        "remaining": 8,
+        "q": 0,
+        "x": 0,
+        "belief": 0.675,
+        "active_action": 8,
+        "suppressed_action": 0,
+        "advantage_in_active_Q": 0.010909259652136807,
+        "active_immediate_feedback_bonus": 0.013090285223519502,
+        "suppressed_immediate_feedback_bonus": -1.3877787807814457e-17,
+        "active_Q": 0.09680712166837556,
+        "suppressed_action_active_Q": 0.08589786201623875
+      },
+      {
+        "remaining": 8,
+        "q": -1,
+        "x": 0,
+        "belief": 0.7250000000000001,
+        "active_action": 6,
+        "suppressed_action": 0,
+        "advantage_in_active_Q": 0.008084648254524096,
+        "active_immediate_feedback_bonus": 0.008779265771571863,
+        "suppressed_immediate_feedback_bonus": -1.3877787807814457e-17,
+        "active_Q": 0.061161309852005026,
+        "suppressed_action_active_Q": 0.05307666159748093
+      },
+      {
+        "remaining": 8,
+        "q": 1,
+        "x": 0,
+        "belief": 0.7250000000000001,
+        "active_action": 2,
+        "suppressed_action": 0,
+        "advantage_in_active_Q": 0.008084648254524054,
+        "active_immediate_feedback_bonus": 0.008779265771571836,
+        "suppressed_immediate_feedback_bonus": -1.3877787807814457e-17,
+        "active_Q": 0.061161309852005,
+        "suppressed_action_active_Q": 0.053076661597480944
+      },
+      {
+        "remaining": 8,
+        "q": 0,
+        "x": 0,
+        "belief": 0.7000000000000001,
+        "active_action": 8,
+        "suppressed_action": 0,
+        "advantage_in_active_Q": 0.007968790339081544,
+        "active_immediate_feedback_bonus": 0.012760848634915306,
+        "suppressed_immediate_feedback_bonus": 0.0,
+        "active_Q": 0.08119807643984467,
+        "suppressed_action_active_Q": 0.07322928610076312
+      },
+      {
+        "remaining": 8,
+        "q": -2,
+        "x": 0,
+        "belief": 0.7250000000000001,
+        "active_action": 3,
+        "suppressed_action": 9,
+        "advantage_in_active_Q": 0.007226359120300847,
+        "active_immediate_feedback_bonus": 0.007858494128428678,
+        "suppressed_immediate_feedback_bonus": -1.3877787807814457e-17,
+        "active_Q": 0.027303020717781776,
+        "suppressed_action_active_Q": 0.02007666159748093
+      },
+      {
+        "remaining": 8,
+        "q": 2,
+        "x": 0,
+        "belief": 0.7250000000000001,
+        "active_action": 1,
+        "suppressed_action": 10,
+        "advantage_in_active_Q": 0.007226359120300813,
+        "active_immediate_feedback_bonus": 0.007858494128428657,
+        "suppressed_immediate_feedback_bonus": -1.3877787807814457e-17,
+        "active_Q": 0.027303020717781755,
+        "suppressed_action_active_Q": 0.020076661597480942
+      },
+      {
+        "remaining": 8,
+        "q": 1,
+        "x": 1,
+        "belief": 0.525,
+        "active_action": 5,
+        "suppressed_action": 6,
+        "advantage_in_active_Q": 0.006844112967969496,
+        "active_immediate_feedback_bonus": 0.012213933483109729,
+        "suppressed_immediate_feedback_bonus": 0.005109109800469802,
+        "active_Q": 0.26387571338161137,
+        "suppressed_action_active_Q": 0.25703160041364187
+      },
+      {
+        "remaining": 8,
+        "q": -1,
+        "x": -1,
+        "belief": 0.525,
+        "active_action": 7,
+        "suppressed_action": 2,
+        "advantage_in_active_Q": 0.006844112967969385,
+        "active_immediate_feedback_bonus": 0.012213933483109729,
+        "suppressed_immediate_feedback_bonus": 0.005109109800469858,
+        "active_Q": 0.2638757133816113,
+        "suppressed_action_active_Q": 0.2570316004136419
+      },
+      {
+        "remaining": 8,
+        "q": 0,
+        "x": -1,
+        "belief": 0.525,
+        "active_action": 1,
+        "suppressed_action": 10,
+        "advantage_in_active_Q": 0.0067960822907440765,
+        "active_immediate_feedback_bonus": 0.007540767259551107,
+        "suppressed_immediate_feedback_bonus": 2.7755575615628914e-17,
+        "active_Q": 0.21999086803688842,
+        "suppressed_action_active_Q": 0.21319478574614434
+      },
+      {
+        "remaining": 8,
+        "q": 0,
+        "x": 1,
+        "belief": 0.525,
+        "active_action": 3,
+        "suppressed_action": 9,
+        "advantage_in_active_Q": 0.0067960822907439655,
+        "active_immediate_feedback_bonus": 0.0075407672595508846,
+        "suppressed_immediate_feedback_bonus": 2.7755575615628914e-17,
+        "active_Q": 0.21999086803688828,
+        "suppressed_action_active_Q": 0.2131947857461443
+      },
+      {
+        "remaining": 8,
+        "q": 2,
+        "x": 1,
+        "belief": 0.625,
+        "active_action": 2,
+        "suppressed_action": 0,
+        "advantage_in_active_Q": 0.006358865120023677,
+        "active_immediate_feedback_bonus": 0.008248158584687026,
+        "suppressed_immediate_feedback_bonus": 2.7755575615628914e-17,
+        "active_Q": 0.2079348285486466,
+        "suppressed_action_active_Q": 0.2015759634286229
+      },
+      {
+        "remaining": 8,
+        "q": -2,
+        "x": -1,
+        "belief": 0.625,
+        "active_action": 6,
+        "suppressed_action": 0,
+        "advantage_in_active_Q": 0.0063588651200235935,
+        "active_immediate_feedback_bonus": 0.008248158584686971,
+        "suppressed_immediate_feedback_bonus": 0.0,
+        "active_Q": 0.20793482854864653,
+        "suppressed_action_active_Q": 0.20157596342862294
+      }
+    ]
+  },
+  "planner_comparison": {
+    "active_initial": 0.21862943879777383,
+    "noinfo_planning_initial": 0.17273610996008149,
+    "full_initial": 0.3777036704282514,
+    "taker_initial": 0.03221822706249997,
+    "active_noinfo_action_differences": 90
+  },
+  "elapsed_seconds": 0.6316282499901718,
+  "all_checks_passed": true
+}

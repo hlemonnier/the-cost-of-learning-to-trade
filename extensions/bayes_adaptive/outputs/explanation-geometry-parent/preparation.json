@@ -1,0 +1,9 @@
+{
+  "config_sha256": "8681e5a8c48f25967f95a4b7d42b76531cbc4e8e00d013114c3e6efe93aee462",
+  "explain_sha256": "c4536c3ed03070988e73f59ba02da29cfc8477d6116e6f4e965e4f353edaa866",
+  "failure_note_sha256": "6f2cc12b52bfce83a4ce9fe6b0a7dae18849490786c2d25827cef8575adad3ed",
+  "geometry_amendment_sha256": "a23139363166be0502af795f5c907a830451d2b92cfdcaaab3006ecee347ca56",
+  "harness_sha256": "0e6aaa0fe42f3b1bf61ea687e6425b1a3a367a0841fab6393e3b4569cde1e401",
+  "solver_sha256": "8fdf88cae1b6b74ebd738e8b07942c15fd99042e2fd4f80f112660fc77f9e1ff",
+  "uniform_before_sha256": "307b08f18c1f81ea3a15899fbd3bcd1fcc5f505a82836a63f26695272c217b5b"
+}

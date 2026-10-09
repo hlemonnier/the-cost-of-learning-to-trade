@@ -1,0 +1,48 @@
+{
+  "archived_v2_source_matches_old_manifest": true,
+  "archived_v2_source_sha256": "7a8a9e29654b8c7620a6e1a72d4aaa0db30404f6b8978e767efe99cf77e6d393",
+  "candidate_count": 137430,
+  "changed_source_files": [
+    "explain.py",
+    "explain_failure_modes.md"
+  ],
+  "checks": {
+    "candidate_states.npz": {
+      "array_equal": {
+        "candidate_id": true,
+        "episode": true,
+        "inventory": true,
+        "joint": true,
+        "model_index": true,
+        "probe_index": true,
+        "remaining": true,
+        "signal": true,
+        "source": true,
+        "t": true
+      },
+      "byte_equal": true,
+      "new_sha256": "8ecd738dd877535656356bb31c8a063f10d5545a334b1b9c00f1fe6d1102b025",
+      "old_sha256": "8ecd738dd877535656356bb31c8a063f10d5545a334b1b9c00f1fe6d1102b025"
+    },
+    "exploration_public.npz": {
+      "array_equal": {
+        "actions": true,
+        "fills": true,
+        "inventory": true,
+        "joint": true,
+        "return_": true,
+        "signal": true
+      },
+      "byte_equal": true,
+      "new_sha256": "d4e7e115f13023bdc4f27e74a05d1d93405e910a42390cda605ab9dabf074eab",
+      "old_sha256": "d4e7e115f13023bdc4f27e74a05d1d93405e910a42390cda605ab9dabf074eab"
+    }
+  },
+  "interpretation": "One authorized same-seed source-only regeneration after numerical-receipt binding correction; identical fixed sample, not independent evidence",
+  "new_candidate_artifact_sha256": "4c84eb53f8e9e9717c03f875161f64eba2b904a7391d7f0714af8a371dcbd71e",
+  "new_manifest_file_sha256": "fbe9994a956ece44fa67bcf105a7fdd532bce7d72db08797e908bca8f749563e",
+  "old_candidate_artifact_sha256": "3f22c7c576aaafa20e2a65a12b050a65c57dac1b2996412bd21eeb8e99b1e1db",
+  "old_manifest_file_sha256": "66a5e3b1a32a6dbe2fa8068cbaf7c05a5dae46c033dcfd6da73102e683403d4d",
+  "passed": true,
+  "reached_public_states": 60000
+}

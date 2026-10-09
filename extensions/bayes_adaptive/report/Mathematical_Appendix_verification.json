@@ -1,0 +1,81 @@
+{
+  "artifact": "Standalone Bayes-adaptive mathematical appendix",
+  "date_local": "2026-09-27 Europe/Paris",
+  "status": "Compiled and visually inspected. Mathematical claims derive from THEORY.md; this receipt is not independent theorem certification.",
+  "source": {
+    "path": "report/Mathematical_Appendix.tex",
+    "sha256": "f6b46bb62b142af79aff8c0971a6e3cbc21ac89e98310d8bd0d481223d55bec1",
+    "bytes": 37318
+  },
+  "pdf": {
+    "path": "report/Mathematical_Appendix.pdf",
+    "sha256": "e36a81330489c89efe49cbfeed1633ba4cb09da1caacb248f9c722d26371449d",
+    "bytes": 118989,
+    "pages": 10,
+    "page_size": "A4"
+  },
+  "theory_source": {
+    "path": "THEORY.md",
+    "sha256": "36fbbb2f79bcfbb8f8e55e1414c10900c498cb2673cd95ff2322108b9ff90a59",
+    "prior_sha256": "32b4654b005fc251d1a4a78c2ab73a0ab3bcbbb22dddeac75fba32ed8dbc0eef",
+    "clarification": "Parent qualified the old numerical illustration as uniform; the compiled appendix already states that qualification and needs no byte change."
+  },
+  "content_checks": {
+    "ten_pdf_pages": true,
+    "ten_sections": true,
+    "equations_1_to_33": true,
+    "ten_rendered_pages": true,
+    "nonempty_page_text": true,
+    "no_unconverted_markdown": true,
+    "conservative_allowance": true,
+    "geometry_agnostic_cell_width": true,
+    "references_visible": true,
+    "pilots_visible": true,
+    "revelation_proof_visible": true,
+    "three_primary_links": true
+  },
+  "section_titles": [
+    "Decision state and chronology",
+    "Exact action-dependent joint filter",
+    "Reward and exact Bellman recursion",
+    "Exact interpretation of posterior-weighted known-model Q values",
+    "A hierarchy of delayed-revelation bounds",
+    "What an observation teaches about the model and the regime",
+    "Matched suppression of model-weight updates in planning",
+    "Numerical error: what can be proved and what remains empirical",
+    "Pilot episodes, reset semantics, and validation identities",
+    "Attribution to established work"
+  ],
+  "compilation": {
+    "desktop_compiler": "success",
+    "cli_compiler": "Tectonic 0.17.0, exit 0",
+    "reproduce_command": "python3 /recorded-environment /absolute/path/to/report/Mathematical_Appendix.tex --json",
+    "note": "Builds should verify their own PDF; the SHA-256 above authenticates this local build."
+  },
+  "visual_check": {
+    "render_command": "pdftoppm -f 1 -l 10 -r 150 -png report/Mathematical_Appendix.pdf /tmp/trade-learning-math-appendix-pages/verified",
+    "all_ten_pages_reviewed": true,
+    "observed_defects": [],
+    "local_render_page_sha256": [
+      "3d5223bc6170384ac744d4f42fd14ebc7f724a4720833261f0f18920750bf67c",
+      "a061058b088be5b45a32b2594a06b8beb0de455b7bd3857024c5f21a03fb1734",
+      "e5a585d00861007994246c0a48e66c59986f52e6ba28c088f9ba3ad5f342bd82",
+      "61af0bd30e9ecc590240ed6947557ec5063422e06b36e2ad241bcfb803c74f75",
+      "8d0978d95bda5fe33933c51eaf09438dd937883235e6354b54bfca7589fac7ff",
+      "1aaf87593374d1d5495d3319151597d4b5e7064e9db1246dafeac4a9213f30e0",
+      "398f10c9017397e700ec885be02f5ef918bc28e69adf983e4aebd727b854941a",
+      "7bcd8740aadd4e34e7fbd79bb2515c6879b4a4922efb47ce5d10e12c73713a84",
+      "5b270b34e787b5d54062daae4f4dec646ce300b700d709ae7d2d89008e4742d1",
+      "66cf8bf427cde2f190b189affc893e02e6ed595b843dacab647f17c2fe9e5d96"
+    ],
+    "note": "Local raster hashes are diagnostic and may vary across renderers."
+  },
+  "claim_boundary": "No numerical-gate success, optimality certificate, economic outcome, or external execution is asserted here.",
+  "primary_agent_review": {
+    "all_ten_pages_visually_inspected": true,
+    "source_and_claim_scope_checked": true,
+    "pdf_sha256": "e36a81330489c89efe49cbfeed1633ba4cb09da1caacb248f9c722d26371449d",
+    "observed_defects": [],
+    "scope": "Parent reviewed all ten 150-dpi page renders and the mathematical-source correspondence; no standalone theorem certificate asserted."
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "utc": "2026-09-25T01:03:56.593243+00:00",
+  "reason": "User requested immediate stop and portable GPT Pro handoff ZIP",
+  "process_actions": [
+    {
+      "pid": 92741,
+      "action": "already absent",
+      "command": "",
+      "remaining_command": ""
+    },
+    {
+      "pid": 92739,
+      "action": "already absent",
+      "command": "",
+      "remaining_command": ""
+    }
+  ],
+  "agents": "Three previous extension agents interrupted; numerical reviewer completed; no running subagent",
+  "full_evaluation_exists": false
+}

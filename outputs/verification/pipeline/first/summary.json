@@ -1,0 +1,2489 @@
+{
+  "primary_comparison": {
+    "mean": -0.027940933548566076,
+    "se": 0.055107374933672994,
+    "df": 1.0,
+    "low": -0.7281465219289565,
+    "high": 0.6722646548318243,
+    "one_sided_lower": -0.3758752055058091,
+    "environments": 1,
+    "pilots": 2,
+    "episodes": 32,
+    "policy": "active",
+    "baseline": "noinfo",
+    "threshold": 0.05,
+    "population": "smoke integration only: theta=0.35,kappa=0.02, fresh 12-episode pilot; no deployment inference",
+    "active_net_pnl": {
+      "mean": 0.6555916153920557,
+      "se": 0.0663103795647918,
+      "df": 1.0,
+      "low": -0.18696164349164357,
+      "high": 1.4981448742757548,
+      "one_sided_lower": 0.23692435597617484,
+      "environments": 1,
+      "pilots": 2,
+      "episodes": 32
+    },
+    "decision": "smoke_only_no_deployment_decision",
+    "guarantee": false
+  },
+  "overall": [
+    {
+      "variant": "fixed_duration",
+      "policy": "abstain",
+      "objective": {
+        "mean": 0.0,
+        "se": 0.0,
+        "df": 1.0,
+        "low": 0.0,
+        "high": 0.0,
+        "one_sided_lower": 0.0,
+        "environments": 1,
+        "pilots": 2,
+        "episodes": 32
+      },
+      "pnl": {
+        "mean": 0.0,
+        "se": 0.0,
+        "df": 1.0,
+        "low": 0.0,
+        "high": 0.0,
+        "one_sided_lower": 0.0,
+        "environments": 1,
+        "pilots": 2,
+        "episodes": 32
+      }
+    },
+    {
+      "variant": "fixed_duration",
+      "policy": "active",
+      "objective": {
+        "mean": 0.6282051732014826,
+        "se": 0.0801048575668219,
+        "df": 1.0,
+        "low": -0.389623547404669,
+        "high": 1.6460338938076342,
+        "one_sided_lower": 0.12244300740613279,
+        "environments": 1,
+        "pilots": 2,
+        "episodes": 32
+      },
+      "pnl": {
+        "mean": 0.6488301732014826,
+        "se": 0.08072985756682194,
+        "df": 1.0,
+        "low": -0.3769399253647788,
+        "high": 1.6746002717677442,
+        "one_sided_lower": 0.13912191270946062,
+        "environments": 1,
+        "pilots": 2,
+        "episodes": 32
+      }
+    },
+    {
+      "variant": "fixed_duration",
+      "policy": "full_information",
+      "objective": {
+        "mean": 0.6738244546197234,
+        "se": 0.13390662534847864,
+        "df": 1.0,
+        "low": -1.0276205425882863,
+        "high": 2.375269451827733,
+        "one_sided_lower": -0.17162870399925623,
+        "environments": 1,
+        "pilots": 2,
+        "episodes": 32
+      },
+      "pnl": {
+        "mean": 0.6971369546197235,
+        "se": 0.13521912534847863,
+        "df": 1.0,
+        "low": -1.0209849363045154,
+        "high": 2.4152588455439625,
+        "one_sided_lower": -0.15660300286226714,
+        "environments": 1,
+        "pilots": 2,
+        "episodes": 32
+      }
+    },
+    {
+      "variant": "fixed_duration",
+      "policy": "independent",
+      "objective": {
+        "mean": 0.5783479403607514,
+        "se": 0.03735818265206753,
+        "df": 1.0,
+        "low": 0.10366722301217168,
+        "high": 1.0530286577093313,
+        "one_sided_lower": 0.34247765805575336,
+        "environments": 1,
+        "pilots": 2,
+        "episodes": 32
+      },
+      "pnl": {
+        "mean": 0.5978479403607513,
+        "se": 0.0366081826520675,
+        "df": 1.0,
+        "low": 0.13269687656430296,
+        "high": 1.0629990041571995,
+        "one_sided_lower": 0.3667129716917597,
+        "environments": 1,
+        "pilots": 2,
+        "episodes": 32
+      }
+    },
+    {
+      "variant": "fixed_duration",
+      "policy": "myopic",
+      "objective": {
+        "mean": 0.5709851496000228,
+        "se": 0.04904015971351883,
+        "df": 1.0,
+        "low": -0.05212916001465362,
+        "high": 1.1940994592146992,
+        "one_sided_lower": 0.26135776692888757,
+        "environments": 1,
+        "pilots": 2,
+        "episodes": 32
+      },
+      "pnl": {
+        "mean": 0.5867351496000228,
+        "se": 0.05054015971351883,
+        "df": 1.0,
+        "low": -0.055438467118915646,
+        "high": 1.2289087663189613,
+        "one_sided_lower": 0.267637139656875,
+        "environments": 1,
+        "pilots": 2,
+        "episodes": 32
+      }
+    },
+    {
+      "variant": "fixed_duration",
+      "policy": "noinfo",
+      "objective": {
+        "mean": 0.6154072068676564,
+        "se": 0.07397575343118845,
+        "df": 1.0,
+        "low": -0.3245438617418017,
+        "high": 1.5553582754771145,
+        "one_sided_lower": 0.14834268159226327,
+        "environments": 1,
+        "pilots": 2,
+        "episodes": 32
+      },
+      "pnl": {
+        "mean": 0.6371572068676564,
+        "se": 0.07397575343118845,
+        "df": 1.0,
+        "low": -0.3027938617418017,
+        "high": 1.5771082754771144,
+        "one_sided_lower": 0.17009268159226332,
+        "environments": 1,
+        "pilots": 2,
+        "episodes": 32
+      }
+    },
+    {
+      "variant": "fixed_duration",
+      "policy": "taker",
+      "objective": {
+        "mean": -0.012045806385469815,
+        "se": 0.07776960476784543,
+        "df": 1.0,
+        "low": -1.0002023268171016,
+        "high": 0.9761107140461619,
+        "one_sided_lower": -0.5030637662841329,
+        "environments": 1,
+        "pilots": 2,
+        "episodes": 32
+      },
+      "pnl": {
+        "mean": 0.016016693614530182,
+        "se": 0.07520710476784542,
+        "df": 1.0,
+        "low": -0.9395801771806538,
+        "high": 0.9716135644097141,
+        "one_sided_lower": -0.45882227802777803,
+        "environments": 1,
+        "pilots": 2,
+        "episodes": 32
+      }
+    },
+    {
+      "variant": "nominal",
+      "policy": "abstain",
+      "objective": {
+        "mean": 0.0,
+        "se": 0.0,
+        "df": 1.0,
+        "low": 0.0,
+        "high": 0.0,
+        "one_sided_lower": 0.0,
+        "environments": 1,
+        "pilots": 2,
+        "episodes": 32
+      },
+      "pnl": {
+        "mean": 0.0,
+        "se": 0.0,
+        "df": 1.0,
+        "low": 0.0,
+        "high": 0.0,
+        "one_sided_lower": 0.0,
+        "environments": 1,
+        "pilots": 2,
+        "episodes": 32
+      }
+    },
+    {
+      "variant": "nominal",
+      "policy": "active",
+      "objective": {
+        "mean": 0.6297166153920557,
+        "se": 0.06668537956479187,
+        "df": 1.0,
+        "low": -0.21760147026770993,
+        "high": 1.4770347010518212,
+        "one_sided_lower": 0.2086816991581713,
+        "environments": 1,
+        "pilots": 2,
+        "episodes": 32
+      },
+      "pnl": {
+        "mean": 0.6555916153920557,
+        "se": 0.0663103795647918,
+        "df": 1.0,
+        "low": -0.18696164349164357,
+        "high": 1.4981448742757548,
+        "one_sided_lower": 0.23692435597617484,
+        "environments": 1,
+        "pilots": 2,
+        "episodes": 32
+      }
+    },
+    {
+      "variant": "nominal",
+      "policy": "full_information",
+      "objective": {
+        "mean": 1.1557652569317567,
+        "se": 0.04930403327374333,
+        "df": 1.0,
+        "low": 0.5292981158364045,
+        "high": 1.7822323980271089,
+        "one_sided_lower": 0.8444718421700713,
+        "environments": 1,
+        "pilots": 2,
+        "episodes": 32
+      },
+      "pnl": {
+        "mean": 1.1838902569317566,
+        "se": 0.049929033273743206,
+        "df": 1.0,
+        "low": 0.5494817378762968,
+        "high": 1.8182987759872165,
+        "one_sided_lower": 0.8686507474734002,
+        "environments": 1,
+        "pilots": 2,
+        "episodes": 32
+      }
+    },
+    {
+      "variant": "nominal",
+      "policy": "independent",
+      "objective": {
+        "mean": 0.19431654842142604,
+        "se": 0.349088984894573,
+        "df": 1.0,
+        "low": -4.241279564792413,
+        "high": 4.629912661635266,
+        "one_sided_lower": -2.0097445587130554,
+        "environments": 1,
+        "pilots": 2,
+        "episodes": 32
+      },
+      "pnl": {
+        "mean": 0.21581654842142606,
+        "se": 0.351213984894573,
+        "df": 1.0,
+        "low": -4.246780249856785,
+        "high": 4.678413346699637,
+        "one_sided_lower": -2.0016612806817395,
+        "environments": 1,
+        "pilots": 2,
+        "episodes": 32
+      }
+    },
+    {
+      "variant": "nominal",
+      "policy": "myopic",
+      "objective": {
+        "mean": 0.467927479113719,
+        "se": 0.10908222197931265,
+        "df": 1.0,
+        "low": -0.9180935664322828,
+        "high": 1.853948524659721,
+        "one_sided_lower": -0.2207905651322848,
+        "environments": 1,
+        "pilots": 2,
+        "episodes": 32
+      },
+      "pnl": {
+        "mean": 0.48823997911371897,
+        "se": 0.10876972197931256,
+        "df": 1.0,
+        "low": -0.8938103774522271,
+        "high": 1.8702903356796652,
+        "one_sided_lower": -0.19850501778394836,
+        "environments": 1,
+        "pilots": 2,
+        "episodes": 32
+      }
+    },
+    {
+      "variant": "nominal",
+      "policy": "noinfo",
+      "objective": {
+        "mean": 0.6576575489406218,
+        "se": 0.011578004631118854,
+        "df": 1.0,
+        "low": 0.5105450516612469,
+        "high": 0.8047700462199967,
+        "one_sided_lower": 0.5845569046639805,
+        "environments": 1,
+        "pilots": 2,
+        "episodes": 32
+      },
+      "pnl": {
+        "mean": 0.6856575489406218,
+        "se": 0.011953004631118869,
+        "df": 1.0,
+        "low": 0.5337802248851812,
+        "high": 0.8375348729960624,
+        "one_sided_lower": 0.6101892478459773,
+        "environments": 1,
+        "pilots": 2,
+        "episodes": 32
+      }
+    },
+    {
+      "variant": "nominal",
+      "policy": "taker",
+      "objective": {
+        "mean": 0.2586279350531492,
+        "se": 0.013584203886123039,
+        "df": 1.0,
+        "low": 0.08602425929812993,
+        "high": 0.4312316108081684,
+        "one_sided_lower": 0.1728606471914853,
+        "environments": 1,
+        "pilots": 2,
+        "episodes": 32
+      },
+      "pnl": {
+        "mean": 0.28712793505314915,
+        "se": 0.013334203886123053,
+        "df": 1.0,
+        "low": 0.1177008104821734,
+        "high": 0.4565550596241249,
+        "one_sided_lower": 0.20293908507015396,
+        "environments": 1,
+        "pilots": 2,
+        "episodes": 32
+      }
+    },
+    {
+      "variant": "state_dependence",
+      "policy": "abstain",
+      "objective": {
+        "mean": 0.0,
+        "se": 0.0,
+        "df": 1.0,
+        "low": 0.0,
+        "high": 0.0,
+        "one_sided_lower": 0.0,
+        "environments": 1,
+        "pilots": 2,
+        "episodes": 32
+      },
+      "pnl": {
+        "mean": 0.0,
+        "se": 0.0,
+        "df": 1.0,
+        "low": 0.0,
+        "high": 0.0,
+        "one_sided_lower": 0.0,
+        "environments": 1,
+        "pilots": 2,
+        "episodes": 32
+      }
+    },
+    {
+      "variant": "state_dependence",
+      "policy": "active",
+      "objective": {
+        "mean": 0.6954535746523207,
+        "se": 0.24457142737823195,
+        "df": 1.0,
+        "low": -2.4121210542339755,
+        "high": 3.8030282035386165,
+        "one_sided_lower": -0.848709645403227,
+        "environments": 1,
+        "pilots": 2,
+        "episodes": 32
+      },
+      "pnl": {
+        "mean": 0.7186410746523206,
+        "se": 0.24863392737823192,
+        "df": 1.0,
+        "low": -2.4405525109746846,
+        "high": 3.877834660279326,
+        "one_sided_lower": -0.8511717609315943,
+        "environments": 1,
+        "pilots": 2,
+        "episodes": 32
+      }
+    },
+    {
+      "variant": "state_dependence",
+      "policy": "full_information",
+      "objective": {
+        "mean": 0.49648163038858206,
+        "se": 0.04657820864254547,
+        "df": 1.0,
+        "low": -0.09535062486786228,
+        "high": 1.0883138856450265,
+        "one_sided_lower": 0.2023983950208607,
+        "environments": 1,
+        "pilots": 2,
+        "episodes": 32
+      },
+      "pnl": {
+        "mean": 0.525606630388582,
+        "se": 0.04532820864254544,
+        "df": 1.0,
+        "low": -0.050342868947643615,
+        "high": 1.1015561297248078,
+        "one_sided_lower": 0.23941558441420463,
+        "environments": 1,
+        "pilots": 2,
+        "episodes": 32
+      }
+    },
+    {
+      "variant": "state_dependence",
+      "policy": "independent",
+      "objective": {
+        "mean": 0.5091389691765513,
+        "se": 0.20499206505321874,
+        "df": 1.0,
+        "low": -2.0955321786808874,
+        "high": 3.1138101170339905,
+        "one_sided_lower": -0.7851299920495722,
+        "environments": 1,
+        "pilots": 2,
+        "episodes": 32
+      },
+      "pnl": {
+        "mean": 0.5327639691765513,
+        "se": 0.20861706505321875,
+        "df": 1.0,
+        "low": -2.1179671708495214,
+        "high": 3.1834951092026236,
+        "one_sided_lower": -0.7843923412902691,
+        "environments": 1,
+        "pilots": 2,
+        "episodes": 32
+      }
+    },
+    {
+      "variant": "state_dependence",
+      "policy": "myopic",
+      "objective": {
+        "mean": 0.6168500437114396,
+        "se": 0.1305546128223477,
+        "df": 1.0,
+        "low": -1.042003596061328,
+        "high": 2.2757036834842075,
+        "one_sided_lower": -0.20743934074347115,
+        "environments": 1,
+        "pilots": 2,
+        "episodes": 32
+      },
+      "pnl": {
+        "mean": 0.6364750437114396,
+        "se": 0.13430461282234774,
+        "df": 1.0,
+        "low": -1.0700268638219836,
+        "high": 2.342976951244863,
+        "one_sided_lower": -0.21149090892350275,
+        "environments": 1,
+        "pilots": 2,
+        "episodes": 32
+      }
+    },
+    {
+      "variant": "state_dependence",
+      "policy": "noinfo",
+      "objective": {
+        "mean": 0.6054345692542478,
+        "se": 0.27303111503485555,
+        "df": 1.0,
+        "low": -2.8637546777246916,
+        "high": 4.074623816233188,
+        "one_sided_lower": -1.1184160468504856,
+        "environments": 1,
+        "pilots": 2,
+        "episodes": 32
+      },
+      "pnl": {
+        "mean": 0.6314970692542478,
+        "se": 0.2769686150348556,
+        "df": 1.0,
+        "low": -2.88772285887338,
+        "high": 4.150716997381876,
+        "one_sided_lower": -1.117213943439519,
+        "environments": 1,
+        "pilots": 2,
+        "episodes": 32
+      }
+    },
+    {
+      "variant": "state_dependence",
+      "policy": "taker",
+      "objective": {
+        "mean": 0.14797628265053975,
+        "se": 0.12031439273504906,
+        "df": 1.0,
+        "low": -1.3807630241495228,
+        "high": 1.6767155894506023,
+        "one_sided_lower": -0.6116588967175834,
+        "environments": 1,
+        "pilots": 2,
+        "episodes": 32
+      },
+      "pnl": {
+        "mean": 0.17847628265053977,
+        "se": 0.11793939273504907,
+        "df": 1.0,
+        "low": -1.320085787901108,
+        "high": 1.6770383532021875,
+        "one_sided_lower": -0.5661637368702304,
+        "environments": 1,
+        "pilots": 2,
+        "episodes": 32
+      }
+    }
+  ],
+  "per_environment": [
+    {
+      "variant": "fixed_duration",
+      "environment": "theta0.35_kappa0.02",
+      "policy": "abstain",
+      "objective": {
+        "mean": 0.0,
+        "se": 0.0,
+        "low": 0.0,
+        "high": 0.0,
+        "pilots": 2,
+        "episodes": 32,
+        "df": 1,
+        "observed_pilot_mean_variance": 0.0,
+        "within_pilot_mean_variance": 0.0,
+        "estimated_between_pilot_variance": 0.0
+      },
+      "pnl": {
+        "mean": 0.0,
+        "se": 0.0,
+        "low": 0.0,
+        "high": 0.0,
+        "pilots": 2,
+        "episodes": 32,
+        "df": 1,
+        "observed_pilot_mean_variance": 0.0,
+        "within_pilot_mean_variance": 0.0,
+        "estimated_between_pilot_variance": 0.0
+      },
+      "metrics": {
+        "pnl": 0.0,
+        "inventory_penalty": 0.0,
+        "liquidation_cost": 0.0,
+        "passive_fees": 0.0,
+        "market_fees": 0.0,
+        "turnover": 0.0,
+        "spread_capture": 0.0,
+        "directional_exposure": 0.0,
+        "execution_selection": 0.0,
+        "mean_abs_inventory": 0.0,
+        "max_quote_gap": 12.0,
+        "regime_brier": null,
+        "wrong_confident_fraction": null,
+        "post_switch_error_10": null,
+        "conditional_logscore": null,
+        "score_residual_per_side": null
+      },
+      "downside": {
+        "pnl_5pct_quantile": 0.0,
+        "pnl_lower_5pct_mean": 0.0,
+        "loss_probability": 0.0
+      },
+      "action_frequencies": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "variant": "fixed_duration",
+      "environment": "theta0.35_kappa0.02",
+      "policy": "active",
+      "objective": {
+        "mean": 0.6282051732014826,
+        "se": 0.0801048575668219,
+        "low": -0.389623547404669,
+        "high": 1.6460338938076342,
+        "pilots": 2,
+        "episodes": 32,
+        "df": 1,
+        "observed_pilot_mean_variance": 0.012833576411601646,
+        "within_pilot_mean_variance": 0.08225782507925081,
+        "estimated_between_pilot_variance": 0.0
+      },
+      "pnl": {
+        "mean": 0.6488301732014826,
+        "se": 0.08072985756682194,
+        "low": -0.3769399253647788,
+        "high": 1.6746002717677442,
+        "pilots": 2,
+        "episodes": 32,
+        "df": 1,
+        "observed_pilot_mean_variance": 0.013034619805518715,
+        "within_pilot_mean_variance": 0.08245830899243384,
+        "estimated_between_pilot_variance": 0.0
+      },
+      "metrics": {
+        "pnl": 0.6488301732014826,
+        "inventory_penalty": 0.020625,
+        "liquidation_cost": 0.020250000000000004,
+        "passive_fees": 0.006,
+        "market_fees": 0.002,
+        "turnover": 7.75,
+        "spread_capture": 0.2265625,
+        "directional_exposure": 0.19007669060135585,
+        "execution_selection": 0.3440767560279047,
+        "mean_abs_inventory": 0.640625,
+        "max_quote_gap": 2.15625,
+        "regime_brier": 0.1414709199003106,
+        "wrong_confident_fraction": 0.0,
+        "post_switch_error_10": 0.3225806451612903,
+        "conditional_logscore": -1.126273185459608,
+        "score_residual_per_side": 0.023238172965410576
+      },
+      "downside": {
+        "pnl_5pct_quantile": -0.9644554493252289,
+        "pnl_lower_5pct_mean": -1.114725617263402,
+        "loss_probability": 0.28125
+      },
+      "action_frequencies": [
+        0.11979166666666667,
+        0.0390625,
+        0.052083333333333336,
+        0.044270833333333336,
+        0.049479166666666664,
+        0.15364583333333334,
+        0.020833333333333332,
+        0.17708333333333334,
+        0.2604166666666667,
+        0.046875,
+        0.036458333333333336
+      ]
+    },
+    {
+      "variant": "fixed_duration",
+      "environment": "theta0.35_kappa0.02",
+      "policy": "full_information",
+      "objective": {
+        "mean": 0.6738244546197234,
+        "se": 0.13390662534847864,
+        "low": -1.0276205425882863,
+        "high": 2.375269451827733,
+        "pilots": 2,
+        "episodes": 32,
+        "df": 1,
+        "observed_pilot_mean_variance": 0.03586196862443564,
+        "within_pilot_mean_variance": 0.0723982847246513,
+        "estimated_between_pilot_variance": 0.0
+      },
+      "pnl": {
+        "mean": 0.6971369546197235,
+        "se": 0.13521912534847863,
+        "low": -1.0209849363045154,
+        "high": 2.4152588455439625,
+        "pilots": 2,
+        "episodes": 32,
+        "df": 1,
+        "observed_pilot_mean_variance": 0.03656842372001515,
+        "within_pilot_mean_variance": 0.07261295815829077,
+        "estimated_between_pilot_variance": 0.0
+      },
+      "metrics": {
+        "pnl": 0.6971369546197234,
+        "inventory_penalty": 0.0233125,
+        "liquidation_cost": 0.027000000000000003,
+        "passive_fees": 0.005187500000000001,
+        "market_fees": 0.003125,
+        "turnover": 7.75,
+        "spread_capture": 0.15546875,
+        "directional_exposure": 0.045649951307110664,
+        "execution_selection": 0.5610547699644406,
+        "mean_abs_inventory": 0.6901041666666666,
+        "max_quote_gap": 5.15625,
+        "regime_brier": null,
+        "wrong_confident_fraction": null,
+        "post_switch_error_10": null,
+        "conditional_logscore": null,
+        "score_residual_per_side": null
+      },
+      "downside": {
+        "pnl_5pct_quantile": -0.5264244312546156,
+        "pnl_lower_5pct_mean": -0.6994273953567358,
+        "loss_probability": 0.3125
+      },
+      "action_frequencies": [
+        0.3020833333333333,
+        0.020833333333333332,
+        0.0,
+        0.020833333333333332,
+        0.19270833333333334,
+        0.1875,
+        0.0,
+        0.14583333333333334,
+        0.0,
+        0.07291666666666667,
+        0.057291666666666664
+      ]
+    },
+    {
+      "variant": "fixed_duration",
+      "environment": "theta0.35_kappa0.02",
+      "policy": "independent",
+      "objective": {
+        "mean": 0.5783479403607514,
+        "se": 0.03735818265206753,
+        "low": 0.10366722301217168,
+        "high": 1.0530286577093313,
+        "pilots": 2,
+        "episodes": 32,
+        "df": 1,
+        "observed_pilot_mean_variance": 0.0027912676221304783,
+        "within_pilot_mean_variance": 0.07683534506749987,
+        "estimated_between_pilot_variance": 0.0
+      },
+      "pnl": {
+        "mean": 0.5978479403607513,
+        "se": 0.0366081826520675,
+        "low": 0.13269687656430296,
+        "high": 1.0629990041571995,
+        "pilots": 2,
+        "episodes": 32,
+        "df": 1,
+        "observed_pilot_mean_variance": 0.002680318074174272,
+        "within_pilot_mean_variance": 0.07721937334982665,
+        "estimated_between_pilot_variance": 0.0
+      },
+      "metrics": {
+        "pnl": 0.5978479403607513,
+        "inventory_penalty": 0.0195,
+        "liquidation_cost": 0.024468750000000004,
+        "passive_fees": 0.0064687500000000005,
+        "market_fees": 0.001,
+        "turnover": 7.875,
+        "spread_capture": 0.24765625000000002,
+        "directional_exposure": 0.17397808921484903,
+        "execution_selection": 0.24567605611820198,
+        "mean_abs_inventory": 0.59375,
+        "max_quote_gap": 0.46875,
+        "regime_brier": null,
+        "wrong_confident_fraction": null,
+        "post_switch_error_10": null,
+        "conditional_logscore": null,
+        "score_residual_per_side": 0.044935330571396086
+      },
+      "downside": {
+        "pnl_5pct_quantile": -0.878712972473821,
+        "pnl_lower_5pct_mean": -1.3639005910603628,
+        "loss_probability": 0.28125
+      },
+      "action_frequencies": [
+        0.0,
+        0.1171875,
+        0.036458333333333336,
+        0.1171875,
+        0.0,
+        0.1640625,
+        0.010416666666666666,
+        0.17708333333333334,
+        0.3359375,
+        0.0234375,
+        0.018229166666666668
+      ]
+    },
+    {
+      "variant": "fixed_duration",
+      "environment": "theta0.35_kappa0.02",
+      "policy": "myopic",
+      "objective": {
+        "mean": 0.5709851496000228,
+        "se": 0.04904015971351883,
+        "low": -0.05212916001465362,
+        "high": 1.1940994592146992,
+        "pilots": 2,
+        "episodes": 32,
+        "df": 1,
+        "observed_pilot_mean_variance": 0.00480987452945487,
+        "within_pilot_mean_variance": 0.07807737184572819,
+        "estimated_between_pilot_variance": 0.0
+      },
+      "pnl": {
+        "mean": 0.5867351496000228,
+        "se": 0.05054015971351883,
+        "low": -0.055438467118915646,
+        "high": 1.2289087663189613,
+        "pilots": 2,
+        "episodes": 32,
+        "df": 1,
+        "observed_pilot_mean_variance": 0.005108615487735983,
+        "within_pilot_mean_variance": 0.07895947155532902,
+        "estimated_between_pilot_variance": 0.0
+      },
+      "metrics": {
+        "pnl": 0.5867351496000227,
+        "inventory_penalty": 0.01575,
+        "liquidation_cost": 0.016875,
+        "passive_fees": 0.005531250000000001,
+        "market_fees": 0.0006875,
+        "turnover": 6.5,
+        "spread_capture": 0.21015625,
+        "directional_exposure": 0.127323997111814,
+        "execution_selection": 0.33125787430979897,
+        "mean_abs_inventory": 0.5416666666666667,
+        "max_quote_gap": 2.65625,
+        "regime_brier": 0.14280001144083726,
+        "wrong_confident_fraction": 0.0,
+        "post_switch_error_10": 0.3870967741935484,
+        "conditional_logscore": -1.1281008529885637,
+        "score_residual_per_side": 0.020315218051987802
+      },
+      "downside": {
+        "pnl_5pct_quantile": -0.7405468642632342,
+        "pnl_lower_5pct_mean": -0.9510565079207035,
+        "loss_probability": 0.3125
+      },
+      "action_frequencies": [
+        0.2109375,
+        0.026041666666666668,
+        0.046875,
+        0.018229166666666668,
+        0.049479166666666664,
+        0.18489583333333334,
+        0.0234375,
+        0.14322916666666666,
+        0.2682291666666667,
+        0.018229166666666668,
+        0.010416666666666666
+      ]
+    },
+    {
+      "variant": "fixed_duration",
+      "environment": "theta0.35_kappa0.02",
+      "policy": "noinfo",
+      "objective": {
+        "mean": 0.6154072068676564,
+        "se": 0.07397575343118845,
+        "low": -0.3245438617418017,
+        "high": 1.5553582754771145,
+        "pilots": 2,
+        "episodes": 32,
+        "df": 1,
+        "observed_pilot_mean_variance": 0.01094482419142398,
+        "within_pilot_mean_variance": 0.08229467802027746,
+        "estimated_between_pilot_variance": 0.0
+      },
+      "pnl": {
+        "mean": 0.6371572068676564,
+        "se": 0.07397575343118845,
+        "low": -0.3027938617418017,
+        "high": 1.5771082754771144,
+        "pilots": 2,
+        "episodes": 32,
+        "df": 1,
+        "observed_pilot_mean_variance": 0.01094482419142398,
+        "within_pilot_mean_variance": 0.0822146967431201,
+        "estimated_between_pilot_variance": 0.0
+      },
+      "metrics": {
+        "pnl": 0.6371572068676563,
+        "inventory_penalty": 0.021750000000000002,
+        "liquidation_cost": 0.020250000000000004,
+        "passive_fees": 0.00575,
+        "market_fees": 0.002125,
+        "turnover": 7.5625,
+        "spread_capture": 0.22031250000000002,
+        "directional_exposure": 0.1665020939765815,
+        "execution_selection": 0.3691493162861895,
+        "mean_abs_inventory": 0.671875,
+        "max_quote_gap": 2.25,
+        "regime_brier": 0.13814552619699533,
+        "wrong_confident_fraction": 0.0,
+        "post_switch_error_10": 0.45161290322580644,
+        "conditional_logscore": -1.1034672847491407,
+        "score_residual_per_side": 0.025405408349090327
+      },
+      "downside": {
+        "pnl_5pct_quantile": -0.9775919673670689,
+        "pnl_lower_5pct_mean": -1.0376520265594553,
+        "loss_probability": 0.25
+      },
+      "action_frequencies": [
+        0.12239583333333333,
+        0.033854166666666664,
+        0.06770833333333333,
+        0.046875,
+        0.049479166666666664,
+        0.15104166666666666,
+        0.0234375,
+        0.13802083333333334,
+        0.2786458333333333,
+        0.049479166666666664,
+        0.0390625
+      ]
+    },
+    {
+      "variant": "fixed_duration",
+      "environment": "theta0.35_kappa0.02",
+      "policy": "taker",
+      "objective": {
+        "mean": -0.012045806385469815,
+        "se": 0.07776960476784543,
+        "low": -1.0002023268171016,
+        "high": 0.9761107140461619,
+        "pilots": 2,
+        "episodes": 32,
+        "df": 1,
+        "observed_pilot_mean_variance": 0.012096222851493773,
+        "within_pilot_mean_variance": 0.06569459923485085,
+        "estimated_between_pilot_variance": 0.0
+      },
+      "pnl": {
+        "mean": 0.016016693614530182,
+        "se": 0.07520710476784542,
+        "low": -0.9395801771806538,
+        "high": 0.9716135644097141,
+        "pilots": 2,
+        "episodes": 32,
+        "df": 1,
+        "observed_pilot_mean_variance": 0.011312217215123356,
+        "within_pilot_mean_variance": 0.06598076915393544,
+        "estimated_between_pilot_variance": 0.0
+      },
+      "metrics": {
+        "pnl": 0.016016693614530148,
+        "inventory_penalty": 0.0280625,
+        "liquidation_cost": 0.02109375,
+        "passive_fees": 0.0,
+        "market_fees": 0.0055625,
+        "turnover": 3.5625,
+        "spread_capture": 0.0,
+        "directional_exposure": 0.15925939652081383,
+        "execution_selection": 0.0,
+        "mean_abs_inventory": 0.7213541666666667,
+        "max_quote_gap": 12.0,
+        "regime_brier": null,
+        "wrong_confident_fraction": null,
+        "post_switch_error_10": null,
+        "conditional_logscore": null,
+        "score_residual_per_side": null
+      },
+      "downside": {
+        "pnl_5pct_quantile": -1.3674807782142584,
+        "pnl_lower_5pct_mean": -1.9453958087618863,
+        "loss_probability": 0.4375
+      },
+      "action_frequencies": [
+        0.7682291666666666,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.11979166666666667,
+        0.11197916666666667
+      ]
+    },
+    {
+      "variant": "nominal",
+      "environment": "theta0.35_kappa0.02",
+      "policy": "abstain",
+      "objective": {
+        "mean": 0.0,
+        "se": 0.0,
+        "low": 0.0,
+        "high": 0.0,
+        "pilots": 2,
+        "episodes": 32,
+        "df": 1,
+        "observed_pilot_mean_variance": 0.0,
+        "within_pilot_mean_variance": 0.0,
+        "estimated_between_pilot_variance": 0.0
+      },
+      "pnl": {
+        "mean": 0.0,
+        "se": 0.0,
+        "low": 0.0,
+        "high": 0.0,
+        "pilots": 2,
+        "episodes": 32,
+        "df": 1,
+        "observed_pilot_mean_variance": 0.0,
+        "within_pilot_mean_variance": 0.0,
+        "estimated_between_pilot_variance": 0.0
+      },
+      "metrics": {
+        "pnl": 0.0,
+        "inventory_penalty": 0.0,
+        "liquidation_cost": 0.0,
+        "passive_fees": 0.0,
+        "market_fees": 0.0,
+        "turnover": 0.0,
+        "spread_capture": 0.0,
+        "directional_exposure": 0.0,
+        "execution_selection": 0.0,
+        "mean_abs_inventory": 0.0,
+        "max_quote_gap": 12.0,
+        "regime_brier": null,
+        "wrong_confident_fraction": null,
+        "post_switch_error_10": null,
+        "conditional_logscore": null,
+        "score_residual_per_side": null
+      },
+      "downside": {
+        "pnl_5pct_quantile": 0.0,
+        "pnl_lower_5pct_mean": 0.0,
+        "loss_probability": 0.0
+      },
+      "action_frequencies": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "variant": "nominal",
+      "environment": "theta0.35_kappa0.02",
+      "policy": "active",
+      "objective": {
+        "mean": 0.6297166153920557,
+        "se": 0.06668537956479187,
+        "low": -0.21760147026770993,
+        "high": 1.4770347010518212,
+        "pilots": 2,
+        "episodes": 32,
+        "df": 1,
+        "observed_pilot_mean_variance": 0.008893879695400723,
+        "within_pilot_mean_variance": 0.08010822688981026,
+        "estimated_between_pilot_variance": 0.0
+      },
+      "pnl": {
+        "mean": 0.6555916153920557,
+        "se": 0.0663103795647918,
+        "low": -0.18696164349164357,
+        "high": 1.4981448742757548,
+        "pilots": 2,
+        "episodes": 32,
+        "df": 1,
+        "observed_pilot_mean_variance": 0.008794132876053516,
+        "within_pilot_mean_variance": 0.08112043074716534,
+        "estimated_between_pilot_variance": 0.0
+      },
+      "metrics": {
+        "pnl": 0.6555916153920556,
+        "inventory_penalty": 0.025875000000000002,
+        "liquidation_cost": 0.020250000000000004,
+        "passive_fees": 0.005937500000000001,
+        "market_fees": 0.0013750000000000001,
+        "turnover": 7.375,
+        "spread_capture": 0.23046875000000003,
+        "directional_exposure": 0.3391135932454649,
+        "execution_selection": 0.12521479163606591,
+        "mean_abs_inventory": 0.75,
+        "max_quote_gap": 2.5,
+        "regime_brier": 0.15811934682493997,
+        "wrong_confident_fraction": 0.0,
+        "post_switch_error_10": 0.5294117647058824,
+        "conditional_logscore": -1.1228649034327818,
+        "score_residual_per_side": -0.017629411327568068
+      },
+      "downside": {
+        "pnl_5pct_quantile": -0.8227835661590321,
+        "pnl_lower_5pct_mean": -1.0937123726087197,
+        "loss_probability": 0.28125
+      },
+      "action_frequencies": [
+        0.18229166666666666,
+        0.078125,
+        0.044270833333333336,
+        0.046875,
+        0.046875,
+        0.13020833333333334,
+        0.0390625,
+        0.140625,
+        0.234375,
+        0.026041666666666668,
+        0.03125
+      ]
+    },
+    {
+      "variant": "nominal",
+      "environment": "theta0.35_kappa0.02",
+      "policy": "full_information",
+      "objective": {
+        "mean": 1.1557652569317567,
+        "se": 0.04930403327374333,
+        "low": 0.5292981158364045,
+        "high": 1.7822323980271089,
+        "pilots": 2,
+        "episodes": 32,
+        "df": 1,
+        "observed_pilot_mean_variance": 0.004861775394116779,
+        "within_pilot_mean_variance": 0.07611297726621842,
+        "estimated_between_pilot_variance": 0.0
+      },
+      "pnl": {
+        "mean": 1.1838902569317566,
+        "se": 0.049929033273743206,
+        "low": 0.5494817378762968,
+        "high": 1.8182987759872165,
+        "pilots": 2,
+        "episodes": 32,
+        "df": 1,
+        "observed_pilot_mean_variance": 0.004985816727301112,
+        "within_pilot_mean_variance": 0.07699261133029023,
+        "estimated_between_pilot_variance": 0.0
+      },
+      "metrics": {
+        "pnl": 1.1838902569317566,
+        "inventory_penalty": 0.028125000000000004,
+        "liquidation_cost": 0.023625000000000004,
+        "passive_fees": 0.00425,
+        "market_fees": 0.003125,
+        "turnover": 6.6875,
+        "spread_capture": 0.13828125000000002,
+        "directional_exposure": 0.5903644646446831,
+        "execution_selection": 0.5134539364165104,
+        "mean_abs_inventory": 0.7916666666666667,
+        "max_quote_gap": 6.625,
+        "regime_brier": null,
+        "wrong_confident_fraction": null,
+        "post_switch_error_10": null,
+        "conditional_logscore": null,
+        "score_residual_per_side": null
+      },
+      "downside": {
+        "pnl_5pct_quantile": -0.14901692424278576,
+        "pnl_lower_5pct_mean": -0.7350541087454434,
+        "loss_probability": 0.09375
+      },
+      "action_frequencies": [
+        0.4244791666666667,
+        0.041666666666666664,
+        0.0,
+        0.028645833333333332,
+        0.10677083333333333,
+        0.10416666666666667,
+        0.0,
+        0.1640625,
+        0.0,
+        0.0625,
+        0.06770833333333333
+      ]
+    },
+    {
+      "variant": "nominal",
+      "environment": "theta0.35_kappa0.02",
+      "policy": "independent",
+      "objective": {
+        "mean": 0.19431654842142604,
+        "se": 0.349088984894573,
+        "low": -4.241279564792413,
+        "high": 4.629912661635266,
+        "pilots": 2,
+        "episodes": 32,
+        "df": 1,
+        "observed_pilot_mean_variance": 0.24372623874944682,
+        "within_pilot_mean_variance": 0.11469684686631124,
+        "estimated_between_pilot_variance": 0.12902939188313559
+      },
+      "pnl": {
+        "mean": 0.21581654842142606,
+        "se": 0.351213984894573,
+        "low": -4.246780249856785,
+        "high": 4.678413346699637,
+        "pilots": 2,
+        "episodes": 32,
+        "df": 1,
+        "observed_pilot_mean_variance": 0.24670252637105072,
+        "within_pilot_mean_variance": 0.11456259773404025,
+        "estimated_between_pilot_variance": 0.13213992863701046
+      },
+      "metrics": {
+        "pnl": 0.21581654842142606,
+        "inventory_penalty": 0.0215,
+        "liquidation_cost": 0.017718750000000002,
+        "passive_fees": 0.007218750000000001,
+        "market_fees": 0.00075,
+        "turnover": 8.25,
+        "spread_capture": 0.28359375,
+        "directional_exposure": 0.17350792828088743,
+        "execution_selection": -0.19451294152462223,
+        "mean_abs_inventory": 0.671875,
+        "max_quote_gap": 0.3125,
+        "regime_brier": null,
+        "wrong_confident_fraction": null,
+        "post_switch_error_10": null,
+        "conditional_logscore": null,
+        "score_residual_per_side": -0.02846025834005602
+      },
+      "downside": {
+        "pnl_5pct_quantile": -1.571405618336192,
+        "pnl_lower_5pct_mean": -2.6621735207373396,
+        "loss_probability": 0.40625
+      },
+      "action_frequencies": [
+        0.0,
+        0.1015625,
+        0.0234375,
+        0.08854166666666667,
+        0.0,
+        0.1640625,
+        0.018229166666666668,
+        0.2786458333333333,
+        0.2942708333333333,
+        0.0026041666666666665,
+        0.028645833333333332
+      ]
+    },
+    {
+      "variant": "nominal",
+      "environment": "theta0.35_kappa0.02",
+      "policy": "myopic",
+      "objective": {
+        "mean": 0.467927479113719,
+        "se": 0.10908222197931265,
+        "low": -0.9180935664322828,
+        "high": 1.853948524659721,
+        "pilots": 2,
+        "episodes": 32,
+        "df": 1,
+        "observed_pilot_mean_variance": 0.023797862303888077,
+        "within_pilot_mean_variance": 0.09072755730920005,
+        "estimated_between_pilot_variance": 0.0
+      },
+      "pnl": {
+        "mean": 0.48823997911371897,
+        "se": 0.10876972197931256,
+        "low": -0.8938103774522271,
+        "high": 1.8702903356796652,
+        "pilots": 2,
+        "episodes": 32,
+        "df": 1,
+        "observed_pilot_mean_variance": 0.0236617048389139,
+        "within_pilot_mean_variance": 0.09161988986490349,
+        "estimated_between_pilot_variance": 0.0
+      },
+      "metrics": {
+        "pnl": 0.48823997911371897,
+        "inventory_penalty": 0.0203125,
+        "liquidation_cost": 0.020250000000000004,
+        "passive_fees": 0.005968750000000001,
+        "market_fees": 0.0001875,
+        "turnover": 6.8125,
+        "spread_capture": 0.2265625,
+        "directional_exposure": 0.2057747383832413,
+        "execution_selection": 0.10840540579214725,
+        "mean_abs_inventory": 0.6484375,
+        "max_quote_gap": 2.75,
+        "regime_brier": 0.16547966763947508,
+        "wrong_confident_fraction": 0.0,
+        "post_switch_error_10": 0.5294117647058824,
+        "conditional_logscore": -1.0952019739646748,
+        "score_residual_per_side": -0.02096214711607332
+      },
+      "downside": {
+        "pnl_5pct_quantile": -1.1038224432461579,
+        "pnl_lower_5pct_mean": -1.5930875745531152,
+        "loss_probability": 0.375
+      },
+      "action_frequencies": [
+        0.24479166666666666,
+        0.026041666666666668,
+        0.08333333333333333,
+        0.049479166666666664,
+        0.08333333333333333,
+        0.11197916666666667,
+        0.049479166666666664,
+        0.10416666666666667,
+        0.23958333333333334,
+        0.005208333333333333,
+        0.0026041666666666665
+      ]
+    },
+    {
+      "variant": "nominal",
+      "environment": "theta0.35_kappa0.02",
+      "policy": "noinfo",
+      "objective": {
+        "mean": 0.6576575489406218,
+        "se": 0.011578004631118854,
+        "low": 0.5105450516612469,
+        "high": 0.8047700462199967,
+        "pilots": 2,
+        "episodes": 32,
+        "df": 1,
+        "observed_pilot_mean_variance": 0.0002681003824764193,
+        "within_pilot_mean_variance": 0.08522760364541998,
+        "estimated_between_pilot_variance": 0.0
+      },
+      "pnl": {
+        "mean": 0.6856575489406218,
+        "se": 0.011953004631118869,
+        "low": 0.5337802248851812,
+        "high": 0.8375348729960624,
+        "pilots": 2,
+        "episodes": 32,
+        "df": 1,
+        "observed_pilot_mean_variance": 0.00028574863942309824,
+        "within_pilot_mean_variance": 0.0860607849234551,
+        "estimated_between_pilot_variance": 0.0
+      },
+      "metrics": {
+        "pnl": 0.6856575489406217,
+        "inventory_penalty": 0.028,
+        "liquidation_cost": 0.021937500000000002,
+        "passive_fees": 0.005531250000000001,
+        "market_fees": 0.0019375000000000002,
+        "turnover": 7.3125,
+        "spread_capture": 0.21796875000000002,
+        "directional_exposure": 0.3864076302159993,
+        "execution_selection": 0.09130742955179512,
+        "mean_abs_inventory": 0.8072916666666666,
+        "max_quote_gap": 3.03125,
+        "regime_brier": 0.17469420600287827,
+        "wrong_confident_fraction": 0.0,
+        "post_switch_error_10": 0.6470588235294118,
+        "conditional_logscore": -1.106018276996303,
+        "score_residual_per_side": -0.025214304336997465
+      },
+      "downside": {
+        "pnl_5pct_quantile": -0.9469658760356227,
+        "pnl_lower_5pct_mean": -1.3109369207170316,
+        "loss_probability": 0.25
+      },
+      "action_frequencies": [
+        0.20572916666666666,
+        0.0625,
+        0.041666666666666664,
+        0.049479166666666664,
+        0.036458333333333336,
+        0.11197916666666667,
+        0.0390625,
+        0.1328125,
+        0.23958333333333334,
+        0.036458333333333336,
+        0.044270833333333336
+      ]
+    },
+    {
+      "variant": "nominal",
+      "environment": "theta0.35_kappa0.02",
+      "policy": "taker",
+      "objective": {
+        "mean": 0.2586279350531492,
+        "se": 0.013584203886123039,
+        "low": 0.08602425929812993,
+        "high": 0.4312316108081684,
+        "pilots": 2,
+        "episodes": 32,
+        "df": 1,
+        "observed_pilot_mean_variance": 0.00036906119043952055,
+        "within_pilot_mean_variance": 0.07939374139707173,
+        "estimated_between_pilot_variance": 0.0
+      },
+      "pnl": {
+        "mean": 0.28712793505314915,
+        "se": 0.013334203886123053,
+        "low": 0.1177008104821734,
+        "high": 0.4565550596241249,
+        "pilots": 2,
+        "episodes": 32,
+        "df": 1,
+        "observed_pilot_mean_variance": 0.00035560198655339826,
+        "within_pilot_mean_variance": 0.08013686657117575,
+        "estimated_between_pilot_variance": 0.0
+      },
+      "metrics": {
+        "pnl": 0.28712793505314915,
+        "inventory_penalty": 0.028500000000000004,
+        "liquidation_cost": 0.026156250000000002,
+        "passive_fees": 0.0,
+        "market_fees": 0.0056875,
+        "turnover": 3.8125,
+        "spread_capture": 0.0,
+        "directional_exposure": 0.42069008274318953,
+        "execution_selection": 0.0,
+        "mean_abs_inventory": 0.765625,
+        "max_quote_gap": 12.0,
+        "regime_brier": null,
+        "wrong_confident_fraction": null,
+        "post_switch_error_10": null,
+        "conditional_logscore": null,
+        "score_residual_per_side": null
+      },
+      "downside": {
+        "pnl_5pct_quantile": -1.2831192709871306,
+        "pnl_lower_5pct_mean": -1.6701232330594062,
+        "loss_probability": 0.375
+      },
+      "action_frequencies": [
+        0.7630208333333334,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.109375,
+        0.12760416666666666
+      ]
+    },
+    {
+      "variant": "state_dependence",
+      "environment": "theta0.35_kappa0.02",
+      "policy": "abstain",
+      "objective": {
+        "mean": 0.0,
+        "se": 0.0,
+        "low": 0.0,
+        "high": 0.0,
+        "pilots": 2,
+        "episodes": 32,
+        "df": 1,
+        "observed_pilot_mean_variance": 0.0,
+        "within_pilot_mean_variance": 0.0,
+        "estimated_between_pilot_variance": 0.0
+      },
+      "pnl": {
+        "mean": 0.0,
+        "se": 0.0,
+        "low": 0.0,
+        "high": 0.0,
+        "pilots": 2,
+        "episodes": 32,
+        "df": 1,
+        "observed_pilot_mean_variance": 0.0,
+        "within_pilot_mean_variance": 0.0,
+        "estimated_between_pilot_variance": 0.0
+      },
+      "metrics": {
+        "pnl": 0.0,
+        "inventory_penalty": 0.0,
+        "liquidation_cost": 0.0,
+        "passive_fees": 0.0,
+        "market_fees": 0.0,
+        "turnover": 0.0,
+        "spread_capture": 0.0,
+        "directional_exposure": 0.0,
+        "execution_selection": 0.0,
+        "mean_abs_inventory": 0.0,
+        "max_quote_gap": 12.0,
+        "regime_brier": null,
+        "wrong_confident_fraction": null,
+        "post_switch_error_10": null,
+        "conditional_logscore": null,
+        "score_residual_per_side": null
+      },
+      "downside": {
+        "pnl_5pct_quantile": 0.0,
+        "pnl_lower_5pct_mean": 0.0,
+        "loss_probability": 0.0
+      },
+      "action_frequencies": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "variant": "state_dependence",
+      "environment": "theta0.35_kappa0.02",
+      "policy": "active",
+      "objective": {
+        "mean": 0.6954535746523207,
+        "se": 0.24457142737823195,
+        "low": -2.4121210542339755,
+        "high": 3.8030282035386165,
+        "pilots": 2,
+        "episodes": 32,
+        "df": 1,
+        "observed_pilot_mean_variance": 0.11963036617965157,
+        "within_pilot_mean_variance": 0.06938461394858607,
+        "estimated_between_pilot_variance": 0.050245752231065505
+      },
+      "pnl": {
+        "mean": 0.7186410746523206,
+        "se": 0.24863392737823192,
+        "low": -2.4405525109746846,
+        "high": 3.877834660279326,
+        "pilots": 2,
+        "episodes": 32,
+        "df": 1,
+        "observed_pilot_mean_variance": 0.12363765968704782,
+        "within_pilot_mean_variance": 0.07039842879920864,
+        "estimated_between_pilot_variance": 0.053239230887839176
+      },
+      "metrics": {
+        "pnl": 0.7186410746523206,
+        "inventory_penalty": 0.0231875,
+        "liquidation_cost": 0.023625000000000004,
+        "passive_fees": 0.005781250000000001,
+        "market_fees": 0.0016875,
+        "turnover": 7.5,
+        "spread_capture": 0.2203125,
+        "directional_exposure": 0.20573463470181608,
+        "execution_selection": 0.29214416258658477,
+        "mean_abs_inventory": 0.7005208333333334,
+        "max_quote_gap": 1.8125,
+        "regime_brier": 0.1958917790585873,
+        "wrong_confident_fraction": 0.005208333333333333,
+        "post_switch_error_10": 0.5581395348837209,
+        "conditional_logscore": -1.0442200475474364,
+        "score_residual_per_side": 0.015571654283869892
+      },
+      "downside": {
+        "pnl_5pct_quantile": -0.5913560468788722,
+        "pnl_lower_5pct_mean": -0.8147581214823758,
+        "loss_probability": 0.3125
+      },
+      "action_frequencies": [
+        0.1015625,
+        0.06510416666666667,
+        0.0390625,
+        0.08854166666666667,
+        0.033854166666666664,
+        0.15885416666666666,
+        0.0546875,
+        0.16145833333333334,
+        0.2265625,
+        0.033854166666666664,
+        0.036458333333333336
+      ]
+    },
+    {
+      "variant": "state_dependence",
+      "environment": "theta0.35_kappa0.02",
+      "policy": "full_information",
+      "objective": {
+        "mean": 0.49648163038858206,
+        "se": 0.04657820864254547,
+        "low": -0.09535062486786228,
+        "high": 1.0883138856450265,
+        "pilots": 2,
+        "episodes": 32,
+        "df": 1,
+        "observed_pilot_mean_variance": 0.004339059040696995,
+        "within_pilot_mean_variance": 0.12875946901879276,
+        "estimated_between_pilot_variance": 0.0
+      },
+      "pnl": {
+        "mean": 0.525606630388582,
+        "se": 0.04532820864254544,
+        "low": -0.050342868947643615,
+        "high": 1.1015561297248078,
+        "pilots": 2,
+        "episodes": 32,
+        "df": 1,
+        "observed_pilot_mean_variance": 0.004109292997484262,
+        "within_pilot_mean_variance": 0.12858550726915668,
+        "estimated_between_pilot_variance": 0.0
+      },
+      "metrics": {
+        "pnl": 0.5256066303885821,
+        "inventory_penalty": 0.029125,
+        "liquidation_cost": 0.0253125,
+        "passive_fees": 0.0053125,
+        "market_fees": 0.00275,
+        "turnover": 7.625,
+        "spread_capture": 0.16484375,
+        "directional_exposure": -0.030475685835065477,
+        "execution_selection": 0.37028873765965487,
+        "mean_abs_inventory": 0.8125,
+        "max_quote_gap": 4.65625,
+        "regime_brier": null,
+        "wrong_confident_fraction": null,
+        "post_switch_error_10": null,
+        "conditional_logscore": null,
+        "score_residual_per_side": null
+      },
+      "downside": {
+        "pnl_5pct_quantile": -0.9019439124870435,
+        "pnl_lower_5pct_mean": -2.519135753565641,
+        "loss_probability": 0.375
+      },
+      "action_frequencies": [
+        0.2760416666666667,
+        0.026041666666666668,
+        0.0,
+        0.057291666666666664,
+        0.171875,
+        0.15885416666666666,
+        0.0,
+        0.1953125,
+        0.0,
+        0.057291666666666664,
+        0.057291666666666664
+      ]
+    },
+    {
+      "variant": "state_dependence",
+      "environment": "theta0.35_kappa0.02",
+      "policy": "independent",
+      "objective": {
+        "mean": 0.5091389691765513,
+        "se": 0.20499206505321874,
+        "low": -2.0955321786808874,
+        "high": 3.1138101170339905,
+        "pilots": 2,
+        "episodes": 32,
+        "df": 1,
+        "observed_pilot_mean_variance": 0.08404349346956613,
+        "within_pilot_mean_variance": 0.09635314653939414,
+        "estimated_between_pilot_variance": 0.0
+      },
+      "pnl": {
+        "mean": 0.5327639691765513,
+        "se": 0.20861706505321875,
+        "low": -2.1179671708495214,
+        "high": 3.1834951092026236,
+        "pilots": 2,
+        "episodes": 32,
+        "df": 1,
+        "observed_pilot_mean_variance": 0.0870421596628378,
+        "within_pilot_mean_variance": 0.0969251182453553,
+        "estimated_between_pilot_variance": 0.0
+      },
+      "metrics": {
+        "pnl": 0.5327639691765513,
+        "inventory_penalty": 0.023625,
+        "liquidation_cost": 0.029531250000000002,
+        "passive_fees": 0.006843750000000001,
+        "market_fees": 0.001,
+        "turnover": 8.4375,
+        "spread_capture": 0.26875,
+        "directional_exposure": 0.07518177919697411,
+        "execution_selection": 0.2237266382436928,
+        "mean_abs_inventory": 0.6875,
+        "max_quote_gap": 0.46875,
+        "regime_brier": null,
+        "wrong_confident_fraction": null,
+        "post_switch_error_10": null,
+        "conditional_logscore": null,
+        "score_residual_per_side": 0.03477039943246514
+      },
+      "downside": {
+        "pnl_5pct_quantile": -1.2915617429474802,
+        "pnl_lower_5pct_mean": -1.9455061625396781,
+        "loss_probability": 0.34375
+      },
+      "action_frequencies": [
+        0.0,
+        0.11458333333333333,
+        0.0078125,
+        0.1328125,
+        0.0,
+        0.1875,
+        0.0546875,
+        0.16927083333333334,
+        0.2916666666666667,
+        0.0234375,
+        0.018229166666666668
+      ]
+    },
+    {
+      "variant": "state_dependence",
+      "environment": "theta0.35_kappa0.02",
+      "policy": "myopic",
+      "objective": {
+        "mean": 0.6168500437114396,
+        "se": 0.1305546128223477,
+        "low": -1.042003596061328,
+        "high": 2.2757036834842075,
+        "pilots": 2,
+        "episodes": 32,
+        "df": 1,
+        "observed_pilot_mean_variance": 0.03408901385838623,
+        "within_pilot_mean_variance": 0.07390613885190868,
+        "estimated_between_pilot_variance": 0.0
+      },
+      "pnl": {
+        "mean": 0.6364750437114396,
+        "se": 0.13430461282234774,
+        "low": -1.0700268638219836,
+        "high": 2.342976951244863,
+        "pilots": 2,
+        "episodes": 32,
+        "df": 1,
+        "observed_pilot_mean_variance": 0.036075458050721466,
+        "within_pilot_mean_variance": 0.07546597366360996,
+        "estimated_between_pilot_variance": 0.0
+      },
+      "metrics": {
+        "pnl": 0.6364750437114397,
+        "inventory_penalty": 0.019625,
+        "liquidation_cost": 0.020250000000000004,
+        "passive_fees": 0.005625,
+        "market_fees": 0.000625,
+        "turnover": 6.6875,
+        "spread_capture": 0.22265625,
+        "directional_exposure": 0.08101323427043394,
+        "execution_selection": 0.32768741348070873,
+        "mean_abs_inventory": 0.609375,
+        "max_quote_gap": 2.4375,
+        "regime_brier": 0.18287540892736198,
+        "wrong_confident_fraction": 0.0026041666666666665,
+        "post_switch_error_10": 0.46511627906976744,
+        "conditional_logscore": -1.1417079149139573,
+        "score_residual_per_side": 0.021700099657825246
+      },
+      "downside": {
+        "pnl_5pct_quantile": -0.7064597850630694,
+        "pnl_lower_5pct_mean": -1.1353306690325335,
+        "loss_probability": 0.28125
+      },
+      "action_frequencies": [
+        0.20052083333333334,
+        0.033854166666666664,
+        0.026041666666666668,
+        0.044270833333333336,
+        0.057291666666666664,
+        0.15104166666666666,
+        0.052083333333333336,
+        0.15625,
+        0.2526041666666667,
+        0.015625,
+        0.010416666666666666
+      ]
+    },
+    {
+      "variant": "state_dependence",
+      "environment": "theta0.35_kappa0.02",
+      "policy": "noinfo",
+      "objective": {
+        "mean": 0.6054345692542478,
+        "se": 0.27303111503485555,
+        "low": -2.8637546777246916,
+        "high": 4.074623816233188,
+        "pilots": 2,
+        "episodes": 32,
+        "df": 1,
+        "observed_pilot_mean_variance": 0.14909197955435305,
+        "within_pilot_mean_variance": 0.07437561848232156,
+        "estimated_between_pilot_variance": 0.07471636107203149
+      },
+      "pnl": {
+        "mean": 0.6314970692542478,
+        "se": 0.2769686150348556,
+        "low": -2.88772285887338,
+        "high": 4.150716997381876,
+        "pilots": 2,
+        "episodes": 32,
+        "df": 1,
+        "observed_pilot_mean_variance": 0.15342322742865208,
+        "within_pilot_mean_variance": 0.07477757201779714,
+        "estimated_between_pilot_variance": 0.07864565541085494
+      },
+      "metrics": {
+        "pnl": 0.6314970692542478,
+        "inventory_penalty": 0.026062500000000002,
+        "liquidation_cost": 0.026156250000000006,
+        "passive_fees": 0.005343750000000001,
+        "market_fees": 0.002125,
+        "turnover": 7.375,
+        "spread_capture": 0.2109375,
+        "directional_exposure": 0.1757108321771893,
+        "execution_selection": 0.2642780693759652,
+        "mean_abs_inventory": 0.7630208333333333,
+        "max_quote_gap": 2.53125,
+        "regime_brier": 0.19464389233879156,
+        "wrong_confident_fraction": 0.005208333333333333,
+        "post_switch_error_10": 0.5348837209302325,
+        "conditional_logscore": -1.097462464822255,
+        "score_residual_per_side": 0.013996453954769362
+      },
+      "downside": {
+        "pnl_5pct_quantile": -1.1062846744542032,
+        "pnl_lower_5pct_mean": -1.7313661193241414,
+        "loss_probability": 0.25
+      },
+      "action_frequencies": [
+        0.14583333333333334,
+        0.057291666666666664,
+        0.0390625,
+        0.07291666666666667,
+        0.026041666666666668,
+        0.14583333333333334,
+        0.046875,
+        0.15104166666666666,
+        0.2265625,
+        0.046875,
+        0.041666666666666664
+      ]
+    },
+    {
+      "variant": "state_dependence",
+      "environment": "theta0.35_kappa0.02",
+      "policy": "taker",
+      "objective": {
+        "mean": 0.14797628265053975,
+        "se": 0.12031439273504906,
+        "low": -1.3807630241495228,
+        "high": 1.6767155894506023,
+        "pilots": 2,
+        "episodes": 32,
+        "df": 1,
+        "observed_pilot_mean_variance": 0.02895110619840725,
+        "within_pilot_mean_variance": 0.11071703246733787,
+        "estimated_between_pilot_variance": 0.0
+      },
+      "pnl": {
+        "mean": 0.17847628265053977,
+        "se": 0.11793939273504907,
+        "low": -1.320085787901108,
+        "high": 1.6770383532021875,
+        "pilots": 2,
+        "episodes": 32,
+        "df": 1,
+        "observed_pilot_mean_variance": 0.027819400717424288,
+        "within_pilot_mean_variance": 0.11121567537647041,
+        "estimated_between_pilot_variance": 0.0
+      },
+      "metrics": {
+        "pnl": 0.17847628265053972,
+        "inventory_penalty": 0.030500000000000003,
+        "liquidation_cost": 0.024468750000000004,
+        "passive_fees": 0.0,
+        "market_fees": 0.0064375000000000005,
+        "turnover": 4.125,
+        "spread_capture": 0.0,
+        "directional_exposure": 0.20605963751995832,
+        "execution_selection": 0.0,
+        "mean_abs_inventory": 0.7760416666666667,
+        "max_quote_gap": 12.0,
+        "regime_brier": null,
+        "wrong_confident_fraction": null,
+        "post_switch_error_10": null,
+        "conditional_logscore": null,
+        "score_residual_per_side": null
+      },
+      "downside": {
+        "pnl_5pct_quantile": -1.424229845946963,
+        "pnl_lower_5pct_mean": -2.580984895973564,
+        "loss_probability": 0.46875
+      },
+      "action_frequencies": [
+        0.7317708333333334,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.125,
+        0.14322916666666666
+      ]
+    }
+  ],
+  "paired_differences": [
+    {
+      "variant": "fixed_duration",
+      "environment": "theta0.35_kappa0.02",
+      "baseline": "abstain",
+      "paired": {
+        "mean": 0.6282051732014826,
+        "se": 0.0801048575668219,
+        "low": -0.389623547404669,
+        "high": 1.6460338938076342,
+        "pilots": 2,
+        "episodes": 32,
+        "df": 1,
+        "observed_pilot_mean_variance": 0.012833576411601646,
+        "within_pilot_mean_variance": 0.08225782507925081,
+        "estimated_between_pilot_variance": 0.0
+      },
+      "family_adjusted": {
+        "mean": 0.6282051732014826,
+        "se": 0.0801048575668219,
+        "low": -17.730359347160057,
+        "high": 18.986769693563023,
+        "pilots": 2,
+        "episodes": 32,
+        "df": 1,
+        "observed_pilot_mean_variance": 0.012833576411601646,
+        "within_pilot_mean_variance": 0.08225782507925081,
+        "estimated_between_pilot_variance": 0.0
+      },
+      "family_size": 18
+    },
+    {
+      "variant": "nominal",
+      "environment": "theta0.35_kappa0.02",
+      "baseline": "abstain",
+      "paired": {
+        "mean": 0.6297166153920557,
+        "se": 0.06668537956479187,
+        "low": -0.21760147026770993,
+        "high": 1.4770347010518212,
+        "pilots": 2,
+        "episodes": 32,
+        "df": 1,
+        "observed_pilot_mean_variance": 0.008893879695400723,
+        "within_pilot_mean_variance": 0.08010822688981026,
+        "estimated_between_pilot_variance": 0.0
+      },
+      "family_adjusted": {
+        "mean": 0.6297166153920557,
+        "se": 0.06668537956479187,
+        "low": -14.653349611693947,
+        "high": 15.912782842478059,
+        "pilots": 2,
+        "episodes": 32,
+        "df": 1,
+        "observed_pilot_mean_variance": 0.008893879695400723,
+        "within_pilot_mean_variance": 0.08010822688981026,
+        "estimated_between_pilot_variance": 0.0
+      },
+      "family_size": 18
+    },
+    {
+      "variant": "state_dependence",
+      "environment": "theta0.35_kappa0.02",
+      "baseline": "abstain",
+      "paired": {
+        "mean": 0.6954535746523207,
+        "se": 0.24457142737823195,
+        "low": -2.4121210542339755,
+        "high": 3.8030282035386165,
+        "pilots": 2,
+        "episodes": 32,
+        "df": 1,
+        "observed_pilot_mean_variance": 0.11963036617965157,
+        "within_pilot_mean_variance": 0.06938461394858607,
+        "estimated_between_pilot_variance": 0.050245752231065505
+      },
+      "family_adjusted": {
+        "mean": 0.6954535746523207,
+        "se": 0.24457142737823195,
+        "low": -55.3558330232264,
+        "high": 56.74674017253104,
+        "pilots": 2,
+        "episodes": 32,
+        "df": 1,
+        "observed_pilot_mean_variance": 0.11963036617965157,
+        "within_pilot_mean_variance": 0.06938461394858607,
+        "estimated_between_pilot_variance": 0.050245752231065505
+      },
+      "family_size": 18
+    },
+    {
+      "variant": "fixed_duration",
+      "environment": "theta0.35_kappa0.02",
+      "baseline": "taker",
+      "paired": {
+        "mean": 0.6402509795869524,
+        "se": 0.0023352527989764504,
+        "low": 0.6105787794124327,
+        "high": 0.6699231797614722,
+        "pilots": 2,
+        "episodes": 32,
+        "df": 1,
+        "observed_pilot_mean_variance": 1.0906811270254692e-05,
+        "within_pilot_mean_variance": 0.11581087404778723,
+        "estimated_between_pilot_variance": 0.0
+      },
+      "family_adjusted": {
+        "mean": 0.6402509795869524,
+        "se": 0.0023352527989764504,
+        "low": 0.10505385816892665,
+        "high": 1.1754481010049782,
+        "pilots": 2,
+        "episodes": 32,
+        "df": 1,
+        "observed_pilot_mean_variance": 1.0906811270254692e-05,
+        "within_pilot_mean_variance": 0.11581087404778723,
+        "estimated_between_pilot_variance": 0.0
+      },
+      "family_size": 18
+    },
+    {
+      "variant": "nominal",
+      "environment": "theta0.35_kappa0.02",
+      "baseline": "taker",
+      "paired": {
+        "mean": 0.3710886803389065,
+        "se": 0.08026958345091487,
+        "low": -0.6488330810758779,
+        "high": 1.391010441753691,
+        "pilots": 2,
+        "episodes": 32,
+        "df": 1,
+        "observed_pilot_mean_variance": 0.01288641205476677,
+        "within_pilot_mean_variance": 0.06588539822876005,
+        "estimated_between_pilot_variance": 0.0
+      },
+      "family_adjusted": {
+        "mean": 0.3710886803389065,
+        "se": 0.08026958345091487,
+        "low": -18.025227992178593,
+        "high": 18.767405352856407,
+        "pilots": 2,
+        "episodes": 32,
+        "df": 1,
+        "observed_pilot_mean_variance": 0.01288641205476677,
+        "within_pilot_mean_variance": 0.06588539822876005,
+        "estimated_between_pilot_variance": 0.0
+      },
+      "family_size": 18
+    },
+    {
+      "variant": "state_dependence",
+      "environment": "theta0.35_kappa0.02",
+      "baseline": "taker",
+      "paired": {
+        "mean": 0.547477292001781,
+        "se": 0.12425703464318288,
+        "low": -1.0313580300844525,
+        "high": 2.1263126140880146,
+        "pilots": 2,
+        "episodes": 32,
+        "df": 1,
+        "observed_pilot_mean_variance": 0.0308796213166343,
+        "within_pilot_mean_variance": 0.09233218636875357,
+        "estimated_between_pilot_variance": 0.0
+      },
+      "family_adjusted": {
+        "mean": 0.547477292001781,
+        "se": 0.12425703464318288,
+        "low": -27.929956622698782,
+        "high": 29.024911206702342,
+        "pilots": 2,
+        "episodes": 32,
+        "df": 1,
+        "observed_pilot_mean_variance": 0.0308796213166343,
+        "within_pilot_mean_variance": 0.09233218636875357,
+        "estimated_between_pilot_variance": 0.0
+      },
+      "family_size": 18
+    },
+    {
+      "variant": "fixed_duration",
+      "environment": "theta0.35_kappa0.02",
+      "baseline": "independent",
+      "paired": {
+        "mean": 0.04985723284073128,
+        "se": 0.11746304021888944,
+        "low": -1.4426522051140005,
+        "high": 1.5423666707954629,
+        "pilots": 2,
+        "episodes": 32,
+        "df": 1,
+        "observed_pilot_mean_variance": 0.027595131634928875,
+        "within_pilot_mean_variance": 0.01828407929022295,
+        "estimated_between_pilot_variance": 0.009311052344705924
+      },
+      "family_adjusted": {
+        "mean": 0.04985723284073128,
+        "se": 0.11746304021888944,
+        "low": -26.870517737146994,
+        "high": 26.97023220282846,
+        "pilots": 2,
+        "episodes": 32,
+        "df": 1,
+        "observed_pilot_mean_variance": 0.027595131634928875,
+        "within_pilot_mean_variance": 0.01828407929022295,
+        "estimated_between_pilot_variance": 0.009311052344705924
+      },
+      "family_size": 18
+    },
+    {
+      "variant": "nominal",
+      "environment": "theta0.35_kappa0.02",
+      "baseline": "independent",
+      "paired": {
+        "mean": 0.4354000669706296,
+        "se": 0.28240360532978115,
+        "low": -3.152877960583445,
+        "high": 4.023678094524704,
+        "pilots": 2,
+        "episodes": 32,
+        "df": 1,
+        "observed_pilot_mean_variance": 0.15950359260651759,
+        "within_pilot_mean_variance": 0.0648368465286006,
+        "estimated_between_pilot_variance": 0.09466674607791699
+      },
+      "family_adjusted": {
+        "mean": 0.4354000669706296,
+        "se": 0.28240360532978115,
+        "low": -64.28632801181254,
+        "high": 65.1571281457538,
+        "pilots": 2,
+        "episodes": 32,
+        "df": 1,
+        "observed_pilot_mean_variance": 0.15950359260651759,
+        "within_pilot_mean_variance": 0.0648368465286006,
+        "estimated_between_pilot_variance": 0.09466674607791699
+      },
+      "family_size": 18
+    },
+    {
+      "variant": "state_dependence",
+      "environment": "theta0.35_kappa0.02",
+      "baseline": "independent",
+      "paired": {
+        "mean": 0.18631460547576933,
+        "se": 0.039579362325013204,
+        "low": -0.31658887555308773,
+        "high": 0.6892180865046265,
+        "pilots": 2,
+        "episodes": 32,
+        "df": 1,
+        "observed_pilot_mean_variance": 0.0031330518441093492,
+        "within_pilot_mean_variance": 0.031485622740726145,
+        "estimated_between_pilot_variance": 0.0
+      },
+      "family_adjusted": {
+        "mean": 0.18631460547576933,
+        "se": 0.039579362325013204,
+        "low": -8.88454949677158,
+        "high": 9.257178707723117,
+        "pilots": 2,
+        "episodes": 32,
+        "df": 1,
+        "observed_pilot_mean_variance": 0.0031330518441093492,
+        "within_pilot_mean_variance": 0.031485622740726145,
+        "estimated_between_pilot_variance": 0.0
+      },
+      "family_size": 18
+    },
+    {
+      "variant": "fixed_duration",
+      "environment": "theta0.35_kappa0.02",
+      "baseline": "myopic",
+      "paired": {
+        "mean": 0.057220023601459814,
+        "se": 0.03106469785330309,
+        "low": -0.33749438739001575,
+        "high": 0.4519344345929354,
+        "pilots": 2,
+        "episodes": 32,
+        "df": 1,
+        "observed_pilot_mean_variance": 0.0019300309054340271,
+        "within_pilot_mean_variance": 0.010313652198280919,
+        "estimated_between_pilot_variance": 0.0
+      },
+      "family_adjusted": {
+        "mean": 0.057220023601459814,
+        "se": 0.03106469785330309,
+        "low": -7.062239109943165,
+        "high": 7.176679157146084,
+        "pilots": 2,
+        "episodes": 32,
+        "df": 1,
+        "observed_pilot_mean_variance": 0.0019300309054340271,
+        "within_pilot_mean_variance": 0.010313652198280919,
+        "estimated_between_pilot_variance": 0.0
+      },
+      "family_size": 18
+    },
+    {
+      "variant": "nominal",
+      "environment": "theta0.35_kappa0.02",
+      "baseline": "myopic",
+      "paired": {
+        "mean": 0.16178913627833671,
+        "se": 0.04239684241452077,
+        "low": -0.37691382360789927,
+        "high": 0.7004920961645726,
+        "pilots": 2,
+        "episodes": 32,
+        "df": 1,
+        "observed_pilot_mean_variance": 0.0035949844934434145,
+        "within_pilot_mean_variance": 0.03101443976960083,
+        "estimated_between_pilot_variance": 0.0
+      },
+      "family_adjusted": {
+        "mean": 0.16178913627833671,
+        "se": 0.04239684241452077,
+        "low": -9.55478974006883,
+        "high": 9.878368012625504,
+        "pilots": 2,
+        "episodes": 32,
+        "df": 1,
+        "observed_pilot_mean_variance": 0.0035949844934434145,
+        "within_pilot_mean_variance": 0.03101443976960083,
+        "estimated_between_pilot_variance": 0.0
+      },
+      "family_size": 18
+    },
+    {
+      "variant": "state_dependence",
+      "environment": "theta0.35_kappa0.02",
+      "baseline": "myopic",
+      "paired": {
+        "mean": 0.07860353094088106,
+        "se": 0.11401681455588421,
+        "low": -1.3701174581726467,
+        "high": 1.5273245200544088,
+        "pilots": 2,
+        "episodes": 32,
+        "df": 1,
+        "observed_pilot_mean_variance": 0.025999668002941775,
+        "within_pilot_mean_variance": 0.0248763816153988,
+        "estimated_between_pilot_variance": 0.0011232863875429745
+      },
+      "family_adjusted": {
+        "mean": 0.07860353094088106,
+        "se": 0.11401681455588421,
+        "low": -26.05195970842576,
+        "high": 26.209166770307522,
+        "pilots": 2,
+        "episodes": 32,
+        "df": 1,
+        "observed_pilot_mean_variance": 0.025999668002941775,
+        "within_pilot_mean_variance": 0.0248763816153988,
+        "estimated_between_pilot_variance": 0.0011232863875429745
+      },
+      "family_size": 18
+    },
+    {
+      "variant": "fixed_duration",
+      "environment": "theta0.35_kappa0.02",
+      "baseline": "noinfo",
+      "paired": {
+        "mean": 0.0127979663338262,
+        "se": 0.006129104135633435,
+        "low": -0.06507968566286726,
+        "high": 0.09067561833051965,
+        "pilots": 2,
+        "episodes": 32,
+        "df": 1,
+        "observed_pilot_mean_variance": 7.513183501087775e-05,
+        "within_pilot_mean_variance": 0.0030424993236200346,
+        "estimated_between_pilot_variance": 0.0
+      },
+      "family_adjusted": {
+        "mean": 0.0127979663338262,
+        "se": 0.006129104135633435,
+        "low": -1.3918803159061477,
+        "high": 1.4174762485738002,
+        "pilots": 2,
+        "episodes": 32,
+        "df": 1,
+        "observed_pilot_mean_variance": 7.513183501087775e-05,
+        "within_pilot_mean_variance": 0.0030424993236200346,
+        "estimated_between_pilot_variance": 0.0
+      },
+      "family_size": 18
+    },
+    {
+      "variant": "nominal",
+      "environment": "theta0.35_kappa0.02",
+      "baseline": "noinfo",
+      "paired": {
+        "mean": -0.027940933548566076,
+        "se": 0.055107374933672994,
+        "low": -0.7281465219289565,
+        "high": 0.6722646548318243,
+        "pilots": 2,
+        "episodes": 32,
+        "df": 1,
+        "observed_pilot_mean_variance": 0.0060736455441608205,
+        "within_pilot_mean_variance": 0.007496739922975415,
+        "estimated_between_pilot_variance": 0.0
+      },
+      "family_adjusted": {
+        "mean": -0.027940933548566076,
+        "se": 0.055107374933672994,
+        "low": -12.657540797996935,
+        "high": 12.601658930899804,
+        "pilots": 2,
+        "episodes": 32,
+        "df": 1,
+        "observed_pilot_mean_variance": 0.0060736455441608205,
+        "within_pilot_mean_variance": 0.007496739922975415,
+        "estimated_between_pilot_variance": 0.0
+      },
+      "family_size": 18
+    },
+    {
+      "variant": "state_dependence",
+      "environment": "theta0.35_kappa0.02",
+      "baseline": "noinfo",
+      "paired": {
+        "mean": 0.09001900539807291,
+        "se": 0.028459687656623597,
+        "low": -0.27159561269457033,
+        "high": 0.4516336234907161,
+        "pilots": 2,
+        "episodes": 32,
+        "df": 1,
+        "observed_pilot_mean_variance": 0.0016199076430251469,
+        "within_pilot_mean_variance": 0.014850465404017191,
+        "estimated_between_pilot_variance": 0.0
+      },
+      "family_adjusted": {
+        "mean": 0.09001900539807291,
+        "se": 0.028459687656623597,
+        "low": -6.432419557551989,
+        "high": 6.612457568348135,
+        "pilots": 2,
+        "episodes": 32,
+        "df": 1,
+        "observed_pilot_mean_variance": 0.0016199076430251469,
+        "within_pilot_mean_variance": 0.014850465404017191,
+        "estimated_between_pilot_variance": 0.0
+      },
+      "family_size": 18
+    },
+    {
+      "variant": "fixed_duration",
+      "environment": "theta0.35_kappa0.02",
+      "baseline": "full_information",
+      "paired": {
+        "mean": -0.04561928141824081,
+        "se": 0.05380176778165676,
+        "low": -0.729235558020099,
+        "high": 0.6379969951836174,
+        "pilots": 2,
+        "episodes": 32,
+        "df": 1,
+        "observed_pilot_mean_variance": 0.005789260432862639,
+        "within_pilot_mean_variance": 0.033931902703530414,
+        "estimated_between_pilot_variance": 0.0
+      },
+      "family_adjusted": {
+        "mean": -0.04561928141824081,
+        "se": 0.05380176778165676,
+        "low": -12.375997926747146,
+        "high": 12.284759363910666,
+        "pilots": 2,
+        "episodes": 32,
+        "df": 1,
+        "observed_pilot_mean_variance": 0.005789260432862639,
+        "within_pilot_mean_variance": 0.033931902703530414,
+        "estimated_between_pilot_variance": 0.0
+      },
+      "family_size": 18
+    },
+    {
+      "variant": "nominal",
+      "environment": "theta0.35_kappa0.02",
+      "baseline": "full_information",
+      "paired": {
+        "mean": -0.526048641539701,
+        "se": 0.017381346291048594,
+        "low": -0.7468995861041151,
+        "high": -0.30519769697528687,
+        "pilots": 2,
+        "episodes": 32,
+        "df": 1,
+        "observed_pilot_mean_variance": 0.0006042223977786974,
+        "within_pilot_mean_variance": 0.020529115512460016,
+        "estimated_between_pilot_variance": 0.0
+      },
+      "family_adjusted": {
+        "mean": -0.526048641539701,
+        "se": 0.017381346291048594,
+        "low": -4.509534500294,
+        "high": 3.457437217214598,
+        "pilots": 2,
+        "episodes": 32,
+        "df": 1,
+        "observed_pilot_mean_variance": 0.0006042223977786974,
+        "within_pilot_mean_variance": 0.020529115512460016,
+        "estimated_between_pilot_variance": 0.0
+      },
+      "family_size": 18
+    },
+    {
+      "variant": "state_dependence",
+      "environment": "theta0.35_kappa0.02",
+      "baseline": "full_information",
+      "paired": {
+        "mean": 0.1989719442637386,
+        "se": 0.2911496360207774,
+        "low": -3.500434939879002,
+        "high": 3.898378828406479,
+        "pilots": 2,
+        "episodes": 32,
+        "df": 1,
+        "observed_pilot_mean_variance": 0.16953622111006236,
+        "within_pilot_mean_variance": 0.04698938919110445,
+        "estimated_between_pilot_variance": 0.1225468319189579
+      },
+      "family_adjusted": {
+        "mean": 0.1989719442637386,
+        "se": 0.2911496360207774,
+        "low": -66.52718599826119,
+        "high": 66.92512988678865,
+        "pilots": 2,
+        "episodes": 32,
+        "df": 1,
+        "observed_pilot_mean_variance": 0.16953622111006236,
+        "within_pilot_mean_variance": 0.04698938919110445,
+        "estimated_between_pilot_variance": 0.1225468319189579
+      },
+      "family_size": 18
+    }
+  ],
+  "uncertainty_method": "Paired episode differences aggregated within independent pilots; Student intervals over pilot means and stratified Welch-Satterthwaite approximation for the uniform environment mixture. Within-pilot Monte Carlo variance and excess between-pilot variance reported separately. One prespecified primary comparison; other contrasts also provide Bonferroni family-adjusted intervals. Empirical approximations, not finite-sample distribution-free guarantees.",
+  "reference_note": "Full-information policy knows nominal parameters and current H, not future innovations. Under stresses it remains a frozen nominal-model privileged reference, not the optimum for the altered environment."
+}

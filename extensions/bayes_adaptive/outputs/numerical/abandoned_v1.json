@@ -1,0 +1,20 @@
+{
+  "config_sha256": "8681e5a8c48f25967f95a4b7d42b76531cbc4e8e00d013114c3e6efe93aee462",
+  "last_completed_bayes_horizon": 3,
+  "last_completed_record": {
+    "elapsed_seconds": 427.1307626249909,
+    "mode": "bayes",
+    "phase": "bellman",
+    "remaining": 3
+  },
+  "partial_directory": "cache/w33-b65-gh25",
+  "progress_file": "outputs/numerical/progress-v1.jsonl",
+  "progress_sha256": "a5a3c6af1d10ffa1b360325e631db7546e4b3eb7e4fed9ed9c6c0da296de2ff3",
+  "reason": "Persistent disk paging: second horizon took96.68seconds for three sequential scans of11.85GiB kernels. Replaced by a numerically equivalent batched continuation revision before economic evaluation.",
+  "retention": "Original partial directory retained; no complete.json exists; never load as a solved family.",
+  "source_file": "revisions/solver_v1.py",
+  "source_sha256": "ba716aaf7231e3aac3dceaf977f6439b84ebea0984c34cec8ef681f483f2a313",
+  "status": "abandoned_partial_not_a_valid_control_artifact",
+  "termination": "SIGINT; process exited130",
+  "utc": "2026-09-24T23:10:40.836310+00:00"
+}

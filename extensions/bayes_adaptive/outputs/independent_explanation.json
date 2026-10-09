@@ -1,0 +1,591 @@
+{
+  "analysis": {
+    "artifact_sha256": "9c639724f0b40a05a1b33852499fcc0875abe16dfb32f345e511721c0a33d153",
+    "direct": {
+      "csv_action_rows_checked": 16896,
+      "direct_cases": 512,
+      "direct_family_cases": 1536,
+      "direct_legal_scores_recomputed": 68625,
+      "maximum_absolute_errors": {
+        "csv": 4.440892098500626e-16,
+        "gap": 6.661338147750939e-16,
+        "information": 4.440892098500626e-16,
+        "one_period_q": 2.7755575615628914e-17,
+        "reward": 0.0,
+        "score": 4.440892098500626e-16
+      },
+      "refinement_stable_witnesses": 223,
+      "selected_qualifiers": 230,
+      "winner_candidate_id": 48408
+    },
+    "error_envelopes": {
+      "families": 3,
+      "horizon_rows_recomputed": 93,
+      "maximum_absolute_report_error": 1.1546319456101628e-13,
+      "passed": true,
+      "quadrature_rules_integrated": 2
+    },
+    "file_records": [
+      {
+        "bytes": 2438,
+        "file": "EXPLANATION.md",
+        "sha256": "237dd7318f9fc55064c4b22613b9da22c0e37432ba338ac91d244adf94727814"
+      },
+      {
+        "bytes": 5175676,
+        "file": "direct_candidates.jsonl",
+        "sha256": "bd7e364644eb9d19ac9fee56760ddf1d1d2ae22d99ba9f654db9da1b39101ae1"
+      },
+      {
+        "bytes": 3993496,
+        "file": "direct_scores.csv",
+        "sha256": "8a2c14bc310c60a33adc3910688b5ff54f3145e2611dd7b34995947c743dbe23"
+      },
+      {
+        "bytes": 51550,
+        "file": "error_envelopes.json",
+        "sha256": "51cb4cbb841b616bb920b6458bdcfb1961c3dd337e72af1ec92d09f630e7ce03"
+      },
+      {
+        "bytes": 30856,
+        "file": "explanation.json",
+        "sha256": "a2798e35a6b3412f3f24bf328ebba59a745e77454625239617a6d870a45309bb"
+      },
+      {
+        "bytes": 1352,
+        "file": "fixed_state_checks.json",
+        "sha256": "1977182d525272e83d4e45395494dc41bc48dc1c7cd77024ec73b1a5bb37a1c2"
+      },
+      {
+        "bytes": 24538254,
+        "file": "traversal.csv",
+        "sha256": "6b6efe2b8b55711cfe2e8a429ac2c48f1067b5e4f14286dc046cbd39b933a324"
+      }
+    ],
+    "fixed_state": {
+      "equal_conditional_states": 135,
+      "family_state_checks": 453,
+      "maximum_absolute_report_error": 1.1102230246251565e-16,
+      "passed": true,
+      "states_per_family": 151
+    },
+    "illustrative_posteriors": {
+      "branches_checked": 15,
+      "maximum_absolute_error": 2.220446049250313e-16
+    },
+    "manifest_sha256": "9d0fc86e891bfe578fcd20b45300e7352b8a3fbfee8fec506afd96a31083009f",
+    "traversal_rows_recomputed": 137430
+  },
+  "candidate": {
+    "artifact_sha256": "9b74b3f2ac56c774d07446af41b79407a9835531ce8c2260be7006aff47c8bde",
+    "frozen_numerical_probe_count": 2581,
+    "frozen_numerical_probe_sha256": "663ccedec00b567efb27e9d3dde4c5332acf2cf21db4a892fec21c8b75580a77",
+    "manifest_sha256": "63372007d70445ec8095d638eb15e37dcbcf09ec31be3c2104bf4fd6a7d54198",
+    "public_decisions_replayed": 60000,
+    "states": 137430
+  },
+  "certified_bound": false,
+  "families": {
+    "comparison_1": {
+      "array_records": [
+        {
+          "bytes": 13135448,
+          "dtype": "float64",
+          "file": "known-q-0.npy",
+          "sha256": "9e0e0a5cb0497b1b4346ca13ba4ba2d8c910736253392204344c759731e29501",
+          "shape": [
+            31,
+            5,
+            3,
+            321,
+            11
+          ]
+        },
+        {
+          "bytes": 13135448,
+          "dtype": "float64",
+          "file": "known-q-1.npy",
+          "sha256": "e9df3b9cf747bcb440ae97700b48227e0b4b5afa16942dff435a6541bdb5a8c8",
+          "shape": [
+            31,
+            5,
+            3,
+            321,
+            11
+          ]
+        },
+        {
+          "bytes": 2456223128,
+          "dtype": "float64",
+          "file": "q-bayes.npy",
+          "sha256": "14606d2e5b844ac278c5afa798c2e0876fd9998190609eed2a70f09ea8397068",
+          "shape": [
+            31,
+            5,
+            3,
+            60025,
+            11
+          ]
+        },
+        {
+          "bytes": 2456223128,
+          "dtype": "float64",
+          "file": "q-frozen_model.npy",
+          "sha256": "91a4ae002274264bcbb64c26e7f2aa729f1ce07ca5a5422d04584b6586fb0f21",
+          "shape": [
+            31,
+            5,
+            3,
+            60025,
+            11
+          ]
+        },
+        {
+          "bytes": 2456223128,
+          "dtype": "float64",
+          "file": "q-no_feedback.npy",
+          "sha256": "39c5dd8db372bd23c91da5a0f9ddaf59ec54971c36ad14cf7e02f6747ee7eb1d",
+          "shape": [
+            31,
+            5,
+            3,
+            60025,
+            11
+          ]
+        },
+        {
+          "bytes": 223293128,
+          "dtype": "float64",
+          "file": "value-bayes.npy",
+          "sha256": "41bce87c1459bc48a9dc0145501733e6edd4c3621158a846019dc34a50c4aeb1",
+          "shape": [
+            31,
+            5,
+            3,
+            60025
+          ]
+        },
+        {
+          "bytes": 223293128,
+          "dtype": "float64",
+          "file": "value-frozen_model.npy",
+          "sha256": "fb32834ed7ebf6d8cb2bba56ac52c37ba762af7263839c1eca89bbad6ffc43fd",
+          "shape": [
+            31,
+            5,
+            3,
+            60025
+          ]
+        },
+        {
+          "bytes": 223293128,
+          "dtype": "float64",
+          "file": "value-no_feedback.npy",
+          "sha256": "25f575c9668036853d802e8ace257c4b3f2fa19597638cee8dfa538f68ef24fb",
+          "shape": [
+            31,
+            5,
+            3,
+            60025
+          ]
+        },
+        {
+          "bytes": 223293128,
+          "dtype": "float64",
+          "file": "value-reveal1.npy",
+          "sha256": "5b44e56da82b2ea097d110f9d0f25a241e201605be2cdd20feafa88103a93b6e",
+          "shape": [
+            31,
+            5,
+            3,
+            60025
+          ]
+        },
+        {
+          "bytes": 223293128,
+          "dtype": "float64",
+          "file": "value-reveal2.npy",
+          "sha256": "35c231b34d179d1eea39cc7456e99d3a60224af1a3810c8bb60ee21ac7197bab",
+          "shape": [
+            31,
+            5,
+            3,
+            60025
+          ]
+        },
+        {
+          "bytes": 223293128,
+          "dtype": "float64",
+          "file": "value-reveal3.npy",
+          "sha256": "6c5bb9ced4d6ef9cbf3638920d68ada0b7758cb29a78194bb4721d115ec47a4b",
+          "shape": [
+            31,
+            5,
+            3,
+            60025
+          ]
+        }
+      ],
+      "artifact_sha256": "9e572f2fbe378bedf6bbe85dcd46a351212e503f050b7c1247c8eba939738542",
+      "grid_axes_sha256": "91643c06eff0b7a07fd0c0fa600c54391f6f86373d3a26cb21fb8b3403df8abb",
+      "manifest_sha256": "db0dba6f0dad79de3254485531ddd8d00c5e50bcb84f5f06060765a3f367e4af",
+      "specification": {
+        "belief_geometry": "endpoint_sine",
+        "belief_points": 49,
+        "horizon": 30,
+        "kappas": [
+          0.002,
+          0.1
+        ],
+        "known_belief_points": 321,
+        "known_quadrature_points": 161,
+        "qmax": 2,
+        "quadrature_points": 25,
+        "theta": 0.35,
+        "weight_points": 25
+      }
+    },
+    "comparison_2": {
+      "array_records": [
+        {
+          "bytes": 13135448,
+          "dtype": "float64",
+          "file": "known-q-0.npy",
+          "sha256": "9e0e0a5cb0497b1b4346ca13ba4ba2d8c910736253392204344c759731e29501",
+          "shape": [
+            31,
+            5,
+            3,
+            321,
+            11
+          ]
+        },
+        {
+          "bytes": 13135448,
+          "dtype": "float64",
+          "file": "known-q-1.npy",
+          "sha256": "e9df3b9cf747bcb440ae97700b48227e0b4b5afa16942dff435a6541bdb5a8c8",
+          "shape": [
+            31,
+            5,
+            3,
+            321,
+            11
+          ]
+        },
+        {
+          "bytes": 5705271128,
+          "dtype": "float64",
+          "file": "q-bayes.npy",
+          "sha256": "56bc6d67c1a924a52a91c386b5599ed55a9d210f158ec5ae50b361e6f4415ac8",
+          "shape": [
+            31,
+            5,
+            3,
+            139425,
+            11
+          ]
+        },
+        {
+          "bytes": 5705271128,
+          "dtype": "float64",
+          "file": "q-frozen_model.npy",
+          "sha256": "f1c0414a344054ec83237a42fe9aba13a2e5db1ac4e6ee196870cb79ef6fc515",
+          "shape": [
+            31,
+            5,
+            3,
+            139425,
+            11
+          ]
+        },
+        {
+          "bytes": 5705271128,
+          "dtype": "float64",
+          "file": "q-no_feedback.npy",
+          "sha256": "ca40341c20901fe7485b6688ef87bc2b310890d24ce2cacae619601dddf78af2",
+          "shape": [
+            31,
+            5,
+            3,
+            139425,
+            11
+          ]
+        },
+        {
+          "bytes": 518661128,
+          "dtype": "float64",
+          "file": "value-bayes.npy",
+          "sha256": "30832f49609fb02f2f04aa2279f1ab4ff940e201cd3629991e163a305a88b0b5",
+          "shape": [
+            31,
+            5,
+            3,
+            139425
+          ]
+        },
+        {
+          "bytes": 518661128,
+          "dtype": "float64",
+          "file": "value-frozen_model.npy",
+          "sha256": "9560d941573f6f20a886f87e9947b04fcedaab5f406c05ee4b22f94016f5b63d",
+          "shape": [
+            31,
+            5,
+            3,
+            139425
+          ]
+        },
+        {
+          "bytes": 518661128,
+          "dtype": "float64",
+          "file": "value-no_feedback.npy",
+          "sha256": "7c8c177f62e5a2710612539b48cf5a81979d45b723a03e48a980746a22be2db9",
+          "shape": [
+            31,
+            5,
+            3,
+            139425
+          ]
+        },
+        {
+          "bytes": 518661128,
+          "dtype": "float64",
+          "file": "value-reveal1.npy",
+          "sha256": "b5dababae7ff549246b1a2ad25b5cef0bb7ba256de3d868030c2573c89a2fc77",
+          "shape": [
+            31,
+            5,
+            3,
+            139425
+          ]
+        },
+        {
+          "bytes": 518661128,
+          "dtype": "float64",
+          "file": "value-reveal2.npy",
+          "sha256": "cfa19cacfde017c1c15cb6689c59128e5119d68a263fa826ffd7a89f9ec96270",
+          "shape": [
+            31,
+            5,
+            3,
+            139425
+          ]
+        },
+        {
+          "bytes": 518661128,
+          "dtype": "float64",
+          "file": "value-reveal3.npy",
+          "sha256": "5c52ab55bb9af9b4d10738fea9efe946fa12191d93073fc3f84eff9a00e455c1",
+          "shape": [
+            31,
+            5,
+            3,
+            139425
+          ]
+        }
+      ],
+      "artifact_sha256": "e45e4c62aecb4c374172f1e0c797f480f2173bc4cd1ae729ec75f93299c97088",
+      "grid_axes_sha256": "9e3452532b197f40d8ed9e4afda7e520b6b49e72504166dff4104ce7ba1561b8",
+      "manifest_sha256": "3b2c6ea23d22ba78b1fa30525d610957d26127cb2635bd58f44dc6f8e044ea42",
+      "specification": {
+        "belief_geometry": "endpoint_sine",
+        "belief_points": 65,
+        "horizon": 30,
+        "kappas": [
+          0.002,
+          0.1
+        ],
+        "known_belief_points": 321,
+        "known_quadrature_points": 161,
+        "qmax": 2,
+        "quadrature_points": 15,
+        "theta": 0.35,
+        "weight_points": 33
+      }
+    },
+    "selected": {
+      "array_records": [
+        {
+          "bytes": 13135448,
+          "dtype": "float64",
+          "file": "known-q-0.npy",
+          "sha256": "9e0e0a5cb0497b1b4346ca13ba4ba2d8c910736253392204344c759731e29501",
+          "shape": [
+            31,
+            5,
+            3,
+            321,
+            11
+          ]
+        },
+        {
+          "bytes": 13135448,
+          "dtype": "float64",
+          "file": "known-q-1.npy",
+          "sha256": "e9df3b9cf747bcb440ae97700b48227e0b4b5afa16942dff435a6541bdb5a8c8",
+          "shape": [
+            31,
+            5,
+            3,
+            321,
+            11
+          ]
+        },
+        {
+          "bytes": 5705271128,
+          "dtype": "float64",
+          "file": "q-bayes.npy",
+          "sha256": "0e5090e0a7ea7453059c11a4051b0f2c571754687099cfcd93ee9c37f9e12b31",
+          "shape": [
+            31,
+            5,
+            3,
+            139425,
+            11
+          ]
+        },
+        {
+          "bytes": 5705271128,
+          "dtype": "float64",
+          "file": "q-frozen_model.npy",
+          "sha256": "467806e06d5e602d6c504fd0a15fd0f99c75ec2d2696553871354e3a4c38e94a",
+          "shape": [
+            31,
+            5,
+            3,
+            139425,
+            11
+          ]
+        },
+        {
+          "bytes": 5705271128,
+          "dtype": "float64",
+          "file": "q-no_feedback.npy",
+          "sha256": "40c1572a5343cabf7e1554da33b6e407a9caf82a6f52246eacf35b7a53c466d0",
+          "shape": [
+            31,
+            5,
+            3,
+            139425,
+            11
+          ]
+        },
+        {
+          "bytes": 518661128,
+          "dtype": "float64",
+          "file": "value-bayes.npy",
+          "sha256": "f4d351d0c88b0e28b0c37381d473fd2df934c407f909daea6f9183159435578c",
+          "shape": [
+            31,
+            5,
+            3,
+            139425
+          ]
+        },
+        {
+          "bytes": 518661128,
+          "dtype": "float64",
+          "file": "value-frozen_model.npy",
+          "sha256": "bb6ddf4af5a332f7a71429123ccf6c90e5496fec241a1a95154899e9cf7469cd",
+          "shape": [
+            31,
+            5,
+            3,
+            139425
+          ]
+        },
+        {
+          "bytes": 518661128,
+          "dtype": "float64",
+          "file": "value-no_feedback.npy",
+          "sha256": "1351c2930e09b32ccc59ee285b467c67529fdad78623c5989e608419f2ab38ba",
+          "shape": [
+            31,
+            5,
+            3,
+            139425
+          ]
+        },
+        {
+          "bytes": 518661128,
+          "dtype": "float64",
+          "file": "value-reveal1.npy",
+          "sha256": "b5dababae7ff549246b1a2ad25b5cef0bb7ba256de3d868030c2573c89a2fc77",
+          "shape": [
+            31,
+            5,
+            3,
+            139425
+          ]
+        },
+        {
+          "bytes": 518661128,
+          "dtype": "float64",
+          "file": "value-reveal2.npy",
+          "sha256": "b2fa6ea9c974108006a5afabb61342775fe2d38d0f273da5ee96f7526f27fcd2",
+          "shape": [
+            31,
+            5,
+            3,
+            139425
+          ]
+        },
+        {
+          "bytes": 518661128,
+          "dtype": "float64",
+          "file": "value-reveal3.npy",
+          "sha256": "6ae7d950525ba58fe437d0b3a1955f1ff87526c6f0f41210165db0d5fa39cc07",
+          "shape": [
+            31,
+            5,
+            3,
+            139425
+          ]
+        }
+      ],
+      "artifact_sha256": "ed158983727bdf3c2fd06f4eaf8d79d6bfd840bd6cbd2979342733aaffa0a60e",
+      "grid_axes_sha256": "9e3452532b197f40d8ed9e4afda7e520b6b49e72504166dff4104ce7ba1561b8",
+      "manifest_sha256": "90c477b6da702dd7875e1055579f0a0b43b1f03d327eca67f375348828a66d22",
+      "specification": {
+        "belief_geometry": "endpoint_sine",
+        "belief_points": 65,
+        "horizon": 30,
+        "kappas": [
+          0.002,
+          0.1
+        ],
+        "known_belief_points": 321,
+        "known_quadrature_points": 161,
+        "qmax": 2,
+        "quadrature_points": 25,
+        "theta": 0.35,
+        "weight_points": 33
+      }
+    }
+  },
+  "numerical_acceptance_binding": {
+    "binding_status": "accepted_family_authenticated",
+    "passes_predeclared_rule": true,
+    "receipt_sha256": "3625857e7b44fc5b0e0873d7f2043fcef8da1ba716c24c17fb62f28747277a56",
+    "selected_artifact_sha256": "ed158983727bdf3c2fd06f4eaf8d79d6bfd840bd6cbd2979342733aaffa0a60e"
+  },
+  "schema_version": 1,
+  "scope": "full_endpoint_explanation_independent_raw_recomputation",
+  "source": {
+    "candidate_reader_sha256": "f258fe671a5031b60d7c7ce671477e5bdf24874a8de88d2abc8ebc05702870f9",
+    "physical_reader_sha256": "372f088f7f3be1645bb21a86a29675fab4222fbd04868962be69bec10955432c",
+    "solver_source": {
+      "files": {
+        "trade_learning.control": "2ad1a96921e2b6d595608e279e3d40fef74d29642188e7b297e32473278b78c4",
+        "trade_learning.filtering": "711997ebc28c7981ffb848ddded400650aee28488b5982d07cdc1fe563cf6ec1",
+        "trade_learning.model": "7a120a7faabd8aec2c1345a486128129105e9d564ec60908f1c07ea0cf5a897f",
+        "trade_learning.numerics": "bd30936513b1da7237ead270382a281943e558f95628ea930a1c1c149fbe8347",
+        "solver.py": "8fdf88cae1b6b74ebd738e8b07942c15fd99042e2fd4f80f112660fc77f9e1ff"
+      },
+      "sha256": "c6ad66295c5f45b948669ee57ef5b7cc785228b1dd6630af4fc50652878ead65"
+    },
+    "verifier_sha256": "8bbf7e93e8ef803f433bb082d7bf114a5d6d46b184784541602686b80099bc62"
+  },
+  "validation_completion": true
+}

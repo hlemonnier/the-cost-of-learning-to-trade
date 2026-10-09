@@ -1,0 +1,32 @@
+{
+  "by_family": [
+    {
+      "equal_conditional_states": 135,
+      "family": "coarse_diagnostic_only",
+      "max_equal_conditional_frozen_difference": 0.0,
+      "max_equal_conditional_model_information": 3.0033211149002594e-17,
+      "max_final_horizon_suppression_difference": 1.3877787807814457e-17,
+      "max_information_chain_residual": 7.632783294297951e-17,
+      "max_mass_error": 3.3306690738754696e-16,
+      "passed": true,
+      "states": 151
+    }
+  ],
+  "family_artifact_sha256": "a42442d638ed28952a5548a9d2c55c7007f3881e28b55daa402ca7637959602a",
+  "passed": true,
+  "scope": "151 fixed identity checks only; no witness screening, no numerical acceptance or economic result",
+  "source": {
+    "files": {
+      "THEORY.md": "32b4654b005fc251d1a4a78c2ab73a0ab3bcbbb22dddeac75fba32ed8dbc0eef",
+      "trade_learning/control.py": "2ad1a96921e2b6d595608e279e3d40fef74d29642188e7b297e32473278b78c4",
+      "trade_learning/environment.py": "dc50eb8f5d8cb884da02404445d299b3bffefb3cc6ac7a3a6f28a737ca8e8eef",
+      "trade_learning/filtering.py": "711997ebc28c7981ffb848ddded400650aee28488b5982d07cdc1fe563cf6ec1",
+      "trade_learning/model.py": "7a120a7faabd8aec2c1345a486128129105e9d564ec60908f1c07ea0cf5a897f",
+      "trade_learning/numerics.py": "bd30936513b1da7237ead270382a281943e558f95628ea930a1c1c149fbe8347",
+      "explain.py": "7a8a9e29654b8c7620a6e1a72d4aaa0db30404f6b8978e767efe99cf77e6d393",
+      "explain_failure_modes.md": "bf16da28d480ca589cedde6804f3e532ea614cc9a329349c8c3f16cfebfd90ec",
+      "solver.py": "ba716aaf7231e3aac3dceaf977f6439b84ebea0984c34cec8ef681f483f2a313"
+    },
+    "sha256": "1feb4498876931245047dcb89e9fc5eca4507e1c1e3a3beebb36b38e53d1b62a"
+  }
+}

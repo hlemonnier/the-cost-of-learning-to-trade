@@ -1,0 +1,267 @@
+{
+  "cold_initial": [
+    {
+      "artifact_sha256": "5d77653a56cb56ea6e6582322eee10c3591c6b497abb2dfe74ceeabfc590eac9",
+      "bayes_action": 8,
+      "bayes_value": 0.9396289469367783,
+      "relevant_arrays_hash_match": {
+        "known-q-0.npy": true,
+        "known-q-1.npy": true,
+        "value-bayes.npy": true
+      },
+      "specification": {
+        "belief_points": 33,
+        "horizon": 30,
+        "kappas": [
+          0.002,
+          0.1
+        ],
+        "known_belief_points": 321,
+        "known_quadrature_points": 161,
+        "qmax": 2,
+        "quadrature_points": 25,
+        "theta": 0.35,
+        "weight_points": 17
+      },
+      "weighted_q_action": 8,
+      "weighted_q_relaxation": 0.9808777763896961
+    },
+    {
+      "artifact_sha256": "3cc0a61ecde8fb11c94985f6e88ffb83d7dd749cca6948a3b070142d5004e283",
+      "bayes_action": 8,
+      "bayes_value": 0.9385762019123292,
+      "relevant_arrays_hash_match": {
+        "known-q-0.npy": true,
+        "known-q-1.npy": true,
+        "value-bayes.npy": true
+      },
+      "specification": {
+        "belief_points": 49,
+        "horizon": 30,
+        "kappas": [
+          0.002,
+          0.1
+        ],
+        "known_belief_points": 321,
+        "known_quadrature_points": 161,
+        "qmax": 2,
+        "quadrature_points": 25,
+        "theta": 0.35,
+        "weight_points": 25
+      },
+      "weighted_q_action": 8,
+      "weighted_q_relaxation": 0.9808777763896961
+    },
+    {
+      "artifact_sha256": "a42442d638ed28952a5548a9d2c55c7007f3881e28b55daa402ca7637959602a",
+      "bayes_action": 8,
+      "bayes_value": 0.9445913062740218,
+      "relevant_arrays_hash_match": {
+        "known-q-0.npy": true,
+        "known-q-1.npy": true,
+        "value-bayes.npy": true
+      },
+      "specification": {
+        "belief_points": 17,
+        "horizon": 30,
+        "kappas": [
+          0.002,
+          0.1
+        ],
+        "known_belief_points": 321,
+        "known_quadrature_points": 161,
+        "qmax": 2,
+        "quadrature_points": 25,
+        "theta": 0.35,
+        "weight_points": 9
+      },
+      "weighted_q_action": 8,
+      "weighted_q_relaxation": 0.9808777763896961
+    }
+  ],
+  "coordinate_and_frozen_kernel_checks": {
+    "max_frozen_expected_weight_error": 4.440892098500626e-16,
+    "max_interpolation_mass_error": 3.3306690738754696e-16,
+    "max_joint_reconstruction_error": 4.440892098500626e-16,
+    "max_kernel_mass_error": 4.440892098500626e-16,
+    "max_outcome_mass_changing_weight_coordinate": 1.776356839400251e-15,
+    "minimum_interpolation_weight": 0.0,
+    "specification": {
+      "belief_points": 9,
+      "quadrature_points": 15,
+      "weight_points": 25
+    }
+  },
+  "description": "Numerical diagnostics only; no economic observations",
+  "max_by_mode": [
+    {
+      "axis": "belief",
+      "fine_specification": {
+        "belief_points": 33,
+        "horizon": 30,
+        "kappas": [
+          0.002,
+          0.1
+        ],
+        "known_belief_points": 321,
+        "known_quadrature_points": 161,
+        "qmax": 2,
+        "quadrature_points": 25,
+        "theta": 0.35,
+        "weight_points": 17
+      },
+      "modes": {
+        "bayes": {
+          "finite_q_change": 0.016545432847078267,
+          "initial_value_change": 0.0065765311021386275,
+          "probe_value_change": 0.016932696863796837,
+          "robust_disagreement_fraction": 0.0004363001745200698
+        },
+        "frozen_model": {
+          "finite_q_change": 0.044858336321643266,
+          "initial_value_change": 0.008786509907723561,
+          "probe_value_change": 0.04280150050854892,
+          "robust_disagreement_fraction": 0.002183406113537118
+        },
+        "no_feedback": {
+          "finite_q_change": 0.00911784396454185,
+          "initial_value_change": 0.0,
+          "probe_value_change": 0.010617809366641418,
+          "robust_disagreement_fraction": 0.0
+        },
+        "reveal1": {
+          "initial_value_change": 0.0,
+          "probe_value_change": 0.00784437130868737
+        },
+        "reveal2": {
+          "initial_value_change": 0.00027475921129416214,
+          "probe_value_change": 0.009414995187252695
+        },
+        "reveal3": {
+          "initial_value_change": 0.0007231425694311788,
+          "probe_value_change": 0.010437359840830551
+        }
+      }
+    },
+    {
+      "axis": "quadrature",
+      "fine_specification": {
+        "belief_points": 33,
+        "horizon": 30,
+        "kappas": [
+          0.002,
+          0.1
+        ],
+        "known_belief_points": 321,
+        "known_quadrature_points": 161,
+        "qmax": 2,
+        "quadrature_points": 25,
+        "theta": 0.35,
+        "weight_points": 17
+      },
+      "modes": {
+        "bayes": {
+          "finite_q_change": 0.0005249209415463252,
+          "initial_value_change": 0.00036844358451859627,
+          "probe_value_change": 0.00048002800580604355,
+          "robust_disagreement_fraction": 0.0
+        },
+        "frozen_model": {
+          "finite_q_change": 0.0005709705519429953,
+          "initial_value_change": 0.00036844358451859627,
+          "probe_value_change": 0.0004911178367541513,
+          "robust_disagreement_fraction": 0.0
+        },
+        "no_feedback": {
+          "finite_q_change": 1.7763568394002505e-15,
+          "initial_value_change": 4.440892098500626e-16,
+          "probe_value_change": 1.7763568394002505e-15,
+          "robust_disagreement_fraction": 0.0
+        },
+        "reveal1": {
+          "initial_value_change": 0.0,
+          "probe_value_change": 0.0
+        },
+        "reveal2": {
+          "initial_value_change": 0.00017137648975784625,
+          "probe_value_change": 0.00020962331116691768
+        },
+        "reveal3": {
+          "initial_value_change": 0.0002538380361509218,
+          "probe_value_change": 0.00026102307900316424
+        }
+      }
+    }
+  ],
+  "worst_first_mesh_states": [
+    {
+      "absolute_change": 0.016545432847078267,
+      "action": 10,
+      "coarse_chosen_action": 2,
+      "coarse_q": 0.2707993389470771,
+      "coordinates": [
+        0.7979687383414,
+        0.9679718199523987,
+        0.17175833968702042
+      ],
+      "fine_chosen_action": 2,
+      "fine_q": 0.2542539060999988,
+      "inventory": 1,
+      "joint": [
+        0.02555748642395559,
+        0.7724112519174443,
+        0.16733070759124485,
+        0.03470055406735512
+      ],
+      "kind": "bayes",
+      "probe_index": 1383,
+      "signal": 0
+    },
+    {
+      "absolute_change": 0.044858336321643266,
+      "action": 5,
+      "coarse_chosen_action": 9,
+      "coarse_q": 1.4286805441704074,
+      "coordinates": [
+        0.47482867187426114,
+        0.03043881999083859,
+        0.7144146215066093
+      ],
+      "fine_chosen_action": 9,
+      "fine_q": 1.383822207848764,
+      "inventory": -1,
+      "joint": [
+        0.4603754474045915,
+        0.014453224469669597,
+        0.1499812525166658,
+        0.375190075609073
+      ],
+      "kind": "frozen_model",
+      "probe_index": 1592,
+      "signal": 1
+    },
+    {
+      "absolute_change": 0.00911784396454185,
+      "action": 0,
+      "coarse_chosen_action": 8,
+      "coarse_q": 0.2896821025692943,
+      "coordinates": [
+        0.5610525106099059,
+        0.9638800234073727,
+        0.23330463078381936
+      ],
+      "fine_chosen_action": 8,
+      "fine_q": 0.2805642586047524,
+      "inventory": 0,
+      "joint": [
+        0.0202652035504646,
+        0.5407873070594412,
+        0.3365390074444537,
+        0.10240848194564035
+      ],
+      "kind": "no_feedback",
+      "probe_index": 1764,
+      "signal": 0
+    }
+  ]
+}

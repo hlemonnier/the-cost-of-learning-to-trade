@@ -1,0 +1,373 @@
+{
+  "scope": "Preserved pre-correction probes; these are defects, not acceptance results",
+  "single_pilot": {
+    "accepted": true,
+    "result": {
+      "mean": 10.0,
+      "se": 0.0,
+      "low": 10.0,
+      "high": 10.0,
+      "pilots": 1,
+      "episodes": 3,
+      "df": 1,
+      "observed_pilot_mean_variance": 0.0,
+      "within_pilot_mean_variance": 33.333333333333336,
+      "estimated_between_pilot_variance": 0.0
+    }
+  },
+  "implicit_population": {
+    "accepted": true,
+    "result": {
+      "mean": 2.5,
+      "se": 1.0,
+      "df": 1.0,
+      "low": -10.206204736174694,
+      "high": 15.206204736174694,
+      "one_sided_lower": -3.8137515146750367,
+      "environments": 1,
+      "pilots": 2,
+      "episodes": 4
+    }
+  },
+  "theta_grid": {
+    "accepted": true,
+    "resolved": {
+      "version": 1,
+      "horizon": 300,
+      "qmax": 5,
+      "theta_grid": [
+        0.27
+      ],
+      "kappa_grid": [
+        0.002,
+        0.02,
+        0.1
+      ],
+      "pilots": 10,
+      "pilot_episodes": 100,
+      "test_episodes": 100,
+      "variants": [
+        "nominal",
+        "state_dependence",
+        "fixed_duration"
+      ],
+      "policies": [
+        "abstain",
+        "taker",
+        "independent",
+        "myopic",
+        "noinfo",
+        "active",
+        "full_information"
+      ],
+      "master_seed": 260924138,
+      "primary_policy": "active",
+      "primary_baseline": "noinfo",
+      "deployment_threshold": 0.05,
+      "deployment_population": "uniform mixture of nine nominal environments, fresh 100-episode pilot",
+      "parameter_prior": "uniform over declared public 3x3 grid",
+      "online_updates": "joint parameter/regime posterior within each episode only",
+      "algorithm_selection": "fixed in advance; no final-data tuning",
+      "environments": [
+        [
+          0.15,
+          0.002
+        ],
+        [
+          0.15,
+          0.02
+        ],
+        [
+          0.15,
+          0.1
+        ],
+        [
+          0.35,
+          0.002
+        ],
+        [
+          0.35,
+          0.02
+        ],
+        [
+          0.35,
+          0.1
+        ],
+        [
+          0.65,
+          0.002
+        ],
+        [
+          0.65,
+          0.02
+        ],
+        [
+          0.65,
+          0.1
+        ]
+      ],
+      "belief_points": 641,
+      "quadrature_points": 161,
+      "belief_overrides": {
+        "0.65,0.002": 1281
+      },
+      "profile": "full"
+    }
+  },
+  "kappa_grid": {
+    "accepted": true,
+    "resolved": {
+      "version": 1,
+      "horizon": 300,
+      "qmax": 5,
+      "theta_grid": [
+        0.15,
+        0.35,
+        0.65
+      ],
+      "kappa_grid": [
+        0.04
+      ],
+      "pilots": 10,
+      "pilot_episodes": 100,
+      "test_episodes": 100,
+      "variants": [
+        "nominal",
+        "state_dependence",
+        "fixed_duration"
+      ],
+      "policies": [
+        "abstain",
+        "taker",
+        "independent",
+        "myopic",
+        "noinfo",
+        "active",
+        "full_information"
+      ],
+      "master_seed": 260924138,
+      "primary_policy": "active",
+      "primary_baseline": "noinfo",
+      "deployment_threshold": 0.05,
+      "deployment_population": "uniform mixture of nine nominal environments, fresh 100-episode pilot",
+      "parameter_prior": "uniform over declared public 3x3 grid",
+      "online_updates": "joint parameter/regime posterior within each episode only",
+      "algorithm_selection": "fixed in advance; no final-data tuning",
+      "environments": [
+        [
+          0.15,
+          0.002
+        ],
+        [
+          0.15,
+          0.02
+        ],
+        [
+          0.15,
+          0.1
+        ],
+        [
+          0.35,
+          0.002
+        ],
+        [
+          0.35,
+          0.02
+        ],
+        [
+          0.35,
+          0.1
+        ],
+        [
+          0.65,
+          0.002
+        ],
+        [
+          0.65,
+          0.02
+        ],
+        [
+          0.65,
+          0.1
+        ]
+      ],
+      "belief_points": 641,
+      "quadrature_points": 161,
+      "belief_overrides": {
+        "0.65,0.002": 1281
+      },
+      "profile": "full"
+    }
+  },
+  "policies": {
+    "accepted": true,
+    "resolved": {
+      "version": 1,
+      "horizon": 300,
+      "qmax": 5,
+      "theta_grid": [
+        0.15,
+        0.35,
+        0.65
+      ],
+      "kappa_grid": [
+        0.002,
+        0.02,
+        0.1
+      ],
+      "pilots": 10,
+      "pilot_episodes": 100,
+      "test_episodes": 100,
+      "variants": [
+        "nominal",
+        "state_dependence",
+        "fixed_duration"
+      ],
+      "policies": [
+        "abstain"
+      ],
+      "master_seed": 260924138,
+      "primary_policy": "active",
+      "primary_baseline": "noinfo",
+      "deployment_threshold": 0.05,
+      "deployment_population": "uniform mixture of nine nominal environments, fresh 100-episode pilot",
+      "parameter_prior": "uniform over declared public 3x3 grid",
+      "online_updates": "joint parameter/regime posterior within each episode only",
+      "algorithm_selection": "fixed in advance; no final-data tuning",
+      "environments": [
+        [
+          0.15,
+          0.002
+        ],
+        [
+          0.15,
+          0.02
+        ],
+        [
+          0.15,
+          0.1
+        ],
+        [
+          0.35,
+          0.002
+        ],
+        [
+          0.35,
+          0.02
+        ],
+        [
+          0.35,
+          0.1
+        ],
+        [
+          0.65,
+          0.002
+        ],
+        [
+          0.65,
+          0.02
+        ],
+        [
+          0.65,
+          0.1
+        ]
+      ],
+      "belief_points": 641,
+      "quadrature_points": 161,
+      "belief_overrides": {
+        "0.65,0.002": 1281
+      },
+      "profile": "full"
+    }
+  },
+  "primary_baseline": {
+    "accepted": true,
+    "resolved": {
+      "version": 1,
+      "horizon": 300,
+      "qmax": 5,
+      "theta_grid": [
+        0.15,
+        0.35,
+        0.65
+      ],
+      "kappa_grid": [
+        0.002,
+        0.02,
+        0.1
+      ],
+      "pilots": 10,
+      "pilot_episodes": 100,
+      "test_episodes": 100,
+      "variants": [
+        "nominal",
+        "state_dependence",
+        "fixed_duration"
+      ],
+      "policies": [
+        "abstain",
+        "taker",
+        "independent",
+        "myopic",
+        "noinfo",
+        "active",
+        "full_information"
+      ],
+      "master_seed": 260924138,
+      "primary_policy": "active",
+      "primary_baseline": "taker",
+      "deployment_threshold": 0.05,
+      "deployment_population": "uniform mixture of nine nominal environments, fresh 100-episode pilot",
+      "parameter_prior": "uniform over declared public 3x3 grid",
+      "online_updates": "joint parameter/regime posterior within each episode only",
+      "algorithm_selection": "fixed in advance; no final-data tuning",
+      "environments": [
+        [
+          0.15,
+          0.002
+        ],
+        [
+          0.15,
+          0.02
+        ],
+        [
+          0.15,
+          0.1
+        ],
+        [
+          0.35,
+          0.002
+        ],
+        [
+          0.35,
+          0.02
+        ],
+        [
+          0.35,
+          0.1
+        ],
+        [
+          0.65,
+          0.002
+        ],
+        [
+          0.65,
+          0.02
+        ],
+        [
+          0.65,
+          0.1
+        ]
+      ],
+      "belief_points": 641,
+      "quadrature_points": 161,
+      "belief_overrides": {
+        "0.65,0.002": 1281
+      },
+      "profile": "full"
+    }
+  },
+  "original_summary_max_numeric_difference": 3.552713678800501e-14,
+  "original_rows": 189000,
+  "original_csv_sha256": "098ac2ced552c16f090d5ea9a2dc9199116c4f12e4686df5e1a991fcec253ef3"
+}

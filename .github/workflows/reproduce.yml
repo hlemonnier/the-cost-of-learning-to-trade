@@ -1,0 +1,33 @@
+name: End-to-end reproduction
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  cold-reproduction:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+      - name: Install the research package
+        run: python -m pip install -e .
+      - name: Repeat the experiment with separate cold caches
+        run: python verification/verify_pipeline.py --out outputs/reproduction/pipeline
+      - name: Export repeatable evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: cold-reproduction-evidence
+          path: outputs/reproduction/pipeline/
+          if-no-files-found: error
+          retention-days: 30

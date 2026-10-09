@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "scope": "Parent independently checked current operator file headers, sizes, dtypes and totals; no full payload scan or worker modification",
+  "diagnosis_sha256": "e6b5e94c56df77624109208a4c0d606cf1811d05afcb54baae04f04301a9b90c",
+  "npy_files": 207,
+  "logical_bytes": 13347100716,
+  "solver_sha256": "8fdf88cae1b6b74ebd738e8b07942c15fd99042e2fd4f80f112660fc77f9e1ff"
+}

@@ -1,0 +1,44 @@
+{
+  "passed": true,
+  "tracked_files_checked": 856,
+  "content_rules_checked": 1,
+  "preserved_numeric_assets": 466,
+  "source_migration_files": 354,
+  "relative_links_valid": true,
+  "pdfs": {
+    "extensions/bayes_adaptive/report/Bayes_Adaptive_Extension.pdf": {
+      "pages": 6,
+      "sha256": "98b549dc4b739690b7b503e855aeb83729d206b464726ac5ac2bf58d75073f6d"
+    },
+    "extensions/bayes_adaptive/report/Mathematical_Appendix.pdf": {
+      "pages": 10,
+      "sha256": "50a86153d1e02fac44adb8ddd3e33a54379e0a8b84240514758b8861760c20de"
+    },
+    "extensions/bayes_adaptive/report/generated/action_explanation.pdf": {
+      "pages": 1,
+      "sha256": "5ed46d15f08eac8ac8fbbd5f5ff31ab2adca9dfb7df1812738886f607ad42cf4"
+    },
+    "extensions/bayes_adaptive/report/generated/economic_performance.pdf": {
+      "pages": 1,
+      "sha256": "7f30dc640cd07bd285c6f9a15da706e20b68ad932c2bc9385c30da06e3cbf9a2"
+    },
+    "extensions/bayes_adaptive/report/generated/information_and_compute.pdf": {
+      "pages": 1,
+      "sha256": "6cf0ced09f671ff4957b1753cb41217631781f47c5bc925deb7be96202afbfeb"
+    },
+    "extensions/bayes_adaptive/report/generated/numerical_refinement.pdf": {
+      "pages": 1,
+      "sha256": "e06448c15e3885005f689fa8a79f88bd3593840dbe590a8b7650dededb056d49"
+    },
+    "output/pdf/Market_Making_Appendix.pdf": {
+      "pages": 11,
+      "sha256": "b48396283df13e0bbd9822f7c5f9d1df7f22c8a6e0b497ddf6a69e6d86e11243"
+    },
+    "output/pdf/Market_Making_Study.pdf": {
+      "pages": 8,
+      "sha256": "dd18d638d2e4490ecf1fcbab4133c7dfa571131e31429442d414dce727647b0c"
+    }
+  },
+  "issues": [],
+  "scope": "Publication content, recorded data hashes and explicit source migration; numerical simulation is checked separately."
+}

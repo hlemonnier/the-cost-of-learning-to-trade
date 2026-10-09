@@ -1,0 +1,39 @@
+{
+  "active_v2_and_user_paused_caches_untouched": true,
+  "disk_available_after_bytes": 254830305280,
+  "disk_available_before_bytes": 254830678016,
+  "observed_immediate_available_increase_bytes": -372736,
+  "reason": "Authorized removal of unused regenerable v1 caches after exact manifest preservation and v2 full-array equivalence; reserve disk for33/49 grids",
+  "removed": [
+    {
+      "array_bytes": 2712138088,
+      "artifact_sha256": "881d8a3205a1d88f72ce1dfd1881cb653713dd322eb135daa5096bba3b2da0ce",
+      "directory": "cache/w17-b33-gh15",
+      "manifest_sha256": "79effb5460d3b1488d5ea14537a348f38424c0f993d5e66fa49ceaa006e7f227",
+      "receipt": "outputs/numerical/v1-table-manifests/w17-b33-gh15/complete.json"
+    },
+    {
+      "array_bytes": 2712138088,
+      "artifact_sha256": "5d77653a56cb56ea6e6582322eee10c3591c6b497abb2dfe74ceeabfc590eac9",
+      "directory": "cache/w17-b33-gh25",
+      "manifest_sha256": "8a91a4d939c6249b66b1fcb4c86b9596604e0068860934152b5da3a96db8c35b",
+      "receipt": "outputs/numerical/v1-table-manifests/w17-b33-gh25/complete.json"
+    },
+    {
+      "array_bytes": 8734699048,
+      "artifact_sha256": "d8e28e4614810a70448a082b589c7e848787f919494626c1048e985074105fd5",
+      "directory": "cache/w25-b49-gh15",
+      "manifest_sha256": "94df705f88eb80ed8f590e54e01e6a5b8faadb19ef2703411cf1a7573047ea2a",
+      "receipt": "outputs/numerical/v1-table-manifests/w25-b49-gh15/complete.json"
+    },
+    {
+      "array_bytes": 8734699048,
+      "artifact_sha256": "3cc0a61ecde8fb11c94985f6e88ffb83d7dd749cca6948a3b070142d5004e283",
+      "directory": "cache/w25-b49-gh25",
+      "manifest_sha256": "859a54d43e66b14db047ce3983cbf3b3d09e06c8d701c1f471704fb93c00594c",
+      "receipt": "outputs/numerical/v1-table-manifests/w25-b49-gh25/complete.json"
+    }
+  ],
+  "utc": "2026-09-24T23:49:32.791867+00:00",
+  "v1_coarse_and_small_equivalence_arrays_retained": true
+}

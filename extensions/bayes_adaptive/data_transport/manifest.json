@@ -1,0 +1,33 @@
+{
+  "format_version": 1,
+  "part_bytes": 33554432,
+  "parts": [
+    {
+      "bytes": 33554432,
+      "file": "episodes.csv.gz.part-000000",
+      "index": 0,
+      "sha256": "2579b88a8226bac1738631b9fc60cfc9f739a94ef22b29e2f2284905057f4f44"
+    },
+    {
+      "bytes": 33554432,
+      "file": "episodes.csv.gz.part-000001",
+      "index": 1,
+      "sha256": "23c57fbd04232dcf4d377d9691ab89ef8ebd4e7bbbdc164d8901f293a5f5ea08"
+    },
+    {
+      "bytes": 33554432,
+      "file": "episodes.csv.gz.part-000002",
+      "index": 2,
+      "sha256": "47c36ae956aac3ebce3c98360c7a57eb50139447578e9fe2b18f5aeda8015c3c"
+    },
+    {
+      "bytes": 33472251,
+      "file": "episodes.csv.gz.part-000003",
+      "index": 3,
+      "sha256": "591928b3494ad515549d6a01e7bb468b4bb68affea5d2d1da87976b514cb1917"
+    }
+  ],
+  "source_bytes": 134135547,
+  "source_sha256": "b6aff149c34d7bc4e267330bb7a994d0a8edc0153e970735dfa4b3eab16c9603",
+  "target": "outputs/full/episodes.csv.gz"
+}

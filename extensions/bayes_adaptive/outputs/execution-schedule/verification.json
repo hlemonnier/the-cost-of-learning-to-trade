@@ -1,0 +1,33 @@
+{
+  "count": 18,
+  "current_run_sha256": "293ea96002a68ec809fd5fbdfb2510a1efe40ab1b959dfd70a50dee6323539bd",
+  "excluded": [
+    "manifest.json: distinct runner provenance and elapsed time",
+    "timings.csv: execution timing"
+  ],
+  "identical_nontiming_files": {
+    "actions/m0_r0.npz": "58705ca51c966993adf424ae2de62a327d753beba8f9a5afc899800755381ecb",
+    "actions/m0_r1.npz": "95749774251aa868ff5783667d385d625ddecea673f632c0602d6835164639db",
+    "actions/m1_r0.npz": "df17258c596bc0adff96a55f22240a526d6a6eefed72cbc2ea2b3ee73785b635",
+    "actions/m1_r1.npz": "b4dcc29dd491a5f3bf3680112a5d821c26184115de5b32f06288126747a02f48",
+    "diagnostics.csv": "ff44f3b49af91626eab7a95386c743ee57c5b9c195be0d79d3fcae941a73ca8c",
+    "episodes.csv.gz": "be68d1116c3a6751fc6f257a1c8ae1d461ece914fbf6e4f46887d0f33b70e2b4",
+    "pilot_records.json": "c0e70b7bf41357003507fc14faecc0d74c3ad25b9d40da90152819941f46947c",
+    "pilots/m0_r0.npz": "45515848e4f061df292de6020ae3d9148bfeea77a42dc7bb91bb418d857beb31",
+    "pilots/m0_r1.npz": "ebe48f6cf3006db2ee06d444badb99ab69d2e34c585119410d90bc7fef6eef0b",
+    "pilots/m1_r0.npz": "f626f966ed389f5f6e0d83428dafee6daaf0a89ee1b1d52208752370416885e3",
+    "pilots/m1_r1.npz": "4f4ca49977213bdb94dc129634fb562fd134fc56514dd8aa0f8bb5ba4453d078",
+    "planning_values.csv": "7e80b20757465d0242fc84100fef376c8d8817dc1c0ddd596e5dfaaa2b9794b0",
+    "summary.json": "3812357482250754285f5c230d9bf8f9fa9d4fd3df69329d54fd37f2d2dd3294",
+    "tapes/m0_r0.npz": "0b116d2c5073d4e7591dcc34d2c597e736ad9da4db43fddb4d6c9f845f49abab",
+    "tapes/m0_r1.npz": "75fa230b9dfbe9ae7de3364ceb9dcb07cf413d24483fc023c0ec544a91cfa749",
+    "tapes/m1_r0.npz": "64944e63ad62b0b511d8d5591fc9fd56c0ae22e42a8c277d7165f74b907376c0",
+    "tapes/m1_r1.npz": "9e98ee686b4c65e0dbbd7a0c202ae15f03a73565c19e62ede42b3a21220a5a78",
+    "traces.csv.gz": "ee7cb1e4782464c7228e719083b66b8b5194d7451333cdf67e6eab5ba4ad0722"
+  },
+  "legacy_run_sha256": "403a828b57f6f5ef2a9fa32b208b47c5cc07729dc8fd4d75ccb874b0c4af9acb",
+  "passed": true,
+  "scope": "720-record end-to-end schedule equivalence; no final outcomes",
+  "solver_sha256": "8fdf88cae1b6b74ebd738e8b07942c15fd99042e2fd4f80f112660fc77f9e1ff",
+  "table_artifact_sha256": "51ccd684d0e289bb5e717269625169504ae295e71aa8d35db6b1cad481c97f64"
+}

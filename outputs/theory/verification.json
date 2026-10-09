@@ -1,0 +1,163 @@
+{
+  "checks": {
+    "adaptive_identification": true,
+    "economic_and_information_inequalities": true,
+    "independent_quadrature": {
+      "fill_law_error": 5.551115123125783e-17,
+      "kl_error": 2.220446049250313e-16,
+      "refinement_error": 4.440892098500626e-16,
+      "reward_error": 8.326672684688674e-17
+    },
+    "raw_noise_ledger": {
+      "maximum_standardized_error": 2.6139666484869375,
+      "results": [
+        {
+          "action": 0,
+          "mean": 0.0,
+          "regime": 1,
+          "se": 0.0
+        },
+        {
+          "action": 1,
+          "mean": -0.042499765877898464,
+          "regime": 1,
+          "se": 0.000387822332256463
+        },
+        {
+          "action": 2,
+          "mean": -0.02885999152205891,
+          "regime": 1,
+          "se": 0.00031103004336635294
+        },
+        {
+          "action": 3,
+          "mean": -0.04228922591346253,
+          "regime": 1,
+          "se": 0.00038708886808531083
+        },
+        {
+          "action": 4,
+          "mean": -0.07597705579136099,
+          "regime": 1,
+          "se": 0.00044102966221936334
+        },
+        {
+          "action": 5,
+          "mean": -0.06578744943552144,
+          "regime": 1,
+          "se": 0.0004266826174748794
+        },
+        {
+          "action": 6,
+          "mean": -0.02846463052572229,
+          "regime": 1,
+          "se": 0.0003111737020732301
+        },
+        {
+          "action": 7,
+          "mean": -0.06561342840362075,
+          "regime": 1,
+          "se": 0.0004277644502090989
+        },
+        {
+          "action": 8,
+          "mean": -0.054106438047781195,
+          "regime": 1,
+          "se": 0.0003938853965876203
+        },
+        {
+          "action": 9,
+          "mean": -0.053491193639017366,
+          "regime": 1,
+          "se": 0.0005989032186549052
+        },
+        {
+          "action": 10,
+          "mean": -0.05450880636106997,
+          "regime": 1,
+          "se": 0.0005989032186549052
+        },
+        {
+          "action": 0,
+          "mean": 0.0,
+          "regime": -1,
+          "se": 0.0
+        },
+        {
+          "action": 1,
+          "mean": 0.03907055474563915,
+          "regime": -1,
+          "se": 0.00038601748767210967
+        },
+        {
+          "action": 2,
+          "mean": 0.04044157817674092,
+          "regime": -1,
+          "se": 0.000325360689835242
+        },
+        {
+          "action": 3,
+          "mean": 0.03965928022277242,
+          "regime": -1,
+          "se": 0.0003850940960061686
+        },
+        {
+          "action": 4,
+          "mean": 0.08753205096841157,
+          "regime": -1,
+          "se": 0.0004281073706358079
+        },
+        {
+          "action": 5,
+          "mean": 0.08548595439951334,
+          "regime": -1,
+          "se": 0.00042369745146070845
+        },
+        {
+          "action": 6,
+          "mean": 0.04024963396497429,
+          "regime": -1,
+          "se": 0.00032396692638913686
+        },
+        {
+          "action": 7,
+          "mean": 0.08466791671061344,
+          "regime": -1,
+          "se": 0.00042411544931892763
+        },
+        {
+          "action": 8,
+          "mean": 0.08392581214171521,
+          "regime": -1,
+          "se": 0.0004035164810376004
+        },
+        {
+          "action": 9,
+          "mean": -0.053491193639017366,
+          "regime": -1,
+          "se": 0.0005989032186549052
+        },
+        {
+          "action": 10,
+          "mean": -0.05450880636106997,
+          "regime": -1,
+          "se": 0.0005989032186549052
+        }
+      ],
+      "samples_per_regime": 250000,
+      "simultaneous_tolerance_standard_errors": 6.5
+    },
+    "tail_likelihood_and_invalid_assumptions": true
+  },
+  "numpy": "2.5.3",
+  "python": "3.12.14",
+  "runtime_seconds": 0.38453708300949074,
+  "scope": "Independent stationary-reduction and exact-likelihood evidence; not final policy evaluation",
+  "seed": 2026092403,
+  "sha256": {
+    "BENCHMARK.md": "50d4b5e4504613946f08bfe73128cb3f6db9215d196363c9ed22aefd395ac767",
+    "src/trade_learning/theory.py": "6d66ad7c6805fef49c927f7d0628a475d4e215a71327fef882b490e682daa3a4",
+    "verification/verify_theory.py": "cc43c0aadba8799c07fbbefb615548fc8f0a1c63341dbbe8aa9725fbcb3f8402"
+  },
+  "status": "passed"
+}

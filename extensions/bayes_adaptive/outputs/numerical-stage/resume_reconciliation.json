@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "scope": "Same-source resumed-run reconciliation of retained comparisons; warm-cache reuse, not cold reproduction",
+  "historical_receipt_sha256": "ed11bc4b2c33106553275d5790cff1dddd7cbaa889d38d9efe0fad0d5f3e119e",
+  "resumed_probe_sha256": "663ccedec00b567efb27e9d3dde4c5332acf2cf21db4a892fec21c8b75580a77",
+  "identical_comparisons": 4,
+  "known_reference_checks_identical": true,
+  "full_economic_outputs_exist": false
+}

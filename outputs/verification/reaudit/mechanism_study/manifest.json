@@ -1,0 +1,442 @@
+{
+  "status": "complete",
+  "protocol": {
+    "version": 1,
+    "theta": 0.35,
+    "kappa": 0.02,
+    "horizon": 30,
+    "qmax": 2,
+    "episodes": 20000,
+    "seed": 260924506,
+    "belief_points": 321,
+    "quadrature_points": 161,
+    "policies": [
+      "active",
+      "noinfo",
+      "no_forecast",
+      "blind_regime",
+      "inventory_off",
+      "myopic",
+      "full_information"
+    ],
+    "contrasts": [
+      {
+        "mechanism": "forecast",
+        "policy": "noinfo",
+        "baseline": "no_forecast"
+      },
+      {
+        "mechanism": "current_inference",
+        "policy": "noinfo",
+        "baseline": "blind_regime"
+      },
+      {
+        "mechanism": "inventory_continuation",
+        "policy": "noinfo",
+        "baseline": "inventory_off"
+      },
+      {
+        "mechanism": "future_information",
+        "policy": "active",
+        "baseline": "noinfo"
+      }
+    ],
+    "alpha": 0.05,
+    "family_size": 4,
+    "trace_episodes": 12,
+    "refinement": {
+      "initial": 0.001,
+      "sup": 0.005,
+      "robust_gap": 0.001,
+      "robust_disagreement": 0.005
+    }
+  },
+  "input_sha256": {
+    "src/trade_learning/__init__.py": "dbcea2a78df304d3856b15682c08a578552c571b823f8d44b6dab9cd044648f1",
+    "src/trade_learning/control.py": "2ad1a96921e2b6d595608e279e3d40fef74d29642188e7b297e32473278b78c4",
+    "src/trade_learning/environment.py": "dc50eb8f5d8cb884da02404445d299b3bffefb3cc6ac7a3a6f28a737ca8e8eef",
+    "src/trade_learning/filtering.py": "711997ebc28c7981ffb848ddded400650aee28488b5982d07cdc1fe563cf6ec1",
+    "src/trade_learning/model.py": "7a120a7faabd8aec2c1345a486128129105e9d564ec60908f1c07ea0cf5a897f",
+    "src/trade_learning/numerics.py": "bd30936513b1da7237ead270382a281943e558f95628ea930a1c1c149fbe8347",
+    "src/trade_learning/policies.py": "496759e539fabf4774a7ba77c7b9e0c9c951f1bc34d270b1052b4fa8597f22d5",
+    "src/trade_learning/protocol.py": "ad7ea5d9f105d5951637c1815f55211365a237ee49921cc1e4dd433487cfa7ac",
+    "src/trade_learning/run.py": "4f92e18e7d2311c36a238ca8480fbd010b30ab3432b3c1aa4b38a170903cb9da",
+    "src/trade_learning/statistics.py": "dcbd89fe362fad79c26cfebcbcb6b6b0e7defe0dfb5a5cc994114b6c57fe665a",
+    "src/trade_learning/theory.py": "6d66ad7c6805fef49c927f7d0628a475d4e215a71327fef882b490e682daa3a4",
+    "verification/mechanism_study.py": "3ec88aebb7e523a674922db9cf4eba023a5e58c21c5a4c506b85876946a8338a",
+    "verification/verify_control.py": "6a17eb3184bfedf1202697634c898bfebe52dd60d2a79169102c76ad9e269faf",
+    "configs/mechanism_study.json": "d2c6f2edd919e7ff0f08b7a09ea05ec109234f6f4ef17c2eaef392aae04d942a",
+    "report/mechanism_study_protocol.md": "773cdeca929f732d6c3662a46a9e2cb1f5c25698f8ed4d2dfcd4b357d2755364",
+    "verification/mechanism_failure_modes.md": "a13c9156df0d831e5e7b69492e530ca72605408a39bd6e79b89a8e7029c4a529"
+  },
+  "protocol_freeze_commit": "ac7b70b",
+  "execution_commit": "527d019154b7683ee3fdca74096f050a12affdf4",
+  "execution_git_scope": "current checkout commit plus exact source hashes",
+  "canonical_source_sha256": "cabebb53081506b722f4f9232e49a5171585217b7712e4c7a2940149aa6a34eb",
+  "canonical_raw_sha256": "1f2f28f70bc92c90b98a4d0ed1fcf8689e7e018fdd17230fc0798a919ad48057",
+  "numerical_contract": {
+    "version": 2,
+    "score_dtype": "float64",
+    "tie_absolute_tolerance": 1e-12,
+    "tie_relative_tolerance": 0.0,
+    "tie_action": "lowest admissible action ID within absolute tolerance of maximum",
+    "bellman_value": "Q of the action selected by the same tie rule",
+    "invalid_action": "negative infinity; no decision at remaining horizon zero"
+  },
+  "build": {
+    "python": "3.12.14",
+    "implementation": "CPython",
+    "system": "Darwin",
+    "machine": "arm64",
+    "byteorder": "little",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "numpy_config": {
+      "Compilers": {
+        "c": {
+          "name": "clang",
+          "linker": "ld64",
+          "version": "15.0.0",
+          "commands": "cc"
+        },
+        "cython": {
+          "name": "cython",
+          "linker": "cython",
+          "version": "3.3.0",
+          "commands": "cython"
+        },
+        "c++": {
+          "name": "clang",
+          "linker": "ld64",
+          "version": "15.0.0",
+          "commands": "c++"
+        }
+      },
+      "Machine Information": {
+        "host": {
+          "cpu": "aarch64",
+          "family": "aarch64",
+          "endian": "little",
+          "system": "darwin"
+        },
+        "build": {
+          "cpu": "aarch64",
+          "family": "aarch64",
+          "endian": "little",
+          "system": "darwin"
+        }
+      },
+      "Build Dependencies": {
+        "blas": {
+          "name": "accelerate",
+          "found": true,
+          "version": "unknown",
+          "detection method": "system",
+          "include directory": "unknown",
+          "lib directory": "unknown",
+          "openblas configuration": "unknown",
+          "pc file directory": "unknown"
+        },
+        "lapack": {
+          "name": "accelerate",
+          "found": true,
+          "version": "unknown",
+          "detection method": "system",
+          "include directory": "unknown",
+          "lib directory": "unknown",
+          "openblas configuration": "unknown",
+          "pc file directory": "unknown"
+        }
+      },
+      "Python Information": {
+        "path": "/private/var/folders/s6/5hzmn6lx4dz5nxs7k_0slzph0000gn/T/build-env-sd3oh5ko/bin/python",
+        "version": "3.12"
+      },
+      "SIMD Extensions": {
+        "baseline": [
+          "NEON",
+          "NEON_FP16",
+          "NEON_VFPV4",
+          "ASIMD"
+        ],
+        "found": [
+          "ASIMDHP",
+          "ASIMDDP"
+        ],
+        "not found": [
+          "ASIMDFHM"
+        ]
+      }
+    },
+    "scipy_config": {
+      "Compilers": {
+        "c": {
+          "name": "clang",
+          "linker": "ld64",
+          "version": "15.0.0",
+          "commands": "cc"
+        },
+        "cython": {
+          "name": "cython",
+          "linker": "cython",
+          "version": "3.2.9",
+          "commands": "cython"
+        },
+        "c++": {
+          "name": "clang",
+          "linker": "ld64",
+          "version": "15.0.0",
+          "commands": "c++"
+        },
+        "fortran": {
+          "name": "gcc",
+          "linker": "ld64",
+          "version": "13.4.0",
+          "commands": "gfortran"
+        },
+        "pythran": {
+          "version": "0.19.0",
+          "include directory": "../../../../../../../private/var/folders/g3/pffjr_y96bq06blnkf72x_hw0000gn/T/build-env-qsdhhi00/lib/python3.12/site-packages/pythran"
+        }
+      },
+      "Machine Information": {
+        "host": {
+          "cpu": "aarch64",
+          "family": "aarch64",
+          "endian": "little",
+          "system": "darwin"
+        },
+        "build": {
+          "cpu": "aarch64",
+          "family": "aarch64",
+          "endian": "little",
+          "system": "darwin"
+        },
+        "cross-compiled": false
+      },
+      "Build Dependencies": {
+        "blas": {
+          "name": "Accelerate",
+          "found": true,
+          "version": "unknown",
+          "detection method": "extraframeworks",
+          "include directory": "unknown",
+          "lib directory": "unknown",
+          "openblas configuration": "unknown",
+          "pc file directory": "unknown",
+          "has ilp64": false,
+          "cython blas ilp64": false
+        },
+        "lapack": {
+          "name": "Accelerate",
+          "found": true,
+          "version": "unknown",
+          "detection method": "extraframeworks",
+          "include directory": "unknown",
+          "lib directory": "unknown",
+          "openblas configuration": "unknown",
+          "pc file directory": "unknown",
+          "has ilp64": false
+        },
+        "pybind11": {
+          "name": "pybind11",
+          "version": "3.0.4",
+          "detection method": "config-tool",
+          "include directory": "unknown"
+        }
+      },
+      "Python Information": {
+        "path": "/private/var/folders/g3/pffjr_y96bq06blnkf72x_hw0000gn/T/build-env-qsdhhi00/bin/python",
+        "version": "3.12"
+      }
+    },
+    "numerical_binaries": {
+      "numpy._core._multiarray_umath": "3432cd9093d7e84b4080015b6a889598fea4c305da967063cb916215193bf85d",
+      "scipy.special._ufuncs": "a0889d5c82454d79d4cd4cc8a589a62a382d667da8e2b030e637f58708bd340c",
+      "scipy.sparse._sparsetools": "077b33d61dc1a677cb56bb4835572623986f7f0a1c0d35d6eaf85fc0df5dade2",
+      "scipy.linalg._fblas": "6502e4e093d03932479317d45bfea018ef0999bc5c4bd46687253322c13e9448"
+    },
+    "thread_environment": {
+      "OMP_NUM_THREADS": null,
+      "OPENBLAS_NUM_THREADS": null,
+      "MKL_NUM_THREADS": null,
+      "VECLIB_MAXIMUM_THREADS": null,
+      "NUMEXPR_NUM_THREADS": null
+    },
+    "sha256": "734eddc7d5a49af317fdedcd669ef30ac9d3a34847a389f01335a545e700261d"
+  },
+  "cold_control_build": true,
+  "shared_control_cache": false,
+  "selected_resolution": [
+    321,
+    161
+  ],
+  "table_fingerprints": {
+    "active": {
+      "beliefs": {
+        "sha256": "6c7c6f3c1a0b7f7600c3ffe922bdb45c208b4f8e00317b86f58638b1649129fd",
+        "shape": [
+          321
+        ],
+        "dtype": "float64"
+      },
+      "values": {
+        "sha256": "3c2161412a2dff659f08edfa9e2778dcf09e924bfcac03cc9a05d00def628864",
+        "shape": [
+          31,
+          5,
+          3,
+          321
+        ],
+        "dtype": "float64"
+      },
+      "q_values": {
+        "sha256": "d73fb019b0ed5866450c07b5dc3ea0de848b421c50bceac0627c8e06f9a91088",
+        "shape": [
+          31,
+          5,
+          3,
+          321,
+          11
+        ],
+        "dtype": "float64"
+      }
+    },
+    "noinfo": {
+      "beliefs": {
+        "sha256": "6c7c6f3c1a0b7f7600c3ffe922bdb45c208b4f8e00317b86f58638b1649129fd",
+        "shape": [
+          321
+        ],
+        "dtype": "float64"
+      },
+      "values": {
+        "sha256": "4879dae6ddf4ae0881cda23aef59be7b0595ae0af38ad0552e011b601ae858e5",
+        "shape": [
+          31,
+          5,
+          3,
+          321
+        ],
+        "dtype": "float64"
+      },
+      "q_values": {
+        "sha256": "4b75d551006054de336f617d183e699790ac4561e359226139b10b7134f06338",
+        "shape": [
+          31,
+          5,
+          3,
+          321,
+          11
+        ],
+        "dtype": "float64"
+      }
+    },
+    "no_forecast": {
+      "beliefs": {
+        "sha256": "6c7c6f3c1a0b7f7600c3ffe922bdb45c208b4f8e00317b86f58638b1649129fd",
+        "shape": [
+          321
+        ],
+        "dtype": "float64"
+      },
+      "values": {
+        "sha256": "86c075e13645e4ab102d9eeb6a5d6039da7045a939a825f785edd8618f05fc52",
+        "shape": [
+          31,
+          5,
+          3,
+          321
+        ],
+        "dtype": "float64"
+      },
+      "q_values": {
+        "sha256": "b4b3301211a66130559e44968cdb50da07c4c78583c40e5ded69605ee35ce2e3",
+        "shape": [
+          31,
+          5,
+          3,
+          321,
+          11
+        ],
+        "dtype": "float64"
+      }
+    },
+    "inventory_off": {
+      "beliefs": {
+        "sha256": "6c7c6f3c1a0b7f7600c3ffe922bdb45c208b4f8e00317b86f58638b1649129fd",
+        "shape": [
+          321
+        ],
+        "dtype": "float64"
+      },
+      "values": {
+        "sha256": "dc5be1bf7b57609c99b60d8cbadf852b1e2417c93e35210515d7430d341b0256",
+        "shape": [
+          31,
+          5,
+          3,
+          321
+        ],
+        "dtype": "float64"
+      },
+      "q_values": {
+        "sha256": "0c06e8b7bb38be73c5d22bdf42d65f887a94719498635bc692fc5d98687af4be",
+        "shape": [
+          31,
+          5,
+          3,
+          321,
+          11
+        ],
+        "dtype": "float64"
+      }
+    },
+    "full_information": {
+      "beliefs": {
+        "sha256": "fc62429c3e69001d65972cdeb94fb9aa18a7d9c16bc449e1e474e7e41bb95a7d",
+        "shape": [
+          2
+        ],
+        "dtype": "float64"
+      },
+      "values": {
+        "sha256": "96a0d31b8bc13edf92a53cde87239ffb45e6a76000ebc5bbc00b9ff6ed7b0c0f",
+        "shape": [
+          31,
+          5,
+          3,
+          2
+        ],
+        "dtype": "float64"
+      },
+      "q_values": {
+        "sha256": "69f55c3541e3528a07e54a539266ccc1393e7528c00468be1da256e5de70ad2c",
+        "shape": [
+          31,
+          5,
+          3,
+          2,
+          11
+        ],
+        "dtype": "float64"
+      }
+    }
+  },
+  "tape_sha256": {
+    "x": "537b0653632d3995171d017bb7b8d709befcf8823ecf29c4029789a3886fa367",
+    "h": "bd61b2269dd86f13df8a6648cd874a9522fd599e979649f6240ca6ffc61ce525",
+    "z": "f97bedddb2f637a22e8a04460639ed53e87659525cd8a08f50befdb0cf0a42d0",
+    "u_bid": "b1a5a721353f46e40e7e8dca45c7955d98d24e109cf6c21d26ed2764a83ba907",
+    "u_ask": "44e73aaa6718ee9ccc1079d5ba3d5d52817d2d6b59ac199885ede0b3f984e6c5"
+  },
+  "files": {
+    "episodes.csv.gz": "f56a267a851130fc553eb72a79bdb3c4ad0a17a19ee78a313a653da3d50bde4d",
+    "actions.npz": "ba8e0fbe460c6b9cf963652728c2babd33b9bbcb03abf6a46c726e84272bc515",
+    "traces.csv.gz": "19dba502c9557e5b4077e710c708aee77dee13eb6f00195cba97004574d1ebba",
+    "numerical_checks.json": "616a30d72534fccf74eb4cfbdc4be85867434a75ab054eadef1a464745f3d428",
+    "summary.json": "00c07e53567b654962fc977facb3080d837f4d063919d58fbd165e05fc3f996f"
+  },
+  "seconds": 12.753891041997122,
+  "scope": "Supplemental implementation and evaluation; final independent verifier and PDF build are separate"
+}

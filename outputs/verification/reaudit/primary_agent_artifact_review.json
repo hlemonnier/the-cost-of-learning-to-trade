@@ -1,0 +1,43 @@
+{
+  "passed": true,
+  "scope": "Primary-agent structural and exact-byte review of delegated artifacts; not a new external review or full economic replay.",
+  "checked_utc": "2026-09-24T15:57:29.273760+00:00",
+  "practical_refinement": {
+    "families": 18,
+    "solves": 81,
+    "comparisons": 61,
+    "remaining_horizons": "1..300 inclusive",
+    "all_final_axis_checks_passed": true,
+    "differences_from_previous_record": 164,
+    "only_runtime_fields_differ": true,
+    "sha256": "da4c464e2bf82d3fa130397b366d24811d934f675f7cc616d9d182bab70f0e9e"
+  },
+  "pilot_portability": {
+    "linux_original_archives_rehashed": 90,
+    "exact_public_hashes": 88,
+    "differing_fields": [
+      [
+        "03_01",
+        "return_",
+        2.220446049250313e-16
+      ],
+      [
+        "08_02",
+        "return_",
+        2.220446049250313e-16
+      ]
+    ],
+    "exact_raw_rng_and_hex_tail_values_checked": true
+  },
+  "cold_resource": {
+    "production_source_files_rehashed": 4,
+    "peak_process_rss_bytes": 3628892160
+  },
+  "evidence_sha256": {
+    "outputs/verification/reaudit/pilot_portability_reviewer_linux_x86_exact.json": "e018a52c14981f5edb243c0ac181b2ed19960eacc09cebba20bdad4b75b2f5a8",
+    "outputs/verification/reaudit/pilot_tail_libm_supported_macos.json": "359f7f55cd3800ff50d7e1bbbe9f92d644afa9e5d24cf285db23c03553ee8c59",
+    "outputs/verification/reaudit/pilot_tail_libm_reviewer_linux_x86.json": "9b7428247c5153c32859b0d186fe50b1eb03b2989ec7546556a2a1dbca5fd04f",
+    "outputs/verification/reaudit/resource_envelope.json": "20419be3dd6d10d64c7ef491d6a62df8fcb627688fd301dda0bf872325315df7",
+    "outputs/verification/reaudit/mechanism_contrasts.json": "8d110934e1088c3017d0831849516b9e24d2797f018acbd36ff49455b6432376"
+  }
+}

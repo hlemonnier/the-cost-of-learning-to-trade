@@ -1,0 +1,36 @@
+{
+  "settings": {
+    "theta": 0.35,
+    "kappa": 0.02,
+    "horizon": 300,
+    "qmax": 5,
+    "belief_points": 641,
+    "quadrature_points": 161,
+    "mode": "active"
+  },
+  "solver_metadata": {
+    "operator_build_seconds": 2.251224166015163,
+    "transition_nonzeros": 46148150,
+    "transition_storage_bytes": 554708536,
+    "max_transition_mass_error": 6.661338147750939e-16,
+    "effective_planning_theta": 0.35,
+    "solve_seconds": 17.989713916991604,
+    "table_storage_bytes": 611242216,
+    "approximation": "Gauss-Hermite continuation integration; uniform linear belief interpolation",
+    "reward_integration": "analytic expected marked-wealth increment",
+    "tie_breaking": {
+      "version": 2,
+      "score_dtype": "float64",
+      "tie_absolute_tolerance": 1e-12,
+      "tie_relative_tolerance": 0.0,
+      "tie_action": "lowest admissible action ID within absolute tolerance of maximum",
+      "bellman_value": "Q of the action selected by the same tie rule",
+      "invalid_action": "negative infinity; no decision at remaining horizon zero"
+    },
+    "requested_belief_points": 641,
+    "noinfo_semantics": "prediction-only belief in planning; runtime filtering external",
+    "full_semantics": "current regime observed, next regime averaged; no future innovation access"
+  },
+  "solve_elapsed_seconds": 17.989820957998745,
+  "solve_and_save_elapsed_seconds": 19.089869957999326
+}

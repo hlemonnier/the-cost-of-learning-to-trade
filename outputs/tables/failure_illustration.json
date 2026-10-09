@@ -1,0 +1,166 @@
+{
+  "illustration_selection": "Largest active objective deterioration across prescribed stresses, retrospective only",
+  "variant": "fixed_duration",
+  "environment": "theta0.65_kappa0.002",
+  "objective_change": -9.404406720534347,
+  "nominal": {
+    "variant": "nominal",
+    "environment": "theta0.65_kappa0.002",
+    "policy": "active",
+    "objective": {
+      "mean": 23.946102751700757,
+      "se": 0.5560074160235723,
+      "low": 22.68832659297411,
+      "high": 25.203878910427402,
+      "pilots": 10,
+      "episodes": 1000,
+      "df": 9,
+      "observed_pilot_mean_variance": 3.0914424667320985,
+      "within_pilot_mean_variance": 4.35164438890478,
+      "estimated_between_pilot_variance": 0.0
+    },
+    "pnl": {
+      "mean": 26.01462475170075,
+      "se": 0.5621475443022834,
+      "low": 24.742958657807918,
+      "high": 27.286290845593584,
+      "pilots": 10,
+      "episodes": 1000,
+      "df": 9,
+      "observed_pilot_mean_variance": 3.1600986156508766,
+      "within_pilot_mean_variance": 4.379578558829726,
+      "estimated_between_pilot_variance": 0.0
+    },
+    "metrics": {
+      "pnl": 26.014624751700758,
+      "inventory_penalty": 2.0685219999999997,
+      "liquidation_cost": 0.042552000000000006,
+      "passive_fees": 0.11075300000000007,
+      "market_fees": 0.12323800000000008,
+      "turnover": 173.948,
+      "spread_capture": 3.6352000000000015,
+      "directional_exposure": 4.95451816886932,
+      "execution_selection": 19.264936064871748,
+      "mean_abs_inventory": 1.5031966666666667,
+      "max_quote_gap": 22.436,
+      "regime_brier": 0.02887129670540547,
+      "wrong_confident_fraction": 0.023136666666666666,
+      "post_switch_error_10": 0.6966002747252747,
+      "conditional_logscore": -0.8695535825216436,
+      "score_residual_per_side": 0.00030182695558528304
+    },
+    "downside": {
+      "pnl_5pct_quantile": -6.957617673745942,
+      "pnl_lower_5pct_mean": -11.793833666803591,
+      "loss_probability": 0.115
+    },
+    "action_frequencies": [
+      0.26105666666666666,
+      0.01574333333333333,
+      0.008586666666666666,
+      0.015710000000000002,
+      0.10612666666666667,
+      0.18866333333333332,
+      0.006246666666666667,
+      0.18463666666666667,
+      0.007833333333333333,
+      0.10299333333333333,
+      0.10240333333333333
+    ]
+  },
+  "stress": {
+    "variant": "fixed_duration",
+    "environment": "theta0.65_kappa0.002",
+    "policy": "active",
+    "objective": {
+      "mean": 14.54169603116641,
+      "se": 0.23466103016407563,
+      "low": 14.01085590095114,
+      "high": 15.072536161381679,
+      "pilots": 10,
+      "episodes": 1000,
+      "df": 9,
+      "observed_pilot_mean_variance": 0.5506579907766521,
+      "within_pilot_mean_variance": 1.012807711807561,
+      "estimated_between_pilot_variance": 0.0
+    },
+    "pnl": {
+      "mean": 16.56704803116641,
+      "se": 0.23826541435660914,
+      "low": 16.028054217432526,
+      "high": 17.106041844900297,
+      "pilots": 10,
+      "episodes": 1000,
+      "df": 9,
+      "observed_pilot_mean_variance": 0.5677040767852665,
+      "within_pilot_mean_variance": 1.0333458003947542,
+      "estimated_between_pilot_variance": 0.0
+    },
+    "metrics": {
+      "pnl": 16.56704803116641,
+      "inventory_penalty": 2.025352,
+      "liquidation_cost": 0.035343000000000006,
+      "passive_fees": 0.08229400000000003,
+      "market_fees": 0.15141000000000007,
+      "turnover": 159.308,
+      "spread_capture": 2.7088999999999963,
+      "directional_exposure": 6.293527698961309,
+      "execution_selection": 9.711644894405667,
+      "mean_abs_inventory": 1.4930933333333332,
+      "max_quote_gap": 30.931,
+      "regime_brier": 0.23039055380967477,
+      "wrong_confident_fraction": 0.22058666666666665,
+      "post_switch_error_10": 0.6782214371847348,
+      "conditional_logscore": -1.052332868002045,
+      "score_residual_per_side": -0.023877454665570237
+    },
+    "downside": {
+      "pnl_5pct_quantile": 0.5438949036542188,
+      "pnl_lower_5pct_mean": -3.8759387705822888,
+      "loss_probability": 0.045
+    },
+    "action_frequencies": [
+      0.32817999999999997,
+      0.02621,
+      0.014623333333333332,
+      0.02617,
+      0.07198,
+      0.12820333333333334,
+      0.010280000000000001,
+      0.13033999999999998,
+      0.011663333333333333,
+      0.12674,
+      0.12561
+    ]
+  },
+  "matched_contrast": {
+    "variant": "fixed_duration",
+    "environment": "theta0.65_kappa0.002",
+    "baseline": "noinfo",
+    "paired": {
+      "mean": 9.265419020593876,
+      "se": 0.17491231867143822,
+      "low": 8.86973986604964,
+      "high": 9.661098175138113,
+      "pilots": 10,
+      "episodes": 1000,
+      "df": 9,
+      "observed_pilot_mean_variance": 0.30594319223018757,
+      "within_pilot_mean_variance": 0.6298004050951984,
+      "estimated_between_pilot_variance": 0.0
+    },
+    "family_adjusted": {
+      "mean": 9.265419020593876,
+      "se": 0.17491231867143822,
+      "low": 8.274973271771936,
+      "high": 10.255864769415817,
+      "pilots": 10,
+      "episodes": 1000,
+      "df": 9,
+      "observed_pilot_mean_variance": 0.30594319223018757,
+      "within_pilot_mean_variance": 0.6298004050951984,
+      "estimated_between_pilot_variance": 0.0
+    },
+    "family_size": 162
+  }
+}

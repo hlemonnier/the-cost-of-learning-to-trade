@@ -1,0 +1,50 @@
+{
+  "continuous_side_kl": 0.27920227920227914,
+  "deep_two_sided_affinity": 0.9322425302303463,
+  "delta": 0.05,
+  "economic_bound_analytic": 0.20379128469674368,
+  "economic_bound_exact_action": 0.48463371556559165,
+  "economic_bound_exact_sides": 0.33973152353047303,
+  "fill_probabilities": [
+    0.425557483188341,
+    0.2689414213699951
+  ],
+  "fixed_signal": 0,
+  "gross_cost_per_side_by_depth": [
+    0.030944151365279064,
+    0.021471357275899758
+  ],
+  "liquidation_cost_per_unit": 0.027000000000000003,
+  "maximum_side_kl": 0.1674822241327502,
+  "minimum_cost_per_nat": 0.18288098683452184,
+  "minimum_cost_per_nat_action": 8,
+  "minimum_gross_cost_per_side": 0.021471357275899758,
+  "minimum_integer_periods_exact": 8,
+  "numerical_status": "Exact integral formulas evaluated by adaptive quadrature; error estimates are not certified interval bounds.",
+  "optimal_bad_action": 0,
+  "optimal_good_action": 4,
+  "optimal_good_reward": 0.08852454342563541,
+  "period_bound_exact": 7.9112726588505,
+  "period_bound_gaussian": 4.745654456727952,
+  "quadrature_error_estimates": {
+    "affinity": 4.0429271137035324e-13,
+    "side_kl": [
+      1.9497878667581193e-12,
+      1.8896708874054547e-12
+    ]
+  },
+  "regime_bad": 1,
+  "regime_good": -1,
+  "side_bound_exact": 15.822545317701,
+  "side_bound_gaussian": 9.491308913455905,
+  "side_kl_by_depth": [
+    0.1674822241327502,
+    0.14835855405951998
+  ],
+  "testing_kl_requirement": 2.6499950812497963,
+  "theta": 0.35,
+  "thresholds": [
+    -0.18769599962225825,
+    -0.6160176926724505
+  ]
+}

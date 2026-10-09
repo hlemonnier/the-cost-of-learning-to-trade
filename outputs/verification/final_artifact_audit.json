@@ -1,0 +1,27 @@
+{
+  "passed": true,
+  "episodes": 189000,
+  "pilot_datasets": 90,
+  "pilot_episodes": 9000,
+  "final_periods": 56700000,
+  "total_stream_ids": 450,
+  "final_stream_ids": 270,
+  "pilot_and_behavior_stream_ids": 180,
+  "policy_variant_environment_cells": 189,
+  "max_ledger_error": 1.6626700016786344e-11,
+  "max_attribution_error": 1.6623147303107544e-11,
+  "production_code_hash": "cabebb53081506b722f4f9232e49a5171585217b7712e4c7a2940149aa6a34eb",
+  "final_csv_sha256": "1f2f28f70bc92c90b98a4d0ed1fcf8689e7e018fdd17230fc0798a919ad48057",
+  "primary_comparison_recomputed": {
+    "mean": 1.39256132230691,
+    "se": 0.04793454341220856,
+    "df": 35.92273420211001,
+    "low": 1.2953383013860345,
+    "high": 1.4897843432277855,
+    "one_sided_lower": 1.3116289454047196,
+    "environments": 9,
+    "pilots": 90,
+    "episodes": 9000
+  },
+  "scope": "Complete frozen campaign and existing verification reconciled; PDF visual review is separate."
+}

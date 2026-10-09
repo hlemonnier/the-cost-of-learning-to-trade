@@ -1,0 +1,48 @@
+{
+  "affinity": 0.9322425302303463,
+  "boundary": 3.6888794541139363,
+  "delta": 0.05,
+  "environments": [
+    {
+      "error_rate": 0.014625,
+      "error_se": 0.0006002314006906004,
+      "expected_kl_from_counts": 4.479041180117047,
+      "expected_pnl_from_counts": -0.8191314710922667,
+      "expected_regret_from_counts": 0.8191314710922667,
+      "horizon_censoring_rate": 0.006175,
+      "kl_martingale_se": 0.016570725333437397,
+      "mean_log_likelihood_ratio": 4.453387651292745,
+      "mean_pnl": -0.8135612523997233,
+      "mean_quoted_periods": 15.095325,
+      "mean_submitted_sides": 30.19065,
+      "pnl_martingale_se": 0.0038333340042856472,
+      "pnl_se": 0.0017241349480744234,
+      "regime": 1,
+      "repeats": 40000
+    },
+    {
+      "error_rate": 0.0137,
+      "error_se": 0.0005812123106060297,
+      "expected_kl_from_counts": 4.4518025495917195,
+      "expected_pnl_from_counts": 1.2653077296856121,
+      "expected_regret_from_counts": 3.603542158724335,
+      "horizon_censoring_rate": 0.0063,
+      "kl_martingale_se": 0.016401967304240452,
+      "mean_log_likelihood_ratio": 4.453611074093566,
+      "mean_pnl": 1.2659334639995463,
+      "mean_quoted_periods": 15.003525,
+      "mean_submitted_sides": 30.00705,
+      "pnl_martingale_se": 0.003895117371811569,
+      "pnl_se": 0.001666481356908662,
+      "regime": -1,
+      "repeats": 40000
+    }
+  ],
+  "horizon_opportunities": 55,
+  "policy": "Quote both deep sides until the log-likelihood-ratio hits +/-log(2/delta), then abstain; classify at the fixed horizon",
+  "risk_bound_formula": "exp(-boundary) + affinity**horizon",
+  "risk_bound_numerical": 0.04609065997072559,
+  "scope_note": "An identification experiment, not a proposed profit-maximising policy. Risk formula is analytic; numeric affinity is quadrature, not a certificate.",
+  "seed": 2026092404,
+  "theta": 0.35
+}

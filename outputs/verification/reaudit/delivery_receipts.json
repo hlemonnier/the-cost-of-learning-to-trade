@@ -1,0 +1,146 @@
+{
+  "passed": true,
+  "scope": "CLI E2E current-tree and deliberate stale-artifact rejection probes",
+  "baseline": {
+    "passed": true,
+    "identity": {
+      "production_source_sha256": "cabebb53081506b722f4f9232e49a5171585217b7712e4c7a2940149aa6a34eb",
+      "raw_csv_sha256": "1f2f28f70bc92c90b98a4d0ed1fcf8689e7e018fdd17230fc0798a919ad48057",
+      "manifest_sha256": "8dfec1a33e07c96ef625b9b7150046f878d2875510493b9ec37ab143d0b45e58",
+      "claims_sha256": "16bbb9ed8ebea8284cd27c4e9f90f16e34a063dc1626350a87805b6e27410c22"
+    },
+    "checked_input_files": 177,
+    "pdfs": {
+      "output/pdf/Market_Making_Study.pdf": {
+        "sha256": "55c29c4f6c0757eaa931731bf10129f361a0962605096d5f27cdf8581cc63e41",
+        "pages": 8
+      },
+      "output/pdf/Market_Making_Appendix.pdf": {
+        "sha256": "7f2b440647699659525bd42989d7138848fdc03c95ceef626d8e3763c34fbf1e",
+        "pages": 11
+      }
+    },
+    "build_receipt_sha256": "1a1a5793d3c5ead08300754d0d71a082b8817a5776509ba9a488ea1339963195",
+    "scope": "Current source/data/claim/input/PDF receipts agree; no visual or external sign-off inferred."
+  },
+  "healthy_runs": 3,
+  "rejected_cases": 19,
+  "cases": [
+    {
+      "case": "receipt_state",
+      "rejected": true,
+      "expected_reason": "incomplete or historical",
+      "exit_code": 1
+    },
+    {
+      "case": "receipt_generated",
+      "rejected": true,
+      "expected_reason": "incomplete or historical",
+      "exit_code": 1
+    },
+    {
+      "case": "receipt_schema",
+      "rejected": true,
+      "expected_reason": "incomplete or historical",
+      "exit_code": 1
+    },
+    {
+      "case": "receipt_worst_stress_drop",
+      "rejected": true,
+      "expected_reason": "stale stress",
+      "exit_code": 1
+    },
+    {
+      "case": "receipt_episodes",
+      "rejected": true,
+      "expected_reason": "budget differs",
+      "exit_code": 1
+    },
+    {
+      "case": "superseded_primary",
+      "rejected": true,
+      "expected_reason": "stale primary",
+      "exit_code": 1
+    },
+    {
+      "case": "omitted_input",
+      "rejected": true,
+      "expected_reason": "inputs changed",
+      "exit_code": 1
+    },
+    {
+      "case": "changed_source",
+      "rejected": true,
+      "expected_reason": "Production source differs",
+      "exit_code": 1
+    },
+    {
+      "case": "changed_raw",
+      "rejected": true,
+      "expected_reason": "Raw ledger differs",
+      "exit_code": 1
+    },
+    {
+      "case": "changed_pilot",
+      "rejected": true,
+      "expected_reason": "inputs changed",
+      "exit_code": 1
+    },
+    {
+      "case": "changed_resources",
+      "rejected": true,
+      "expected_reason": "inputs changed",
+      "exit_code": 1
+    },
+    {
+      "case": "changed_tex",
+      "rejected": true,
+      "expected_reason": "inputs changed",
+      "exit_code": 1
+    },
+    {
+      "case": "changed_main_pdf",
+      "rejected": true,
+      "expected_reason": "Compiled PDF changed",
+      "exit_code": 1
+    },
+    {
+      "case": "changed_appendix_pdf",
+      "rejected": true,
+      "expected_reason": "Compiled PDF changed",
+      "exit_code": 1
+    },
+    {
+      "case": "superseded_claims",
+      "rejected": true,
+      "expected_reason": "Claims and summary primary differ",
+      "exit_code": 1
+    },
+    {
+      "case": "failed_compile_with_updated_receipt_hash",
+      "rejected": true,
+      "expected_reason": "Compilation was incomplete",
+      "exit_code": 1
+    },
+    {
+      "case": "missing_compile_receipt",
+      "rejected": true,
+      "expected_reason": "FileNotFoundError",
+      "exit_code": 1
+    },
+    {
+      "case": "new_unrecorded_tex_dependency",
+      "rejected": true,
+      "expected_reason": "inputs changed",
+      "exit_code": 1
+    },
+    {
+      "case": "successful_noop_compiler_with_old_pdfs",
+      "rejected": true,
+      "old_pdf_bytes_preserved": true,
+      "build_and_package_success_invalidated": true
+    }
+  ],
+  "command": ".venv/bin/python verification/verify_delivery_receipts.py",
+  "original_tree_unchanged": true
+}

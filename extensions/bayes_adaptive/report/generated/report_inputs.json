@@ -1,0 +1,46 @@
+{
+  "primary": {
+    "budget": 0,
+    "policy": "bayes",
+    "baseline": "weighted_q",
+    "metric": "objective",
+    "mean": 0.004498372584936738,
+    "se": 0.00277809494970488,
+    "df": 56.55518639732497,
+    "low": -0.0010656150058491586,
+    "high": 0.010062360175722635,
+    "simultaneous_low": -0.004466153051317137,
+    "simultaneous_high": 0.013462898221190614,
+    "stratum_means": [
+      -0.011294534034976739,
+      0.020291279204850222
+    ],
+    "independent_replicates_per_model": 30,
+    "zero_empirical_variance": false
+  },
+  "conclusion": "The prespecified economically meaningful improvement criterion is not met.",
+  "macro_values": {
+    "PrimaryMean": "+0.004498",
+    "PrimaryLow": "-0.001066",
+    "PrimaryHigh": "+0.010062",
+    "PrimaryConclusion": "The prespecified economically meaningful improvement criterion is not met.",
+    "EvaluationMinutes": "10.8",
+    "GridWeights": "33",
+    "GridBeliefs": "65",
+    "GHNodes": "25",
+    "MaxHierarchyViolation": "3.1696e-05"
+  },
+  "study_manifest_sha256": "d946db4cdec14a483eb43e4e4c8c7662e319f3cee6375c79f1275ee4e94ea1c1",
+  "numerical_sha256": "3625857e7b44fc5b0e0873d7f2043fcef8da1ba716c24c17fb62f28747277a56",
+  "independent_numerical_raw_sha256": "6eb9428e39a4045855043210db9a78cd23934746a0f7764caab0949a1c64e26a",
+  "independent_verification_sha256": "f4f8a4defc45453f9cdb255926bd681a059f14c0e4ab3653abedf3c300b51bef",
+  "explanation_manifest_sha256": "9d0fc86e891bfe578fcd20b45300e7352b8a3fbfee8fec506afd96a31083009f",
+  "explanation_sha256": "a2798e35a6b3412f3f24bf328ebba59a745e77454625239617a6d870a45309bb",
+  "independent_explanation_sha256": "3cd23b84b2c65686f70aa29f3f3d86633a859b779fda4dd2ee0635255b205cd4",
+  "candidate_manifest_sha256": "63372007d70445ec8095d638eb15e37dcbcf09ec31be3c2104bf4fd6a7d54198",
+  "candidate_artifact_sha256": "9b74b3f2ac56c774d07446af41b79407a9835531ce8c2260be7006aff47c8bde",
+  "cold_verification_sha256": "95a4357bb097111908d9ad18e3b621282fae4da89e4043bc1c470563c37614bb",
+  "mathematical_appendix_verification_sha256": "f3152246fe3a08b0eda4800e6a4eb4f49dbee1f5e0a74142cbb2406449f96a0a",
+  "builder_sha256": "5fde2ac58e5fa2f88d9985629d6b92862d87cfd8879549b363f95480e9b3de4d",
+  "scope": "Tables generated from authenticated outputs; plotting is not independent scientific validation."
+}

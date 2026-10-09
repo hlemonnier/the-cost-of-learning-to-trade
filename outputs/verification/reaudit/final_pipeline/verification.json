@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "rows": 672,
+  "profile": "smoke",
+  "exact_repeat": true,
+  "separate_cold_caches": true,
+  "control_content_and_build_fingerprints_match": true,
+  "control_tables_per_run": 21,
+  "source_hashes": [
+    "cabebb53081506b722f4f9232e49a5171585217b7712e4c7a2940149aa6a34eb",
+    "cabebb53081506b722f4f9232e49a5171585217b7712e4c7a2940149aa6a34eb"
+  ],
+  "max_reconciliation_error": 8.822942376696119e-13,
+  "artifacts": [
+    "outputs/verification/reaudit/final_pipeline/first",
+    "outputs/verification/reaudit/final_pipeline/repeat"
+  ],
+  "scope": "Fresh-process small end-to-end integration; not full evaluation."
+}

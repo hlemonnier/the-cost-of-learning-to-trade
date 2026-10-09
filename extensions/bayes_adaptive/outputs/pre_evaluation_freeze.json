@@ -1,0 +1,51 @@
+{
+  "branch": "main",
+  "evidence_sha256": {
+    "explanation-candidates-endpoint/manifest.json": "63372007d70445ec8095d638eb15e37dcbcf09ec31be3c2104bf4fd6a7d54198",
+    "independent_numerical_raw.json": "6eb9428e39a4045855043210db9a78cd23934746a0f7764caab0949a1c64e26a",
+    "numerical-endpoint/numerical_checks.json": "3625857e7b44fc5b0e0873d7f2043fcef8da1ba716c24c17fb62f28747277a56",
+    "selected-reference-smoke/manifest.json": "50e1ce71397de4ca92a6773d0d0df23354858617e6c3b21bf87bb6d8f3dbd051"
+  },
+  "expected_paired_trajectories": 60000,
+  "expected_policy_decisions": 27000000,
+  "expected_policy_records": 900000,
+  "full_output_existed_at_recording": false,
+  "git_commit": "155d1dbb3ed2a4c6011c182cd3cade440170bf8f",
+  "recorded_utc": "2026-09-27T20:48:25.511765+00:00",
+  "remaining_pre_evaluation_gate": "Selected-resolution cold reproduction must pass before full execution.",
+  "scope": "Pre-evaluation identity record after numerical acceptance and independent raw replay; selected cold reproduction is still in progress. No full local campaign output directory exists.",
+  "selected_artifact_sha256": "ed158983727bdf3c2fd06f4eaf8d79d6bfd840bd6cbd2979342733aaffa0a60e",
+  "selected_specification": {
+    "belief_geometry": "endpoint_sine",
+    "belief_points": 65,
+    "horizon": 30,
+    "kappas": [
+      0.002,
+      0.1
+    ],
+    "known_belief_points": 321,
+    "known_quadrature_points": 161,
+    "qmax": 2,
+    "quadrature_points": 25,
+    "theta": 0.35,
+    "weight_points": 33
+  },
+  "sources": {
+    "GEOMETRY_AMENDMENT.md": "a23139363166be0502af795f5c907a830451d2b92cfdcaaab3006ecee347ca56",
+    "NUMERICAL_AMENDMENT.md": "61a0187514ea3af0dfaee271d2c306c32057e600c084d5732d7647b81e781511",
+    "PROTOCOL.md": "da2c1d8ce367fe1f647a7ffbbf7f4629602d5ed6f9c9b7f00dad2f852ea66c3e",
+    "THEORY.md": "36fbbb2f79bcfbb8f8e55e1414c10900c498cb2673cd95ff2322108b9ff90a59",
+    "config.json": "8681e5a8c48f25967f95a4b7d42b76531cbc4e8e00d013114c3e6efe93aee462",
+    "explain.py": "21503a858f7f6d8e8a3c3b0337b632e4ea15f080c010168a5e41081fe254ba18",
+    "numerical_config.json": "10e311f1d7b7bdf44bafa5b948811831a6d09d6bcc8d7cbbe64953e1d89caff6",
+    "refine_geometry.py": "c063827f5859794fd33a3e083efdb5f30d4af6eef567a794e0719dcbaa32325f",
+    "refine_numerical.py": "63754394ca07788225b7d7facc801cd7752538ecf617052e8ef881eaeea16fda",
+    "run.py": "293ea96002a68ec809fd5fbdfb2510a1efe40ab1b959dfd70a50dee6323539bd",
+    "solver.py": "8fdf88cae1b6b74ebd738e8b07942c15fd99042e2fd4f80f112660fc77f9e1ff",
+    "verify_cold_reproduction.py": "b21628006f8c6ffd81e8c04275bdb990269d2f0b24130d8dc72c6fbb259d94fa",
+    "verify_explanation.py": "8bbf7e93e8ef803f433bb082d7bf114a5d6d46b184784541602686b80099bc62",
+    "verify_extension.py": "f258fe671a5031b60d7c7ce671477e5bdf24874a8de88d2abc8ebc05702870f9",
+    "verify_numerical_raw.py": "372f088f7f3be1645bb21a86a29675fab4222fbd04868962be69bec10955432c"
+  },
+  "statistical_protocol_sha256": "8681e5a8c48f25967f95a4b7d42b76531cbc4e8e00d013114c3e6efe93aee462"
+}

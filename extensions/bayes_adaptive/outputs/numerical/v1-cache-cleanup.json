@@ -1,0 +1,70 @@
+{
+  "active_v2_cache_untouched": true,
+  "complete_v1_arrays_retained": true,
+  "disk_available_after_bytes": 239193001984,
+  "disk_available_before_bytes": 239193788416,
+  "observed_disk_available_increase_bytes": -786432,
+  "preserved_complete_manifests": [
+    {
+      "array_bytes": 9971608,
+      "artifact_sha256": "1e616df907a20327780daef78f68327bd24b0a3e9293b1568f22e2ecaea51295",
+      "manifest_sha256": "4465c5faacce77f21154475059addd62cbd97d59535b5b2e113a503f6fa4a936",
+      "original_directory": "cache/v1-validity-h4-w5-b7-gh15",
+      "receipt": "outputs/numerical/v1-table-manifests/v1-validity-h4-w5-b7-gh15/complete.json"
+    },
+    {
+      "array_bytes": 21944128,
+      "artifact_sha256": "ecc19c8992deeef5d568f7104627c49db817508d53eab89e3109ba68ed130fcc",
+      "manifest_sha256": "7c684ee2858ad39aa9d70044a07a28e22ac73fce5c0d724dc8e462bff1e32cc7",
+      "original_directory": "cache/v1-validity-h7-w5-b9-gh25",
+      "receipt": "outputs/numerical/v1-table-manifests/v1-validity-h7-w5-b9-gh25/complete.json"
+    },
+    {
+      "array_bytes": 2712138088,
+      "artifact_sha256": "881d8a3205a1d88f72ce1dfd1881cb653713dd322eb135daa5096bba3b2da0ce",
+      "manifest_sha256": "79effb5460d3b1488d5ea14537a348f38424c0f993d5e66fa49ceaa006e7f227",
+      "original_directory": "cache/w17-b33-gh15",
+      "receipt": "outputs/numerical/v1-table-manifests/w17-b33-gh15/complete.json"
+    },
+    {
+      "array_bytes": 2712138088,
+      "artifact_sha256": "5d77653a56cb56ea6e6582322eee10c3591c6b497abb2dfe74ceeabfc590eac9",
+      "manifest_sha256": "8a91a4d939c6249b66b1fcb4c86b9596604e0068860934152b5da3a96db8c35b",
+      "original_directory": "cache/w17-b33-gh25",
+      "receipt": "outputs/numerical/v1-table-manifests/w17-b33-gh25/complete.json"
+    },
+    {
+      "array_bytes": 8734699048,
+      "artifact_sha256": "d8e28e4614810a70448a082b589c7e848787f919494626c1048e985074105fd5",
+      "manifest_sha256": "94df705f88eb80ed8f590e54e01e6a5b8faadb19ef2703411cf1a7573047ea2a",
+      "original_directory": "cache/w25-b49-gh15",
+      "receipt": "outputs/numerical/v1-table-manifests/w25-b49-gh15/complete.json"
+    },
+    {
+      "array_bytes": 8734699048,
+      "artifact_sha256": "3cc0a61ecde8fb11c94985f6e88ffb83d7dd749cca6948a3b070142d5004e283",
+      "manifest_sha256": "859a54d43e66b14db047ce3983cbf3b3d09e06c8d701c1f471704fb93c00594c",
+      "original_directory": "cache/w25-b49-gh25",
+      "receipt": "outputs/numerical/v1-table-manifests/w25-b49-gh25/complete.json"
+    },
+    {
+      "array_bytes": 403625128,
+      "artifact_sha256": "a42442d638ed28952a5548a9d2c55c7007f3881e28b55daa402ca7637959602a",
+      "manifest_sha256": "9131bc3cc27fe84dcf2e8c23af7c04e48945cfba45090e726cc990dc582276bb",
+      "original_directory": "cache/w9-b17-gh25",
+      "receipt": "outputs/numerical/v1-table-manifests/w9-b17-gh25/complete.json"
+    }
+  ],
+  "removed_directory": "cache/w33-b65-gh25",
+  "removed_file_count": 219,
+  "removed_logical_file_bytes": 32982827174,
+  "removed_status": "Explicitly abandoned incomplete v1 artifact; never a completed numerical solution",
+  "retained_evidence": [
+    "revisions/solver_v1.py",
+    "outputs/numerical/progress-v1.jsonl",
+    "outputs/numerical/abandoned_v1.json",
+    "outputs/numerical/numerical_checks.json"
+  ],
+  "utc": "2026-09-24T23:16:51.621598+00:00",
+  "v1_source_sha256": "ba716aaf7231e3aac3dceaf977f6439b84ebea0984c34cec8ef681f483f2a313"
+}

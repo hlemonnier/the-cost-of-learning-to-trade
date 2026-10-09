@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "math": {
+    "mass_error": 2.220446049250313e-16,
+    "cold_first_step_model_weight_drift": 1.1102230246251565e-16,
+    "no_feedback_belief_error": 0.0,
+    "one_step_sign_symmetry_error": 4.163336342344337e-17,
+    "scope": "Independent four-state selected likelihood and timing identities"
+  }
+}

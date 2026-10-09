@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "horizon": 300,
+  "qmax": 5,
+  "theta_grid": [0.15, 0.35, 0.65],
+  "kappa_grid": [0.002, 0.02, 0.10],
+  "pilots": 10,
+  "pilot_episodes": 100,
+  "test_episodes": 100,
+  "variants": ["nominal", "state_dependence", "fixed_duration"],
+  "policies": ["abstain", "taker", "independent", "myopic", "noinfo", "active", "full_information"],
+  "master_seed": 260924138,
+  "primary_policy": "active",
+  "primary_baseline": "noinfo",
+  "deployment_threshold": 0.05,
+  "deployment_population": "uniform mixture of nine nominal environments, fresh 100-episode pilot",
+  "parameter_prior": "uniform over declared public 3x3 grid",
+  "online_updates": "joint parameter/regime posterior within each episode only",
+  "algorithm_selection": "fixed in advance; no final-data tuning",
+  "belief_points": 641,
+  "quadrature_points": 161,
+  "belief_overrides": {"0.65,0.002": 1281}
+}

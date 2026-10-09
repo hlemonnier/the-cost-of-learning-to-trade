@@ -1,0 +1,72 @@
+{
+  "status": "running",
+  "protocol": {
+    "version": 1,
+    "theta": 0.35,
+    "kappa": 0.02,
+    "horizon": 30,
+    "qmax": 2,
+    "episodes": 20000,
+    "seed": 260924506,
+    "belief_points": 321,
+    "quadrature_points": 161,
+    "policies": [
+      "active",
+      "noinfo",
+      "no_forecast",
+      "blind_regime",
+      "inventory_off",
+      "myopic",
+      "full_information"
+    ],
+    "contrasts": [
+      {
+        "mechanism": "forecast",
+        "policy": "noinfo",
+        "baseline": "no_forecast"
+      },
+      {
+        "mechanism": "current_inference",
+        "policy": "noinfo",
+        "baseline": "blind_regime"
+      },
+      {
+        "mechanism": "inventory_continuation",
+        "policy": "noinfo",
+        "baseline": "inventory_off"
+      },
+      {
+        "mechanism": "future_information",
+        "policy": "active",
+        "baseline": "noinfo"
+      }
+    ],
+    "alpha": 0.05,
+    "family_size": 4,
+    "trace_episodes": 12,
+    "refinement": {
+      "initial": 0.001,
+      "sup": 0.005,
+      "robust_gap": 0.001,
+      "robust_disagreement": 0.005
+    }
+  },
+  "input_sha256": {
+    "src/trade_learning/__init__.py": "dbcea2a78df304d3856b15682c08a578552c571b823f8d44b6dab9cd044648f1",
+    "src/trade_learning/control.py": "2ad1a96921e2b6d595608e279e3d40fef74d29642188e7b297e32473278b78c4",
+    "src/trade_learning/environment.py": "dc50eb8f5d8cb884da02404445d299b3bffefb3cc6ac7a3a6f28a737ca8e8eef",
+    "src/trade_learning/filtering.py": "711997ebc28c7981ffb848ddded400650aee28488b5982d07cdc1fe563cf6ec1",
+    "src/trade_learning/model.py": "7a120a7faabd8aec2c1345a486128129105e9d564ec60908f1c07ea0cf5a897f",
+    "src/trade_learning/numerics.py": "bd30936513b1da7237ead270382a281943e558f95628ea930a1c1c149fbe8347",
+    "src/trade_learning/policies.py": "496759e539fabf4774a7ba77c7b9e0c9c951f1bc34d270b1052b4fa8597f22d5",
+    "src/trade_learning/protocol.py": "ad7ea5d9f105d5951637c1815f55211365a237ee49921cc1e4dd433487cfa7ac",
+    "src/trade_learning/run.py": "4f92e18e7d2311c36a238ca8480fbd010b30ab3432b3c1aa4b38a170903cb9da",
+    "src/trade_learning/statistics.py": "dcbd89fe362fad79c26cfebcbcb6b6b0e7defe0dfb5a5cc994114b6c57fe665a",
+    "src/trade_learning/theory.py": "6d66ad7c6805fef49c927f7d0628a475d4e215a71327fef882b490e682daa3a4",
+    "verification/mechanism_study.py": "4b61fd689d7894ff9d40d48eccc07d9d68d94781a85fdbf3e3f8d1a17e03d6ca",
+    "verification/verify_control.py": "6a17eb3184bfedf1202697634c898bfebe52dd60d2a79169102c76ad9e269faf",
+    "configs/mechanism_study.json": "d2c6f2edd919e7ff0f08b7a09ea05ec109234f6f4ef17c2eaef392aae04d942a",
+    "report/mechanism_study_protocol.md": "773cdeca929f732d6c3662a46a9e2cb1f5c25698f8ed4d2dfcd4b357d2755364",
+    "verification/mechanism_failure_modes.md": "a13c9156df0d831e5e7b69492e530ca72605408a39bd6e79b89a8e7029c4a529"
+  }
+}

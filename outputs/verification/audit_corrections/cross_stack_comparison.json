@@ -1,0 +1,95 @@
+{
+  "comparison_completed": true,
+  "exact_episode_equality": true,
+  "scope": "Two local macOS numerical stacks; no claim of universal platform invariance",
+  "seed": 260924301,
+  "episodes": 20000,
+  "settings": {
+    "horizon": 30,
+    "qmax": 2,
+    "theta": 0.35,
+    "kappa": 0.02,
+    "belief_points": 321,
+    "quadrature_points": 161
+  },
+  "numerical_contract": {
+    "version": 2,
+    "score_dtype": "float64",
+    "tie_absolute_tolerance": 1e-12,
+    "tie_relative_tolerance": 0.0,
+    "tie_action": "lowest admissible action ID within absolute tolerance of maximum",
+    "bellman_value": "Q of the action selected by the same tie rule",
+    "invalid_action": "negative infinity; no decision at remaining horizon zero"
+  },
+  "control_source_sha256": "c90b00d6369c3da0626bd1378062a94badbb9217e97d2f306f31be5ec849d2af",
+  "inputs": [
+    {
+      "directory": "outputs/reference/rollout",
+      "build": {
+        "python": "3.12.14",
+        "numpy": "2.5.3",
+        "scipy": "1.18.1",
+        "system": "Darwin",
+        "machine": "arm64",
+        "sha256": "734eddc7d5a49af317fdedcd669ef30ac9d3a34847a389f01335a545e700261d"
+      },
+      "sha256": {
+        "verification.json": "189ce95c537111c6e1b22f4473aaa338d24d3efa3eb57b49874dc0d2285cfec2",
+        "paired_objectives.csv.gz": "79e57e9659c66ea93e606409791a9f9796fb1d500114cbfcabf16c3a6f52e05c"
+      }
+    },
+    {
+      "directory": "outputs/verification/audit_corrections/cross_stack",
+      "build": {
+        "python": "3.14.6",
+        "numpy": "2.5.0",
+        "scipy": "1.18.0",
+        "system": "Darwin",
+        "machine": "arm64",
+        "sha256": "06aaeabfc2c78cc726eed196abe12326ba76f2a3c2db60e6835fba2c894756bb"
+      },
+      "sha256": {
+        "verification.json": "385330b9f12de6db765f50714516291c9613ce1a893f800a30af9d2c88dd86a5",
+        "paired_objectives.csv.gz": "79e57e9659c66ea93e606409791a9f9796fb1d500114cbfcabf16c3a6f52e05c"
+      }
+    }
+  ],
+  "policies": [
+    {
+      "policy": "active",
+      "primary_mean": 0.9866010082370145,
+      "secondary_mean": 0.9866010082370145,
+      "mean_change": 0.0,
+      "max_absolute_episode_difference": 0.0,
+      "differing_episodes": 0,
+      "differences_exceeding_1e_12": 0
+    },
+    {
+      "policy": "noinfo",
+      "primary_mean": 0.9564933922647779,
+      "secondary_mean": 0.9564933922647779,
+      "mean_change": 0.0,
+      "max_absolute_episode_difference": 0.0,
+      "differing_episodes": 0,
+      "differences_exceeding_1e_12": 0
+    },
+    {
+      "policy": "myopic",
+      "primary_mean": 0.8363515144434565,
+      "secondary_mean": 0.8363515144434565,
+      "mean_change": 0.0,
+      "max_absolute_episode_difference": 0.0,
+      "differing_episodes": 0,
+      "differences_exceeding_1e_12": 0
+    },
+    {
+      "policy": "full",
+      "primary_mean": 1.4517850915530366,
+      "secondary_mean": 1.4517850915530366,
+      "mean_change": 0.0,
+      "max_absolute_episode_difference": 0.0,
+      "differing_episodes": 0,
+      "differences_exceeding_1e_12": 0
+    }
+  ]
+}

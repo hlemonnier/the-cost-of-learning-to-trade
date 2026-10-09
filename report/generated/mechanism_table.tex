@@ -1,0 +1,18 @@
+\textbf{Matched mechanism study (reduced model).} A separately frozen study uses
+20,000 fresh paired episodes, seven policies and four planned contrasts.
+\begin{center}\small
+\begin{tabular}{p{.14\linewidth}p{.54\linewidth}p{.24\linewidth}}\toprule
+Channel & Decision intervention & $\Delta J$ [simultaneous 95\%]\\\midrule
+Forecast & Remove only $\mu x\E[q']$ from every noinfo planning reward; keep $X$ in fills and the true filter. & $+0.1907$\newline$[0.1561,0.2253]$\\
+Current inference & Same noinfo table; route $.5$ instead of the selected-feedback posterior into each decision. & $+0.2416$\newline$[0.2142,0.2690]$\\
+Inventory & Same noinfo continuation; replace $q'$ by $q$ for $m\ge2$. Preserve exact last-step scores. & $+0.0854$\newline$[0.0569,0.1140]$\\
+Future feedback & Active versus noinfo; change only feedback conditioning in future planning. Both filter at runtime. & $+0.0262$\newline$[0.0092,0.0432]$\\
+\bottomrule\end{tabular}\end{center}
+The first three rows compare filtered noinfo with the named ablation. All retain
+the same true simulator, accounting, constraints and final liquidation.
+Intervals use paired-episode Student inference adjusted for these four contrasts;
+this separate family leaves the canonical primary and 162 contrasts unchanged.
+Effects are not additive. Inventory continuation includes downstream forecast
+opportunities; it is not a pure risk-cost effect. The appendix defines every
+intervention, including the inventory-off rule's deliberately suppressed
+continuation argument, and gives cold-repeat and independent ledger checks.

@@ -1,0 +1,59 @@
+{
+  "all_array_bytes_authenticated": true,
+  "array_count": 11,
+  "array_records_identical": true,
+  "axes_sha256": "e5441e434d894cf76776b59d10908aff5e849153e7b87f287ed7139f5c8fd92c",
+  "cold_artifact_sha256": "2bcc7133cb81260afc9f18d9506c07becceddee4de12d23fbff6273c976322c2",
+  "cold_manifest_sha256": "b66b0ebf1e73937e3d4b1a003a1e83b481eb1944c2fc25bf1fa3d8d49b3dc4b7",
+  "decision_sha256": "78e3ad5508b40a3af983e016732fb94fbfede711b9246945d2f1e25227d284b3",
+  "first_artifact_sha256": "5b3a71ab67469d40764c97a54857a751ba453b2019b236d51c5939751e44b205",
+  "first_manifest_sha256": "f7b1beb9c4482b1b791c74fc0a1d05a831efa60fbc6abf7f7046f1f78c24023b",
+  "geometry_faults_rejected_by_both_readers": [
+    "altered_axis",
+    "altered_axes_digest",
+    "wrong_interpolation",
+    "mixed_geometry",
+    "historical_format"
+  ],
+  "horizon_policy_probe_decisions_replayed": 108402,
+  "independent_extension_verifier_sha256": "f258fe671a5031b60d7c7ce671477e5bdf24874a8de88d2abc8ebc05702870f9",
+  "independent_raw_verifier_sha256": "372f088f7f3be1645bb21a86a29675fab4222fbd04868962be69bec10955432c",
+  "maximum_independent_raw_q_error": 2.7755575615628914e-16,
+  "maximum_independent_raw_value_error": 2.220446049250313e-16,
+  "passed": true,
+  "probe_count": 2581,
+  "probe_sha256": "663ccedec00b567efb27e9d3dde4c5332acf2cf21db4a892fec21c8b75580a77",
+  "q_modes_interpolated": 3,
+  "reproduction_command": [
+    "/recorded-environment Learning/.venv/bin/python",
+    "/recorded-environment Learning/extensions/bayes_adaptive/verify_geometry_reader.py",
+    "--first",
+    "/recorded-environment Learning/extensions/bayes_adaptive/cache/geometry-e2e-2/endpoint-first",
+    "--cold",
+    "/recorded-environment Learning/extensions/bayes_adaptive/cache/geometry-e2e-2/endpoint-cold",
+    "--probes",
+    "/recorded-environment Learning/extensions/bayes_adaptive/outputs/numerical-stage/numerical_probes.npz",
+    "--root",
+    "/recorded-environment Learning",
+    "--out",
+    "extensions/bayes_adaptive/outputs/geometry-e2e-2/independent_reader_v3.json"
+  ],
+  "scope": "Short-horizon cold V3 endpoint family and independent physical-state action replay; no 30-horizon convergence claim",
+  "specification": {
+    "belief_geometry": "endpoint_sine",
+    "belief_points": 9,
+    "horizon": 7,
+    "kappas": [
+      0.002,
+      0.1
+    ],
+    "known_belief_points": 321,
+    "known_quadrature_points": 161,
+    "qmax": 2,
+    "quadrature_points": 25,
+    "theta": 0.35,
+    "weight_points": 5
+  },
+  "value_modes_interpolated": 6,
+  "verifier_sha256": "9465026f009709fbf844ace814d707362e6563ae04c153a9916684074908956c"
+}

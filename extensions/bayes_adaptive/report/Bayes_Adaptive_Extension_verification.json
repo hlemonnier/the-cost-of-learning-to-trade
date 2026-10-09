@@ -1,0 +1,72 @@
+{
+  "all_pages_visually_reviewed_by_primary": true,
+  "compilation_receipt_sha256": "efa88e006984efc01ac608d81e090e0cf0e8947fe739f24c6fd88a0b746aad1d",
+  "delegated_scientific_review": {
+    "correction": "Revelation delay preserves the market/action set, not necessarily the optimizing first action. Primary verified and corrected the manuscript.",
+    "model": "GPT-6 Astra",
+    "other_material_findings": [],
+    "reasoning": "MAX",
+    "scope": "Final narrative, numerical/scientific claim limits, primary conclusion and action example against audited outputs"
+  },
+  "generated_csv_exports_reconciled": 8,
+  "generated_sha256": {
+    "action_explanation.csv": "b0ebd3c06978a6b694657e5215c674ee63337045156f390d6a8b769c4f715df0",
+    "action_explanation.pdf": "5ed46d15f08eac8ac8fbbd5f5ff31ab2adca9dfb7df1812738886f607ad42cf4",
+    "action_explanation.png": "a8df53b9689073904eb052ed36bb87e9b0488a5f56cca72855d714dae5de7e5e",
+    "action_explanation.tex": "49776839f4f5886837d06c349eadeefe1c72edce92dbef369ef3490e50b207df",
+    "all_contrasts.csv": "4e6928326601b9b0d27fda7f1f6c0a928f4cf4c339c65049d39f48bceda64707",
+    "all_policy_means.csv": "5046ebf59df5ce5d3a393ebfa6760aec4f06602523b7474479eec419aa95cfb3",
+    "computation.csv": "592b3032411d08a76a26ca2e8b93a3644707cbd1599dfe9fc43591239a9bffe9",
+    "contrasts.tex": "a1e7a18a64fa9cc26acc207a247e85598c40b5cb52c9f618791f052535474f22",
+    "economic_performance.pdf": "7f30dc640cd07bd285c6f9a15da706e20b68ad932c2bc9385c30da06e3cbf9a2",
+    "economic_performance.png": "4c6acc45b79325bd3db581084344ad8aeb58ec4137b0900a6afe3078f844f118",
+    "final_interpretation.tex": "0b436a6dd5a44cfc051c3d1c1c0cc5c9f9e6643e5693038bc1c5047b5b21a096",
+    "final_validation.tex": "a592ef2387b1fae772172b23b772a7680ccb586d4422bc6ed3699fe53f4a93c4",
+    "information.csv": "7ff64a8f2bdb594ca6e9b549ad307d8e96c8b00c0454d88ede2dc8fa37dd04cf",
+    "information_and_compute.pdf": "6cf0ced09f671ff4957b1753cb41217631781f47c5bc925deb7be96202afbfeb",
+    "information_and_compute.png": "80b8fd3b6500442d70a3c9e88f9edfbae45d67691f6e85ab86f8d4fdaed9a11a",
+    "numbers.tex": "5079cab363ffe84f7339edc6aa1bbc55305ab9dea40861fa93b00eecb322a651",
+    "numerical_refinement.pdf": "e06448c15e3885005f689fa8a79f88bd3593840dbe590a8b7650dededb056d49",
+    "numerical_refinement.png": "983aa60d700f2b8a309de467fa9a71f48d25eec9fa67026d6190fb9b03ed56fb",
+    "numerical_validation.tex": "0919a9afbb9d368cbd5d49b67e1457d56066fde5f1f3ddd6ced12e9e5b051932",
+    "planning_interpretation.tex": "bf948fe2e8b8a8a85e0661bd4bbca79d2bf1d23bad867a67f3ca3cd76774c4e8",
+    "refinement.csv": "642cbf4c783e9e827bd74700cc70df4ea0bbbf69aefbab85952bc7d4883e44df",
+    "report_inputs.json": "74048990f977bf01e7d73900a3afa3cfb82af786b8f59fdb29265afb4d705050",
+    "result_interpretation.tex": "466d6142324c30cf9a961477c9d83db22ea40deda61ebe4f0cd0d60c3569091a",
+    "revelation.csv": "09b2edcf5ef21c484b3b6f600dae56cd5e63030bc22a07852ec4b8568c0af75b",
+    "revelation.tex": "8eb2a6a3d2574aa818372d7c58b15b286926ccb94288f4489e619a18c01e8ea3",
+    "uncertified_planning_gaps.csv": "df32cc600c742e5bc811c1f3db7c1f7fc8c986906dc978445c4f981ade3fecc0"
+  },
+  "kind": "final_extension_report",
+  "pages": 6,
+  "passed": true,
+  "pdf_sha256": "4ac3dec1ad3d591f675de74be9c1f1b29c63d515f20694ed40c9fe96efbc6ecc",
+  "reconciliation_receipt_sha256": "42d4c740b14cde2cf34c9325c425eec9019acee43059002f15341e4e15ed87d7",
+  "reconciliation_script_sha256": "24de8156823267a4c95752c665fd995780d8d8691fbf9a6a413c39894e256ef9",
+  "report_numbers_reconciled": true,
+  "scope": "Implementation-team presentation acceptance, not external Pro sign-off or a theorem/optimality certificate.",
+  "source_sha256": {
+    "Bayes_Adaptive_Extension.tex": "4a9ca95c2eb5d8db29ead04076e26d0b7acd0b0842fb000b5aca5fbfc3e72610",
+    "mathematics.tex": "08db1820d4a4fa15167da1ef704114dd168926b2f1ee623cde8d224289733641"
+  },
+  "visual_review": {
+    "all_pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "observed_defects": [],
+    "render_command": "pdftoppm -r 120 -png report/Bayes_Adaptive_Extension.pdf <temporary-render-prefix>",
+    "render_sha256": {
+      "1": "29beac5e2e7bf0d50bc55a907d433de6a0c4efb7b890a61fe48a8cf2423090d6",
+      "2": "6cc217fdf9fcf55d94849ee836baaf85cc517ae2777a320ebf75522259910b60",
+      "3": "b1123a095ed2258833b735ca3ed27aa1dafdc05ffd0a71094c0e646e5431cc6d",
+      "4": "c5eea465573e1a07544ad39f74f87204a815e96f7f75bf98cb160fd0ee95d476",
+      "5": "41f1abc8e48195fdd1c3ddc9c1a247510593768c9466f2360d3b1140b6875a49",
+      "6": "5e91dfd46193e981c915a63f2b9835c12eda027ec838a06ec8d35f202ce577b4"
+    }
+  }
+}

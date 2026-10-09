@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "theta": 0.35,
+  "kappa": 0.02,
+  "horizon": 30,
+  "qmax": 2,
+  "episodes": 20000,
+  "seed": 260924506,
+  "belief_points": 321,
+  "quadrature_points": 161,
+  "policies": ["active", "noinfo", "no_forecast", "blind_regime", "inventory_off", "myopic", "full_information"],
+  "contrasts": [
+    {"mechanism": "forecast", "policy": "noinfo", "baseline": "no_forecast"},
+    {"mechanism": "current_inference", "policy": "noinfo", "baseline": "blind_regime"},
+    {"mechanism": "inventory_continuation", "policy": "noinfo", "baseline": "inventory_off"},
+    {"mechanism": "future_information", "policy": "active", "baseline": "noinfo"}
+  ],
+  "alpha": 0.05,
+  "family_size": 4,
+  "trace_episodes": 12,
+  "refinement": {"initial": 0.001, "sup": 0.005, "robust_gap": 0.001, "robust_disagreement": 0.005}
+}

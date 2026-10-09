@@ -1,0 +1,60 @@
+{
+  "all_saved_joint_comparisons_audited": false,
+  "audit_status": "raw_rows_reconciled",
+  "audited_comparisons": [
+    {
+      "axis": "belief",
+      "coarse_artifact_sha256": "b5ec46904c0f7208b354efa8f1c75eb13c77180d9f9ade01508b30f57dd425a3",
+      "fine_artifact_sha256": "ff07baa2ebfb23ccbd834721444363a7a29ca285adc3807ee82becadda3336e4",
+      "horizon_policy_rows_reconciled": 180,
+      "maxima_from_raw_arrays": {
+        "max_finite_q_change": 0.044858336321643266,
+        "max_initial_value_change": 0.008786509907723561,
+        "max_probe_value_change": 0.04280150050854892,
+        "max_robust_disagreement_fraction": 0.002183406113537118
+      },
+      "pair_index": 0,
+      "passes_unchanged_joint_gate": false
+    }
+  ],
+  "authenticated_array_bytes": 3115763216,
+  "current_source_identity": {
+    "files": {
+      "trade_learning.control": "2ad1a96921e2b6d595608e279e3d40fef74d29642188e7b297e32473278b78c4",
+      "trade_learning.filtering": "711997ebc28c7981ffb848ddded400650aee28488b5982d07cdc1fe563cf6ec1",
+      "trade_learning.model": "7a120a7faabd8aec2c1345a486128129105e9d564ec60908f1c07ea0cf5a897f",
+      "trade_learning.numerics": "bd30936513b1da7237ead270382a281943e558f95628ea930a1c1c149fbe8347",
+      "solver.py": "d22fcc3a460eb75c6bac239e1d383f333811dcfe0db3d768109f56f913e853fc"
+    },
+    "sha256": "c60d987e07890d5eb65afe1eefe125e6591aa9f897b555efbad91ed94347c058"
+  },
+  "last_pair_joint_gate_passed_if_audited": null,
+  "note": "A reconciled unresolved gate remains unresolved. This audit does not independently recompute scalar known-model references or certify a mathematical error bound.",
+  "numerical_config_sha256": "10e311f1d7b7bdf44bafa5b948811831a6d09d6bcc8d7cbbe64953e1d89caff6",
+  "numerical_receipt": "/recorded-environment Learning/extensions/bayes_adaptive/outputs/numerical-amended/numerical_checks.json",
+  "numerical_receipt_sha256": "ed11bc4b2c33106553275d5790cff1dddd7cbaa889d38d9efe0fad0d5f3e119e",
+  "probe_count": 2581,
+  "probe_sha256": "663ccedec00b567efb27e9d3dde4c5332acf2cf21db4a892fec21c8b75580a77",
+  "raw_reconciliation_is_numerical_acceptance": false,
+  "receipt_build_sha256": "734eddc7d5a49af317fdedcd669ef30ac9d3a34847a389f01335a545e700261d",
+  "receipt_claims_numerical_acceptance": false,
+  "receipt_last_attempted_resolution": {
+    "belief_points": 49,
+    "horizon": 30,
+    "kappas": [
+      0.002,
+      0.1
+    ],
+    "known_belief_points": 321,
+    "known_quadrature_points": 161,
+    "qmax": 2,
+    "quadrature_points": 25,
+    "theta": 0.35,
+    "weight_points": 25
+  },
+  "receipt_protocol_config_sha256": "10e311f1d7b7bdf44bafa5b948811831a6d09d6bcc8d7cbbe64953e1d89caff6",
+  "receipt_selected_resolution": null,
+  "scope": "joint saved-array comparisons only",
+  "statistical_protocol_sha256": "8681e5a8c48f25967f95a4b7d42b76531cbc4e8e00d013114c3e6efe93aee462",
+  "verifier_sha256": "0c61548d16c662e616a5f32748102a938385007206e7aefdb7f0d6f728169851"
+}

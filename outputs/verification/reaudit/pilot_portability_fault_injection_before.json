@@ -1,0 +1,85 @@
+{
+  "phase": "before",
+  "expectation_met": true,
+  "canonical_archive_sha256": {
+    "03_01": "3fa637e1f93bc473ea5125813cf88e974ffb572f4884f9f89d58b9a4cbbe287b",
+    "08_02": "e3b753f6344414488c4d0c7b62bcfaaabccc05987cbbe9aa1d2dd8c4f4d6835b"
+  },
+  "results": [
+    {
+      "case": "nan_cash",
+      "exit_code": 0,
+      "checker_passed": true,
+      "stderr_tail": [],
+      "stdout_tail": [
+        "08_02: PASS public_hash=same",
+        "{",
+        "  \"count\": 2,",
+        "  \"passed_count\": 2,",
+        "  \"matching_public_hashes\": 2,",
+        "  \"passed\": true",
+        "}"
+      ]
+    },
+    {
+      "case": "nan_executed_price",
+      "exit_code": 1,
+      "checker_passed": false,
+      "stderr_tail": [],
+      "stdout_tail": [
+        "08_02: PASS public_hash=same",
+        "{",
+        "  \"count\": 2,",
+        "  \"passed_count\": 1,",
+        "  \"matching_public_hashes\": 1,",
+        "  \"passed\": false",
+        "}"
+      ]
+    },
+    {
+      "case": "finite_unexecuted_price",
+      "exit_code": 1,
+      "checker_passed": false,
+      "stderr_tail": [],
+      "stdout_tail": [
+        "08_02: PASS public_hash=same",
+        "{",
+        "  \"count\": 2,",
+        "  \"passed_count\": 1,",
+        "  \"matching_public_hashes\": 1,",
+        "  \"passed\": false",
+        "}"
+      ]
+    },
+    {
+      "case": "changed_stored_winner",
+      "exit_code": 0,
+      "checker_passed": true,
+      "stderr_tail": [],
+      "stdout_tail": [
+        "08_02: PASS public_hash=same",
+        "{",
+        "  \"count\": 2,",
+        "  \"passed_count\": 2,",
+        "  \"matching_public_hashes\": 2,",
+        "  \"passed\": true",
+        "}"
+      ]
+    },
+    {
+      "case": "config_environment_order",
+      "exit_code": 0,
+      "checker_passed": true,
+      "stderr_tail": [],
+      "stdout_tail": [
+        "08_02: PASS public_hash=same",
+        "{",
+        "  \"count\": 2,",
+        "  \"passed_count\": 2,",
+        "  \"matching_public_hashes\": 2,",
+        "  \"passed\": true",
+        "}"
+      ]
+    }
+  ]
+}

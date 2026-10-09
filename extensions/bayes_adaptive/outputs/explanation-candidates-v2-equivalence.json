@@ -1,0 +1,31 @@
+{
+  "interpretation": "Identical fixed seeds and samples; source-only v2 provenance regeneration, not independent evidence",
+  "checks": {
+    "exploration_public.npz": {
+      "array_equal": {
+        "signal": true,
+        "return_": true,
+        "actions": true,
+        "fills": true,
+        "inventory": true,
+        "joint": true
+      },
+      "byte_equal": true
+    },
+    "candidate_states.npz": {
+      "array_equal": {
+        "candidate_id": true,
+        "source": true,
+        "remaining": true,
+        "inventory": true,
+        "signal": true,
+        "joint": true,
+        "model_index": true,
+        "episode": true,
+        "t": true,
+        "probe_index": true
+      },
+      "byte_equal": true
+    }
+  }
+}

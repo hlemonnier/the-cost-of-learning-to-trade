@@ -1,0 +1,61 @@
+Write $p_{j,h}=\Pr(M=j,H_t=h\mid\mathcal F_t)$, where $M$ is fixed during
+an episode and $H_t\in\{-1,+1\}$ switches with probability $\kappa_j$.
+The three coordinates are $w_j=\sum_h p_{j,h}$ and
+$b_j=\Pr(H_t=+1\mid M=j,\mathcal F_t)$, with $w_2=1-w_1$.
+The public state is $(q,x)$; $\mathcal A(q)$ requires every possible fill subset
+to respect the inventory cap. Only submitted quotes produce fill observations.
+For observed standardized return $z=(R-.03x)/.30$ and selected outcomes $f$,
+the common-$\theta$ likelihood is
+\begin{equation}
+ \ell_h(z,f\mid x,a)=\prod_{(s,k)\in a}
+ \Phi\!\left(\frac{(2f_s-1)[\tau_{s,k}(x)-h\theta sz]}
+ {\sqrt{1-\theta^2}}\right),\qquad
+ \tau_{s,k}(x)=\Phi^{-1}\!\bigl(p_{s,k}(x)\bigr).
+\end{equation}
+The empty product is one. Update from $H_t$'s observation \emph{before}
+predicting $H_{t+1}$:
+\begin{equation}
+ \begin{gathered}
+ m_j=(1-b_j)\ell_-+b_j\ell_+,\quad m=\sum_jw_jm_j,\quad
+ w'_j=\frac{w_jm_j}{m},\\[-2pt]
+ \widetilde b_j=\frac{b_j\ell_+}{m_j},\qquad
+ b'_j=\kappa_j+(1-2\kappa_j)\widetilde b_j,
+ \qquad p'_{j,+}=w'_jb'_j .
+ \end{gathered}
+\end{equation}
+Zero-mass branches have no contribution. Let $r(q,x,p,a)$ denote exact expected
+marked-to-midpoint wealth change minus the pre-decision $.002q^2$ penalty,
+including execution fees. For $n$ remaining decisions, terminal liquidation
+gives $V_0(q,x,p)=-.027|q|$. With $q'=q'(q,a,f)$, the exact recursion is
+\begin{equation}
+ V_n=\max_{a\in\mathcal A(q)}\left\{
+ r(q,x,p,a)+\sum_f\int_{\mathbb R}\phi(z)m(z,f)
+       \sum_{x'}K_{xx'}V_{n-1}(q',x',p')\,dz\right\}
+ \equiv (\mathcal B V_{n-1})(q,x,p).
+\end{equation}
+The Gaussian density cancels from posterior ratios but remains in this
+expectation. At cold start $b_1=b_2=1/2$, $m_1=m_2$ for every action and
+observation: the first observation has exactly zero model information.
+
+Let $V_{j,n}$ and $Q_{j,n}$ be exact controls knowing $M=j$ while still filtering
+$H$. Define $U_n^d$ by revealing $M$ just before decision $d+1$; for $d\ge n$,
+there is no useful revelation. Then
+\begin{equation}
+ \begin{gathered}
+ U_n^0(q,x,p)=\sum_j w_jV_{j,n}(q,x,b_j),\qquad
+ U_n^d=\mathcal B U_{n-1}^{d-1}\quad(d\ge1),\\[-2pt]
+ U_n^1(q,x,p)=\max_{a\in\mathcal A(q)}\sum_jw_jQ_{j,n}(q,x,b_j).
+ \end{gathered}
+\end{equation}
+Indeed, conditioning on the common first action and observation gives
+$m w'_j=w_jm_j$; substituting this into its continuation yields the weighted
+known-model Q score. Earlier revelation can emulate later revelation by ignoring
+the extra label. It follows that
+\begin{equation}
+ U_n^0\ge U_n^1\ge U_n^2\ge\cdots\ge U_n^n=V_n.
+\end{equation}
+These inequalities concern exact planning values. A trader repeatedly maximizing
+weighted Q receives no actual revelation; its executed value need not equal
+$U_n^1$. Interpolation and quadrature produce approximations to these quantities,
+not certified numerical bounds. The full proofs and conservative error
+allowances are in \texttt{THEORY.md}.

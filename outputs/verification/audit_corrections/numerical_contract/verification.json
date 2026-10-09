@@ -1,0 +1,335 @@
+{
+  "passed": true,
+  "numerical_contract": {
+    "version": 2,
+    "score_dtype": "float64",
+    "tie_absolute_tolerance": 1e-12,
+    "tie_relative_tolerance": 0.0,
+    "tie_action": "lowest admissible action ID within absolute tolerance of maximum",
+    "bellman_value": "Q of the action selected by the same tie rule",
+    "invalid_action": "negative infinity; no decision at remaining horizon zero"
+  },
+  "checks": {
+    "exact_lowest_id": true,
+    "sub_tolerance_perturbation": true,
+    "outside_tolerance": true,
+    "absolute_not_relative": true,
+    "legality_precedes_tie": true,
+    "all_actions_illegal": true,
+    "legal_nan": true,
+    "legal_positive_infinity": true,
+    "myopic_mathematical_tie": true,
+    "myopic_perturbation_0": true,
+    "myopic_perturbation_1": true,
+    "myopic_perturbation_2": true,
+    "symmetric_passive_tie": true,
+    "bellman_uses_chosen_action": true,
+    "runtime_active": true,
+    "runtime_noinfo": true,
+    "runtime_myopic": true,
+    "runtime_taker": true,
+    "runtime_independent": true,
+    "runtime_full": true,
+    "remaining_zero": true,
+    "remaining_too_large": true,
+    "standalone_round_trip": true,
+    "standalone_read_only": true,
+    "complete_fingerprints": true,
+    "end_revalidation": true,
+    "cold_content_repeat": true,
+    "finite_corruption": true,
+    "nan_even_with_matching_hash": true,
+    "wrong_dtype": true,
+    "wrong_shape": true,
+    "nonuniform_beliefs": true,
+    "illegal_finite_score": true,
+    "missing_legal_score": true,
+    "terminal_q_sentinel": true,
+    "terminal_value": true,
+    "bellman_value": true,
+    "stale_build": true,
+    "stale_source": true,
+    "stale_contract": true,
+    "wrong_settings": true,
+    "missing_completion": true,
+    "missing_array": true,
+    "malformed_metadata": true,
+    "stale_format": true,
+    "post_load_mutation": true
+  },
+  "rejections": {
+    "all_actions_illegal": "Every decision row must contain an admissible action",
+    "legal_nan": "Every admissible action score must be finite",
+    "legal_positive_infinity": "Every admissible action score must be finite",
+    "remaining_zero": "remaining must identify a positive solved horizon",
+    "remaining_too_large": "remaining must identify a positive solved horizon",
+    "finite_corruption": "q_values: byte digest or size mismatch",
+    "nan_even_with_matching_hash": "Q legality/finite/sentinel structure failed at horizon 1",
+    "wrong_dtype": "q_values: incorrect shape, dtype, or memory layout",
+    "wrong_shape": "q_values: incorrect shape, dtype, or memory layout",
+    "nonuniform_beliefs": "Beliefs must equal the declared uniform [0,1] grid",
+    "illegal_finite_score": "Q legality/finite/sentinel structure failed at horizon 1",
+    "missing_legal_score": "Q legality/finite/sentinel structure failed at horizon 1",
+    "terminal_q_sentinel": "Terminal Q rows must contain only -infinity",
+    "terminal_value": "Incorrect terminal liquidation values",
+    "bellman_value": "V does not equal selected-action Q at horizon 2",
+    "stale_build": "Stale or modified build provenance",
+    "stale_source": "Stale or modified source provenance",
+    "stale_contract": "Stale or modified numerical_contract provenance",
+    "wrong_settings": "Cache settings do not match requested settings",
+    "missing_completion": "Invalid or incomplete control artifact /var/folders/8z/mp96_9353w79bsgv7kftgk2h0000gn/T/trade-learning-numerical-contract-2nhl1_0h/missing_completion/v2-0a2d8b3a2fa2773e29180e67: [Errno 2] No such file or directory: '/var/folders/8z/mp96_9353w79bsgv7kftgk2h0000gn/T/trade-learning-numerical-contract-2nhl1_0h/missing_completion/v2-0a2d8b3a2fa2773e29180e67/complete.json'",
+    "missing_array": "Invalid or incomplete control artifact /var/folders/8z/mp96_9353w79bsgv7kftgk2h0000gn/T/trade-learning-numerical-contract-2nhl1_0h/missing_array/v2-0a2d8b3a2fa2773e29180e67: [Errno 2] No such file or directory: '/var/folders/8z/mp96_9353w79bsgv7kftgk2h0000gn/T/trade-learning-numerical-contract-2nhl1_0h/missing_array/v2-0a2d8b3a2fa2773e29180e67/values.npy'",
+    "malformed_metadata": "Invalid or incomplete control artifact /var/folders/8z/mp96_9353w79bsgv7kftgk2h0000gn/T/trade-learning-numerical-contract-2nhl1_0h/malformed_metadata/v2-0a2d8b3a2fa2773e29180e67: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)",
+    "stale_format": "Unsupported/stale control-table format",
+    "post_load_mutation": "q_values: byte digest or size mismatch"
+  },
+  "control_artifacts": [
+    {
+      "key": "v2-0a2d8b3a2fa2773e29180e67",
+      "specification": {
+        "theta": 0.35,
+        "kappa": 0.02,
+        "mode": "active",
+        "horizon": 4,
+        "qmax": 2,
+        "belief_points": 9,
+        "quadrature_points": 15
+      },
+      "artifact_sha256": "b1402d23d75660b9d9fed8e4680e9bd8bc950967b2615e756026c2fdd835ddb3",
+      "arrays": {
+        "beliefs": {
+          "shape": [
+            9
+          ],
+          "dtype": "<f8",
+          "bytes": 200,
+          "sha256": "7b11b158237fc1adc124f5804c114a0bccb37151cf629deb564d327aec62364d"
+        },
+        "values": {
+          "shape": [
+            5,
+            5,
+            3,
+            9
+          ],
+          "dtype": "<f8",
+          "bytes": 5528,
+          "sha256": "d934f66063c57915d5c5b625a140f40f9bdceccb9fd081813d13ee704944181f"
+        },
+        "q_values": {
+          "shape": [
+            5,
+            5,
+            3,
+            9,
+            11
+          ],
+          "dtype": "<f8",
+          "bytes": 59528,
+          "sha256": "c69a880a5ea9418a4c56f0323d34f0f1e8256f516354a6cefad67dc968b6c471"
+        }
+      },
+      "source": {
+        "files": {
+          "control.py": "2ad1a96921e2b6d595608e279e3d40fef74d29642188e7b297e32473278b78c4",
+          "model.py": "7a120a7faabd8aec2c1345a486128129105e9d564ec60908f1c07ea0cf5a897f",
+          "numerics.py": "bd30936513b1da7237ead270382a281943e558f95628ea930a1c1c149fbe8347",
+          "policies.py": "496759e539fabf4774a7ba77c7b9e0c9c951f1bc34d270b1052b4fa8597f22d5"
+        },
+        "sha256": "c90b00d6369c3da0626bd1378062a94badbb9217e97d2f306f31be5ec849d2af"
+      },
+      "build": {
+        "python": "3.12.14",
+        "implementation": "CPython",
+        "system": "Darwin",
+        "machine": "arm64",
+        "byteorder": "little",
+        "numpy": "2.5.3",
+        "scipy": "1.18.1",
+        "numpy_config": {
+          "Compilers": {
+            "c": {
+              "name": "clang",
+              "linker": "ld64",
+              "version": "15.0.0",
+              "commands": "cc"
+            },
+            "cython": {
+              "name": "cython",
+              "linker": "cython",
+              "version": "3.3.0",
+              "commands": "cython"
+            },
+            "c++": {
+              "name": "clang",
+              "linker": "ld64",
+              "version": "15.0.0",
+              "commands": "c++"
+            }
+          },
+          "Machine Information": {
+            "host": {
+              "cpu": "aarch64",
+              "family": "aarch64",
+              "endian": "little",
+              "system": "darwin"
+            },
+            "build": {
+              "cpu": "aarch64",
+              "family": "aarch64",
+              "endian": "little",
+              "system": "darwin"
+            }
+          },
+          "Build Dependencies": {
+            "blas": {
+              "name": "accelerate",
+              "found": true,
+              "version": "unknown",
+              "detection method": "system",
+              "include directory": "unknown",
+              "lib directory": "unknown",
+              "openblas configuration": "unknown",
+              "pc file directory": "unknown"
+            },
+            "lapack": {
+              "name": "accelerate",
+              "found": true,
+              "version": "unknown",
+              "detection method": "system",
+              "include directory": "unknown",
+              "lib directory": "unknown",
+              "openblas configuration": "unknown",
+              "pc file directory": "unknown"
+            }
+          },
+          "Python Information": {
+            "path": "/private/var/folders/s6/5hzmn6lx4dz5nxs7k_0slzph0000gn/T/build-env-sd3oh5ko/bin/python",
+            "version": "3.12"
+          },
+          "SIMD Extensions": {
+            "baseline": [
+              "NEON",
+              "NEON_FP16",
+              "NEON_VFPV4",
+              "ASIMD"
+            ],
+            "found": [
+              "ASIMDHP",
+              "ASIMDDP"
+            ],
+            "not found": [
+              "ASIMDFHM"
+            ]
+          }
+        },
+        "scipy_config": {
+          "Compilers": {
+            "c": {
+              "name": "clang",
+              "linker": "ld64",
+              "version": "15.0.0",
+              "commands": "cc"
+            },
+            "cython": {
+              "name": "cython",
+              "linker": "cython",
+              "version": "3.2.9",
+              "commands": "cython"
+            },
+            "c++": {
+              "name": "clang",
+              "linker": "ld64",
+              "version": "15.0.0",
+              "commands": "c++"
+            },
+            "fortran": {
+              "name": "gcc",
+              "linker": "ld64",
+              "version": "13.4.0",
+              "commands": "gfortran"
+            },
+            "pythran": {
+              "version": "0.19.0",
+              "include directory": "../../../../../../../private/var/folders/g3/pffjr_y96bq06blnkf72x_hw0000gn/T/build-env-qsdhhi00/lib/python3.12/site-packages/pythran"
+            }
+          },
+          "Machine Information": {
+            "host": {
+              "cpu": "aarch64",
+              "family": "aarch64",
+              "endian": "little",
+              "system": "darwin"
+            },
+            "build": {
+              "cpu": "aarch64",
+              "family": "aarch64",
+              "endian": "little",
+              "system": "darwin"
+            },
+            "cross-compiled": false
+          },
+          "Build Dependencies": {
+            "blas": {
+              "name": "Accelerate",
+              "found": true,
+              "version": "unknown",
+              "detection method": "extraframeworks",
+              "include directory": "unknown",
+              "lib directory": "unknown",
+              "openblas configuration": "unknown",
+              "pc file directory": "unknown",
+              "has ilp64": false,
+              "cython blas ilp64": false
+            },
+            "lapack": {
+              "name": "Accelerate",
+              "found": true,
+              "version": "unknown",
+              "detection method": "extraframeworks",
+              "include directory": "unknown",
+              "lib directory": "unknown",
+              "openblas configuration": "unknown",
+              "pc file directory": "unknown",
+              "has ilp64": false
+            },
+            "pybind11": {
+              "name": "pybind11",
+              "version": "3.0.4",
+              "detection method": "config-tool",
+              "include directory": "unknown"
+            }
+          },
+          "Python Information": {
+            "path": "/private/var/folders/g3/pffjr_y96bq06blnkf72x_hw0000gn/T/build-env-qsdhhi00/bin/python",
+            "version": "3.12"
+          }
+        },
+        "numerical_binaries": {
+          "numpy._core._multiarray_umath": "3432cd9093d7e84b4080015b6a889598fea4c305da967063cb916215193bf85d",
+          "scipy.special._ufuncs": "a0889d5c82454d79d4cd4cc8a589a62a382d667da8e2b030e637f58708bd340c",
+          "scipy.sparse._sparsetools": "077b33d61dc1a677cb56bb4835572623986f7f0a1c0d35d6eaf85fc0df5dade2",
+          "scipy.linalg._fblas": "6502e4e093d03932479317d45bfea018ef0999bc5c4bd46687253322c13e9448"
+        },
+        "thread_environment": {
+          "OMP_NUM_THREADS": null,
+          "OPENBLAS_NUM_THREADS": null,
+          "MKL_NUM_THREADS": null,
+          "VECLIB_MAXIMUM_THREADS": null,
+          "NUMEXPR_NUM_THREADS": null
+        },
+        "sha256": "734eddc7d5a49af317fdedcd669ef30ac9d3a34847a389f01335a545e700261d"
+      },
+      "numerical_contract": {
+        "version": 2,
+        "score_dtype": "float64",
+        "tie_absolute_tolerance": 1e-12,
+        "tie_relative_tolerance": 0.0,
+        "tie_action": "lowest admissible action ID within absolute tolerance of maximum",
+        "bellman_value": "Q of the action selected by the same tie rule",
+        "invalid_action": "negative infinity; no decision at remaining horizon zero"
+      }
+    }
+  ],
+  "scope": "Bounded supported-stack decisions and cold-table integrity; no full campaign or cross-stack claim."
+}

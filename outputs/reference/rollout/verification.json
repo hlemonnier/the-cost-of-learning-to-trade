@@ -1,0 +1,821 @@
+{
+  "passed": true,
+  "seed": 260924301,
+  "episodes": 20000,
+  "numerical_contract": {
+    "version": 2,
+    "score_dtype": "float64",
+    "tie_absolute_tolerance": 1e-12,
+    "tie_relative_tolerance": 0.0,
+    "tie_action": "lowest admissible action ID within absolute tolerance of maximum",
+    "bellman_value": "Q of the action selected by the same tie rule",
+    "invalid_action": "negative infinity; no decision at remaining horizon zero"
+  },
+  "control_artifacts": [
+    {
+      "key": "v2-15b533fc1492847a75ad8de7",
+      "specification": {
+        "theta": 0.35,
+        "kappa": 0.02,
+        "mode": "noinfo",
+        "horizon": 30,
+        "qmax": 2,
+        "belief_points": 321,
+        "quadrature_points": 161
+      },
+      "artifact_sha256": "a0a3a520f8703e77cfddb37de3db06135bb3eaae7930cc36eed62cfd6109f1d4",
+      "arrays": {
+        "beliefs": {
+          "shape": [
+            321
+          ],
+          "dtype": "<f8",
+          "bytes": 2696,
+          "sha256": "44229c3d41350ace216c5b76728a8b7726e04a016e2ab3e8adf177054fc4955d"
+        },
+        "values": {
+          "shape": [
+            31,
+            5,
+            3,
+            321
+          ],
+          "dtype": "<f8",
+          "bytes": 1194248,
+          "sha256": "6f1993a49d144f067474c24ce3f1108997811a0e69bfee281d8179c7e453a885"
+        },
+        "q_values": {
+          "shape": [
+            31,
+            5,
+            3,
+            321,
+            11
+          ],
+          "dtype": "<f8",
+          "bytes": 13135448,
+          "sha256": "9f42beded92d1756809f73e6324e93f74900794339c222a7fbf535d17535dd51"
+        }
+      },
+      "source": {
+        "files": {
+          "control.py": "2ad1a96921e2b6d595608e279e3d40fef74d29642188e7b297e32473278b78c4",
+          "model.py": "7a120a7faabd8aec2c1345a486128129105e9d564ec60908f1c07ea0cf5a897f",
+          "numerics.py": "bd30936513b1da7237ead270382a281943e558f95628ea930a1c1c149fbe8347",
+          "policies.py": "496759e539fabf4774a7ba77c7b9e0c9c951f1bc34d270b1052b4fa8597f22d5"
+        },
+        "sha256": "c90b00d6369c3da0626bd1378062a94badbb9217e97d2f306f31be5ec849d2af"
+      },
+      "build": {
+        "python": "3.12.14",
+        "implementation": "CPython",
+        "system": "Darwin",
+        "machine": "arm64",
+        "byteorder": "little",
+        "numpy": "2.5.3",
+        "scipy": "1.18.1",
+        "numpy_config": {
+          "Compilers": {
+            "c": {
+              "name": "clang",
+              "linker": "ld64",
+              "version": "15.0.0",
+              "commands": "cc"
+            },
+            "cython": {
+              "name": "cython",
+              "linker": "cython",
+              "version": "3.3.0",
+              "commands": "cython"
+            },
+            "c++": {
+              "name": "clang",
+              "linker": "ld64",
+              "version": "15.0.0",
+              "commands": "c++"
+            }
+          },
+          "Machine Information": {
+            "host": {
+              "cpu": "aarch64",
+              "family": "aarch64",
+              "endian": "little",
+              "system": "darwin"
+            },
+            "build": {
+              "cpu": "aarch64",
+              "family": "aarch64",
+              "endian": "little",
+              "system": "darwin"
+            }
+          },
+          "Build Dependencies": {
+            "blas": {
+              "name": "accelerate",
+              "found": true,
+              "version": "unknown",
+              "detection method": "system",
+              "include directory": "unknown",
+              "lib directory": "unknown",
+              "openblas configuration": "unknown",
+              "pc file directory": "unknown"
+            },
+            "lapack": {
+              "name": "accelerate",
+              "found": true,
+              "version": "unknown",
+              "detection method": "system",
+              "include directory": "unknown",
+              "lib directory": "unknown",
+              "openblas configuration": "unknown",
+              "pc file directory": "unknown"
+            }
+          },
+          "Python Information": {
+            "path": "/private/var/folders/s6/5hzmn6lx4dz5nxs7k_0slzph0000gn/T/build-env-sd3oh5ko/bin/python",
+            "version": "3.12"
+          },
+          "SIMD Extensions": {
+            "baseline": [
+              "NEON",
+              "NEON_FP16",
+              "NEON_VFPV4",
+              "ASIMD"
+            ],
+            "found": [
+              "ASIMDHP",
+              "ASIMDDP"
+            ],
+            "not found": [
+              "ASIMDFHM"
+            ]
+          }
+        },
+        "scipy_config": {
+          "Compilers": {
+            "c": {
+              "name": "clang",
+              "linker": "ld64",
+              "version": "15.0.0",
+              "commands": "cc"
+            },
+            "cython": {
+              "name": "cython",
+              "linker": "cython",
+              "version": "3.2.9",
+              "commands": "cython"
+            },
+            "c++": {
+              "name": "clang",
+              "linker": "ld64",
+              "version": "15.0.0",
+              "commands": "c++"
+            },
+            "fortran": {
+              "name": "gcc",
+              "linker": "ld64",
+              "version": "13.4.0",
+              "commands": "gfortran"
+            },
+            "pythran": {
+              "version": "0.19.0",
+              "include directory": "../../../../../../../private/var/folders/g3/pffjr_y96bq06blnkf72x_hw0000gn/T/build-env-qsdhhi00/lib/python3.12/site-packages/pythran"
+            }
+          },
+          "Machine Information": {
+            "host": {
+              "cpu": "aarch64",
+              "family": "aarch64",
+              "endian": "little",
+              "system": "darwin"
+            },
+            "build": {
+              "cpu": "aarch64",
+              "family": "aarch64",
+              "endian": "little",
+              "system": "darwin"
+            },
+            "cross-compiled": false
+          },
+          "Build Dependencies": {
+            "blas": {
+              "name": "Accelerate",
+              "found": true,
+              "version": "unknown",
+              "detection method": "extraframeworks",
+              "include directory": "unknown",
+              "lib directory": "unknown",
+              "openblas configuration": "unknown",
+              "pc file directory": "unknown",
+              "has ilp64": false,
+              "cython blas ilp64": false
+            },
+            "lapack": {
+              "name": "Accelerate",
+              "found": true,
+              "version": "unknown",
+              "detection method": "extraframeworks",
+              "include directory": "unknown",
+              "lib directory": "unknown",
+              "openblas configuration": "unknown",
+              "pc file directory": "unknown",
+              "has ilp64": false
+            },
+            "pybind11": {
+              "name": "pybind11",
+              "version": "3.0.4",
+              "detection method": "config-tool",
+              "include directory": "unknown"
+            }
+          },
+          "Python Information": {
+            "path": "/private/var/folders/g3/pffjr_y96bq06blnkf72x_hw0000gn/T/build-env-qsdhhi00/bin/python",
+            "version": "3.12"
+          }
+        },
+        "numerical_binaries": {
+          "numpy._core._multiarray_umath": "3432cd9093d7e84b4080015b6a889598fea4c305da967063cb916215193bf85d",
+          "scipy.special._ufuncs": "a0889d5c82454d79d4cd4cc8a589a62a382d667da8e2b030e637f58708bd340c",
+          "scipy.sparse._sparsetools": "077b33d61dc1a677cb56bb4835572623986f7f0a1c0d35d6eaf85fc0df5dade2",
+          "scipy.linalg._fblas": "6502e4e093d03932479317d45bfea018ef0999bc5c4bd46687253322c13e9448"
+        },
+        "thread_environment": {
+          "OMP_NUM_THREADS": null,
+          "OPENBLAS_NUM_THREADS": null,
+          "MKL_NUM_THREADS": null,
+          "VECLIB_MAXIMUM_THREADS": null,
+          "NUMEXPR_NUM_THREADS": null
+        },
+        "sha256": "734eddc7d5a49af317fdedcd669ef30ac9d3a34847a389f01335a545e700261d"
+      },
+      "numerical_contract": {
+        "version": 2,
+        "score_dtype": "float64",
+        "tie_absolute_tolerance": 1e-12,
+        "tie_relative_tolerance": 0.0,
+        "tie_action": "lowest admissible action ID within absolute tolerance of maximum",
+        "bellman_value": "Q of the action selected by the same tie rule",
+        "invalid_action": "negative infinity; no decision at remaining horizon zero"
+      }
+    },
+    {
+      "key": "v2-4f34c05d1cddc05647cbb938",
+      "specification": {
+        "theta": 0.35,
+        "kappa": 0.02,
+        "mode": "full",
+        "horizon": 30,
+        "qmax": 2,
+        "belief_points": 321,
+        "quadrature_points": 161
+      },
+      "artifact_sha256": "af42a271d8476bcea80b6b82ac439dda4b9f4eab2c0adb23e6e06fd81619b782",
+      "arrays": {
+        "beliefs": {
+          "shape": [
+            2
+          ],
+          "dtype": "<f8",
+          "bytes": 144,
+          "sha256": "f8e9076998b78178dd76b3d4c28a9eaa1969be3320f51fc20f389114ff5248b6"
+        },
+        "values": {
+          "shape": [
+            31,
+            5,
+            3,
+            2
+          ],
+          "dtype": "<f8",
+          "bytes": 7568,
+          "sha256": "e330daa0ac72a35bc6ba5b78bce56d6a41401e1d8527f34e9d9a5e13d589aef4"
+        },
+        "q_values": {
+          "shape": [
+            31,
+            5,
+            3,
+            2,
+            11
+          ],
+          "dtype": "<f8",
+          "bytes": 81968,
+          "sha256": "02b7fab26df28a1b7c185d1f1551dba8fa74fd7ba261b9f710e544e045c9ed33"
+        }
+      },
+      "source": {
+        "files": {
+          "control.py": "2ad1a96921e2b6d595608e279e3d40fef74d29642188e7b297e32473278b78c4",
+          "model.py": "7a120a7faabd8aec2c1345a486128129105e9d564ec60908f1c07ea0cf5a897f",
+          "numerics.py": "bd30936513b1da7237ead270382a281943e558f95628ea930a1c1c149fbe8347",
+          "policies.py": "496759e539fabf4774a7ba77c7b9e0c9c951f1bc34d270b1052b4fa8597f22d5"
+        },
+        "sha256": "c90b00d6369c3da0626bd1378062a94badbb9217e97d2f306f31be5ec849d2af"
+      },
+      "build": {
+        "python": "3.12.14",
+        "implementation": "CPython",
+        "system": "Darwin",
+        "machine": "arm64",
+        "byteorder": "little",
+        "numpy": "2.5.3",
+        "scipy": "1.18.1",
+        "numpy_config": {
+          "Compilers": {
+            "c": {
+              "name": "clang",
+              "linker": "ld64",
+              "version": "15.0.0",
+              "commands": "cc"
+            },
+            "cython": {
+              "name": "cython",
+              "linker": "cython",
+              "version": "3.3.0",
+              "commands": "cython"
+            },
+            "c++": {
+              "name": "clang",
+              "linker": "ld64",
+              "version": "15.0.0",
+              "commands": "c++"
+            }
+          },
+          "Machine Information": {
+            "host": {
+              "cpu": "aarch64",
+              "family": "aarch64",
+              "endian": "little",
+              "system": "darwin"
+            },
+            "build": {
+              "cpu": "aarch64",
+              "family": "aarch64",
+              "endian": "little",
+              "system": "darwin"
+            }
+          },
+          "Build Dependencies": {
+            "blas": {
+              "name": "accelerate",
+              "found": true,
+              "version": "unknown",
+              "detection method": "system",
+              "include directory": "unknown",
+              "lib directory": "unknown",
+              "openblas configuration": "unknown",
+              "pc file directory": "unknown"
+            },
+            "lapack": {
+              "name": "accelerate",
+              "found": true,
+              "version": "unknown",
+              "detection method": "system",
+              "include directory": "unknown",
+              "lib directory": "unknown",
+              "openblas configuration": "unknown",
+              "pc file directory": "unknown"
+            }
+          },
+          "Python Information": {
+            "path": "/private/var/folders/s6/5hzmn6lx4dz5nxs7k_0slzph0000gn/T/build-env-sd3oh5ko/bin/python",
+            "version": "3.12"
+          },
+          "SIMD Extensions": {
+            "baseline": [
+              "NEON",
+              "NEON_FP16",
+              "NEON_VFPV4",
+              "ASIMD"
+            ],
+            "found": [
+              "ASIMDHP",
+              "ASIMDDP"
+            ],
+            "not found": [
+              "ASIMDFHM"
+            ]
+          }
+        },
+        "scipy_config": {
+          "Compilers": {
+            "c": {
+              "name": "clang",
+              "linker": "ld64",
+              "version": "15.0.0",
+              "commands": "cc"
+            },
+            "cython": {
+              "name": "cython",
+              "linker": "cython",
+              "version": "3.2.9",
+              "commands": "cython"
+            },
+            "c++": {
+              "name": "clang",
+              "linker": "ld64",
+              "version": "15.0.0",
+              "commands": "c++"
+            },
+            "fortran": {
+              "name": "gcc",
+              "linker": "ld64",
+              "version": "13.4.0",
+              "commands": "gfortran"
+            },
+            "pythran": {
+              "version": "0.19.0",
+              "include directory": "../../../../../../../private/var/folders/g3/pffjr_y96bq06blnkf72x_hw0000gn/T/build-env-qsdhhi00/lib/python3.12/site-packages/pythran"
+            }
+          },
+          "Machine Information": {
+            "host": {
+              "cpu": "aarch64",
+              "family": "aarch64",
+              "endian": "little",
+              "system": "darwin"
+            },
+            "build": {
+              "cpu": "aarch64",
+              "family": "aarch64",
+              "endian": "little",
+              "system": "darwin"
+            },
+            "cross-compiled": false
+          },
+          "Build Dependencies": {
+            "blas": {
+              "name": "Accelerate",
+              "found": true,
+              "version": "unknown",
+              "detection method": "extraframeworks",
+              "include directory": "unknown",
+              "lib directory": "unknown",
+              "openblas configuration": "unknown",
+              "pc file directory": "unknown",
+              "has ilp64": false,
+              "cython blas ilp64": false
+            },
+            "lapack": {
+              "name": "Accelerate",
+              "found": true,
+              "version": "unknown",
+              "detection method": "extraframeworks",
+              "include directory": "unknown",
+              "lib directory": "unknown",
+              "openblas configuration": "unknown",
+              "pc file directory": "unknown",
+              "has ilp64": false
+            },
+            "pybind11": {
+              "name": "pybind11",
+              "version": "3.0.4",
+              "detection method": "config-tool",
+              "include directory": "unknown"
+            }
+          },
+          "Python Information": {
+            "path": "/private/var/folders/g3/pffjr_y96bq06blnkf72x_hw0000gn/T/build-env-qsdhhi00/bin/python",
+            "version": "3.12"
+          }
+        },
+        "numerical_binaries": {
+          "numpy._core._multiarray_umath": "3432cd9093d7e84b4080015b6a889598fea4c305da967063cb916215193bf85d",
+          "scipy.special._ufuncs": "a0889d5c82454d79d4cd4cc8a589a62a382d667da8e2b030e637f58708bd340c",
+          "scipy.sparse._sparsetools": "077b33d61dc1a677cb56bb4835572623986f7f0a1c0d35d6eaf85fc0df5dade2",
+          "scipy.linalg._fblas": "6502e4e093d03932479317d45bfea018ef0999bc5c4bd46687253322c13e9448"
+        },
+        "thread_environment": {
+          "OMP_NUM_THREADS": null,
+          "OPENBLAS_NUM_THREADS": null,
+          "MKL_NUM_THREADS": null,
+          "VECLIB_MAXIMUM_THREADS": null,
+          "NUMEXPR_NUM_THREADS": null
+        },
+        "sha256": "734eddc7d5a49af317fdedcd669ef30ac9d3a34847a389f01335a545e700261d"
+      },
+      "numerical_contract": {
+        "version": 2,
+        "score_dtype": "float64",
+        "tie_absolute_tolerance": 1e-12,
+        "tie_relative_tolerance": 0.0,
+        "tie_action": "lowest admissible action ID within absolute tolerance of maximum",
+        "bellman_value": "Q of the action selected by the same tie rule",
+        "invalid_action": "negative infinity; no decision at remaining horizon zero"
+      }
+    },
+    {
+      "key": "v2-71f71dba37e78161beb0ad30",
+      "specification": {
+        "theta": 0.35,
+        "kappa": 0.02,
+        "mode": "active",
+        "horizon": 30,
+        "qmax": 2,
+        "belief_points": 321,
+        "quadrature_points": 161
+      },
+      "artifact_sha256": "f748002978447fdc798fb04f4a65e0b2d7c263fb28478fd176c69e2be000e831",
+      "arrays": {
+        "beliefs": {
+          "shape": [
+            321
+          ],
+          "dtype": "<f8",
+          "bytes": 2696,
+          "sha256": "44229c3d41350ace216c5b76728a8b7726e04a016e2ab3e8adf177054fc4955d"
+        },
+        "values": {
+          "shape": [
+            31,
+            5,
+            3,
+            321
+          ],
+          "dtype": "<f8",
+          "bytes": 1194248,
+          "sha256": "cfc28ba1d7528483af013d9a224576dc56571e7b9bd6150e84f2c2d86ebb4d01"
+        },
+        "q_values": {
+          "shape": [
+            31,
+            5,
+            3,
+            321,
+            11
+          ],
+          "dtype": "<f8",
+          "bytes": 13135448,
+          "sha256": "a7cabafae8332db44c079bc0615aca8a10b62257f2e02ced96b70c1a64f10310"
+        }
+      },
+      "source": {
+        "files": {
+          "control.py": "2ad1a96921e2b6d595608e279e3d40fef74d29642188e7b297e32473278b78c4",
+          "model.py": "7a120a7faabd8aec2c1345a486128129105e9d564ec60908f1c07ea0cf5a897f",
+          "numerics.py": "bd30936513b1da7237ead270382a281943e558f95628ea930a1c1c149fbe8347",
+          "policies.py": "496759e539fabf4774a7ba77c7b9e0c9c951f1bc34d270b1052b4fa8597f22d5"
+        },
+        "sha256": "c90b00d6369c3da0626bd1378062a94badbb9217e97d2f306f31be5ec849d2af"
+      },
+      "build": {
+        "python": "3.12.14",
+        "implementation": "CPython",
+        "system": "Darwin",
+        "machine": "arm64",
+        "byteorder": "little",
+        "numpy": "2.5.3",
+        "scipy": "1.18.1",
+        "numpy_config": {
+          "Compilers": {
+            "c": {
+              "name": "clang",
+              "linker": "ld64",
+              "version": "15.0.0",
+              "commands": "cc"
+            },
+            "cython": {
+              "name": "cython",
+              "linker": "cython",
+              "version": "3.3.0",
+              "commands": "cython"
+            },
+            "c++": {
+              "name": "clang",
+              "linker": "ld64",
+              "version": "15.0.0",
+              "commands": "c++"
+            }
+          },
+          "Machine Information": {
+            "host": {
+              "cpu": "aarch64",
+              "family": "aarch64",
+              "endian": "little",
+              "system": "darwin"
+            },
+            "build": {
+              "cpu": "aarch64",
+              "family": "aarch64",
+              "endian": "little",
+              "system": "darwin"
+            }
+          },
+          "Build Dependencies": {
+            "blas": {
+              "name": "accelerate",
+              "found": true,
+              "version": "unknown",
+              "detection method": "system",
+              "include directory": "unknown",
+              "lib directory": "unknown",
+              "openblas configuration": "unknown",
+              "pc file directory": "unknown"
+            },
+            "lapack": {
+              "name": "accelerate",
+              "found": true,
+              "version": "unknown",
+              "detection method": "system",
+              "include directory": "unknown",
+              "lib directory": "unknown",
+              "openblas configuration": "unknown",
+              "pc file directory": "unknown"
+            }
+          },
+          "Python Information": {
+            "path": "/private/var/folders/s6/5hzmn6lx4dz5nxs7k_0slzph0000gn/T/build-env-sd3oh5ko/bin/python",
+            "version": "3.12"
+          },
+          "SIMD Extensions": {
+            "baseline": [
+              "NEON",
+              "NEON_FP16",
+              "NEON_VFPV4",
+              "ASIMD"
+            ],
+            "found": [
+              "ASIMDHP",
+              "ASIMDDP"
+            ],
+            "not found": [
+              "ASIMDFHM"
+            ]
+          }
+        },
+        "scipy_config": {
+          "Compilers": {
+            "c": {
+              "name": "clang",
+              "linker": "ld64",
+              "version": "15.0.0",
+              "commands": "cc"
+            },
+            "cython": {
+              "name": "cython",
+              "linker": "cython",
+              "version": "3.2.9",
+              "commands": "cython"
+            },
+            "c++": {
+              "name": "clang",
+              "linker": "ld64",
+              "version": "15.0.0",
+              "commands": "c++"
+            },
+            "fortran": {
+              "name": "gcc",
+              "linker": "ld64",
+              "version": "13.4.0",
+              "commands": "gfortran"
+            },
+            "pythran": {
+              "version": "0.19.0",
+              "include directory": "../../../../../../../private/var/folders/g3/pffjr_y96bq06blnkf72x_hw0000gn/T/build-env-qsdhhi00/lib/python3.12/site-packages/pythran"
+            }
+          },
+          "Machine Information": {
+            "host": {
+              "cpu": "aarch64",
+              "family": "aarch64",
+              "endian": "little",
+              "system": "darwin"
+            },
+            "build": {
+              "cpu": "aarch64",
+              "family": "aarch64",
+              "endian": "little",
+              "system": "darwin"
+            },
+            "cross-compiled": false
+          },
+          "Build Dependencies": {
+            "blas": {
+              "name": "Accelerate",
+              "found": true,
+              "version": "unknown",
+              "detection method": "extraframeworks",
+              "include directory": "unknown",
+              "lib directory": "unknown",
+              "openblas configuration": "unknown",
+              "pc file directory": "unknown",
+              "has ilp64": false,
+              "cython blas ilp64": false
+            },
+            "lapack": {
+              "name": "Accelerate",
+              "found": true,
+              "version": "unknown",
+              "detection method": "extraframeworks",
+              "include directory": "unknown",
+              "lib directory": "unknown",
+              "openblas configuration": "unknown",
+              "pc file directory": "unknown",
+              "has ilp64": false
+            },
+            "pybind11": {
+              "name": "pybind11",
+              "version": "3.0.4",
+              "detection method": "config-tool",
+              "include directory": "unknown"
+            }
+          },
+          "Python Information": {
+            "path": "/private/var/folders/g3/pffjr_y96bq06blnkf72x_hw0000gn/T/build-env-qsdhhi00/bin/python",
+            "version": "3.12"
+          }
+        },
+        "numerical_binaries": {
+          "numpy._core._multiarray_umath": "3432cd9093d7e84b4080015b6a889598fea4c305da967063cb916215193bf85d",
+          "scipy.special._ufuncs": "a0889d5c82454d79d4cd4cc8a589a62a382d667da8e2b030e637f58708bd340c",
+          "scipy.sparse._sparsetools": "077b33d61dc1a677cb56bb4835572623986f7f0a1c0d35d6eaf85fc0df5dade2",
+          "scipy.linalg._fblas": "6502e4e093d03932479317d45bfea018ef0999bc5c4bd46687253322c13e9448"
+        },
+        "thread_environment": {
+          "OMP_NUM_THREADS": null,
+          "OPENBLAS_NUM_THREADS": null,
+          "MKL_NUM_THREADS": null,
+          "VECLIB_MAXIMUM_THREADS": null,
+          "NUMEXPR_NUM_THREADS": null
+        },
+        "sha256": "734eddc7d5a49af317fdedcd669ef30ac9d3a34847a389f01335a545e700261d"
+      },
+      "numerical_contract": {
+        "version": 2,
+        "score_dtype": "float64",
+        "tie_absolute_tolerance": 1e-12,
+        "tie_relative_tolerance": 0.0,
+        "tie_action": "lowest admissible action ID within absolute tolerance of maximum",
+        "bellman_value": "Q of the action selected by the same tie rule",
+        "invalid_action": "negative infinity; no decision at remaining horizon zero"
+      }
+    }
+  ],
+  "settings": {
+    "horizon": 30,
+    "qmax": 2,
+    "theta": 0.35,
+    "kappa": 0.02,
+    "belief_points": 321,
+    "quadrature_points": 161
+  },
+  "policies": [
+    {
+      "policy": "active",
+      "episodes": 20000,
+      "objective_mean": 0.9866010082370145,
+      "objective_mc_se": 0.016013359977850743,
+      "pnl_mean": 1.0674571082370146,
+      "planner_initial_value": 0.9895587848309377,
+      "value_error_in_mc_se": 0.18470680719189386
+    },
+    {
+      "policy": "noinfo",
+      "episodes": 20000,
+      "objective_mean": 0.9564933922647779,
+      "objective_mc_se": 0.016305257182226723,
+      "pnl_mean": 1.0453447922647778,
+      "planner_initial_value": 0.730029461729834
+    },
+    {
+      "policy": "myopic",
+      "episodes": 20000,
+      "objective_mean": 0.8363515144434565,
+      "objective_mc_se": 0.013406863771965642,
+      "pnl_mean": 0.8837057144434565
+    },
+    {
+      "policy": "full",
+      "episodes": 20000,
+      "objective_mean": 1.4517850915530366,
+      "objective_mc_se": 0.015604080943188756,
+      "pnl_mean": 1.5369460915530366,
+      "planner_initial_value": 1.4719921721355629,
+      "value_error_in_mc_se": 1.2949869111866383
+    }
+  ],
+  "paired_differences": [
+    {
+      "baseline": "noinfo",
+      "mean": 0.03010761597223661,
+      "mc_se": 0.006833599542959802,
+      "low": 0.016713196336929796,
+      "high": 0.04350203560754343
+    },
+    {
+      "baseline": "myopic",
+      "mean": 0.15024949379355815,
+      "mc_se": 0.010535303957810108,
+      "low": 0.12959942770330884,
+      "high": 0.17089955988380745
+    },
+    {
+      "baseline": "full",
+      "mean": -0.46518408331602223,
+      "mc_se": 0.009705365337224381,
+      "low": -0.4842074011477896,
+      "high": -0.4461607654842549
+    }
+  ],
+  "note": "No-information planner value excludes future learning; its evaluated runtime policy filters and replans."
+}

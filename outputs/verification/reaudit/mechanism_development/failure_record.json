@@ -1,0 +1,8 @@
+{
+  "source_commit": "4d8f11b",
+  "before_evaluation": true,
+  "failure": "Independent terminal check compared decimal .027 with .025+.002 using bit equality; differs by one rounding step",
+  "correction_commit": "15771fd",
+  "correction": "Use 1e-15 for independent decimal identity; retain exact bit equality between ablated and reference terminal scores",
+  "statistical_design_or_policies_changed": false
+}

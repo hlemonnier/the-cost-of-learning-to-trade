@@ -1,0 +1,40 @@
+{
+  "amendment_sha256": "a23139363166be0502af795f5c907a830451d2b92cfdcaaab3006ecee347ca56",
+  "commands": [
+    {
+      "command": [
+        "/recorded-environment Learning/.venv/bin/python",
+        "/recorded-environment Learning/extensions/bayes_adaptive/geometry_end_to_end.py",
+        "--worker",
+        "--revision",
+        "v2",
+        "--belief-geometry",
+        "uniform",
+        "--horizon",
+        "4",
+        "--weight-points",
+        "5",
+        "--belief-points",
+        "7",
+        "--quadrature-points",
+        "15",
+        "--cache",
+        "/recorded-environment Learning/extensions/bayes_adaptive/cache/geometry-e2e/uniform-v2-0"
+      ],
+      "label": "uniform-v2-0",
+      "log_sha256": "71684f317df350d1c3b332a6bd88a9d8aaa63a5356a135295d1f15d455458672",
+      "returncode": 1
+    }
+  ],
+  "failure": {
+    "message": "uniform-v2-0 failed; see preserved log",
+    "type": "AssertionError"
+  },
+  "harness_sha256": "c29862d23c407075e0f30cc2010036f2176610e5230b16600a3e3d893da5b629",
+  "passed": false,
+  "preserved_v2_sha256": "d22fcc3a460eb75c6bac239e1d383f333811dcfe0db3d768109f56f913e853fc",
+  "rejections": [],
+  "scope": "Bounded production E2E; no full-horizon acceptance or economic evaluation",
+  "solver_sha256": "8fdf88cae1b6b74ebd738e8b07942c15fd99042e2fd4f80f112660fc77f9e1ff",
+  "uniform_equivalence": []
+}
