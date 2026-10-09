@@ -1,0 +1,48 @@
+{
+  "passed": true,
+  "public_repository": "hlemonnier/the-cost-of-learning-to-trade",
+  "github_repository_id": 1411950284,
+  "public_source_commit": "d424aec46f860f3e2b1326b82eef01c66ed35abd",
+  "clone_tree": "f896ef3258acbe4f8e983d06040f5e8260f4688a",
+  "fresh_clone_pipeline": {
+    "passed": true,
+    "rows": 672,
+    "profile": "smoke",
+    "exact_repeat": true,
+    "separate_cold_caches": true,
+    "control_content_and_build_fingerprints_match": true,
+    "control_tables_per_run": 21,
+    "source_hashes": [
+      "bfe4d3aebcd0f34a3d7fdced84bcc36b0e10103f24313da4f1dff573e1a868a1",
+      "bfe4d3aebcd0f34a3d7fdced84bcc36b0e10103f24313da4f1dff573e1a868a1"
+    ],
+    "max_reconciliation_error": 8.822942376696119e-13,
+    "artifacts": [
+      "outputs/reproduction/pipeline/first",
+      "outputs/reproduction/pipeline/repeat"
+    ],
+    "scope": "Fresh-process small end-to-end integration; not full evaluation."
+  },
+  "fresh_clone_publication": {
+    "passed": true,
+    "tracked_files_checked": 856,
+    "content_rules_checked": 1,
+    "preserved_numeric_assets": 466,
+    "source_migration_files": 354,
+    "relative_links_valid": true,
+    "issues": [],
+    "scope": "Publication content, recorded data hashes and explicit source migration; numerical simulation is checked separately."
+  },
+  "github_actions": {
+    "run_id": 37942083266,
+    "conclusion": "success",
+    "artifact_id": 11621808545,
+    "artifact_name": "cold-reproduction-evidence"
+  },
+  "historical_archive": {
+    "visibility": "private",
+    "archived": true
+  },
+  "anonymous_old_snapshot_http_status": 404,
+  "scope": "Fresh clone of the new public repository, installed package, separate cold caches, publication content and preserved data checks. Full scientific campaigns are recorded data, not rerun here."
+}

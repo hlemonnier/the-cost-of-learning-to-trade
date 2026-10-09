@@ -13,4 +13,11 @@ Updated: 9 October 2026 (Europe/Paris).
   are distinct from current source fingerprints. See docs/publication-manifest.json.
 - **Validation:** installed-package cold E2E repeat, independent data reconciliation,
   PDF review and fresh-clone acceptance.
-- **Next:** finish publication acceptance and retain repeatable evidence.
+- **Published:** public repository `hlemonnier/the-cost-of-learning-to-trade`,
+  with a clean root history and MIT licence. Original history is preserved in
+  an archived private repository and a verified local Git bundle.
+- **Verified:** publication scan, 466 byte-preserved numeric assets, production
+  AST equivalence, exact cold E2E repeat, core raw-data reconciliation, independent
+  extension mathematics, reviewed PDFs and green GitHub Actions.
+- **Next:** maintain this public research edition; introduce new scientific
+  hypotheses only with a separate frozen protocol and fresh evaluation streams.
