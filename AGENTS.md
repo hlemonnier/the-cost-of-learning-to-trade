@@ -19,3 +19,21 @@ Exclude temporary logs, environments and regenerable large control caches.
 
 Maintain concise English documentation, working relative links and reproducible
 commands. The public research edition uses the MIT licence.
+
+## Cursor Cloud specific instructions
+
+The default image has Python 3.12, but Ubuntu marks it externally managed and
+does not ship `ensurepip`. `install` adds `python3.12-venv`, creates
+`~/.local/share/trade-learning-venv`, installs `requirements-lock.txt`, and
+performs an editable install. `/usr/local/bin/python`, `python3`, and `pip` are
+wrappers for that environment. There is no `start` process and no secret.
+
+Cold end-to-end acceptance matches GitHub Actions:
+
+```bash
+python verification/verify_pipeline.py --out outputs/reproduction/pipeline
+```
+
+It writes `verification.json` after two separate cold smoke runs (672 episode
+rows, exact repeat). `outputs/reproduction/` is gitignored. The `full` profile
+is a separate heavy solve and is not part of environment startup.
